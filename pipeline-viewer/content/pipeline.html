@@ -230,10 +230,59 @@ footer p{font-size:11px;color:var(--text4);font-family:var(--mono);letter-spacin
   .chain-ant{width:1px;height:14px;margin:0}
   .chain-ant::before{border-top:none;border-left:1.5px dashed var(--border2);inset:0;width:0;height:100%}
   .chain-ant::after{display:none}
+  .theme-toggle{top:10px;right:10px;width:34px;height:34px}
 }
+
+/* ===== THEME TOGGLE BUTTON ===== */
+.theme-toggle{position:fixed;top:18px;right:18px;z-index:200;width:38px;height:38px;border-radius:50%;background:var(--bg2);border:1px solid var(--border);color:var(--text2);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .18s,transform .18s,color .18s,border-color .18s;-webkit-tap-highlight-color:transparent}
+.theme-toggle:hover{background:var(--bg-hover);transform:scale(1.06);color:var(--text);border-color:var(--border2)}
+.theme-toggle:active{transform:scale(.96)}
+.theme-toggle svg{width:16px;height:16px;display:block}
+.theme-toggle .sun{display:none}
+.theme-toggle .moon{display:block}
+:root[data-theme="light"] .theme-toggle .sun{display:block}
+:root[data-theme="light"] .theme-toggle .moon{display:none}
+
+/* ===== LIGHT THEME =====
+   page bg is cream (--bg #f5f5f8), cards/chrome are pure white (--bg2 #fff),
+   nested rows are pale grey (--bg3 #eceff3). This inversion gives cards a "floating
+   on cream" feel — much higher visual contrast than near-white on near-white. */
+:root[data-theme="light"]{
+  --bg:#f5f5f8;--bg2:#ffffff;--bg3:#eceff3;--bg-hover:#e3e6ec;--bg-active:#d6d9e0;
+  --border:#d8dae0;--border2:#b8bbc4;
+  --text:#0d0e10;--text2:#3d3e48;--text3:#65666f;--text4:#94959f;
+}
+/* light-mode adjustments where dark-tuned values don't translate */
+:root[data-theme="light"] body{background:var(--bg);color:var(--text2)}
+:root[data-theme="light"] ::selection{background:#9580f045;color:var(--text)}
+:root[data-theme="light"] ::-webkit-scrollbar-thumb{background:#c2c5cd}
+:root[data-theme="light"] .cta-btn{color:#fff;background:#0d0e10;border-color:#0d0e10}
+:root[data-theme="light"] .cta-btn:hover{background:var(--gold);color:#0d0e10;border-color:var(--gold)}
+:root[data-theme="light"] .lc.cb{background:#eeb64418;color:#9a6c0c}
+:root[data-theme="light"] .lc .ci{background:#eeb64418;color:#9a6c0c}
+:root[data-theme="light"] .chain-node.bright{background:#eeb64418;border-color:#eeb64470}
+:root[data-theme="light"] .chain-ant::after{background:var(--bg2)}
+:root[data-theme="light"] .ide-frame.max{box-shadow:0 24px 80px rgba(20,20,30,.18)}
+:root[data-theme="light"] .ref-thumb-label{color:#dcdce4}
+/* keep header h1 em + ref-link readable on white */
+:root[data-theme="light"] .ref-link:hover{color:#0d0e10}
+/* phase color pills already use alpha-tinted bg; bump alpha so faint pastels read on white */
+:root[data-theme="light"] .c-discovery{background:#3ecfcf22;border-color:#3ecfcf55;color:#1f8a8a}
+:root[data-theme="light"] .c-capture{background:#e5a63e22;border-color:#e5a63e55;color:#a87a18}
+:root[data-theme="light"] .c-decode{background:#ec5f8a22;border-color:#ec5f8a55;color:#c43e6b}
+:root[data-theme="light"] .c-strategy{background:#9580f022;border-color:#9580f055;color:#5d48c8}
+:root[data-theme="light"] .c-build{background:#3ec98a22;border-color:#3ec98a55;color:#1f8e5a}
+:root[data-theme="light"] .c-polish{background:#f08e5e22;border-color:#f08e5e55;color:#c5683a}
+:root[data-theme="light"] .c-deliver{background:#eeb64422;border-color:#eeb64455;color:#9a6c0c}
 </style>
+<script>(function(){try{if(localStorage.getItem('factory-viewer-theme')==='light')document.documentElement.setAttribute('data-theme','light')}catch(e){}})();</script>
 </head>
 <body>
+
+<button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark or light mode" title="Toggle theme">
+  <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+  <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+</button>
 
 <div class="page">
 
@@ -241,7 +290,7 @@ footer p{font-size:11px;color:var(--text4);font-family:var(--mono);letter-spacin
 <header class="fi">
   <span class="header-eyebrow">Behind the Curtain</span>
   <h1>The Roofing Website <em>Factory.</em></h1>
-  <p class="lede">From <strong>one URL</strong> to a complete contractor website + sales-ready proposal. <strong>No templates. No copy-paste. No mistakes.</strong> Watch what happens when 13 specialized AI agents take your business and build it a website that actually converts.</p>
+  <p class="lede">From <strong>one URL</strong> to a complete contractor website + sales-ready proposal. <strong>No clones. No copy-paste. No mistakes.</strong> Watch what happens when 13 specialized AI agents take your business and build it a website that actually converts.</p>
 </header>
 
 <!-- WHAT THIS IS -->
@@ -254,7 +303,7 @@ footer p{font-size:11px;color:var(--text4);font-family:var(--mono);letter-spacin
 
   <div class="promise-grid">
     <div class="promise-stat"><div class="num">1 URL</div><div class="lbl">in</div></div>
-    <div class="promise-stat"><div class="num">0</div><div class="lbl">templates</div></div>
+    <div class="promise-stat"><div class="num">11</div><div class="lbl">SOPs</div></div>
     <div class="promise-stat"><div class="num">13</div><div class="lbl">stages</div></div>
     <div class="promise-stat"><div class="num">30+</div><div class="lbl">quality gates</div></div>
   </div>
@@ -1654,6 +1703,17 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.getElement
 const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('v')}),{threshold:.05});
 document.querySelectorAll('.fi').forEach(e=>obs.observe(e));
 oF('.claude/CLAUDE.md','CLAUDE.md','discovery');
+
+// theme toggle — saved choice persists across visits; default is dark
+(function(){
+  const k='factory-viewer-theme',h=document.documentElement,btn=document.getElementById('themeToggle');
+  if(!btn)return;
+  btn.addEventListener('click',()=>{
+    const isLight=h.getAttribute('data-theme')==='light';
+    if(isLight){h.removeAttribute('data-theme');try{localStorage.setItem(k,'dark')}catch(e){}}
+    else{h.setAttribute('data-theme','light');try{localStorage.setItem(k,'light')}catch(e){}}
+  });
+})();
 </script>
 </body>
 </html>
