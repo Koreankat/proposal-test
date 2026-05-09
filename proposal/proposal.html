@@ -1,9 +1,10 @@
+<!-- KCA Proposal · Becker Roofing and Exteriors -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Custom Roofing Website Is Ready · Camelback Roofing | King Contractor Agency</title>
+<title>Your Custom Roofing Website Is Ready · Becker Roofing and Exteriors | King Contractor Agency</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -14,9 +15,9 @@ a{color:inherit;text-decoration:none}
 
 /* ============================ TOP BAR ============================ */
 .topbar{background:#030303;color:#fff;padding:10px 0;position:sticky;top:0;z-index:1000;border-bottom:3px solid #AE312D}
-.topbar-inner{max-width:1400px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:nowrap}
+.topbar-inner{max-width:1520px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:nowrap}
 .kca-mark{display:flex;align-items:center;gap:10px;flex-shrink:0}
-.kca-mark img{height:36px;width:auto}
+.kca-mark img{height:100px;width:auto}
 .kca-mark .kca-name{font-family:'Montserrat',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;white-space:nowrap}
 .kca-mark .kca-name em{font-style:normal;color:#EEB644}
 .topbar-cta{display:flex;align-items:center;gap:14px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;flex-shrink:0;white-space:nowrap}
@@ -26,29 +27,286 @@ a{color:inherit;text-decoration:none}
 @media (max-width:768px){.topbar-cta .topbar-phone{display:none}.kca-mark .kca-name{display:none}}
 
 /* ============================ COVER ============================ */
-.cover{background:linear-gradient(180deg,#030303 0%,#1F2124 100%);color:#fff;padding:64px 0 80px;position:relative;overflow:hidden}
+.cover{background:linear-gradient(180deg,#030303 0%,#1F2124 100%);color:#fff;min-height:100vh;display:flex;align-items:center;padding:80px 0;position:relative;overflow:hidden}
 .cover::after{content:'';position:absolute;top:0;right:0;width:240px;height:100%;background:linear-gradient(135deg,transparent 0%,#AE312D 100%);clip-path:polygon(60% 0,100% 0,100% 100%,30% 100%);opacity:0.10;pointer-events:none}
-.cover-inner{max-width:1400px;margin:0 auto;padding:0 32px;position:relative;z-index:2}
-.cover-grid{display:grid;grid-template-columns:1fr 640px;gap:56px;align-items:center}
+.cover-inner{max-width:1520px;margin:0 auto;padding:0 32px;position:relative;z-index:2;width:100%}
+.cover-grid{display:grid;grid-template-columns:1fr 720px;gap:56px;align-items:center}
 @media (max-width:1380px){.cover-grid{grid-template-columns:1fr;gap:48px}}
 .cover-content{min-width:0}
-.cover-eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.18em;color:#EEB644;margin-bottom:18px}
+.cover-eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.18em;color:#EEB644;margin-bottom:18px}
 .cover-eyebrow::before{content:'';width:32px;height:2px;background:#EEB644}
-.cover h1{font-family:'Montserrat',sans-serif;font-size:clamp(34px,2.4vw,40px);font-weight:900;line-height:1.08;margin-bottom:16px;letter-spacing:-0.02em;text-wrap:balance;max-width:28ch}
+.cover h1{font-family:'Montserrat',sans-serif;font-size:clamp(48px,3.6vw,68px);font-weight:900;line-height:1.0;margin-bottom:36px;letter-spacing:-0.025em;text-wrap:normal;max-width:22ch}
+
+/* Hero sales bullets · 3 punchy stacked rows with KCA-gold icons */
+.cover-bullets{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:18px}
+.cover-bullets li{display:flex;align-items:center;gap:18px}
+.cover-bullets .cb-icon{flex-shrink:0;font-size:clamp(32px,2.4vw,40px);line-height:1;display:inline-flex;align-items:center;justify-content:center;width:auto;height:auto}
+.cover-bullets .cb-label{font-family:'Montserrat',sans-serif;font-size:clamp(20px,1.6vw,28px);font-weight:800;color:#fff;letter-spacing:0.02em;text-transform:uppercase;line-height:1.1}
+.cover-bullets .cb-label em{font-style:normal;color:#EEB644}
+
+/* (Removed 2026-05-09: .cover-trust-mark* classes for the hero KCA Seal of Excellence
+   "100% Money-Back Guarantee" block. Per operator direction: hero stays focused on the
+   3 outcome bullets; risk-reversal lives in §16 Investment / Money-Back Badge only.) */
+
+/* "Open Live Site" button under the laptop */
+.cover-open-live{display:inline-flex;align-items:center;gap:8px;margin-top:14px;padding:11px 20px;background:rgba(238,182,68,0.10);border:1px solid rgba(238,182,68,0.45);color:#EEB644;font-family:'Montserrat',sans-serif;font-weight:800;font-size:11.5px;letter-spacing:0.12em;text-transform:uppercase;border-radius:6px;text-decoration:none;transition:background 0.15s,color 0.15s,transform 0.15s}
+.cover-open-live:hover{background:#EEB644;color:#030303;transform:translateY(-1px)}
+
+/* KCA crown · sits ON the top edge of the last letter of the wrapped word (overlapping it slightly) */
+.kca-crown{display:inline-block;position:relative;line-height:1}
+.kca-crown::before{content:'';position:absolute;right:-0.05em;top:-0.42em;width:0.62em;height:0.46em;background-image:url('kca-assets/o-crown-1-1.webp');background-size:contain;background-repeat:no-repeat;background-position:center bottom;pointer-events:none;transform:rotate(16deg);transform-origin:bottom right;z-index:2}
+
+/* KCA Seal-of-Excellence badge · corner stamp on §3 SERP yours-row, outside-left so it doesn't cover logo/text */
+.kca-seal-stamp{position:absolute;top:-30px;left:-46px;width:64px;height:64px;background-image:url('kca-assets/KCA-Badge-3.webp');background-size:contain;background-repeat:no-repeat;background-position:center;pointer-events:none;filter:drop-shadow(0 4px 12px rgba(0,0,0,0.45));z-index:4;transform:rotate(-8deg)}
+@media (max-width:768px){.kca-seal-stamp{width:48px;height:48px;top:-20px;left:-28px}}
+
+/* Money-back guarantee badge · bigger, more prominent above the price hero */
+.money-back-row{display:flex;align-items:center;gap:16px;background:#fff;border:2px solid #EEB644;border-radius:16px;padding:14px 24px 14px 16px;margin:0 auto 22px;width:fit-content;max-width:100%;box-shadow:0 8px 22px rgba(238,182,68,0.22)}
+.money-back-badge-img{width:96px;height:96px;background-image:url('kca-assets/guarantee_icons.webp');background-size:contain;background-repeat:no-repeat;background-position:center;flex-shrink:0;filter:drop-shadow(0 3px 8px rgba(0,0,0,0.20))}
+.money-back-text{display:flex;flex-direction:column;gap:4px;text-align:left}
+.money-back-headline{font-family:'Montserrat',sans-serif;font-weight:800;font-size:17px;color:#030303;text-transform:uppercase;letter-spacing:0.06em;line-height:1.15}
+.money-back-headline em{font-style:normal;color:#AE312D}
+.money-back-sub{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;font-size:13.5px;color:#54595F;line-height:1.45}
+.money-back-sub strong{color:#030303;font-weight:700}
+@media (max-width:520px){.money-back-row{padding:12px 16px 12px 12px;gap:12px}.money-back-badge-img{width:72px;height:72px}.money-back-headline{font-size:14px}}
+
+/* ============================ TRUST-FIRST SALES SECTIONS (per Dean's whiteboard 2026-05-07) ============================ */
+
+/* Shared wrapper for the trust-first sections (KCA dark with gold accents) */
+.section-trust{background:#030303;color:#fff;padding:88px 0;position:relative;overflow:hidden}
+.section-trust .kicker{color:#EEB644;display:flex;justify-content:center}
+.section-trust .kicker::before{background:#EEB644}
+.section-trust .section-title{color:#fff;letter-spacing:-0.012em;text-align:center;max-width:860px;margin:0 auto 18px}
+.section-trust .section-title em{color:#EEB644;font-style:normal;font-weight:900}
+.section-trust .section-sub{color:rgba(255,255,255,0.72);text-align:center;max-width:760px;margin-left:auto;margin-right:auto}
+
+/* === §A · YOUR VISION, OUR COMMITMENT (Dean intro) === */
+.dean-intro-grid{display:grid;grid-template-columns:1.05fr 0.95fr;gap:56px;align-items:center;margin-top:48px}
+@media (max-width:980px){.dean-intro-grid{grid-template-columns:1fr;gap:36px}}
+.dean-intro-body p{font-size:16px;color:rgba(255,255,255,0.78);line-height:1.7;margin-bottom:14px}
+.dean-intro-body p strong{color:#fff;font-weight:700}
+.dean-intro-body .dean-promise{font-family:'Montserrat',sans-serif;font-size:18px;font-weight:800;color:#fff;border-left:4px solid #AE312D;padding:10px 0 10px 18px;margin:18px 0;line-height:1.4;background:linear-gradient(90deg,rgba(174,49,45,0.10) 0%,transparent 100%)}
+.dean-intro-body .dean-promise strong{color:#AE312D}
+
+/* §A bullets · editorial style: no chips, no numbers, just a confident red dash marker per line, key phrases pulled in red. Reads like a personal note, not a templated list. */
+.dean-bullets{list-style:none;padding:0;margin:0 0 30px;display:flex;flex-direction:column;gap:22px}
+.dean-bullets li{position:relative;padding:2px 0 2px 44px;font-family:'Montserrat',sans-serif;font-size:clamp(18px,1.5vw,23px);font-weight:600;color:#030303;line-height:1.45;letter-spacing:-0.006em}
+.dean-bullets li::before{content:'';position:absolute;left:0;top:0.7em;width:28px;height:3px;background:#AE312D;border-radius:2px}
+.dean-bullets li strong{color:#AE312D;font-weight:800}
+.dean-bullets li em{font-style:normal;color:#AE312D;font-weight:800;text-decoration:underline;text-decoration-color:rgba(174,49,45,0.45);text-underline-offset:5px;text-decoration-thickness:2px}
+.dean-signature{display:flex;align-items:center;gap:18px;margin-top:30px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08)}
+.dean-sig-portrait{width:64px;height:64px;border-radius:50%;background:#1a1a1a;background-image:url('kca-assets/KCA-Badge-3.webp');background-size:cover;background-position:center;flex-shrink:0;border:2px solid rgba(238,182,68,0.4)}
+.dean-sig-text{display:flex;flex-direction:column;gap:2px}
+.dean-sig-name{font-family:'Montserrat',sans-serif;font-style:italic;font-size:24px;font-weight:700;color:#fff;line-height:1}
+.dean-sig-title{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;color:#EEB644;letter-spacing:0.12em;text-transform:uppercase;margin-top:6px}
+.dean-portrait-wrap{position:relative;width:100%;max-width:480px;margin-left:auto;margin-right:auto;display:block}
+.dean-portrait{width:100%;aspect-ratio:4/5;border-radius:18px;overflow:hidden;background:linear-gradient(160deg,#1F2124 0%,#0E1430 100%);position:relative;box-shadow:0 18px 48px rgba(0,0,0,0.5),0 0 0 1px rgba(238,182,68,0.18)}
+.dean-portrait::before{content:'';position:absolute;inset:0;background-image:url('kca-assets/KCA-Badge-3.webp');background-size:60% auto;background-repeat:no-repeat;background-position:center;opacity:0.12;pointer-events:none}
+.dean-portrait img{width:100%;height:100%;object-fit:cover;display:block}
+.dean-portrait-caption{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.55);white-space:nowrap}
+/* Money-back badge · sibling of .dean-portrait inside .dean-portrait-wrap so corner overflow is visible */
+.dean-portrait-money-back{position:absolute;top:-44px;right:-44px;width:128px;height:128px;background-image:url('kca-assets/guarantee_icons.webp');background-size:contain;background-repeat:no-repeat;background-position:center;filter:drop-shadow(0 8px 22px rgba(0,0,0,0.35));z-index:6;transform:rotate(12deg);pointer-events:none}
+@media (max-width:1100px){.dean-portrait-money-back{width:104px;height:104px;top:-34px;right:-34px}}
+@media (max-width:520px){.dean-portrait-money-back{width:80px;height:80px;top:-24px;right:-24px}}
+
+/* §C LIGHT MODE · white background variant for the Winning Formula stack (cards become white-on-cream, ops get solid filled chips, result stays dark red as the climax) */
+.section-trust.section-formula-light{background:#FAF8F1;color:#030303;overflow:visible}
+.section-trust.section-formula-light .kicker{color:#AE312D}
+.section-trust.section-formula-light .kicker::before{background:#AE312D}
+.section-trust.section-formula-light .section-title{color:#030303}
+.section-trust.section-formula-light .section-title em{color:#AE312D}
+.section-trust.section-formula-light .section-sub{color:rgba(3,3,3,0.70)}
+.section-trust.section-formula-light .formula-row{background:#fff;border-color:rgba(3,3,3,0.10);box-shadow:0 8px 22px rgba(0,0,0,0.08)}
+.section-trust.section-formula-light .formula-row::before{background:linear-gradient(180deg,#AE312D 0%,#EEB644 100%)}
+.section-trust.section-formula-light .formula-num{color:#AE312D;background:rgba(174,49,45,0.08);border-color:rgba(174,49,45,0.32)}
+.section-trust.section-formula-light .formula-term{color:#030303}
+.section-trust.section-formula-light .formula-tag{color:#AE312D}
+.section-trust.section-formula-light .formula-icon{opacity:0.85}
+.section-trust.section-formula-light .formula-op{color:#030303;background:#EEB644;border-color:#EEB644}
+.section-trust.section-formula-light .formula-op.equals{color:#fff;background:#AE312D;border-color:#AE312D}
+
+/* §A LIGHT MODE · white background variant (better contrast, red accents replace gold which doesn't pop on white) */
+.section-trust.section-dean-light{background:#FAF8F1;color:#030303;overflow:visible}
+.section-trust.section-dean-light .kicker{color:#AE312D}
+.section-trust.section-dean-light .kicker::before{background:#AE312D}
+.section-trust.section-dean-light .section-title{color:#030303}
+.section-trust.section-dean-light .section-title em{color:#AE312D}
+.section-trust.section-dean-light .section-sub{color:rgba(3,3,3,0.72)}
+.section-trust.section-dean-light .dean-intro-body p{color:rgba(3,3,3,0.78)}
+.section-trust.section-dean-light .dean-intro-body p strong{color:#030303}
+.section-trust.section-dean-light .dean-bullets li{color:#030303}
+.section-trust.section-dean-light .dean-bullets li::before{background:#AE312D}
+.section-trust.section-dean-light .dean-bullets li strong{color:#AE312D}
+.section-trust.section-dean-light .dean-bullets li em{color:#AE312D}
+.section-trust.section-dean-light .dean-promise{color:#030303;border-left-color:#AE312D;background:linear-gradient(90deg,rgba(174,49,45,0.10) 0%,transparent 100%)}
+.section-trust.section-dean-light .dean-promise strong{color:#AE312D}
+.section-trust.section-dean-light .dean-signature{border-top-color:rgba(3,3,3,0.10)}
+.section-trust.section-dean-light .dean-sig-portrait{background-color:#fff;border-color:rgba(174,49,45,0.50)}
+.section-trust.section-dean-light .dean-sig-name{color:#030303}
+.section-trust.section-dean-light .dean-sig-title{color:#AE312D}
+
+/* === §B · ROOFERS' FRUSTRATIONS INTO SOLUTIONS (KCA-style big cards) === */
+.frustration-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:54px;align-items:stretch}
+@media (max-width:880px){.frustration-grid{grid-template-columns:1fr}}
+.frustration-card{background:#FAF8F1;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;color:#030303;box-shadow:0 14px 36px rgba(0,0,0,0.32)}
+.frustration-card-head{display:flex;align-items:center;gap:18px;padding:34px 36px;background:#FAF8F1;border-bottom:1px solid #e8e8e8;min-height:130px}
+.frustration-card-head .ic{font-size:44px;line-height:1;flex-shrink:0}
+.frustration-card-head h3{font-family:'Montserrat',sans-serif;font-size:clamp(22px,1.7vw,30px);font-weight:900;color:#030303;line-height:1.1;letter-spacing:-0.01em;text-transform:uppercase;margin:0}
+.frustration-card-body{flex:1;padding:32px 36px 36px;background:#1F2124;color:rgba(255,255,255,0.85)}
+.frustration-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:22px}
+.frustration-list li{display:grid;grid-template-columns:30px 1fr;gap:16px;align-items:flex-start;font-size:17px;line-height:1.55;color:rgba(255,255,255,0.88)}
+.frustration-list li .ic{font-size:22px;line-height:1.2;color:#EEB644}
+
+/* Solution side */
+.frustration-card.solution .frustration-card-head{background:#EEB644;border-bottom:none}
+.frustration-card.solution .frustration-card-head h3{color:#030303}
+.frustration-card.solution .frustration-card-head .king-mascot{width:84px;height:84px;background-image:url('kca-assets/king-icon.webp');background-size:contain;background-repeat:no-repeat;background-position:center;flex-shrink:0;filter:drop-shadow(0 4px 8px rgba(0,0,0,0.20))}
+.frustration-list.solution{gap:20px}
+.frustration-list.solution li{display:grid;grid-template-columns:30px 1fr;gap:16px;align-items:flex-start;font-weight:600;color:#fff;font-size:17px}
+.frustration-list.solution li::before{content:'';display:block;width:30px;height:30px;background-image:url('kca-assets/o-crown-1-1.webp');background-size:contain;background-repeat:no-repeat;background-position:center;flex-shrink:0;margin-top:1px;filter:drop-shadow(0 2px 6px rgba(238,182,68,0.45))}
+.frustration-list.solution li strong{color:#EEB644}
+
+/* === §B · WHAT I DO (full-viewport, punchy sentence + stat + bullets) === */
+.section-wid-full{min-height:100vh;display:flex;align-items:center}
+.section-wid-full .section-inner{width:100%}
+.section-wid-full .section-title{font-size:clamp(40px,4vw,72px);max-width:24ch}
+.section-wid-full .section-title em{color:#EEB644;font-style:normal}
+
+/* Compact stat row · $200M+ + caption */
+.wid-stat-row{display:flex;align-items:center;gap:28px;justify-content:center;margin:36px 0 44px;flex-wrap:wrap}
+.wid-stat-big{font-family:'Montserrat',sans-serif;font-size:clamp(64px,6.5vw,108px);font-weight:900;color:#EEB644;line-height:0.92;letter-spacing:-0.03em;text-shadow:0 4px 28px rgba(238,182,68,0.32);flex-shrink:0}
+.wid-stat-big .plus{font-size:0.65em;vertical-align:top;margin-left:2px}
+.wid-stat-caption{display:flex;flex-direction:column;gap:6px;text-align:left;max-width:380px}
+.wid-stat-eyebrow{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#EEB644}
+.wid-stat-context{font-family:'Montserrat',sans-serif;font-size:18px;font-weight:700;color:#fff;line-height:1.35}
+.wid-stat-context strong{color:#EEB644}
+@media (max-width:600px){.wid-stat-row{gap:18px}.wid-stat-caption{text-align:center;max-width:none}}
+
+/* 4 outcome bullets in 2x2 grid */
+.wid-bullets{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:1040px;margin-left:auto;margin-right:auto}
+@media (max-width:760px){.wid-bullets{grid-template-columns:1fr}}
+.wid-bullets li{display:grid;grid-template-columns:56px 1fr;gap:18px;align-items:center;padding:20px 22px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.10);border-radius:12px;transition:border-color 0.2s,background 0.2s}
+.wid-bullets li:hover{border-color:rgba(238,182,68,0.4);background:rgba(255,255,255,0.06)}
+.wid-bullets .wid-icon{width:64px;height:64px;display:flex;align-items:center;justify-content:center;font-size:44px;flex-shrink:0;line-height:1}
+.wid-bullets .wid-body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;font-size:15.5px;color:rgba(255,255,255,0.82);line-height:1.5}
+.wid-bullets .wid-body strong{color:#fff;font-family:'Montserrat',sans-serif;font-weight:800;font-size:17px;display:block;margin-bottom:2px;letter-spacing:-0.005em}
+.wid-bullets .wid-body em{font-style:normal;color:#AE312D;font-weight:700}
+
+/* === §C · HOW I DO IT (Winning Formula vertical stack · easy-to-consume row cards with operator chips) === */
+.section-formula{padding:96px 0}
+.section-formula .kicker{display:flex;justify-content:center;margin-bottom:16px}
+.section-formula .kicker::before{display:none}
+.section-formula .section-title em{color:#EEB644}
+
+.formula-stack{margin:54px auto 0;max-width:760px;display:flex;flex-direction:column;align-items:stretch;gap:14px}
+
+.formula-row{display:grid;grid-template-columns:64px 1fr auto;align-items:center;gap:22px;padding:26px 32px;background:linear-gradient(135deg,#0E1430 0%,#1F2124 100%);border:1px solid rgba(238,182,68,0.30);border-radius:18px;box-shadow:0 12px 28px rgba(0,0,0,0.35);position:relative;overflow:hidden}
+.formula-row::before{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,#EEB644 0%,#AE312D 100%)}
+
+.formula-num{font-family:'Montserrat',sans-serif;font-size:30px;font-weight:900;color:#EEB644;letter-spacing:-0.02em;line-height:1;width:64px;height:64px;border-radius:14px;background:rgba(238,182,68,0.10);border:1.5px solid rgba(238,182,68,0.45);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+
+.formula-content{display:flex;flex-direction:column;gap:6px;min-width:0}
+.formula-term{font-family:'Montserrat',sans-serif;font-size:clamp(32px,3vw,46px);font-weight:900;color:#fff;letter-spacing:-0.02em;line-height:1;text-transform:uppercase}
+.formula-tag{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;color:rgba(238,182,68,0.85);letter-spacing:0.10em;text-transform:uppercase}
+
+.formula-icon{font-size:38px;line-height:1;flex-shrink:0;opacity:0.55;width:56px;text-align:center}
+
+.formula-op{font-family:'Montserrat',sans-serif;font-size:42px;font-weight:900;color:#EEB644;line-height:1;width:60px;height:60px;border-radius:50%;background:rgba(238,182,68,0.10);border:2px solid rgba(238,182,68,0.45);display:flex;align-items:center;justify-content:center;margin:0 auto;align-self:center}
+.formula-op.equals{color:#AE312D;background:rgba(174,49,45,0.12);border-color:rgba(174,49,45,0.55);width:68px;height:68px;font-size:36px}
+
+.formula-result{display:grid;grid-template-columns:64px 1fr auto;align-items:center;gap:22px;padding:32px;background:linear-gradient(135deg,#AE312D 0%,#7A1F1C 100%);border:2px solid #EEB644;border-radius:18px;box-shadow:0 18px 48px rgba(174,49,45,0.45),0 0 0 1px rgba(238,182,68,0.30);position:relative;overflow:hidden;margin-top:4px}
+.formula-result::before{content:'';position:absolute;top:-40%;left:50%;transform:translateX(-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(238,182,68,0.18) 0%,transparent 60%);pointer-events:none}
+.formula-result .formula-num{color:#EEB644;background:rgba(0,0,0,0.30);border-color:#EEB644;font-size:32px}
+.formula-result-content{position:relative;z-index:1;display:flex;flex-direction:column;gap:6px;min-width:0}
+.formula-result-text{font-family:'Montserrat',sans-serif;font-size:clamp(28px,2.9vw,46px);font-weight:900;color:#fff;letter-spacing:-0.02em;line-height:1;text-transform:uppercase;text-shadow:0 2px 12px rgba(0,0,0,0.30);white-space:nowrap}
+.formula-result-boom{font-family:'Montserrat',sans-serif;font-size:clamp(18px,1.6vw,24px);font-weight:900;color:#EEB644;letter-spacing:0.10em;text-transform:uppercase;display:inline-flex;align-items:center;gap:8px}
+.formula-result-icon{position:relative;z-index:1;font-size:42px;line-height:1;flex-shrink:0;width:56px;text-align:center;filter:drop-shadow(0 4px 10px rgba(0,0,0,0.45))}
+
+@media (max-width:680px){
+  .formula-row,.formula-result{grid-template-columns:48px 1fr;gap:14px;padding:20px 22px}
+  .formula-icon,.formula-result-icon{display:none}
+  .formula-num{width:48px;height:48px;font-size:20px}
+  .formula-term{font-size:clamp(26px,8vw,36px)}
+  .formula-result-text{font-size:clamp(22px,6.4vw,32px);white-space:nowrap}
+  .formula-op{width:50px;height:50px;font-size:32px}
+  .formula-op.equals{width:56px;height:56px;font-size:28px}
+}
+
+/* === §D · PROOF: $1M client story video === */
+.section-proof{background:#030303;color:#fff;padding:88px 0;text-align:center;position:relative;overflow:hidden}
+.section-proof .kicker{color:#EEB644;display:flex;justify-content:center}
+.section-proof .kicker::before{display:none}
+.section-proof .proof-stat{font-family:'Montserrat',sans-serif;font-size:clamp(56px,7vw,128px);font-weight:900;color:#EEB644;line-height:1;letter-spacing:-0.03em;text-shadow:0 4px 28px rgba(238,182,68,0.32);margin:0 auto 14px;max-width:none;text-align:center}
+.section-proof .proof-stat .small{display:block;font-size:0.36em;color:#fff;margin-top:8px;letter-spacing:-0.012em;text-shadow:none}
+.section-proof .proof-sub{font-size:18px;color:rgba(255,255,255,0.72);max-width:620px;margin:0 auto 38px;line-height:1.55}
+.section-proof .proof-sub strong{color:#fff;font-weight:700}
+.proof-video-wrap{position:relative;max-width:960px;margin:0 auto;aspect-ratio:16/9;border-radius:14px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,0.5),0 0 0 1px rgba(174,49,45,0.30);background:#000;display:block;text-decoration:none}
+.proof-video-wrap img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s ease,filter 0.3s ease}
+.proof-video-wrap:hover img{transform:scale(1.03);filter:brightness(0.7)}
+.proof-video-wrap::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,0,0,0.55) 100%);pointer-events:none;z-index:1}
+.proof-play-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:104px;height:104px;border-radius:50%;background:#AE312D;display:flex;align-items:center;justify-content:center;box-shadow:0 14px 36px rgba(174,49,45,0.55),0 0 0 6px rgba(255,255,255,0.10);transition:transform 0.25s ease,background 0.25s ease;z-index:2}
+.proof-play-btn::before{content:'';display:block;width:0;height:0;border-left:30px solid #fff;border-top:20px solid transparent;border-bottom:20px solid transparent;margin-left:6px}
+.proof-video-wrap:hover .proof-play-btn{transform:translate(-50%,-50%) scale(1.08);background:#7A1F1C}
+.proof-caption{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#fff;background:rgba(0,0,0,0.55);padding:8px 14px;border-radius:6px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);z-index:2;white-space:nowrap}
 .cover h1 em{font-style:normal;color:#AE312D;display:inline}
-.cover-sub{font-size:17px;color:rgba(255,255,255,0.7);max-width:580px;line-height:1.55;margin-bottom:32px}
+
+/* ============================ TECHNICAL DEEP-DIVES — §5-§13 click-to-reveal accordions (added 2026-05-08 per Dean) ============================ */
+.section-collapsibles-intro{background:#030303;color:#fff;padding:64px 0 56px;border-top:1px solid rgba(255,255,255,0.06);border-bottom:3px solid #AE312D}
+.section-collapsibles-intro .kicker{color:#EEB644;margin-bottom:14px}
+.section-collapsibles-intro .kicker::before{background:#EEB644}
+.section-collapsibles-intro .section-title{color:#fff;font-size:clamp(28px,3vw,42px);max-width:24ch;margin-bottom:12px}
+.section-collapsibles-intro .section-sub{color:rgba(255,255,255,0.72);font-size:16px;line-height:1.6}
+
+.proposal-collapsibles-wrap{background:#F1F1F1}
+details.proposal-collapsible{margin:0;border:0;background:transparent;border-bottom:1px solid rgba(0,0,0,0.08)}
+details.proposal-collapsible:last-of-type{border-bottom:none}
+details.proposal-collapsible > .ps-summary{list-style:none;cursor:pointer;padding:24px clamp(20px,3vw,40px);background:linear-gradient(180deg,#FFFFFF 0%,#F7F5F2 100%);display:flex;align-items:center;gap:clamp(12px,2vw,24px);font-family:'Montserrat',sans-serif;user-select:none;-webkit-user-select:none;transition:background 0.2s ease;position:relative;max-width:1520px;margin:0 auto}
+details.proposal-collapsible > .ps-summary::-webkit-details-marker{display:none}
+details.proposal-collapsible > .ps-summary::marker{content:''}
+details.proposal-collapsible > .ps-summary:hover{background:linear-gradient(180deg,#FAFAFA 0%,#EFEDE8 100%)}
+details.proposal-collapsible > .ps-summary:focus-visible{outline:3px solid rgba(174,49,45,0.4);outline-offset:-4px}
+details.proposal-collapsible > .ps-summary .ps-num{font-size:12px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#AE312D;white-space:nowrap;display:inline-flex;align-items:center;gap:10px;flex-shrink:0}
+details.proposal-collapsible > .ps-summary .ps-num::before{content:'';display:inline-block;width:32px;height:2px;background:#AE312D}
+details.proposal-collapsible > .ps-summary .ps-title{flex:1;font-size:clamp(18px,1.8vw,24px);font-weight:800;color:#030303;letter-spacing:-0.01em;line-height:1.25}
+details.proposal-collapsible > .ps-summary .ps-chevron{width:36px;height:36px;border-radius:50%;background:#AE312D;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform 0.3s ease,background 0.2s ease;box-shadow:0 4px 10px rgba(174,49,45,0.30)}
+details.proposal-collapsible > .ps-summary .ps-chevron::before{content:'';display:block;width:9px;height:9px;border-right:2.5px solid #fff;border-bottom:2.5px solid #fff;transform:rotate(45deg);margin-top:-3px}
+details.proposal-collapsible[open] > .ps-summary .ps-chevron{transform:rotate(225deg);background:#7A1F1C}
+details.proposal-collapsible > .ps-summary:hover .ps-chevron{background:#7A1F1C}
+details.proposal-collapsible > section{margin:0}
+
+/* When OPEN: dock summary at top of viewport (below topbar) — sticky bound is the <details> so it auto-unsticks at section end */
+details.proposal-collapsible[open] > .ps-summary{
+  position:sticky;
+  top:var(--topbar-h, 123px);
+  z-index:50;
+  box-shadow:inset 0 -3px 0 #AE312D, 0 6px 18px rgba(0,0,0,0.18);
+  background:linear-gradient(180deg,rgba(255,255,255,0.98) 0%,rgba(247,245,242,0.98) 100%);
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+}
+
+@media (max-width:768px){
+  details.proposal-collapsible > .ps-summary{padding:18px 20px;gap:10px;flex-wrap:wrap}
+  details.proposal-collapsible > .ps-summary .ps-num{font-size:11px;width:100%}
+  details.proposal-collapsible > .ps-summary .ps-num::before{width:20px}
+  details.proposal-collapsible > .ps-summary .ps-title{font-size:17px;flex:1}
+  details.proposal-collapsible > .ps-summary .ps-chevron{width:30px;height:30px}
+  details.proposal-collapsible[open] > .ps-summary{top:75px}
+}
+.cover-sub{font-size:19px;color:rgba(255,255,255,0.78);max-width:600px;line-height:1.55;margin-bottom:32px}
 .cover-meta{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:32px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,0.08)}
 .cover-meta-block{display:flex;flex-direction:column;gap:4px}
-.cover-meta-block .label{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:rgba(255,255,255,0.45)}
-.cover-meta-block .value{font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;color:#fff;line-height:1.3}
+.cover-meta-block .label{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:rgba(255,255,255,0.55)}
+.cover-meta-block .value{font-family:'Montserrat',sans-serif;font-size:16px;font-weight:700;color:#fff;line-height:1.3}
 .cover-pills{display:flex;flex-wrap:wrap;gap:8px}
 .cpill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:999px;padding:7px 14px;font-size:12px;color:rgba(255,255,255,0.85);font-family:'Montserrat',sans-serif;font-weight:600}
 .cpill .dot{width:6px;height:6px;border-radius:50%;background:#EEB644}
-@media (max-width:768px){.cover{padding:48px 0 56px}.cover h1{font-size:30px}.cover-sub{font-size:15px}.cover-meta{grid-template-columns:1fr;gap:18px}}
+@media (max-width:768px){.cover{padding:48px 0 56px}.cover h1{font-size:34px}.cover-sub{font-size:17px}.cover-meta{grid-template-columns:1fr;gap:18px}}
 
 /* Cover laptop (desktop preview in hero right column) */
-.cover-laptop{width:100%;max-width:640px;justify-self:end}
-@media (max-width:1380px){.cover-laptop{justify-self:center;max-width:720px}}
+.cover-laptop{width:100%;max-width:720px;justify-self:end;position:relative}
+.cover-laptop-crown{position:absolute;top:-32px;right:-26px;width:96px;height:78px;background-image:url('kca-assets/o-crown-1-1.webp');background-size:contain;background-repeat:no-repeat;background-position:center bottom;filter:drop-shadow(0 6px 14px rgba(0,0,0,0.5));transform:rotate(22deg);z-index:5;pointer-events:none}
+@media (max-width:1520px){.cover-laptop-crown{top:-24px;right:-12px;width:78px;height:62px}}
+@media (max-width:1380px){.cover-laptop{justify-self:center;max-width:760px}}
 .cover-laptop .laptop-screen{background:#1a1a1a;border-radius:12px 12px 4px 4px;padding:10px 10px 0;box-shadow:0 25px 60px rgba(0,0,0,0.4),0 8px 16px rgba(0,0,0,0.25)}
 .cover-laptop .laptop-chrome{background:#2a2a2a;border-radius:6px 6px 0 0;padding:8px 12px;display:flex;align-items:center;gap:8px}
 .cover-laptop .laptop-dots{display:flex;gap:5px;flex-shrink:0}
@@ -57,8 +315,8 @@ a{color:inherit;text-decoration:none}
 .cover-laptop .laptop-dots span:nth-child(2){background:#FFBD2E}
 .cover-laptop .laptop-dots span:nth-child(3){background:#27C93F}
 .cover-laptop .laptop-url{flex:1;background:#1a1a1a;border-radius:3px;padding:4px 10px;font-size:11px;color:#aaa;font-family:'SF Mono',Menlo,monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.cover-laptop .laptop-viewport{position:relative;background:#fff;width:100%;height:380px;overflow:hidden;border-radius:0 0 4px 4px}
-.cover-laptop .laptop-iframe{width:1280px;height:800px;transform:scale(0.484);transform-origin:top left;border:none;display:block;position:absolute;top:0;left:0}
+.cover-laptop .laptop-viewport{position:relative;background:#fff;width:100%;height:440px;overflow:hidden;border-radius:0 0 4px 4px}
+.cover-laptop .laptop-iframe{width:1200px;height:750px;transform:scale(0.583);transform-origin:top left;border:none;display:block;position:absolute;top:0;left:0}
 .cover-laptop .laptop-base{height:14px;background:linear-gradient(180deg,#444 0%,#1a1a1a 100%);border-radius:0 0 12px 12px;margin:0 auto;width:100%;position:relative}
 .cover-laptop .laptop-base::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:64px;height:5px;background:#0a0a0a;border-radius:0 0 6px 6px}
 .cover-laptop .laptop-tray{height:6px;background:linear-gradient(180deg,#888 0%,#444 100%);border-radius:0 0 14px 14px;width:106%;margin-left:-3%}
@@ -70,22 +328,27 @@ a{color:inherit;text-decoration:none}
 .section-grey{background:#F1F1F1}
 .section-dark{background:#030303;color:#fff}
 .section-red{background:#AE312D;color:#fff}
-.section-inner{max-width:1400px;margin:0 auto;padding:0 32px}
+.section-inner{max-width:1520px;margin:0 auto;padding:0 32px}
 .kicker{display:inline-flex;align-items:center;gap:10px;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.18em;color:#AE312D;margin-bottom:14px}
 .kicker::before{content:'';width:32px;height:2px;background:#AE312D}
 .section-dark .kicker,.section-red .kicker{color:#EEB644}
 .section-dark .kicker::before,.section-red .kicker::before{background:#EEB644}
-.section-title{font-family:'Montserrat',sans-serif;font-size:38px;font-weight:900;line-height:1.15;margin-bottom:14px;color:#030303;letter-spacing:-0.005em;text-wrap:balance;max-width:32ch}
+.section-title{font-family:'Montserrat',sans-serif;font-size:clamp(34px,2.6vw,48px);font-weight:900;line-height:1.1;margin-bottom:16px;color:#030303;letter-spacing:-0.012em;text-wrap:balance;max-width:32ch}
 .section-title em{font-style:normal;color:#AE312D;display:inline}
 .section-dark .section-title,.section-red .section-title{color:#fff}
 .section-red .section-title em{color:#EEB644}
-.section-sub{font-size:17px;color:#54595F;line-height:1.6;max-width:720px;margin-bottom:40px}
+.section-sub{font-size:19px;color:#54595F;line-height:1.6;max-width:760px;margin-bottom:40px}
 .section-dark .section-sub{color:rgba(255,255,255,0.65)}
 .section-red .section-sub{color:rgba(255,255,255,0.85)}
-@media (max-width:768px){.section{padding:56px 0}.section-title{font-size:28px}}
+@media (max-width:768px){.section{padding:56px 0}.section-title{font-size:32px}}
 
 /* ============================ DEVICE MOCKUPS ============================ */
-.demo-stack{display:grid;grid-template-columns:320px 1fr;gap:56px;align-items:center;margin-top:32px}
+.demo-stack{display:grid;grid-template-columns:300px minmax(0,640px);gap:56px;align-items:center;margin-top:36px;justify-content:center;max-width:1040px;margin-left:auto;margin-right:auto}
+
+/* §1 Mobile-First · center the whole section (kicker, title, sub, phone+bullets group) */
+.section-mobile-first .kicker{display:flex;justify-content:center}
+.section-mobile-first .section-title{text-align:center;margin-left:auto;margin-right:auto;max-width:24ch}
+.section-mobile-first .section-sub{text-align:center;margin-left:auto;margin-right:auto;max-width:760px}
 @media (max-width:880px){.demo-stack{grid-template-columns:1fr;gap:40px;justify-items:center}}
 
 /* Phone mockup */
@@ -99,14 +362,14 @@ a{color:inherit;text-decoration:none}
 
 /* Mobile-bullets column (right of phone in demo section) */
 .demo-bullets-col{min-width:0}
-.demo-bullets-eyebrow{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.18em;color:#AE312D;margin-bottom:12px}
-.demo-bullets-h3{font-family:'Montserrat',sans-serif;font-size:24px;font-weight:800;line-height:1.2;color:#030303;margin-bottom:18px}
+.demo-bullets-eyebrow{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.18em;color:#AE312D;margin-bottom:14px}
+.demo-bullets-h3{font-family:'Montserrat',sans-serif;font-size:28px;font-weight:800;line-height:1.2;color:#030303;margin-bottom:18px;letter-spacing:-0.008em;text-wrap:balance}
 .demo-bullets-h3 em{font-style:normal;color:#AE312D}
 .demo-bullets-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:24px}
 .demo-bullets-list li{display:grid;grid-template-columns:22px 1fr;gap:12px;align-items:start}
 .demo-bullets-list .check{width:20px;height:20px;background:#AE312D;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-weight:800;font-size:11px;line-height:1;margin-top:3px}
-.demo-bullets-list .body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;font-size:14.5px;color:#54595F;line-height:1.45}
-.demo-bullets-list .body strong{font-family:'Montserrat',sans-serif;font-size:14.5px;font-weight:800;color:#030303;display:inline}
+.demo-bullets-list .body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;font-size:16px;color:#54595F;line-height:1.5}
+.demo-bullets-list .body strong{font-family:'Montserrat',sans-serif;font-size:16px;font-weight:800;color:#030303;display:inline}
 .demo-bullets-list .body em{font-style:normal;color:#AE312D;font-weight:700}
 
 /* ============================ AUDIT FINDINGS ============================ */
@@ -152,14 +415,14 @@ a{color:inherit;text-decoration:none}
 .tree-cell:first-child::before{left:50%}
 .tree-cell:last-child::before{right:50%}
 .tree-cell:only-child::before{display:none}
-/* vertical drop from bus to card's top edge — leaves a 2px breathing gap */
+/* vertical drop from bus to card's top edge · leaves a 2px breathing gap */
 .tree-cell::after{content:'';position:absolute;top:1px;left:50%;transform:translateX(-50%);width:1px;height:21px;background:#d6d2c8}
 
 /* Page-card (node) */
 .page-box{background:#fff;color:#030303;border:1px solid #d8d8d8;border-radius:8px;padding:11px 16px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.01em;line-height:1.2;display:inline-flex;align-items:center;gap:8px;transition:transform 0.15s,border-color 0.15s,box-shadow 0.15s;box-shadow:0 1px 2px rgba(0,0,0,0.03)}
 .page-box:hover{transform:translateY(-2px);border-color:#AE312D;box-shadow:0 6px 16px rgba(174,49,45,0.10)}
 
-/* Root: Home node (header of tree) — clickable, opens modal */
+/* Root: Home node (header of tree) · clickable, opens modal */
 .page-box.root{background:#fff;border-color:#1a1a1a;border-left:4px solid #AE312D;padding:14px 22px 14px 18px;font-size:14px;font-weight:700;color:#030303;box-shadow:0 4px 12px rgba(0,0,0,0.06);cursor:pointer}
 .page-box.root .ic{width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;background:#030303;color:#fff;border-radius:4px;font-size:12px}
 .page-box.root .root-hint{margin-left:8px;color:#54595F;font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;display:inline-flex;align-items:center;gap:4px}
@@ -285,17 +548,23 @@ a{color:inherit;text-decoration:none}
 .pricing-identity em{color:#AE312D;font-style:normal;font-weight:700}
 
 /* Value stack (Dean RoofCon style) */
-.value-stack{background:#FBFAF7;border:1px solid #e8e8e8;border-radius:10px;padding:20px 22px;margin:0 0 22px;text-align:left}
-.value-stack-head{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:#AE312D;margin-bottom:14px;display:flex;align-items:center;gap:8px}
-.value-stack-head::before{content:'';display:inline-block;width:6px;height:6px;background:#AE312D;border-radius:50%}
-.value-stack-list{display:flex;flex-direction:column;gap:9px;padding-bottom:14px;border-bottom:1px dashed #d8d8d8;margin-bottom:14px}
-.vs-item{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-size:14px}
-.vs-name{color:#1a1a1a;font-weight:500;display:flex;align-items:center;gap:8px;flex:1;min-width:0}
-.vs-name::before{content:'✓';color:#AE312D;font-weight:700;font-size:13px;flex-shrink:0}
-.vs-msrp{color:#7A7A7A;text-decoration:line-through;text-decoration-color:rgba(174,49,45,0.5);font-family:'Montserrat',sans-serif;font-weight:600;font-size:13px;white-space:nowrap}
-.vs-msrp em{font-style:normal;font-size:10px;opacity:0.7;margin-left:1px}
-.value-stack-total{display:flex;justify-content:space-between;align-items:baseline;font-size:13px;color:#030303;font-weight:600;font-family:'Montserrat',sans-serif;text-transform:uppercase;letter-spacing:0.06em}
-.value-stack-total strong{font-family:'Montserrat',sans-serif;font-size:20px;color:#030303;font-weight:800;letter-spacing:0}
+.value-stack{background:#FBFAF7;border:1.5px solid #e8e8e8;border-radius:14px;padding:26px 28px 0;margin:0 0 24px;text-align:left;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+.value-stack-head{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:0.16em;color:#AE312D;margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.value-stack-head::before{content:'';display:inline-block;width:8px;height:8px;background:#AE312D;border-radius:50%}
+.value-stack-list{display:flex;flex-direction:column;gap:14px;padding-bottom:22px;border-bottom:1px dashed #d4d0c8;margin-bottom:0}
+.vs-item{display:flex;justify-content:space-between;align-items:center;gap:14px;font-size:15px;line-height:1.35}
+.vs-name{color:#1a1a1a;font-weight:600;display:flex;align-items:center;gap:10px;flex:1;min-width:0}
+.vs-name::before{content:'✓';color:#fff;background:#2C8C3A;font-weight:900;font-size:11px;flex-shrink:0;width:20px;height:20px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;line-height:1;box-shadow:0 2px 4px rgba(44,140,58,0.30)}
+.vs-msrp{color:#7A7A7A;text-decoration:line-through;text-decoration-color:rgba(174,49,45,0.65);text-decoration-thickness:2px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:15px;white-space:nowrap}
+.vs-msrp em{font-style:normal;font-size:11px;opacity:0.7;margin-left:2px;font-weight:600}
+
+/* Total row · bold, full width gold panel beneath the dashed divider */
+.value-stack-total{display:flex;justify-content:space-between;align-items:center;gap:18px;margin:0 -28px;padding:18px 28px;background:linear-gradient(135deg,#FBF5E5 0%,#F8EFD1 100%);border-top:2px solid #EEB644;border-radius:0 0 12px 12px;font-family:'Montserrat',sans-serif}
+.value-stack-total .vt-label{display:flex;flex-direction:column;gap:2px}
+.value-stack-total .vt-eyebrow{font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#7A5A0A}
+.value-stack-total .vt-headline{font-size:14px;font-weight:800;color:#030303;letter-spacing:0.01em}
+.value-stack-total .vt-amount{font-family:'Montserrat',sans-serif;font-size:34px;color:#AE312D;font-weight:900;letter-spacing:-0.015em;line-height:1;text-shadow:0 2px 8px rgba(174,49,45,0.12)}
+.value-stack-total .vt-amount .plus{color:#EEB644}
 
 /* Risk reversal pill */
 .risk-pill{display:inline-flex;align-items:center;gap:8px;background:#EEF7E9;border:1px solid #B6D9A1;color:#2C5C13;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:8px 14px;border-radius:20px;margin-bottom:18px}
@@ -304,11 +573,69 @@ a{color:inherit;text-decoration:none}
 /* Hero price */
 .pricing-hero{background:linear-gradient(135deg,#0E1430 0%,#1F2124 100%);border-radius:12px;padding:30px 24px 26px;margin:0 0 22px;color:#fff;position:relative;overflow:hidden;border:1px solid rgba(238,182,68,0.18)}
 .pricing-hero::before{content:'';position:absolute;top:-30%;right:-10%;width:280px;height:280px;background:radial-gradient(circle,rgba(238,182,68,0.10) 0%,transparent 65%);pointer-events:none}
-.ph-headline{position:relative;z-index:1;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.16em;color:#EEB644;margin-bottom:6px}
-.ph-price{position:relative;z-index:1;font-family:'Montserrat',sans-serif;font-size:84px;font-weight:900;color:#fff;line-height:1;letter-spacing:-0.025em;display:inline-flex;align-items:baseline;justify-content:center}
-.ph-price em{font-style:normal;font-size:22px;font-weight:600;color:rgba(255,255,255,0.55);margin-left:4px;letter-spacing:0.02em;text-transform:uppercase}
-@media (max-width:520px){.ph-price{font-size:64px}}
+.ph-headline{position:relative;z-index:1;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.16em;color:#EEB644;margin-bottom:18px}
+.pricing-hero-crown{position:absolute;top:10px;right:14px;width:60px;height:48px;background-image:url('kca-assets/o-crown-1-1.webp');background-size:contain;background-repeat:no-repeat;background-position:center;filter:drop-shadow(0 4px 10px rgba(0,0,0,0.45));z-index:3;pointer-events:none;transform:rotate(18deg)}
+
+/* Two-tier pricing: setup fee (secondary, smaller) + monthly (primary, bigger) */
+.pricing-tiers{position:relative;z-index:1;display:flex;align-items:flex-end;justify-content:center;gap:28px;margin-bottom:6px}
+.pricing-tier{display:flex;flex-direction:column;align-items:center;gap:6px}
+.pricing-tier .pt-label{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.55)}
+.pricing-tier .pt-amount{font-family:'Montserrat',sans-serif;font-weight:900;color:#fff;line-height:1;letter-spacing:-0.025em;display:inline-flex;align-items:baseline}
+.pricing-tier .pt-amount em{font-style:normal;font-size:0.32em;font-weight:600;color:rgba(255,255,255,0.55);margin-left:4px;letter-spacing:0.02em;text-transform:uppercase}
+.pricing-tier.secondary .pt-amount{font-size:48px;color:rgba(255,255,255,0.85)}
+.pricing-tier.primary .pt-amount{font-size:88px;color:#fff;text-shadow:0 2px 14px rgba(238,182,68,0.18)}
+.pricing-tier.primary .pt-label{color:#EEB644}
+.pricing-tier-plus{position:relative;z-index:1;font-family:'Montserrat',sans-serif;font-size:36px;font-weight:300;color:rgba(255,255,255,0.4);align-self:center;padding-bottom:14px}
+@media (max-width:520px){.pricing-tier.primary .pt-amount{font-size:64px}.pricing-tier.secondary .pt-amount{font-size:36px}.pricing-tiers{gap:16px}.pricing-tier-plus{font-size:28px;padding-bottom:6px}}
 .ph-sub{position:relative;z-index:1;font-family:'Inter',-apple-system,'Segoe UI',sans-serif;font-size:12.5px;color:rgba(255,255,255,0.62);margin-top:10px;letter-spacing:0.01em}
+
+/* Setup-fee reveal button (sits where the old "+ one-time setup fee" line was) */
+.setup-reveal-btn{position:relative;z-index:2;display:inline-flex;align-items:center;gap:8px;margin-top:14px;padding:10px 18px;background:rgba(238,182,68,0.10);border:1.5px solid rgba(238,182,68,0.5);color:#EEB644;font-family:'Montserrat',sans-serif;font-weight:800;font-size:11.5px;letter-spacing:0.10em;text-transform:uppercase;border-radius:6px;cursor:pointer;transition:background 0.15s,color 0.15s,transform 0.15s}
+.setup-reveal-btn:hover{background:#EEB644;color:#030303;transform:translateY(-1px)}
+.setup-reveal-btn::after{content:'→';font-weight:900;font-size:14px;letter-spacing:0}
+
+/* Setup-fee modal */
+.setup-fee-modal{padding:0;border:none;border-radius:18px;background:radial-gradient(circle at top,#1F2124 0%,#030303 100%);color:#fff;max-width:min(560px,92vw);width:520px;overflow:hidden;box-shadow:0 28px 72px rgba(0,0,0,0.55),0 0 0 1px rgba(238,182,68,0.20);position:fixed;inset:0;margin:auto;text-align:center}
+.setup-fee-modal::backdrop{background:rgba(0,0,0,0.65);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.setup-fee-modal-inner{padding:48px 40px 40px;position:relative}
+.setup-fee-modal-inner::before{content:'';position:absolute;top:-30%;right:-15%;width:380px;height:380px;background:radial-gradient(circle,rgba(238,182,68,0.14) 0%,transparent 65%);pointer-events:none}
+.setup-fee-modal-close{position:absolute;top:14px;right:14px;background:none;border:none;color:rgba(255,255,255,0.6);font-size:24px;cursor:pointer;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;line-height:1;transition:background 0.15s,color 0.15s;z-index:3}
+.setup-fee-modal-close:hover{background:rgba(255,255,255,0.08);color:#fff}
+.setup-fee-badge-wrap{position:relative;z-index:1;display:flex;justify-content:center;margin-bottom:18px}
+.setup-fee-badge{width:140px;height:140px;background-image:url('kca-assets/KCA-Badge-3.webp');background-size:contain;background-repeat:no-repeat;background-position:center;filter:drop-shadow(0 8px 22px rgba(238,182,68,0.30))}
+.setup-fee-eyebrow{position:relative;z-index:1;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.2em;color:#EEB644;margin-bottom:14px}
+.setup-fee-amount-row{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:14px}
+.setup-fee-amount{font-family:'Montserrat',sans-serif;font-size:78px;font-weight:900;color:#fff;line-height:1;letter-spacing:-0.025em;outline:none;padding:4px 8px;border-radius:8px;transition:background 0.15s}
+.setup-fee-amount[contenteditable="true"]:hover,.setup-fee-amount[contenteditable="true"]:focus{background:rgba(238,182,68,0.12)}
+.setup-fee-edit{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:rgba(255,255,255,0.04);letter-spacing:0.12em;text-transform:uppercase;background:none;border:none;cursor:pointer;padding:8px 12px;border-radius:4px;transition:color 0.2s,background 0.2s,opacity 0.2s;display:inline-flex;align-items:center;gap:6px;opacity:0.06}
+.setup-fee-edit.is-active{color:#EEB644;background:rgba(238,182,68,0.16);opacity:1;font-weight:800;font-size:11px;border:1px solid rgba(238,182,68,0.45)}
+.setup-fee-edit.is-active:hover{background:rgba(238,182,68,0.24)}
+.setup-fee-sub{position:relative;z-index:1;font-size:14px;color:rgba(255,255,255,0.72);line-height:1.55;max-width:400px;margin:0 auto 26px}
+.setup-fee-sub strong{color:#fff;font-weight:700}
+.setup-fee-cta{position:relative;z-index:1;display:inline-block;background:#AE312D;color:#fff;font-family:'Montserrat',sans-serif;font-weight:800;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;padding:14px 32px;border-radius:6px;border:none;border-bottom:4px solid #7A1F1C;cursor:pointer;transition:transform 0.15s,box-shadow 0.15s}
+.setup-fee-cta:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(174,49,45,0.40)}
+@media (max-width:520px){.setup-fee-amount{font-size:56px}.setup-fee-badge{width:100px;height:100px}.setup-fee-modal-inner{padding:36px 24px 28px}}
+
+/* Password gate modal · protects §4 SOP-PDF reveal */
+.sop-pw-modal{padding:0;border:none;border-radius:14px;background:radial-gradient(circle at top,#1F2124 0%,#030303 100%);color:#fff;max-width:min(440px,92vw);width:420px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,0.6),0 0 0 1px rgba(238,182,68,0.18);position:fixed;inset:0;margin:auto;text-align:center}
+.sop-pw-modal::backdrop{background:rgba(0,0,0,0.7);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.sop-pw-inner{padding:38px 32px 30px;position:relative}
+.sop-pw-close{position:absolute;top:10px;right:10px;background:none;border:none;color:rgba(255,255,255,0.55);font-size:22px;cursor:pointer;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;line-height:1}
+.sop-pw-close:hover{background:rgba(255,255,255,0.08);color:#fff}
+.sop-pw-icon{font-size:42px;margin-bottom:10px;line-height:1}
+.sop-pw-eyebrow{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.18em;color:#EEB644;margin-bottom:8px}
+.sop-pw-title{font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;color:#fff;line-height:1.2;margin-bottom:8px;letter-spacing:-0.005em}
+.sop-pw-sub{font-size:13px;color:rgba(255,255,255,0.62);line-height:1.5;margin-bottom:22px}
+.sop-pw-input{width:100%;background:rgba(255,255,255,0.06);border:1.5px solid rgba(255,255,255,0.12);color:#fff;font-family:'Montserrat',sans-serif;font-size:18px;font-weight:700;letter-spacing:0.08em;padding:13px 16px;border-radius:8px;outline:none;text-align:center;transition:border-color 0.15s,background 0.15s}
+.sop-pw-input::placeholder{color:rgba(255,255,255,0.28);font-weight:600;letter-spacing:0.04em}
+.sop-pw-input:focus{border-color:#EEB644;background:rgba(238,182,68,0.06)}
+.sop-pw-input.shake{animation:sopPwShake 0.4s ease;border-color:#AE312D}
+@keyframes sopPwShake{0%,100%{transform:translateX(0)}25%{transform:translateX(-8px)}50%{transform:translateX(8px)}75%{transform:translateX(-4px)}}
+.sop-pw-error{margin-top:10px;font-size:12px;color:#FF8B86;font-weight:700;letter-spacing:0.04em;min-height:18px;opacity:0;transition:opacity 0.15s}
+.sop-pw-error.show{opacity:1}
+.sop-pw-submit{margin-top:18px;width:100%;background:#AE312D;color:#fff;font-family:'Montserrat',sans-serif;font-weight:800;font-size:12px;letter-spacing:0.10em;text-transform:uppercase;padding:13px;border-radius:6px;border:none;border-bottom:4px solid #7A1F1C;cursor:pointer;transition:transform 0.15s,box-shadow 0.15s}
+.sop-pw-submit:hover{transform:translateY(-1px);box-shadow:0 6px 14px rgba(174,49,45,0.4)}
+.sop-pw-hint{margin-top:14px;font-size:10.5px;color:rgba(255,255,255,0.35);letter-spacing:0.06em}
 
 .pricing-strike{font-size:13px;color:#7A7A7A;text-decoration:line-through;margin-bottom:12px}
 .pricing-cta{display:inline-block;background:#AE312D;color:#fff;font-family:'Montserrat',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;font-size:14px;padding:18px 36px;border-radius:6px;border-bottom:5px solid #7A1F1C;transition:transform 0.15s,box-shadow 0.15s}
@@ -329,7 +656,7 @@ a{color:inherit;text-decoration:none}
 .roi-input-group input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:20px;height:20px;background:#EEB644;border-radius:50%;cursor:pointer;border:3px solid #030303;box-shadow:0 0 0 1px #EEB644,0 4px 10px rgba(238,182,68,0.4)}
 .roi-input-group input[type=range]::-moz-range-thumb{width:20px;height:20px;background:#EEB644;border-radius:50%;cursor:pointer;border:3px solid #030303}
 
-/* Output panel — main lift + 2 supporting stats */
+/* Output panel · main lift + 2 supporting stats */
 .roi-output{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:28px;display:flex;flex-direction:column;justify-content:center;gap:18px;position:relative;overflow:hidden}
 .roi-output::before{content:'';position:absolute;top:-30%;right:-10%;width:280px;height:280px;background:radial-gradient(circle,rgba(238,182,68,0.10) 0%,transparent 65%);pointer-events:none}
 .roi-output-main{position:relative;z-index:1;text-align:center}
@@ -386,8 +713,9 @@ a{color:inherit;text-decoration:none}
 .competitor-chrome .dots span:nth-child(3){background:#27C93F}
 .competitor-chrome .url{flex:1;background:rgba(255,255,255,0.08);border-radius:2px;padding:2px 6px;font-size:9px;color:rgba(255,255,255,0.5);font-family:'SF Mono',Menlo,monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
-/* Hero screenshot (loaded from thum.io). Sits beneath the chrome, covers the rest of the thumb. */
-.competitor-screenshot{display:none}
+/* Hero screenshot · captured once per client during research (agentic/tools/capture-competitor-screenshots.sh) and bundled at kca-assets/competitors/{domain-slug}.png. Sits beneath the chrome, on top of the colored fallback. If a PNG ever goes missing JS adds .error and the gradient fallback shows through. */
+.competitor-screenshot{position:absolute;inset:25px 0 0 0;width:100%;height:calc(100% - 25px);object-fit:cover;object-position:top center;z-index:2;background:#0a0a0a;display:block}
+.competitor-screenshot.error{display:none}
 
 /* Fallback shown when the screenshot fails to load (img.error class added via JS, OR if loading=lazy never resolves). */
 .competitor-fallback{position:absolute;inset:25px 0 0 0;display:flex;flex-direction:column;justify-content:flex-end;padding:14px 12px;color:#fff;overflow:hidden;background:linear-gradient(135deg,var(--c-bg, #2a2a2a) 0%,rgba(0,0,0,0.55) 100%);opacity:1;pointer-events:none}
@@ -417,7 +745,7 @@ a{color:inherit;text-decoration:none}
 .competitors-disclaimer{font-size:11px;color:rgba(255,255,255,0.4);line-height:1.6;margin-top:24px;text-align:center;font-style:italic}
 
 /* ===== Google SERP mockup (this-could-be-you card) ===== */
-.serp-mock{background:#202124;border-radius:14px;border:1px solid rgba(255,255,255,0.08);padding:28px 32px;max-width:1180px;margin:0 auto;box-shadow:0 18px 48px rgba(0,0,0,0.32),0 4px 10px rgba(0,0,0,0.16)}
+.serp-mock{background:#202124;border-radius:14px;border:1px solid rgba(255,255,255,0.08);padding:28px 32px;width:100%;margin:0 auto;box-shadow:0 18px 48px rgba(0,0,0,0.32),0 4px 10px rgba(0,0,0,0.16)}
 .serp-mock-bar{display:flex;align-items:center;gap:18px;border-bottom:1px solid rgba(255,255,255,0.08);padding-bottom:18px;margin-bottom:18px}
 .serp-mock-google{width:78px;height:auto;flex-shrink:0}
 .serp-mock-search{flex:1;background:#2D2E30;border:1px solid rgba(255,255,255,0.12);border-radius:24px;padding:11px 20px;display:flex;justify-content:space-between;align-items:center;font-size:15px;color:#E8EAED;font-family:'Inter',Arial,sans-serif;max-width:680px}
@@ -532,7 +860,7 @@ a{color:inherit;text-decoration:none}
 .blueprint-sub{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;font-size:13px;color:#54595F;font-weight:500;line-height:1.45}
 .blueprint-sub strong{color:#030303;font-weight:600}
 
-/* Category tag pill — color-coded per mechanism */
+/* Category tag pill · color-coded per mechanism */
 .blueprint-tag{font-family:'Montserrat',sans-serif;font-size:9.5px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:5px 10px;border-radius:12px;background:#FBF5E5;color:#7A5A0A;border:1px solid #EEB644;flex-shrink:0;line-height:1;white-space:nowrap}
 .blueprint-tag.trust{background:#FFF1F0;color:#7A1F1C;border-color:#F0BFBC}
 .blueprint-tag.convert{background:#FBF5E5;color:#7A5A0A;border-color:#EEB644}
@@ -553,7 +881,7 @@ a{color:inherit;text-decoration:none}
 .blueprint-bullets li::before{content:'';position:absolute;left:0;top:8px;width:6px;height:6px;background:#AE312D;border-radius:50%}
 .blueprint-bullets li strong{color:#030303;font-weight:700;display:inline}
 
-/* Why this works — stat-driven proof callout */
+/* Why this works · stat-driven proof callout */
 .blueprint-why{background:linear-gradient(135deg,#FBF5E5 0%,#F8EFD1 100%);border:1px solid #EEB644;border-radius:8px;padding:14px 18px;margin:0 0 16px;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center}
 .blueprint-why-stat{font-family:'Montserrat',sans-serif;font-size:30px;font-weight:900;color:#AE312D;line-height:1;letter-spacing:-0.02em;white-space:nowrap;padding:0 4px}
 .blueprint-why-text{font-size:13px;color:#5A4A14;line-height:1.5}
@@ -632,7 +960,7 @@ a{color:inherit;text-decoration:none}
 
 /* ============================ KCA REVIEWS - written testimonials carousel ============================ */
 .section-reviews{background:linear-gradient(180deg,#030303 0%,#1F2124 100%);color:#fff;padding:88px 0;position:relative;overflow:hidden}
-.section-reviews .kicker{color:#EEB644}
+.section-reviews .kicker{color:#EEB644;display:flex;justify-content:center}
 .section-reviews .kicker::before{background:#EEB644}
 .section-reviews .section-title{color:#fff;text-align:center;margin-left:auto;margin-right:auto}
 .section-reviews .section-title em{color:#EEB644}
@@ -670,6 +998,7 @@ a{color:inherit;text-decoration:none}
 
 /* ============================ KCA VIDEOS - 4 tall cards in a row ============================ */
 .section-videos{background:#F1F1F1;padding:88px 0;position:relative;overflow:hidden}
+.section-videos .kicker{display:flex;justify-content:center}
 .section-videos .section-title{text-align:center;margin-left:auto;margin-right:auto}
 .section-videos .section-sub{text-align:center;margin-left:auto;margin-right:auto;color:#54595F}
 .kca-video-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:36px}
@@ -707,7 +1036,6 @@ a{color:inherit;text-decoration:none}
   <div class="topbar-inner">
     <div class="kca-mark">
       <img src="kca-logo.svg" alt="King Contractor Agency">
-      <div class="kca-name">King <em>Contractor</em> Agency</div>
     </div>
     <div class="topbar-cta">
       <span class="topbar-phone">Need a hand? Call Dean directly.</span>
@@ -721,71 +1049,203 @@ a{color:inherit;text-decoration:none}
   <div class="cover-inner">
     <div class="cover-grid">
       <div class="cover-content">
-        <div class="cover-eyebrow">Custom Roofing Website Proposal · Prepared Exclusively For Camelback Roofing</div>
-        <h1>The Ultimate Roofing Website<br>for <em>Camelback Roofing</em>.</h1>
-        <p class="cover-sub">We're not just building a website. We're designing a roofing brand that Phoenix & Tucson homeowners trust on first contact, optimized to convert phone calls and free-estimate requests from the second they land.</p>
-        <div class="cover-meta">
-          <div class="cover-meta-block">
-            <div class="label">Prepared For</div>
-            <div class="value">Luke H. Johnson · Camelback Roofing, LLC</div>
-          </div>
-          <div class="cover-meta-block">
-            <div class="label">Service Area</div>
-            <div class="value">Phoenix & Tucson · 18 cities</div>
-          </div>
-          <div class="cover-meta-block">
-            <div class="label">Prepared By</div>
-            <div class="value">Dean White, CEO · King Contractor Agency</div>
-          </div>
-          <div class="cover-meta-block">
-            <div class="label">Today's Date</div>
-            <div class="value" id="prep-date">May 02, 2026</div>
-          </div>
-        </div>
-        <div class="cover-pills">
-          <span class="cpill"><span class="dot"></span>7 Years in High-Converting Web Design</span>
-          <span class="cpill"><span class="dot"></span>Roofing-Industry Specialist</span>
-          <span class="cpill"><span class="dot"></span>100% Money-Back Guarantee</span>
-          <span class="cpill"><span class="dot"></span>Live in 3 Days</span>
-        </div>
+        <div class="cover-eyebrow">Prepared Exclusively For Becker Roofing and Exteriors</div>
+        <h1>The Ultimate<br>Roofing Website<br>for <em>Becker Roofing</em>.</h1>
+        <ul class="cover-bullets">
+          <li><div class="cb-icon">&#128737;</div><div class="cb-label">Win Homeowner Trust</div></li>
+          <li><div class="cb-icon">&#128293;</div><div class="cb-label">Charge What You're Worth</div></li>
+          <li><div class="cb-icon">&#128176;</div><div class="cb-label">Sell More Roofs</div></li>
+        </ul>
       </div>
+
       <div class="cover-laptop">
+        <div class="cover-laptop-crown" aria-hidden="true"></div>
         <div class="laptop-screen">
           <div class="laptop-chrome">
             <div class="laptop-dots"><span></span><span></span><span></span></div>
-            <div class="laptop-url">🔒  camelbackroofing.com (your live preview)</div>
+            <div class="laptop-url">🔒  brexteriors.com (your live preview)</div>
           </div>
           <div class="laptop-viewport">
-            <iframe class="laptop-iframe" src="https://camelbackroofing.vercel.app/" loading="lazy" title="Camelback Roofing: Desktop Preview"></iframe>
+            <iframe class="laptop-iframe" src="../build/index.html" loading="lazy" title="Becker Roofing and Exteriors: Desktop Preview"></iframe>
           </div>
         </div>
         <div class="laptop-tray"></div>
-        <div class="cover-laptop-caption">Desktop · 1280 viewport · Real, scrollable preview</div>
+        <a class="cover-open-live" href="../build/index.html" target="_blank" rel="noopener">Open Live Site &rarr;</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============================ LIVE DEMO - MOBILE-FIRST ============================ -->
-<section class="section section-grey">
+<!-- ============================ TRUST §A · HELLO I'M DEAN (intro · light/white-bg variant) ============================ -->
+<section class="section section-trust section-dean-light">
   <div class="section-inner">
-    <div class="kicker">Section 1 · Built Mobile-First</div>
+    <div class="kicker">Section 1 &middot; Who I Am</div>
+    <h2 class="section-title">Hello, <em>I'm Dean.</em></h2>
+
+    <div class="dean-intro-grid">
+      <div class="dean-intro-body">
+        <ul class="dean-bullets">
+          <li><strong>150+ roofing companies</strong> in the past 3 years.</li>
+          <li>Not behind a screen &mdash; <strong>on the job sites</strong>, at conferences, on their couches.</li>
+          <li>My job: <em>crown you the KING</em> of your market.</li>
+        </ul>
+
+        <div class="dean-promise">That's not a claim &mdash; <strong>it's my promise.</strong></div>
+
+        <div class="dean-signature">
+          <div class="dean-sig-portrait" aria-hidden="true"></div>
+          <div class="dean-sig-text">
+            <span class="dean-sig-name">Dean White</span>
+            <span class="dean-sig-title">Owner of King Contractor Agency</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dean-portrait-wrap">
+        <div class="dean-portrait" role="img" aria-label="Dean White at RoofCon">
+          <img src="kca-assets/dean-about.png" alt="Dean White, KCA Founder" loading="lazy">
+          <div class="dean-portrait-caption">Dean White &middot; Founder of KCA</div>
+        </div>
+        <div class="dean-portrait-money-back" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ TRUST §B · WHAT I DO (full viewport · punchy sentence + stat + bullets) ============================ -->
+<section class="section section-trust section-wid-full">
+  <div class="section-inner">
+    <div class="kicker">Section 2 &middot; What I Do</div>
+    <h2 class="section-title">I help roofers <em>sell more roofs.</em></h2>
+
+    <div class="wid-stat-row">
+      <div class="wid-stat-big">$200M<span class="plus">+</span></div>
+      <div class="wid-stat-caption">
+        <span class="wid-stat-eyebrow">Extra Revenue Generated</span>
+        <span class="wid-stat-context">across <strong>150+ roofing companies</strong> in the past 3 years</span>
+      </div>
+    </div>
+
+    <ul class="wid-bullets">
+      <li>
+        <div class="wid-icon">&#128200;</div>
+        <div class="wid-body"><strong>Get found first.</strong> Top of Google + AI when homeowners search "roofer near me".</div>
+      </li>
+      <li>
+        <div class="wid-icon">&#128737;</div>
+        <div class="wid-body"><strong>Win their trust in 5 seconds.</strong> Real reviews, owner photo, cert stack visible above the fold.</div>
+      </li>
+      <li>
+        <div class="wid-icon">&#128293;</div>
+        <div class="wid-body"><strong>Charge what you're worth.</strong> Homeowners pre-decide they trust you &mdash; you stop losing bids on price.</div>
+      </li>
+      <li>
+        <div class="wid-icon">&#129302;</div>
+        <div class="wid-body"><strong>Sell on autopilot.</strong> AI chatbot qualifies + books estimates while you sleep through storms.</div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================ TRUST §C · HOW I DO IT (Winning Formula vertical stack · light mode) ============================ -->
+<section class="section section-trust section-formula section-formula-light">
+  <div class="section-inner">
+    <div class="kicker">Section 3 &middot; How I Do It</div>
+    <h2 class="section-title">The <em>Winning Formula.</em></h2>
+    <p class="section-sub">Three levers. Pull all three and the math works every time.</p>
+
+    <div class="formula-stack">
+      <div class="formula-row">
+        <div class="formula-num">01</div>
+        <div class="formula-content">
+          <span class="formula-term">Traffic</span>
+          <span class="formula-tag">Get found first on Google + AI</span>
+        </div>
+        <div class="formula-icon" aria-hidden="true">&#128200;</div>
+      </div>
+
+      <div class="formula-op" aria-hidden="true">+</div>
+
+      <div class="formula-row">
+        <div class="formula-num">02</div>
+        <div class="formula-content">
+          <span class="formula-term">Trust</span>
+          <span class="formula-tag">Win them in 5 seconds</span>
+        </div>
+        <div class="formula-icon" aria-hidden="true">&#128737;&#65039;</div>
+      </div>
+
+      <div class="formula-op" aria-hidden="true">+</div>
+
+      <div class="formula-row">
+        <div class="formula-num">03</div>
+        <div class="formula-content">
+          <span class="formula-term">Conversion</span>
+          <span class="formula-tag">Turn visits into booked estimates</span>
+        </div>
+        <div class="formula-icon" aria-hidden="true">&#128176;</div>
+      </div>
+
+      <div class="formula-op equals" aria-hidden="true">=</div>
+
+      <div class="formula-result">
+        <div class="formula-num">&#128081;</div>
+        <div class="formula-result-content">
+          <span class="formula-result-text">More Roofs Sold.</span>
+          <span class="formula-result-boom">&#128165; BOOM.</span>
+        </div>
+        <div class="formula-result-icon" aria-hidden="true">&#127942;</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ TRUST §D · PROOF: $1M in 90 days client video ============================ -->
+<section class="section section-proof">
+  <div class="section-inner">
+    <div class="kicker">Section 4 &middot; The Proof</div>
+    <h2 class="proof-stat">$1,000,000<span class="small">in 90 days.</span></h2>
+    <p class="proof-sub">A real KCA client took his new roofing company from <strong>zero to seven figures</strong> in his first 90 days. Watch his story.</p>
+    <a class="proof-video-wrap" href="https://www.youtube.com/watch?v=VNYoIJjtnXY" target="_blank" rel="noopener" aria-label="Watch the $1M in 90 days client story on YouTube">
+      <img src="https://img.youtube.com/vi/VNYoIJjtnXY/maxresdefault.jpg" alt="" loading="lazy" onerror="this.src='https://img.youtube.com/vi/VNYoIJjtnXY/hqdefault.jpg'">
+      <div class="proof-play-btn" aria-hidden="true"></div>
+      <span class="proof-caption">Watch on YouTube &middot; 4 min</span>
+    </a>
+  </div>
+</section>
+
+<!-- ============================ LIVE DEMO - MOBILE-FIRST (centered) ============================ -->
+<!-- ============================ TECHNICAL DEEP-DIVES (§5-§13 collapsibles) — added 2026-05-08 per Dean: technical sections collapsed by default; he opens what's relevant during the call ============================ -->
+<section class="section section-collapsibles-intro">
+  <div class="section-inner" style="text-align:center">
+    <div class="kicker" style="display:flex;justify-content:center">Sections 5-13 &middot; Technical Deep-Dives</div>
+    <h2 class="section-title" style="text-align:center;margin-left:auto;margin-right:auto">The full technical breakdown.</h2>
+    <p class="section-sub" style="text-align:center;margin-left:auto;margin-right:auto;max-width:680px">Each section below is collapsed by default. Click any title to reveal the detail. Skip what is not relevant; we open what matters during the call.</p>
+  </div>
+</section>
+
+<div class="proposal-collapsibles-wrap">
+<details class="proposal-collapsible" id="section-5">
+  <summary class="ps-summary"><span class="ps-num">Section 5</span><span class="ps-title">Built Mobile-First</span><span class="ps-chevron" aria-hidden="true"></span></summary>
+<section class="section section-grey section-mobile-first">
+  <div class="section-inner">
+    <div class="kicker">Section 5 · Built Mobile-First</div>
     <h2 class="section-title">60% of your traffic is mobile. <em>Every detail is tuned for the thumb.</em></h2>
-    <p class="section-sub">The desktop preview above is real, but the bigger conversion win is mobile. Arizona homeowners searching for "roofer near me" decide in 5 seconds, on their phone, often after a storm. Scroll the live mobile preview on the left. Every component below is built for that moment.</p>
+    <p class="section-sub">The desktop preview above is real, but the bigger conversion win is mobile. Texas homeowners searching for "roofer near me" decide in 5 seconds, on their phone, often after a storm. Scroll the live mobile preview on the left. Every component below is built for that moment.</p>
     <div class="demo-stack">
       <!-- Phone mockup (left) -->
       <div class="phone">
         <div class="phone-body">
           <div class="phone-screen">
             <div class="phone-notch"></div>
-            <iframe class="phone-iframe" src="https://camelbackroofing.vercel.app/" loading="lazy" title="Camelback Roofing: Mobile Preview"></iframe>
+            <iframe class="phone-iframe" src="../build/index.html" loading="lazy" title="Becker Roofing and Exteriors: Mobile Preview"></iframe>
           </div>
         </div>
         <div class="phone-caption">Mobile · iPhone 14 Pro · Real, scrollable</div>
       </div>
-      <!-- Bullets (right) — outcome-led, Dean voice, one-line each -->
+      <!-- Bullets (right) · outcome-led, Dean voice, one-line each -->
       <div class="demo-bullets-col">
-        <div class="demo-bullets-eyebrow">What this means for Camelback</div>
+        <div class="demo-bullets-eyebrow">What this means for Becker Roofing</div>
         <div class="demo-bullets-h3">Every mobile detail tuned to <em>win the homeowner</em> before they call anyone else.</div>
         <ul class="demo-bullets-list">
           <li>
@@ -794,11 +1254,11 @@ a{color:inherit;text-decoration:none}
           </li>
           <li>
             <div class="check">✓</div>
-            <div class="body"><strong>Trust hits in 1 second.</strong> 4.6&#9733; &times; 39 Google reviews above the fold.</div>
+            <div class="body"><strong>Trust hits in 1 second.</strong> 4.9&#9733; &times; 63 Google reviews above the fold.</div>
           </li>
           <li>
             <div class="check">✓</div>
-            <div class="body"><strong>Leads call <em>you</em> first.</strong> Real "Talk to Luke" photo replaces the generic icon.</div>
+            <div class="body"><strong>Leads call <em>you</em> first.</strong> Real "Talk to Sean" photo replaces the generic icon.</div>
           </li>
           <li>
             <div class="check">✓</div>
@@ -817,30 +1277,33 @@ a{color:inherit;text-decoration:none}
     </div>
   </div>
 </section>
+</details>
 
 <!-- ============================ SEO AUDIT (v3-style, Dean's problems/opportunities/AI-AEO framing) ============================ -->
+<details class="proposal-collapsible" id="section-6">
+  <summary class="ps-summary"><span class="ps-num">Section 6</span><span class="ps-title">SEO Audit On brexteriors.com</span><span class="ps-chevron" aria-hidden="true"></span></summary>
 <section class="section section-white">
   <div class="section-inner">
-    <div class="kicker">Section 2 · SEO Audit On <span style="color:#EEB644">camelbackroofing.com</span></div>
+    <div class="kicker">Section 6 · SEO Audit On <span style="color:#EEB644">brexteriors.com</span></div>
     <h2 class="section-title">Here's what's <em>costing you leads</em>. Here's how we fix it.</h2>
-    <p class="section-sub">We audited camelbackroofing.com end-to-end. Below is what Google sees today, what your competitors are taking, and how we close the gap with AI-ready, AEO-optimized infrastructure built for the way homeowners actually search now.</p>
+    <p class="section-sub">We audited brexteriors.com end-to-end. Below is what Google sees today, what your competitors are taking, and how we close the gap with AI-ready, AEO-optimized infrastructure built for the way homeowners actually search now.</p>
 
     <div class="stats-row">
       <div class="stat-card hot">
-        <div class="stat-num">1</div>
-        <div class="stat-label">Domain Authority (Arizona competitor avg: 28)</div>
+        <div class="stat-num">18</div>
+        <div class="stat-label">Domain Authority (Northeast Tarrant County competitor avg: 28)</div>
       </div>
       <div class="stat-card hot">
-        <div class="stat-num">&lt;50</div>
+        <div class="stat-num">~280</div>
         <div class="stat-label">Monthly Organic Visitors</div>
       </div>
       <div class="stat-card hot">
-        <div class="stat-num">0</div>
+        <div class="stat-num">3</div>
         <div class="stat-label">Page 1 Keywords Currently Ranking</div>
       </div>
       <div class="stat-card hot">
-        <div class="stat-num">2,700</div>
-        <div class="stat-label">Tucson Searches/mo You Don't Rank For</div>
+        <div class="stat-num">2,400</div>
+        <div class="stat-label">DFW Searches/mo You Don't Rank For</div>
       </div>
     </div>
 
@@ -849,8 +1312,8 @@ a{color:inherit;text-decoration:none}
       <div class="finding">
         <div class="finding-ic">1</div>
         <div class="finding-body">
-          <strong>Brand-only H1. Google can't tell you're a roofer.</strong>
-          <p>"Protecting What Matters Most" is great copy &mdash; but a homeowner searching "roofing contractor Tucson" gets zero keyword match from your homepage. Behmer Roofing and Desert Sun rank because their pages tell Google what they sell + where. We rewrite the H1 + meta to capture both markets without losing your tagline above it.</p>
+          <strong>Local visibility gap. Google ranks competitors first.</strong>
+          <p>For "roofer Keller TX" and 30+ similar near-me queries across your service area, brexteriors.com sits on page 5 or deeper. OakStar Roofing and Qualis (qualisgc.com/roofing-contractor-keller) occupy page 1. Not because their work is better. Because they show up first and their pages are structured for local search.</p>
         </div>
       </div>
 
@@ -858,15 +1321,15 @@ a{color:inherit;text-decoration:none}
         <div class="finding-ic">2</div>
         <div class="finding-body">
           <strong>Zero dedicated location pages. 18 cities of "near me" traffic going to competitors.</strong>
-          <p>Scottsdale, Phoenix, Tucson, Mesa, Chandler, Tempe, Gilbert, Glendale, Paradise Valley, Fountain Hills, Cave Creek, Carefree, Marana, Oro Valley, Sahuarita, Vail, Catalina Foothills, Casas Adobes &mdash; 18 cities with active "roofer near me" intent. Without a city-targeted page per market, that traffic flows to Kino Roofing and DJ Roofing. We build 18, schema-marked and FAQ-ready, in 3 days.</p>
+          <p>Keller, North Richland Hills, Southlake, Colleyville, Watauga, Hurst, Bedford, plus 8 more. Every one has homeowners typing "roofer near me" right now. Without a city-targeted landing page per market, that traffic flows to whoever has one. We build 12, schema-marked and FAQ-ready, in 3 days.</p>
         </div>
       </div>
 
       <div class="finding">
         <div class="finding-ic">3</div>
         <div class="finding-body">
-          <strong>Trust spine missing. Your 4.6&#9733; / 39 Google reviews are invisible above the fold.</strong>
-          <p>Your reviews are real proof &mdash; but the homepage shows none of them in the first viewport. Most homeowners decide in the first 5 seconds whether to keep reading. We pull Google + Facebook + BBB pills under the H1 so the trust signal hits before the scroll. Plus the cert stack (GAF Master Elite, CertainTeed MSA, HAAG, NRCA) you've earned but never displayed.</p>
+          <strong>Trust spine buried below the fold. The first 5 seconds matter most.</strong>
+          <p>Your 4.9&#9733; across 63 Google reviews is real proof. But it sits 1,200 pixels down the page. Most homeowners decide in the first 5 seconds whether to keep reading. We move Google plus Facebook plus BBB pills directly under the headline so the trust signal hits before the scroll.</p>
         </div>
       </div>
 
@@ -874,7 +1337,7 @@ a{color:inherit;text-decoration:none}
         <div class="finding-ic">4</div>
         <div class="finding-body">
           <strong>No AI / AEO readiness. ChatGPT and Gemini do not cite your site.</strong>
-          <p>50% of homeowners now ask AI before Google. When someone asks ChatGPT "best roofer in Scottsdale," AI scans for sites with structured FAQ, schema, entity-pair authority, and citation-grade content. camelbackroofing.com has none of that today. The new site ships with the AEO infrastructure that gets cited, not skipped.</p>
+          <p>50% of homeowners now ask AI before Google. When someone asks ChatGPT "best roofer in Keller TX," AI scans for sites with structured FAQ, schema, entity-pair authority, and citation-grade content. brexteriors.com has none of that today. The new site ships with the AEO infrastructure that gets cited, not skipped.</p>
         </div>
       </div>
 
@@ -882,167 +1345,171 @@ a{color:inherit;text-decoration:none}
         <div class="finding-ic">5</div>
         <div class="finding-body">
           <strong>Slow speed-to-lead. The first contractor to call back wins 78% of the time.</strong>
-          <p>Average Arizona roofer responds to a website lead in 4+ hours. We respond in 60 seconds with an AI callback agent that qualifies the homeowner, books the inspection, and texts you the appointment. Your competitor is still checking voicemail.</p>
+          <p>Average Texas roofer responds to a website lead in 4+ hours. We respond in 60 seconds with an AI callback agent that qualifies the homeowner, books the inspection, and texts you the appointment. Your competitor is still checking voicemail.</p>
         </div>
       </div>
 
     </div>
 
     <div class="findings-cta" style="font-size:14px;color:#54595F;line-height:1.7;padding:18px 22px;background:#fff;border:1px solid #e8e8e8;border-left:3px solid #AE312D;border-radius:0 6px 6px 0;margin-top:18px">
-      <strong style="color:#030303">This is the proven blueprint.</strong> Same architecture across 150+ roofing sites: trust spine above fold, real review proof linked to source, location pages per city, AI / AEO schema, sub-60-second callback, sticky mobile call bar. After we ship: 18 location pages live, schema active, your 4,500+/mo keyword opportunity (Phoenix + Tucson combined) starts closing inside 90 days.
+      <strong style="color:#030303">This is the proven blueprint.</strong> Same architecture across 150+ roofing sites: trust spine above fold, real review proof linked to source, location pages per city, AI / AEO schema, sub-60-second callback, sticky mobile call bar. After we ship: 12 location pages live, schema active, your 2,400+/mo keyword opportunity across Northeast Tarrant County starts closing inside 90 days.
     </div>
 
   </div>
 </section>
+</details>
 
-<!-- ============================ COMPETITOR GALLERY (added 2026-05-06 per Dean's feedback) ============================ -->
+<!-- ============================ §7 YOU AT #1 (simplified 2026-05-09 — was 8-card competitor gallery; now SERP mockup + GMB panel only) ============================ -->
+<details class="proposal-collapsible" id="section-7">
+  <summary class="ps-summary"><span class="ps-num">Section 7</span><span class="ps-title">You. At #1.</span><span class="ps-chevron" aria-hidden="true"></span></summary>
 <section class="section section-competitors">
   <div class="section-inner">
-    <div class="kicker">Section 3 · Who's Taking Your Traffic</div>
-    <h2 class="section-title">These are the <em>8 sites</em> ranking for "roofer Phoenix &amp; Tucson" today.</h2>
-    <p class="section-sub">When a homeowner in Scottsdale, Tucson, or Marana searches for a roofer, these sites show up first. Their work isn't better than yours. They show up because their pages are structured for local search and their hero converts in the first 5 seconds. After we ship, camelbackroofing.com sits among them. The card below shows where you'll be.</p>
-
-      <div class="competitors-grid">
+    <div class="kicker">Section 7 · Where Your Site Belongs</div>
+    <h2 class="section-title">When a homeowner searches "roofer Northeast Tarrant County", <em>this</em> is what they should see.</h2>
+    <p class="section-sub">Right now, brexteriors.com doesn't show up first &mdash; or at all &mdash; for the searches that matter in Keller, North Richland Hills, and Southlake. Other sites are structured for local search; yours isn't. After we ship, Becker Roofing &amp; Exteriors sits at the top of the page below. Every homeowner clicking that result is a lead you didn't have to earn twice.</p>
+      <div class="competitors-grid" style="display:none">
+      <!-- COMPETITOR_CARDS:DEPRECATED · 2026-05-09 simplification removed the 8-card competitor grid. Block hidden via display:none. -->
 
       <div class="competitor-card">
         <div class="competitor-rank r1">1</div>
         <div class="competitor-thumb">
-          <div class="competitor-chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">behmer.com</div></div>
-          <img class="competitor-screenshot" src="https://image.thum.io/get/width/1200/https://behmer.com" alt="" loading="lazy" onerror="this.classList.add('error')">
-          <div class="competitor-fallback" style="--c-bg:#0E4D8C">
-            <div class="c-tag">Scottsdale &middot; Established 1995</div>
-            <div class="c-name">Behmer Roofing</div>
+          <div class="competitor-chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">oakstarroofing.com</div></div>
+          <img class="competitor-screenshot" src="kca-assets/competitors/oakstarroofing-com.png" alt="" loading="lazy" onerror="this.classList.add('error')">
+          <div class="competitor-fallback" style="--c-bg:#1A4A5C">
+            <div class="c-tag">Keller · Frank · GAF Master Elite</div>
+            <div class="c-name">OakStar Roofing</div>
           </div>
         </div>
         <div class="competitor-meta">
-          <div class="c-name-row">Behmer Roofing<span class="c-tag-inline">Scottsdale &middot; Est. 1995 &middot; 30 yrs</span></div>
-          <div class="domain">behmer.com</div>
-          <div class="meta-row"><span>Page 1 &middot; "roofer scottsdale"</span><span class="da">DA 38</span></div>
+          <div class="c-name-row">OakStar Roofing<span class="c-tag-inline">Keller · Frank · GAF Master Elite</span></div>
+          <div class="domain">oakstarroofing.com</div>
+          <div class="meta-row"><span>Page 1 &middot; "roofer keller tx"</span><span class="da">DA 28</span></div>
         </div>
       </div>
 
       <div class="competitor-card">
         <div class="competitor-rank r2">2</div>
         <div class="competitor-thumb">
-          <div class="competitor-chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">desertsunroofingaz.com</div></div>
-          <img class="competitor-screenshot" src="https://image.thum.io/get/width/1200/https://desertsunroofingaz.com" alt="" loading="lazy" onerror="this.classList.add('error')">
-          <div class="competitor-fallback" style="--c-bg:#1F4E1F">
-            <div class="c-tag">Tucson &middot; 100% 5-star reviews</div>
-            <div class="c-name">Desert Sun Roofing</div>
+          <div class="competitor-chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">snbroofing.com</div></div>
+          <img class="competitor-screenshot" src="kca-assets/competitors/snbroofing-com.png" alt="" loading="lazy" onerror="this.classList.add('error')">
+          <div class="competitor-fallback" style="--c-bg:#0E2C4D">
+            <div class="c-tag">DFW · Family-owned 20 yrs</div>
+            <div class="c-name">S&B Roofing & Exteriors</div>
           </div>
         </div>
         <div class="competitor-meta">
-          <div class="c-name-row">Desert Sun Roofing<span class="c-tag-inline">Tucson &middot; Est. 2007 &middot; 100% 5-star</span></div>
-          <div class="domain">desertsunroofingaz.com</div>
-          <div class="meta-row"><span>Page 1 &middot; "roofer tucson"</span><span class="da">DA 31</span></div>
+          <div class="c-name-row">S&B Roofing & Exteriors<span class="c-tag-inline">DFW · Family-owned 20 yrs</span></div>
+          <div class="domain">snbroofing.com</div>
+          <div class="meta-row"><span>Page 1 &middot; "dfw roofing exteriors"</span><span class="da">DA 26</span></div>
         </div>
       </div>
 
       <div class="competitor-card">
         <div class="competitor-rank r3">3</div>
         <div class="competitor-thumb">
-          <div class="competitor-chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">kinoroofingaz.com</div></div>
-          <img class="competitor-screenshot" src="https://image.thum.io/get/width/1200/https://kinoroofingaz.com" alt="" loading="lazy" onerror="this.classList.add('error')">
-          <div class="competitor-fallback" style="--c-bg:#5A0F2D">
-            <div class="c-tag">Tucson &middot; GAF Master Elite</div>
-            <div class="c-name">Kino Roofing</div>
+          <div class="competitor-chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">316roofingtx.com</div></div>
+          <img class="competitor-screenshot" src="kca-assets/competitors/316roofingtx-com.png" alt="" loading="lazy" onerror="this.classList.add('error')">
+          <div class="competitor-fallback" style="--c-bg:#2A1A4A">
+            <div class="c-tag">Keller · Faith-based brand</div>
+            <div class="c-name">3:16 Roofing</div>
           </div>
         </div>
         <div class="competitor-meta">
-          <div class="c-name-row">Kino Roofing<span class="c-tag-inline">Tucson &middot; GAF Master Elite</span></div>
-          <div class="domain">kinoroofingaz.com</div>
-          <div class="meta-row"><span>Page 1 &middot; "tile roofer tucson"</span><span class="da">DA 29</span></div>
+          <div class="c-name-row">3:16 Roofing<span class="c-tag-inline">Keller · Faith-based brand</span></div>
+          <div class="domain">316roofingtx.com</div>
+          <div class="meta-row"><span>Page 1 &middot; "best keller roofing company"</span><span class="da">DA 24</span></div>
         </div>
       </div>
 
       <div class="competitor-card">
         <div class="competitor-rank">4</div>
         <div class="competitor-thumb">
-          <div class="competitor-chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">djroofing.com</div></div>
-          <img class="competitor-screenshot" src="https://image.thum.io/get/width/1200/https://djroofing.com" alt="" loading="lazy" onerror="this.classList.add('error')">
-          <div class="competitor-fallback" style="--c-bg:#3B5A0E">
-            <div class="c-tag">Tucson &middot; 26 years</div>
-            <div class="c-name">DJ Roofing</div>
+          <div class="competitor-chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">qualisgc.com</div></div>
+          <img class="competitor-screenshot" src="kca-assets/competitors/qualisgc-com.png" alt="" loading="lazy" onerror="this.classList.add('error')">
+          <div class="competitor-fallback" style="--c-bg:#5A0F2D">
+            <div class="c-tag">Multi-Texas · BBB A+ · Lifetime warranty</div>
+            <div class="c-name">Qualis Roofing & Construction</div>
           </div>
         </div>
         <div class="competitor-meta">
-          <div class="c-name-row">DJ Roofing<span class="c-tag-inline">Tucson &middot; Est. 1999 &middot; TAMKO + GAF</span></div>
-          <div class="domain">djroofing.com</div>
-          <div class="meta-row"><span>Page 1 &middot; "roof repair tucson"</span><span class="da">DA 27</span></div>
+          <div class="c-name-row">Qualis Roofing & Construction<span class="c-tag-inline">Multi-Texas · BBB A+ · Lifetime warranty</span></div>
+          <div class="domain">qualisgc.com</div>
+          <div class="meta-row"><span>Page 1 &middot; "roofing contractor keller"</span><span class="da">DA 32</span></div>
         </div>
       </div>
 
       <div class="competitor-card">
         <div class="competitor-rank">5</div>
         <div class="competitor-thumb">
-          <div class="competitor-chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">robsroofingaz.com</div></div>
-          <img class="competitor-screenshot" src="https://image.thum.io/get/width/1200/https://robsroofingaz.com" alt="" loading="lazy" onerror="this.classList.add('error')">
-          <div class="competitor-fallback" style="--c-bg:#143F4A">
-            <div class="c-tag">Phoenix &middot; GAF Master Elite</div>
-            <div class="c-name">Rob's Roofing AZ</div>
+          <div class="competitor-chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">integrityroofingcompany.com</div></div>
+          <img class="competitor-screenshot" src="kca-assets/competitors/integrityroofingcompany-com.png" alt="" loading="lazy" onerror="this.classList.add('error')">
+          <div class="competitor-fallback" style="--c-bg:#1F4E1F">
+            <div class="c-tag">Keller · BBB Accredited</div>
+            <div class="c-name">Integrity Roofing Company</div>
           </div>
         </div>
         <div class="competitor-meta">
-          <div class="c-name-row">Rob's Roofing AZ<span class="c-tag-inline">Phoenix &middot; GAF Master Elite</span></div>
-          <div class="domain">robsroofingaz.com</div>
-          <div class="meta-row"><span>Page 1 &middot; "roofer phoenix az"</span><span class="da">DA 25</span></div>
+          <div class="c-name-row">Integrity Roofing Company<span class="c-tag-inline">Keller · BBB Accredited</span></div>
+          <div class="domain">integrityroofingcompany.com</div>
+          <div class="meta-row"><span>Page 1 &middot; "keller roofing company"</span><span class="da">DA 22</span></div>
         </div>
       </div>
 
       <div class="competitor-card">
         <div class="competitor-rank">6</div>
         <div class="competitor-thumb">
-          <div class="competitor-chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">acclaimed-roofing.com</div></div>
-          <img class="competitor-screenshot" src="https://image.thum.io/get/width/1200/https://acclaimed-roofing.com" alt="" loading="lazy" onerror="this.classList.add('error')">
-          <div class="competitor-fallback" style="--c-bg:#4A1F12">
-            <div class="c-tag">Scottsdale &middot; BBB Accredited</div>
-            <div class="c-name">Acclaimed Roofing</div>
+          <div class="competitor-chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">kellertxroofingpro.com</div></div>
+          <img class="competitor-screenshot" src="kca-assets/competitors/kellertxroofingpro-com.png" alt="" loading="lazy" onerror="this.classList.add('error')">
+          <div class="competitor-fallback" style="--c-bg:#3B5A0E">
+            <div class="c-tag">Keller · Geo-keyword domain</div>
+            <div class="c-name">Keller Roofing Pro</div>
           </div>
         </div>
         <div class="competitor-meta">
-          <div class="c-name-row">Acclaimed Roofing<span class="c-tag-inline">Scottsdale &middot; BBB Accredited</span></div>
-          <div class="domain">acclaimed-roofing.com</div>
-          <div class="meta-row"><span>Page 1 &middot; "roof replacement scottsdale"</span><span class="da">DA 24</span></div>
+          <div class="c-name-row">Keller Roofing Pro<span class="c-tag-inline">Keller · Geo-keyword domain</span></div>
+          <div class="domain">kellertxroofingpro.com</div>
+          <div class="meta-row"><span>Page 1 &middot; "keller tx roofing pro"</span><span class="da">DA 20</span></div>
         </div>
       </div>
 
       <div class="competitor-card">
         <div class="competitor-rank">7</div>
         <div class="competitor-thumb">
-          <div class="competitor-chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">azprofessionalroofing.com</div></div>
-          <img class="competitor-screenshot" src="https://image.thum.io/get/width/1200/https://azprofessionalroofing.com" alt="" loading="lazy" onerror="this.classList.add('error')">
-          <div class="competitor-fallback" style="--c-bg:#2C1A4A">
-            <div class="c-tag">Phoenix metro</div>
-            <div class="c-name">Arizona Pro Roofing</div>
+          <div class="competitor-chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">roofdog.com</div></div>
+          <img class="competitor-screenshot" src="kca-assets/competitors/roofdog-com.png" alt="" loading="lazy" onerror="this.classList.add('error')">
+          <div class="competitor-fallback" style="--c-bg:#4A1F12">
+            <div class="c-tag">Keller · National franchise</div>
+            <div class="c-name">Roof Dog</div>
           </div>
         </div>
         <div class="competitor-meta">
-          <div class="c-name-row">Arizona Professional Roofing<span class="c-tag-inline">Phoenix metro</span></div>
-          <div class="domain">azprofessionalroofing.com</div>
-          <div class="meta-row"><span>Page 1 &middot; "tile roofer phoenix"</span><span class="da">DA 22</span></div>
+          <div class="c-name-row">Roof Dog<span class="c-tag-inline">Keller · National franchise</span></div>
+          <div class="domain">roofdog.com</div>
+          <div class="meta-row"><span>Page 1 &middot; "roof inspection keller"</span><span class="da">DA 25</span></div>
         </div>
       </div>
 
       <div class="competitor-card">
         <div class="competitor-rank">8</div>
         <div class="competitor-thumb">
-          <div class="competitor-chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">azroofingsystems.com</div></div>
-          <img class="competitor-screenshot" src="https://image.thum.io/get/width/1200/https://azroofingsystems.com" alt="" loading="lazy" onerror="this.classList.add('error')">
+          <div class="competitor-chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">arrowheadrooftx.com</div></div>
+          <img class="competitor-screenshot" src="kca-assets/competitors/arrowheadrooftx-com.png" alt="" loading="lazy" onerror="this.classList.add('error')">
           <div class="competitor-fallback" style="--c-bg:#0F3A4E">
-            <div class="c-tag">Mesa &middot; Phoenix metro</div>
-            <div class="c-name">Arizona Roofing Systems</div>
+            <div class="c-tag">Tarrant County · Multi-city</div>
+            <div class="c-name">Arrowhead Roofing</div>
           </div>
         </div>
         <div class="competitor-meta">
-          <div class="c-name-row">Arizona Roofing Systems<span class="c-tag-inline">Mesa &middot; Phoenix metro</span></div>
-          <div class="domain">azroofingsystems.com</div>
-          <div class="meta-row"><span>Page 1 &middot; "roofer mesa az"</span><span class="da">DA 21</span></div>
+          <div class="c-name-row">Arrowhead Roofing<span class="c-tag-inline">Tarrant County · Multi-city</span></div>
+          <div class="domain">arrowheadrooftx.com</div>
+          <div class="meta-row"><span>Page 1 &middot; "keller texas roofing"</span><span class="da">DA 19</span></div>
         </div>
       </div>
+      <!-- COMPETITOR_CARDS:END -->
 
     </div>
 
-    <!-- "This could be you" SERP mockup: Camelback #1 with competitors below + GMB knowledge panel right -->
+    <!-- "This could be you" SERP mockup: Becker Roofing #1 with competitors below + GMB knowledge panel right -->
     <div style="margin-top:48px">
       <div class="kicker" style="margin-bottom:18px">This could be you · what homeowners will see on Google</div>
 
@@ -1058,7 +1525,7 @@ a{color:inherit;text-decoration:none}
             <path fill="#4285F4" d="M35.29 41.41V32H67c.31 1.64.47 3.58.47 5.68 0 7.06-1.93 15.79-8.15 22.01-6.05 6.3-13.78 9.66-24.02 9.66C16.32 69.35.36 53.89.36 34.91.36 15.93 16.32.47 35.3.47c10.5 0 17.98 4.12 23.6 9.49l-6.64 6.64c-4.03-3.78-9.49-6.72-16.97-6.72-13.86 0-24.7 11.17-24.7 25.03 0 13.86 10.84 25.03 24.7 25.03 8.99 0 14.11-3.61 17.39-6.89 2.66-2.66 4.41-6.46 5.1-11.65l-22.49.01z"/>
           </svg>
           <div class="serp-mock-search">
-            <span class="q">roofer Scottsdale AZ</span>
+            <span class="q">roofer Keller TX</span>
             <span class="icons"><span>×</span><span>🔍</span></span>
           </div>
         </div>
@@ -1072,92 +1539,78 @@ a{color:inherit;text-decoration:none}
           <span class="tab">Shopping</span>
         </div>
 
-        <div class="serp-mock-meta-row">About 1,420,000 results (0.42 seconds) · Scottsdale, AZ</div>
+        <div class="serp-mock-meta-row">About 1,420,000 results (0.42 seconds) · Keller, TX</div>
 
         <div class="serp-mock-body">
           <div class="serp-mock-results">
 
-        <!-- Camelback Roofing - highlighted #1 -->
+        <!-- Becker Roofing and Exteriors - highlighted #1 -->
         <div class="serp-mock-result is-yours">
+          <div class="kca-seal-stamp" aria-hidden="true"></div>
           <div class="serp-mock-result-head">
-            <div class="serp-mock-favicon"><img src="https://www.google.com/s2/favicons?domain=camelbackroofing.com&sz=64" alt="" loading="lazy"></div>
+            <div class="serp-mock-favicon"><img src="https://www.google.com/s2/favicons?domain=brexteriors.com&sz=64" alt="" loading="lazy"></div>
             <div class="serp-mock-result-meta">
-              <div class="name">Camelback Roofing</div>
-              <div class="url">https://camelbackroofing.com &rsaquo; scottsdale</div>
+              <div class="name">Becker Roofing and Exteriors</div>
+              <div class="url">https://brexteriors.com &rsaquo; keller</div>
             </div>
           </div>
-          <a class="serp-mock-title" href="#">#1 Roofing Contractor in Scottsdale, AZ | Camelback Roofing</a>
-          <p class="serp-mock-desc"><b>Family-owned, 11 years strong.</b> Owner-led, never outsourced. Same-day estimates from a 4.6&#9733; team across 39 Google reviews. Serving Scottsdale, Phoenix, Tucson, Mesa, Chandler and 13 more Arizona cities. <b>Licensed and insured &middot; BBB Accredited 2022</b>.</p>
+          <a class="serp-mock-title" href="#">#1 Roofing Contractor in Keller, TX | Becker Roofing and Exteriors</a>
+          <p class="serp-mock-desc"><b>Family-owned, 8 years strong.</b> Owner-led, never outsourced. Same-day estimates from a 4.9&#9733; team across 63 Google reviews. Serving Keller, North Richland Hills, Southlake, Colleyville, Watauga and 7 more Northeast Tarrant County cities. <b>Licensed (TX #03-0235) &middot; Watchdog Hall of Fame 2023</b>.</p>
         </div>
 
-        <!-- Competitor 1 -->
-        <div class="serp-mock-result">
+        <!-- SERP_COMPETITOR_RESULTS · simplified 2026-05-09 from per-lead competitor data to generic dimmed placeholders. No research dependency. -->
+        <div class="serp-mock-result" style="opacity:0.55">
           <div class="serp-mock-result-head">
-            <div class="serp-mock-favicon"><img src="https://www.google.com/s2/favicons?domain=behmer.com&sz=64" alt="" loading="lazy"></div>
+            <div class="serp-mock-favicon" style="background:rgba(255,255,255,0.08);border-radius:50%"></div>
             <div class="serp-mock-result-meta">
-              <div class="name">Behmer Roofing</div>
-              <div class="url">https://behmer.com</div>
+              <div class="name" style="color:rgba(255,255,255,0.55)">Local Roofing Competitor</div>
+              <div class="url">https://example.com</div>
             </div>
           </div>
-          <a class="serp-mock-title" href="#">Scottsdale's Trusted Roofing Experts Since 1995</a>
-          <p class="serp-mock-desc">Behmer Roofing offers full-service roof replacement, repair, and inspection across Scottsdale metro. 30 years of established trust. Free estimates and financing available.</p>
+          <a class="serp-mock-title" href="#" style="color:rgba(138,180,248,0.55)">Roofing Services in Keller, TX</a>
+          <p class="serp-mock-desc" style="opacity:0.7">A Keller-area roofing contractor &mdash; the kind of result currently sitting where Becker Roofing &amp; Exteriors should be. Competing for the same homeowners. Same searches. Different brand.</p>
         </div>
 
-        <!-- Competitor 2 -->
-        <div class="serp-mock-result">
+        <div class="serp-mock-result" style="opacity:0.45">
           <div class="serp-mock-result-head">
-            <div class="serp-mock-favicon"><img src="https://www.google.com/s2/favicons?domain=desertsunroofingaz.com&sz=64" alt="" loading="lazy"></div>
+            <div class="serp-mock-favicon" style="background:rgba(255,255,255,0.06);border-radius:50%"></div>
             <div class="serp-mock-result-meta">
-              <div class="name">Desert Sun Roofing</div>
-              <div class="url">https://desertsunroofingaz.com</div>
+              <div class="name" style="color:rgba(255,255,255,0.45)">Regional Roofing Brand</div>
+              <div class="url">https://example.com</div>
             </div>
           </div>
-          <a class="serp-mock-title" href="#">100% Five-Star Tucson Roofers | Desert Sun Roofing</a>
-          <p class="serp-mock-desc">Tucson's top-rated roofer with zero negative reviews since 2007. Owner Jeremiah Nidey is on every job. Roof coatings specialist + tile + shingle.</p>
+          <a class="serp-mock-title" href="#" style="color:rgba(138,180,248,0.45)">Roof Replacement &amp; Repair · Northeast Tarrant County</a>
+          <p class="serp-mock-desc" style="opacity:0.6">Another regional player. Their pages are structured for local search; yours aren't. That's the gap we close.</p>
         </div>
 
-        <!-- Competitor 3 -->
-        <div class="serp-mock-result">
+        <div class="serp-mock-result" style="opacity:0.35">
           <div class="serp-mock-result-head">
-            <div class="serp-mock-favicon"><img src="https://www.google.com/s2/favicons?domain=kinoroofingaz.com&sz=64" alt="" loading="lazy"></div>
+            <div class="serp-mock-favicon" style="background:rgba(255,255,255,0.05);border-radius:50%"></div>
             <div class="serp-mock-result-meta">
-              <div class="name">Kino Roofing</div>
-              <div class="url">https://kinoroofingaz.com</div>
+              <div class="name" style="color:rgba(255,255,255,0.35)">National Roofing Franchise</div>
+              <div class="url">https://example.com</div>
             </div>
           </div>
-          <a class="serp-mock-title" href="#">GAF Master Elite Tile Roofer Tucson AZ | Kino Roofing</a>
-          <p class="serp-mock-desc">Tile, shingle, and flat roofing across Tucson and surrounding cities. GAF Master Elite certified. BuildZoom top 24% of AZ contractors.</p>
-        </div>
-
-        <!-- Competitor 4 -->
-        <div class="serp-mock-result">
-          <div class="serp-mock-result-head">
-            <div class="serp-mock-favicon"><img src="https://www.google.com/s2/favicons?domain=djroofing.com&sz=64" alt="" loading="lazy"></div>
-            <div class="serp-mock-result-meta">
-              <div class="name">DJ Roofing</div>
-              <div class="url">https://djroofing.com</div>
-            </div>
-          </div>
-          <a class="serp-mock-title" href="#">DJ Roofing Tucson | 26 Years of Quality Roofing Work</a>
-          <p class="serp-mock-desc">Tucson's tenure-leading roofer. TAMKO + GAF + Tile Roofing Institute certified. Established 1999. Serving Tucson, Marana, Oro Valley.</p>
+          <a class="serp-mock-title" href="#" style="color:rgba(138,180,248,0.35)">Free Inspections in Keller &mdash; National Franchise</a>
+          <p class="serp-mock-desc" style="opacity:0.5">National brands ranking on local searches. They don't know your market. You do. After we ship, your local SEO + real proof beats theirs.</p>
         </div>
 
           </div><!-- /serp-mock-results -->
 
-          <!-- GMB Knowledge Panel (right rail — Google Business Profile for Camelback) -->
-          <aside class="gmb-panel" aria-label="Camelback Roofing Google Business Profile">
+          <!-- GMB Knowledge Panel (right rail · Google Business Profile for Becker Roofing) -->
+          <aside class="gmb-panel" aria-label="Becker Roofing and Exteriors Google Business Profile">
             <div class="gmb-panel-cover">
-              <img class="gmb-panel-cover-img" src="../assets/photos/home-hero-tile-roof.png" alt="" loading="lazy">
-              <div class="gmb-panel-logo"><img src="../assets/logo/camelback-roofing-logo.png" alt="Camelback Roofing"></div>
-              <span class="gmb-panel-cover-tag">From Camelback Roofing</span>
+              <img class="gmb-panel-cover-img" src="../assets/photos/hero-keller-texas.jpg" alt="" loading="lazy">
+              <div class="gmb-panel-logo"><img src="../assets/logo/becker-roofing-primary.jpg" alt="Becker Roofing and Exteriors"></div>
+              <span class="gmb-panel-cover-tag">From Becker Roofing and Exteriors</span>
             </div>
             <div class="gmb-panel-body">
-              <div class="gmb-panel-name">Camelback Roofing</div>
-              <div class="gmb-panel-cat">Roofing contractor in Scottsdale, AZ</div>
+              <div class="gmb-panel-name">Becker Roofing and Exteriors</div>
+              <div class="gmb-panel-cat">Roofing contractor in Keller, TX</div>
               <div class="gmb-panel-rating">
-                <span class="num">4.6</span>
+                <span class="num">4.9</span>
                 <span class="stars">★★★★★</span>
-                <a class="reviews" href="#">39 Google reviews</a>
+                <a class="reviews" href="#">63 Google reviews</a>
               </div>
 
               <div class="gmb-panel-actions">
@@ -1168,16 +1621,16 @@ a{color:inherit;text-decoration:none}
               </div>
 
               <div class="gmb-info-list">
-                <div class="gmb-info-row"><span class="ic">📍</span><span>8114 E. Clarendon Ave., Scottsdale, AZ 85251</span></div>
-                <div class="gmb-info-row"><span class="ic">🕐</span><span><span class="open">Open</span> · Closes 6 PM</span></div>
-                <div class="gmb-info-row"><span class="ic">📞</span><a href="tel:4804007663">(480) 400-7663</a></div>
-                <div class="gmb-info-row"><span class="ic">🌐</span><a href="https://camelbackroofing.com">camelbackroofing.com</a></div>
-                <div class="gmb-info-row"><span class="ic">✓</span><span>Licensed &amp; insured · BBB Accredited 2022</span></div>
+                <div class="gmb-info-row"><span class="ic">📍</span><span>8376 Davis Blvd, Suite 249, North Richland Hills, TX 76182</span></div>
+                <div class="gmb-info-row"><span class="ic">🕐</span><span><span class="open">Open</span> · Closes 5 PM</span></div>
+                <div class="gmb-info-row"><span class="ic">📞</span><a href="tel:8178987175">(817) 898-7175</a></div>
+                <div class="gmb-info-row"><span class="ic">🌐</span><a href="https://brexteriors.com">brexteriors.com</a></div>
+                <div class="gmb-info-row"><span class="ic">✓</span><span>Licensed (TX #03-0235) · Watchdog Hall of Fame 2023</span></div>
               </div>
 
               <div class="gmb-review-snippet">
-                <div class="who"><span class="stars-mini">★★★★★</span>Tracy E. &middot; 2 weeks ago</div>
-                <p>"Luke responded same-day, walked us through the insurance claim, and had the crew on the roof inside a week. Cleanest job site we've seen. Best contractor experience we've had in Arizona."</p>
+                <div class="who"><span class="stars-mini">★★★★★</span>Daniel H. &middot; 4/3/2026</div>
+                <p>"Sean was very helpful in assisting with my roof replacement after my insurance company declined the claim. Becker Roofing &amp; Exteriors replaced my roof in North Richland Hills after a major hail storm. Crew was professional, walked the warranty with me, best contractor experience we've had in DFW."</p>
               </div>
             </div>
           </aside>
@@ -1187,15 +1640,18 @@ a{color:inherit;text-decoration:none}
       </div>
     </div>
 
-    <p class="competitors-disclaimer">Top-10 ranking, domain authority, and keyword data sampled from public SERP positions for "roofer Phoenix & Tucson" and the highest-volume nearby city queries. Production builds run a fresh SERP + DA fetch at proposal-generation time.</p>
+    <p class="competitors-disclaimer">SERP layout shown for illustrative purposes &mdash; once brexteriors.com ships, every page is structured for local-search ranking + conversion in the first 5 seconds.</p>
 
   </div>
 </section>
+</details>
 
 <!-- ============================ THE PROVEN BLUEPRINT (added 2026-05-06 per Dean's transcript - the SOP) ============================ -->
+<details class="proposal-collapsible" id="section-8">
+  <summary class="ps-summary"><span class="ps-num">Section 8</span><span class="ps-title">The Proven Blueprint</span><span class="ps-chevron" aria-hidden="true"></span></summary>
 <section class="section section-blueprint">
   <div class="section-inner">
-    <div class="kicker">Section 4 · The Proven Blueprint</div>
+    <div class="kicker">Section 8 · The Proven Blueprint</div>
     <h2 class="section-title">150+ roofing websites built. <em>Same blueprint, same mechanics.</em></h2>
     <p class="section-sub">This is the architecture homeowners trust at first contact. Six mechanisms, all extracted from real conversion data across the 150+ roofing sites we have shipped. Click any card to see exactly what it looks like inside your new build.</p>
 
@@ -1206,7 +1662,7 @@ a{color:inherit;text-decoration:none}
           <div class="blueprint-num">01</div>
           <div class="blueprint-title-block">
             <div class="blueprint-title">Real Google + Facebook + BBB above the fold</div>
-            <div class="blueprint-sub">4.6&#9733; &times; 39 reviews &middot; click any pill &rarr; live source</div>
+            <div class="blueprint-sub">4.9&#9733; &times; 63 reviews &middot; click any pill &rarr; live source</div>
           </div>
           <div class="blueprint-tag trust">Trust</div>
           <div class="blueprint-chevron">&#9662;</div>
@@ -1215,7 +1671,7 @@ a{color:inherit;text-decoration:none}
           <ul class="blueprint-bullets">
             <li><strong>Live numerals</strong> under the H1 &mdash; Google, Facebook, BBB all visible without scroll.</li>
             <li><strong>Every pill clickable</strong> to the live source. Verifiable in 1 tap, not stub badges.</li>
-            <li><strong>Your real numbers</strong> &mdash; 4.6&#9733; &times; 39 Google reviews, auto-syncing as new ones come in.</li>
+            <li><strong>Your real numbers</strong> &mdash; 4.9&#9733; &times; 63 Google reviews, auto-syncing as new ones come in.</li>
           </ul>
           <div class="blueprint-why">
             <div class="blueprint-why-stat">5 sec</div>
@@ -1224,7 +1680,7 @@ a{color:inherit;text-decoration:none}
               Homeowners decide in the first <strong>5 seconds</strong> whether to keep reading. Real verifiable numbers above the fold tell them you are who you say you are &mdash; before they ever scroll.
             </div>
           </div>
-          <a class="blueprint-see-live" href="https://camelbackroofing.vercel.app/#hero" target="_blank">See it in your hero &rarr;</a>
+          <a class="blueprint-see-live" href="../build/index.html#hero" target="_blank">See it in your hero &rarr;</a>
         </div>
       </details>
 
@@ -1233,7 +1689,7 @@ a{color:inherit;text-decoration:none}
           <div class="blueprint-num">02</div>
           <div class="blueprint-title-block">
             <div class="blueprint-title">Owner photo, name &amp; story on every key page</div>
-            <div class="blueprint-sub">Luke in 6 placements &middot; faces beat logos at every step</div>
+            <div class="blueprint-sub">Sean in 6 placements &middot; faces beat logos at every step</div>
           </div>
           <div class="blueprint-tag trust">Trust</div>
           <div class="blueprint-chevron">&#9662;</div>
@@ -1242,7 +1698,7 @@ a{color:inherit;text-decoration:none}
           <ul class="blueprint-bullets">
             <li><strong>6 placements</strong> &mdash; hero owner card, About commander's desk, truck band, mission control, footer, form card.</li>
             <li><strong>Same face across the site</strong> &mdash; story stops feeling like marketing, starts feeling like a neighbor.</li>
-            <li><strong>By name and signature</strong> &mdash; Luke isn't a brand mark, he's the person on the roof.</li>
+            <li><strong>By name and signature</strong> &mdash; Sean isn't a brand mark, he's the person on the roof.</li>
           </ul>
           <div class="blueprint-why">
             <div class="blueprint-why-stat">+47%</div>
@@ -1251,7 +1707,7 @@ a{color:inherit;text-decoration:none}
               Homeowners trust people, not brands. Real owner photo across the site lifts <strong>form-fill rate by ~47%</strong> over generic stock-photo or icon-only sites.
             </div>
           </div>
-          <a class="blueprint-see-live" href="https://camelbackroofing.vercel.app/#owner" target="_blank">See it in your owner section &rarr;</a>
+          <a class="blueprint-see-live" href="../build/index.html#about" target="_blank">See it in your owner section &rarr;</a>
         </div>
       </details>
 
@@ -1268,7 +1724,7 @@ a{color:inherit;text-decoration:none}
         <div class="blueprint-body">
           <ul class="blueprint-bullets">
             <li><strong>5 fields max</strong> &mdash; name, phone, address, service, message. 30%+ higher conversion than 8-field forms.</li>
-            <li><strong>Owner mini-card inside the form</strong> &mdash; "Talk to Luke &middot; 5-min callback" with your real photo.</li>
+            <li><strong>Owner mini-card inside the form</strong> &mdash; "Talk to Sean &middot; 5-min callback" with your real photo.</li>
             <li><strong>Sub-60-second AI agent</strong> calls back, qualifies, books the inspection &mdash; while you sleep.</li>
           </ul>
           <div class="blueprint-why">
@@ -1278,7 +1734,7 @@ a{color:inherit;text-decoration:none}
               The first contractor to call back wins the job <strong>78% of the time</strong>. Your AI agent never loses that race &mdash; while competitors check voicemail.
             </div>
           </div>
-          <a class="blueprint-see-live" href="https://camelbackroofing.vercel.app/#hero" target="_blank">See it in your hero form &rarr;</a>
+          <a class="blueprint-see-live" href="../build/index.html#hero" target="_blank">See it in your hero form &rarr;</a>
         </div>
       </details>
 
@@ -1286,7 +1742,7 @@ a{color:inherit;text-decoration:none}
         <summary class="blueprint-summary">
           <div class="blueprint-num">04</div>
           <div class="blueprint-title-block">
-            <div class="blueprint-title">Story &middot; Vision &middot; Mission written for Camelback</div>
+            <div class="blueprint-title">Story &middot; Vision &middot; Mission written for Becker Roofing</div>
             <div class="blueprint-sub">Brand-specific copy converts 4&ndash;7&times; agency boilerplate</div>
           </div>
           <div class="blueprint-tag brand">Brand</div>
@@ -1294,7 +1750,7 @@ a{color:inherit;text-decoration:none}
         </summary>
         <div class="blueprint-body">
           <ul class="blueprint-bullets">
-            <li><strong>No agency boilerplate</strong> &mdash; your story written for Camelback, not pasted from a template.</li>
+            <li><strong>No agency boilerplate</strong> &mdash; your story written for Becker Roofing, not pasted from a template.</li>
             <li><strong>"Out of this World" voice</strong> woven through section names &mdash; not just the homepage hero.</li>
             <li><strong>Story &middot; Vision &middot; Mission</strong> on About + Owner pages &mdash; homeowners remember what they read.</li>
           </ul>
@@ -1305,7 +1761,7 @@ a{color:inherit;text-decoration:none}
               Generic agency copy converts at <strong>~1%</strong>. Brand-specific story converts at <strong>4&ndash;7%</strong>. That's the gap when a homeowner is weighing 3 estimates.
             </div>
           </div>
-          <a class="blueprint-see-live" href="https://camelbackroofing.vercel.app/#about" target="_blank">See it in your About section &rarr;</a>
+          <a class="blueprint-see-live" href="../build/index.html#about" target="_blank">See it in your About section &rarr;</a>
         </div>
       </details>
 
@@ -1332,7 +1788,7 @@ a{color:inherit;text-decoration:none}
               <strong>50% of homeowners</strong> now ask AI before Google. Your new site shows up in both &mdash; your competitor's old site doesn't.
             </div>
           </div>
-          <a class="blueprint-see-live" href="https://camelbackroofing.vercel.app/#service-areas" target="_blank">See it in your service-area grid &rarr;</a>
+          <a class="blueprint-see-live" href="../build/index.html#service-area" target="_blank">See it in your service-area grid &rarr;</a>
         </div>
       </details>
 
@@ -1359,7 +1815,7 @@ a{color:inherit;text-decoration:none}
               <strong>60&ndash;70% of roofing leads come from mobile</strong>. The thumb is the buyer. After-hours every minute the homeowner can't reach you is a lead going to a competitor.
             </div>
           </div>
-          <a class="blueprint-see-live" href="https://camelbackroofing.vercel.app/" target="_blank">Open your build on your phone &rarr;</a>
+          <a class="blueprint-see-live" href="../build/index.html" target="_blank">Open your build on your phone &rarr;</a>
         </div>
       </details>
 
@@ -1373,7 +1829,7 @@ a{color:inherit;text-decoration:none}
         <div class="blueprint-sop-title">Ultimate Roofing Website Blueprint</div>
         <div class="blueprint-sop-desc">The full mechanism document. 150+ websites built against this exact spec. Click to open the PDF.</div>
       </div>
-      <button type="button" class="blueprint-sop-btn" onclick="document.getElementById('sopDialog').showModal()">
+      <button type="button" class="blueprint-sop-btn" onclick="openSopPasswordGate()">
         View the SOP &rarr;
       </button>
     </div>
@@ -1386,37 +1842,15 @@ a{color:inherit;text-decoration:none}
     </div>
 
   </div>
-
-  <!-- SOP modal dialog (native <dialog>, opened by the button above) -->
-  <dialog id="sopDialog" class="sop-dialog" aria-labelledby="sopDialogTitle">
-    <div class="sop-dialog-head">
-      <div class="sop-dialog-title" id="sopDialogTitle">
-        <span class="sop-dialog-title-tag">SOP</span>
-        Ultimate Roofing Website Blueprint
-      </div>
-      <button type="button" class="sop-dialog-close" aria-label="Close" onclick="document.getElementById('sopDialog').close()">×</button>
-    </div>
-    <div class="sop-dialog-body">
-      <iframe class="sop-dialog-pdf" src="dean-blueprint.pdf#toolbar=1&navpanes=0&scrollbar=1" title="Ultimate Roofing Website Blueprint"></iframe>
-    </div>
-  </dialog>
-
-  <!-- Shared page-card modal — populated by openPage() in JS at the bottom of <body> -->
-  <dialog id="pageDialog" class="page-card-dialog" aria-labelledby="pageDialogTitle">
-    <div class="pc-modal-head">
-      <span class="pc-modal-ic" id="pageDialogIc">⌂</span>
-      <span class="pc-modal-title" id="pageDialogTitle">Home</span>
-      <span class="pc-modal-meta" id="pageDialogMeta">14 sections · canonical scroll order</span>
-      <button type="button" class="pc-modal-close" aria-label="Close" onclick="document.getElementById('pageDialog').close()">×</button>
-    </div>
-    <div class="pc-modal-body" id="pageDialogBody"></div>
-  </dialog>
 </section>
+</details>
 
 <!-- ============================ 3 REASONS YOU CAN'T SLEEP ON THIS ============================ -->
+<details class="proposal-collapsible" id="section-9">
+  <summary class="ps-summary"><span class="ps-num">Section 9</span><span class="ps-title">Why You Can't Sleep On This</span><span class="ps-chevron" aria-hidden="true"></span></summary>
 <section class="section section-grey">
   <div class="section-inner">
-    <div class="kicker">Section 5 · Why You Can't Sleep On This</div>
+    <div class="kicker">Section 9 · Why You Can't Sleep On This</div>
     <h2 class="section-title">Three reasons we're <em>worth the call</em> today.</h2>
     <div class="reasons">
       <div class="reason">
@@ -1432,16 +1866,19 @@ a{color:inherit;text-decoration:none}
       <div class="reason">
         <div class="reason-num">03</div>
         <div class="reason-title">We Understand Roofing</div>
-        <p class="reason-body">Seven years building exclusively for roofing contractors. We know what makes Arizona homeowners pick up the phone: storm urgency, insurance claim language, real warranty proof, owner trust. Generic agencies don't.</p>
+        <p class="reason-body">Seven years building exclusively for roofing contractors. We know what makes Texas homeowners pick up the phone: storm urgency, insurance claim language, real warranty proof, owner trust. Generic agencies don't.</p>
       </div>
     </div>
   </div>
 </section>
+</details>
 
 <!-- ============================ DELIVERABLES ============================ -->
+<details class="proposal-collapsible" id="section-10">
+  <summary class="ps-summary"><span class="ps-num">Section 10</span><span class="ps-title">What's Included</span><span class="ps-chevron" aria-hidden="true"></span></summary>
 <section class="section section-white">
   <div class="section-inner">
-    <div class="kicker">Section 6 · What's Included</div>
+    <div class="kicker">Section 10 · What's Included</div>
     <h2 class="section-title">A complete website system, <em>not just a homepage</em>.</h2>
     <p class="section-sub">The Ultimate Roofing Website is built on a 40+ page sitemap that's been tested across our top 1% of roofing client builds. Here's the full deliverable.</p>
     <div class="deliverables-grid">
@@ -1462,7 +1899,7 @@ a{color:inherit;text-decoration:none}
             <div class="tree-cell"><div class="page-box core" role="button" tabindex="0" onclick="openPage('gallery')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openPage('gallery')}">Gallery</div></div>
             <div class="tree-cell"><div class="page-box core" role="button" tabindex="0" onclick="openPage('reviews')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openPage('reviews')}">Reviews</div></div>
             <div class="tree-cell"><div class="page-box core" role="button" tabindex="0" onclick="openPage('contact')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openPage('contact')}">Contact</div></div>
-            <div class="tree-cell"><div class="page-box core" role="button" tabindex="0" onclick="openPage('financing')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openPage('financing')}">Financing</div></div>
+            <div class="tree-cell"><div class="page-box core" role="button" tabindex="0" onclick="openPage('membership')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openPage('membership')}">Membership</div></div>
           </div>
         </div>
 
@@ -1472,8 +1909,8 @@ a{color:inherit;text-decoration:none}
         <div class="pyramid-tier">
           <div class="pyramid-tier-label">Tier 2 · Pillar Pages</div>
           <div class="pyramid-row">
-            <div class="tree-cell"><div class="page-box pillar has-silos" data-count="+8" role="button" tabindex="0" onclick="openPage('services')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openPage('services')}">Services</div></div>
-            <div class="tree-cell"><div class="page-box pillar has-silos" data-count="+18" role="button" tabindex="0" onclick="openPage('locations')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openPage('locations')}">Locations</div></div>
+            <div class="tree-cell"><div class="page-box pillar has-silos" data-count="+6" role="button" tabindex="0" onclick="openPage('services')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openPage('services')}">Services</div></div>
+            <div class="tree-cell"><div class="page-box pillar has-silos" data-count="+12" role="button" tabindex="0" onclick="openPage('locations')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openPage('locations')}">Locations</div></div>
             <div class="tree-cell"><div class="page-box pillar" role="button" tabindex="0" onclick="openPage('whyus')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openPage('whyus')}">Why Us</div></div>
             <div class="tree-cell"><div class="page-box pillar" role="button" tabindex="0" onclick="openPage('stormdamage')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openPage('stormdamage')}">Storm Damage</div></div>
             <div class="tree-cell"><div class="page-box pillar" role="button" tabindex="0" onclick="openPage('insuranceclaims')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openPage('insuranceclaims')}">Insurance Claims</div></div>
@@ -1485,39 +1922,31 @@ a{color:inherit;text-decoration:none}
         <!-- Tier 3 · SILOS (under Services + Locations) -->
         <div class="pyramid-silos">
           <div class="silo-group">
-            <div class="silo-head"><span class="from">From</span> Services <span class="count">8 pages</span></div>
+            <div class="silo-head"><span class="from">From</span> Services <span class="count">6 pages</span></div>
             <div class="silo-chips">
-              <span class="silo-chip">Repair</span>
-              <span class="silo-chip">Replacement</span>
-              <span class="silo-chip">Inspection</span>
-              <span class="silo-chip">Emergency</span>
-              <span class="silo-chip">Storm Damage</span>
-              <span class="silo-chip">Tile Roofing</span>
-              <span class="silo-chip">Flat / Foam</span>
-              <span class="silo-chip">Insurance Claims</span>
+              <span class="silo-chip">Roof Replacement</span>
+              <span class="silo-chip">Roof Repair</span>
+              <span class="silo-chip">Hail &amp; Storm Damage</span>
+              <span class="silo-chip">Insurance Claim Help</span>
+              <span class="silo-chip">Commercial Roofing</span>
+              <span class="silo-chip">Exterior Services</span>
             </div>
           </div>
           <div class="silo-group">
-            <div class="silo-head"><span class="from">From</span> Locations <span class="count">18 pages</span></div>
+            <div class="silo-head"><span class="from">From</span> Locations <span class="count">12 pages</span></div>
             <div class="silo-chips">
-              <span class="silo-chip">Scottsdale</span>
-              <span class="silo-chip">Phoenix</span>
-              <span class="silo-chip">Tucson</span>
-              <span class="silo-chip">Mesa</span>
-              <span class="silo-chip">Chandler</span>
-              <span class="silo-chip">Tempe</span>
-              <span class="silo-chip">Gilbert</span>
-              <span class="silo-chip">Glendale</span>
-              <span class="silo-chip">Paradise Valley</span>
-              <span class="silo-chip">Fountain Hills</span>
-              <span class="silo-chip">Cave Creek</span>
-              <span class="silo-chip">Carefree</span>
-              <span class="silo-chip">Marana</span>
-              <span class="silo-chip">Oro Valley</span>
-              <span class="silo-chip">Sahuarita</span>
-              <span class="silo-chip">Vail</span>
-              <span class="silo-chip">Catalina Foothills</span>
-              <span class="silo-chip">Casas Adobes</span>
+              <span class="silo-chip">Keller</span>
+              <span class="silo-chip">North Richland Hills</span>
+              <span class="silo-chip">Southlake</span>
+              <span class="silo-chip">Colleyville</span>
+              <span class="silo-chip">Watauga</span>
+              <span class="silo-chip">Hurst</span>
+              <span class="silo-chip">Bedford</span>
+              <span class="silo-chip">Grapevine</span>
+              <span class="silo-chip">Trophy Club</span>
+              <span class="silo-chip">Roanoke</span>
+              <span class="silo-chip">Haltom City</span>
+              <span class="silo-chip">North Fort Worth</span>
             </div>
           </div>
         </div>
@@ -1526,8 +1955,8 @@ a{color:inherit;text-decoration:none}
         <div class="pyramid-stats">
           <div class="pyramid-stat"><div class="num">5</div><div class="label">Core Pages</div></div>
           <div class="pyramid-stat"><div class="num">7</div><div class="label">Pillars</div></div>
-          <div class="pyramid-stat"><div class="num">26</div><div class="label">Silo Pages</div></div>
-          <div class="pyramid-stat"><div class="num">40+</div><div class="label">Total Pages</div></div>
+          <div class="pyramid-stat"><div class="num">10</div><div class="label">Silo Pages</div></div>
+          <div class="pyramid-stat"><div class="num">18</div><div class="label">Total Pages</div></div>
           <div class="pyramid-stat"><div class="num">100%</div><div class="label">SEO Indexed</div></div>
         </div>
       </div>
@@ -1538,7 +1967,7 @@ a{color:inherit;text-decoration:none}
           <div class="included-check">✓</div>
           <div class="included-text">
             <strong>Custom Design: Brand-Faithful, Not Templated</strong>
-            <p>Your space mascot, your purple, your real team photos. Every pixel is designed for Camelback Roofing, not a stock theme with your logo dropped in.</p>
+            <p>Your space mascot, your purple, your real team photos. Every pixel is designed for Becker Roofing and Exteriors, not a stock theme with your logo dropped in.</p>
           </div>
         </div>
         <div class="included-item">
@@ -1580,11 +2009,14 @@ a{color:inherit;text-decoration:none}
     </div>
   </div>
 </section>
+</details>
 
 <!-- ============================ AI INFRASTRUCTURE ============================ -->
+<details class="proposal-collapsible" id="section-11">
+  <summary class="ps-summary"><span class="ps-num">Section 11</span><span class="ps-title">AI Infrastructure</span><span class="ps-chevron" aria-hidden="true"></span></summary>
 <section class="section section-dark">
   <div class="section-inner">
-    <div class="kicker">Section 7 · AI Infrastructure</div>
+    <div class="kicker">Section 11 · AI Infrastructure</div>
     <h2 class="section-title">Your website doesn't sleep. <em>Your AI shouldn't either.</em></h2>
     <p class="section-sub">Every Ultimate Roofing Website ships with a full AI lead-handling stack, built on GoHighLevel, fully integrated, working from day one. Your site captures the lead, your AI books the call, and your team shows up.</p>
     <div class="ai-grid">
@@ -1594,9 +2026,9 @@ a{color:inherit;text-decoration:none}
           <h4>Smart Chatbot</h4>
         </div>
         <ul class="ai-bullets">
-          <li>24/7 trained on Camelback's services + 18-city service area</li>
+          <li>24/7 trained on Becker Roofing's services + 18-city service area</li>
           <li>Qualifies homeowner questions before they hit your phone</li>
-          <li>Books estimates straight into Luke's calendar</li>
+          <li>Books estimates straight into Sean's calendar</li>
           <li>Emergency storm calls escalated to your team in real time</li>
         </ul>
       </div>
@@ -1607,7 +2039,7 @@ a{color:inherit;text-decoration:none}
         </div>
         <ul class="ai-bullets">
           <li>Real-time calendar sync · leads pick the time themselves</li>
-          <li>Auto-routed to Luke, sales rep, or PM by service type</li>
+          <li>Auto-routed to Sean, sales rep, or PM by service type</li>
           <li>SMS + email reminders · auto-reschedule on no-show</li>
           <li>Two-way ICS so booked slots block your other tools</li>
         </ul>
@@ -1621,7 +2053,7 @@ a{color:inherit;text-decoration:none}
           <li>Auto-request a Google review from every completed job</li>
           <li>Hot reviews fast-tracked to Google + Facebook + BBB</li>
           <li>Negative feedback routes privately to you first</li>
-          <li>Goal: protect your 4.6★ × 39 reputation forever</li>
+          <li>Goal: protect your 4.9★ × 63 reputation forever</li>
         </ul>
       </div>
       <div class="ai-card">
@@ -1639,11 +2071,14 @@ a{color:inherit;text-decoration:none}
     </div>
   </div>
 </section>
+</details>
 
 <!-- ============================ TIMELINE ============================ -->
+<details class="proposal-collapsible" id="section-12">
+  <summary class="ps-summary"><span class="ps-num">Section 12</span><span class="ps-title">Live in 3 Days</span><span class="ps-chevron" aria-hidden="true"></span></summary>
 <section class="section section-white">
   <div class="section-inner">
-    <div class="kicker">Section 8 · Live in 3 Days</div>
+    <div class="kicker">Section 12 · Live in 3 Days</div>
     <h2 class="section-title">Sign today. <em>Live by Friday.</em></h2>
     <p class="section-sub">No 4-6 week timelines. No agency drag. We've built the system to ship fast, and yours starts the moment you sign.</p>
     <div class="timeline">
@@ -1666,7 +2101,7 @@ a{color:inherit;text-decoration:none}
           <div class="tl-when">Day 1</div>
         </div>
         <ul class="tl-bullets">
-          <li><strong>Luke tells the story once.</strong> 15-min call · we turn it into your brand.</li>
+          <li><strong>Sean tells the story once.</strong> 15-min call · we turn it into your brand.</li>
           <li>Photos, voice, service-area cities &mdash; we lock it all</li>
           <li>You don't write a single line of copy yourself</li>
         </ul>
@@ -1698,7 +2133,7 @@ a{color:inherit;text-decoration:none}
       </div>
     </div>
 
-    <!-- Transformation banner — Dean voice outcome line -->
+    <!-- Transformation banner · Dean voice outcome line -->
     <div class="timeline-outcome">
       <div class="timeline-outcome-arrow">&rarr;</div>
       <div class="timeline-outcome-text">
@@ -1708,12 +2143,15 @@ a{color:inherit;text-decoration:none}
     </div>
   </div>
 </section>
+</details>
 
 <!-- ============================ ROI CALCULATOR ============================ -->
+<details class="proposal-collapsible" id="section-13">
+  <summary class="ps-summary"><span class="ps-num">Section 13</span><span class="ps-title">Run Your Numbers</span><span class="ps-chevron" aria-hidden="true"></span></summary>
 <section class="section section-dark">
   <div class="section-inner">
-    <div class="kicker">Section 9 · Run Your Numbers</div>
-    <h2 class="section-title">What this site is <em>worth</em> to Camelback Roofing.</h2>
+    <div class="kicker">Section 13 · Run Your Numbers</div>
+    <h2 class="section-title">What this site is <em>worth</em> to Becker Roofing and Exteriors.</h2>
     <p class="section-sub">Slide YOUR real numbers in. This isn&apos;t agency hype &mdash; it&apos;s just math on what we ship. KCA&apos;s roofing clients average <strong style="color:#EEB644">30&ndash;50% lift</strong> in the first 90 days.</p>
     <div class="roi-grid">
       <div class="roi-inputs">
@@ -1755,11 +2193,14 @@ a{color:inherit;text-decoration:none}
     <div class="roi-disclaimer">These are projections on YOUR inputs &mdash; not promises. Actual lift varies by market, season, and execution. Conservative slider math; many clients exceed it.</div>
   </div>
 </section>
+</details>
+</div>
+
 
 <!-- ============================ KCA REVIEWS - written testimonials ============================ -->
 <section class="section section-reviews">
   <div class="section-inner">
-    <div class="kicker">Section 10 · Don't Take Our Word For It</div>
+    <div class="kicker">Section 14 · Don't Take Our Word For It</div>
     <h2 class="section-title">Here's what KCA's <em>roofing clients</em> say.</h2>
     <div class="kca-reviews-aggregate">
       <span class="num">120</span>
@@ -1783,9 +2224,9 @@ a{color:inherit;text-decoration:none}
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M22 12.07C22 6.51 17.52 2 12 2S2 6.51 2 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.77l-.44 2.9h-2.33V22c4.78-.75 8.44-4.91 8.44-9.93z"/></svg>
           </div>
           <div class="kca-review-card-header">
-            <img class="kca-review-card-img" src="https://kingcontractor.com/wp-content/uploads/2024/02/r2.webp" alt="Luke H. Johnson" loading="lazy">
+            <img class="kca-review-card-img" src="https://kingcontractor.com/wp-content/uploads/2024/02/r2.webp" alt="Sean Becker" loading="lazy">
             <div class="kca-review-card-info">
-              <div class="kca-review-card-name">Luke H. Johnson</div>
+              <div class="kca-review-card-name">Sean Becker</div>
               <div class="kca-review-card-stars"><span class="star-num">5.0</span>★★★★★</div>
               <div class="kca-review-card-source">Facebook Review</div>
             </div>
@@ -1937,7 +2378,7 @@ a{color:inherit;text-decoration:none}
 <!-- ============================ KCA VIDEOS - testimonial slider ============================ -->
 <section class="section section-videos">
   <div class="section-inner">
-    <div class="kicker">Section 11 · See It From The Roofers</div>
+    <div class="kicker">Section 15 · See It From The Roofers</div>
     <h2 class="section-title">Real owners. <em>Real results.</em></h2>
     <p class="section-sub">Roofing-business owners on what changed after KCA built their site. 60 to 90 seconds each.</p>
     <div class="kca-video-grid" id="kca-video-grid">
@@ -1968,11 +2409,11 @@ a{color:inherit;text-decoration:none}
 <!-- ============================ PRICING ============================ -->
 <section class="section section-grey">
   <div class="section-inner">
-    <div class="kicker">Section 12 · Investment</div>
-    <h2 class="section-title" style="text-align:center">A complete roofing brand <em>for less than one job.</em></h2>
+    <div class="kicker" style="display:flex;justify-content:center">Section 16 · Investment</div>
+    <h2 class="section-title" style="text-align:center;margin-left:auto;margin-right:auto">A complete roofing brand <em>for less than one job.</em></h2>
     <div class="pricing-card">
       <div class="pricing-eyebrow">Limited Slot · Same-Day Start</div>
-      <div class="pricing-headline">Become Phoenix & Tucson's <em>most trusted</em> roofing brand.</div>
+      <div class="pricing-headline">Become Northeast Tarrant County's <em>most trusted</em> roofing brand.</div>
       <div class="pricing-identity">The Ultimate Roofing Website + AI lead engine + ongoing SEO &mdash; everything you need to charge what you're worth, hire better crew, and win the homeowner before they ever pick up the phone.</div>
 
       <!-- Value Stack (Dean RoofCon move) -->
@@ -1985,17 +2426,40 @@ a{color:inherit;text-decoration:none}
           <div class="vs-item"><span class="vs-name">Hosting · SSL · Lifetime Maintenance</span><span class="vs-msrp">$1,800<em>/yr</em></span></div>
           <div class="vs-item"><span class="vs-name">Reputation + Review Auto-Engine</span><span class="vs-msrp">$2,400<em>/yr</em></span></div>
         </div>
-        <div class="value-stack-total"><span>Stacked Value</span><strong>$34,500+</strong></div>
+        <div class="value-stack-total">
+          <div class="vt-label">
+            <span class="vt-eyebrow">Stacked Value</span>
+            <span class="vt-headline">What this is actually worth</span>
+          </div>
+          <span class="vt-amount">$34,500<span class="plus">+</span></span>
+        </div>
       </div>
 
-      <!-- Risk reversal pill -->
-      <div class="risk-pill">100% money-back · cancel any time after month 3 · no contracts</div>
+      <!-- Risk reversal: Money-Back Guarantee badge (replaces the green pill) -->
+      <div class="money-back-row">
+        <div class="money-back-badge-img" aria-hidden="true"></div>
+        <div class="money-back-text">
+          <div class="money-back-headline"><em>100%</em> Money-Back Guarantee</div>
+          <div class="money-back-sub">Cancel any time after month 3 &middot; <strong>no long-term contracts</strong> &middot; risk is on us.</div>
+        </div>
+      </div>
 
       <!-- Hero price -->
       <div class="pricing-hero">
+        <div class="pricing-hero-crown" aria-hidden="true"></div>
         <div class="ph-headline">Your Investment</div>
-        <div class="ph-price">$297<em>/mo</em></div>
-        <div class="ph-sub">+ one-time setup fee</div>
+        <div class="pricing-tiers">
+          <div class="pricing-tier secondary">
+            <div class="pt-label">One-Time Setup</div>
+            <div class="pt-amount">$5,000</div>
+          </div>
+          <div class="pricing-tier-plus" aria-hidden="true">+</div>
+          <div class="pricing-tier primary">
+            <div class="pt-label">Monthly</div>
+            <div class="pt-amount">$297<em>/mo</em></div>
+          </div>
+        </div>
+        <button type="button" class="setup-reveal-btn" onclick="openSetupFeeModal()">+ Reveal One-Time Offer</button>
       </div>
 
       <a href="#accept" class="pricing-cta">Approve &amp; Lock In Your Slot</a>
@@ -2007,7 +2471,7 @@ a{color:inherit;text-decoration:none}
 <!-- ============================ ACCEPTANCE ============================ -->
 <section id="accept" class="section section-white">
   <div class="section-inner">
-    <div class="kicker">Section 13 · Acceptance</div>
+    <div class="kicker">Section 17 · Acceptance</div>
     <h2 class="section-title">Sign on the line. <em>We get to work.</em></h2>
     <p class="section-sub">Your signature below represents acceptance of this proposal. Setup fee is invoiced same-day &mdash; we start building the moment it clears.</p>
     <div class="accept-block">
@@ -2020,8 +2484,8 @@ a{color:inherit;text-decoration:none}
       </div>
       <div class="accept-side">
         <h3>Client</h3>
-        <div class="accept-row"><div class="label">Name</div><div class="pre-filled">Luke H. Johnson</div></div>
-        <div class="accept-row"><div class="label">Company</div><div class="pre-filled">Camelback Roofing, LLC</div></div>
+        <div class="accept-row"><div class="label">Name</div><div class="pre-filled">Sean Becker</div></div>
+        <div class="accept-row"><div class="label">Company</div><div class="pre-filled">Becker Roofing and Exteriors, LLC</div></div>
         <div class="accept-row"><div class="label">Date</div><div class="line"></div></div>
         <div class="accept-row"><div class="label">Signature</div><div class="line"></div></div>
       </div>
@@ -2036,13 +2500,13 @@ a{color:inherit;text-decoration:none}
     <img src="kca-logo.svg" alt="King Contractor Agency">
     <p class="footer-tag">Building America's Most Trusted Roofing Brands. The top 1% of roofing websites, designed, built, and shipped by King Contractor Agency.</p>
     <div class="footer-meta">
-      © <span id="year">2026</span> King Contractor Agency LLC · <a href="https://kingcontractor.com/">kingcontractor.com</a> · Proposal prepared for Camelback Roofing, LLC
+      © <span id="year">2026</span> King Contractor Agency LLC · <a href="https://kingcontractor.com/">kingcontractor.com</a> · Proposal prepared for Becker Roofing and Exteriors, LLC
     </div>
   </div>
 </footer>
 
 <script>
-// ROI calculator — 4 sliders, big monthly lift + annual + ROI multiple over $297/mo
+// ROI calculator · 4 sliders, big monthly lift + annual + ROI multiple over $297/mo
 (function(){
   var leads=document.getElementById('leads'),close=document.getElementById('close'),ticket=document.getElementById('ticket'),lift=document.getElementById('lift');
   var leadsV=document.getElementById('leads-val'),closeV=document.getElementById('close-val'),ticketV=document.getElementById('ticket-val'),liftPctV=document.getElementById('lift-pct-val');
@@ -2069,8 +2533,11 @@ a{color:inherit;text-decoration:none}
   update();
 })();
 // Date + year
-document.getElementById('year').textContent=new Date().getFullYear();
-document.getElementById('prep-date').textContent=new Date().toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});
+// Date + year · null-safe so a missing #prep-date doesn't abort the rest of the script (which would TDZ-block PAGE_DATA / openPage and break the sitemap modal)
+(function(){
+  var y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear();
+  var p=document.getElementById('prep-date'); if(p) p.textContent=new Date().toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});
+})();
 
 // KCA written-reviews carousel arrows
 (function(){
@@ -2139,155 +2606,160 @@ document.getElementById('prep-date').textContent=new Date().toLocaleDateString('
 // ===== Page-card dialog (Relume-style section list, 13 pages) =====
 const PAGE_DATA = {
   home: { title:'Home', sections:[
-    ['Sticky Utility Bar','Phone · service area · "storm-emergency" badge — always visible on scroll.','Trust'],
-    ['Header / Navbar','Logo · primary navigation · sticky CTA button.','Nav'],
-    ['Hero Section','H1 + 5-field lead form, owner cut-out, real Google reviews row, truck overlay.','Convert'],
-    ['Trust Marquee','Google · Facebook · BBB · GAF · Owens Corning · CCC license logo strip.','Trust'],
-    ['Services Overview','8 service tiles · each tile links to its dedicated silo page.','SEO'],
-    ['About / Owner Story',"Luke's 11-year track record + the Camelback Mountain icon + team photo.",'Trust'],
-    ['Why Us · 4 Differentiators','Owner-led · 39 5★ reviews · GAF Master Elite · 25-yr warranty.','Pitch'],
-    ['Process Timeline','Inspect → Quote → Install → Cleanup → Warranty.','Pitch'],
-    ['Real Reviews Strip','Top 6 of 39 Google reviews · clickable to live source.','Trust'],
-    ['Past Work Gallery','Drone shots + before/after sliders · filterable.','Proof'],
-    ['Service Area Map','Scottsdale + 18 pinned cities · click pin → location page.','SEO'],
-    ['FAQ Accordion','Insurance · financing · warranty · timing — schema-marked.','AEO'],
-    ['Final CTA','Second lead form + emergency call · owner photo on form card.','Convert'],
-    ['Footer','Sitemap · CCC license · social · address · GMB embed.','Nav'],
+    ['Sticky Utility Bar','Phone (817) 898-7175 · "Schedule Free Inspection" · "Storm? Tap to call Sean" · always visible on scroll.','Trust'],
+    ['Header / Navbar','BR-mark logo · Services · Service Area · Roofs That Last™ · About · Reviews · Gallery · Contact.','Nav'],
+    ['Hero Section','H1 + 5-field lead form · Sean Becker owner cutout · Google 4.9 / 63 review pill · drone aerial of real Keller residential project.','Convert'],
+    ['Trust Marquee','Google · Watchdog Hall of Fame 2023 · CertainTeed Select Shingle Master · Durolast · NTRCA · TX License #03-0235.','Trust'],
+    ['Services Overview','6 service tiles · Roof Replacement · Repair · Hail & Storm · Insurance Claim Help · Commercial · Exterior Services.','SEO'],
+    ['About / Owner Story',"Sean Becker's family-owned story · founded 2018 · Andre Coursey + team · Northeast Tarrant County native.",'Trust'],
+    ['Five Specialties Stack','Insurance claim experts · Built for hail wind & Texas heat · Local & trusted · Family-owned · Texas-certified.','Pitch'],
+    ['Roofs That Last™ Callout','Trademarked maintenance program · annual inspection + cloud reports + nail-flashing + CO check.','Brand'],
+    ['Process Snapshot',"5 steps · Free Consultation → Inspection → Recommendations → Installation → Final Review (Becker's 'Simple Roofing Process').",'Pitch'],
+    ['Real Reviews Strip','Top 6 of 63 Google reviews · Jon G · Daniel H · Marty from T · Mark Hamilton S · clickable to source.','Trust'],
+    ['Past Work Gallery','12 real Keller / NRH / Southlake / Colleyville projects from 39 on disk · drone shots + before/after.','Proof'],
+    ['Service Area Map','Northeast Tarrant County · 12 pinned cities · click pin → city page.','SEO'],
+    ['FAQ Accordion','Hail · insurance claims · Roofs That Last™ · timing · warranty · schema-marked for AEO.','AEO'],
+    ['Final CTA','Second lead form + tap-to-call (817) 898-7175 · Sean photo on form card.','Convert'],
+    ['Footer','Sitemap · TX License #03-0235 · social · address · GMB embed.','Nav'],
   ]},
   about: { title:'About', sections:[
-    ['Hero',"Owner photo + 'Built by Luke, run by family · 11 yrs across Arizona.'",'Trust'],
-    ['Story Timeline','2015 founding → 1,000th roof → GAF Master Elite → 39 reviews.','Story'],
-    ['Owner Bio',"Full Luke bio + signature · why he started Camelback · personal note.",'Trust'],
-    ['Team Grid','Office staff, PMs, install crews · names, roles, headshots.','Team'],
-    ['Values & Mission','Honesty · craftsmanship · clean sites · Arizona-tough warranty.','Pitch'],
-    ['Behind-the-Scenes Gallery','Truck wraps, the Camelback Mountain icon mascot, install-day photos, events.','Proof'],
-    ['Awards & Certifications','GAF Master Elite · Owens Corning Platinum · BBB A+ · BBB Accredited 2022.','Trust'],
-    ['Final CTA',"Lead form + 'Book a call directly with Luke'.",'Convert'],
+    ['Hero',"Sean Becker portrait + 'Built by Sean, run by family · 8 yrs across Northeast Tarrant County.'",'Trust'],
+    ['Story Timeline','2018 founding → first 100 roofs → Dallas Morning News Watchdog Hall of Fame 2023 → 63 verified Google 5-star reviews.','Story'],
+    ['Owner Bio',"Full Sean Becker bio · 13+ years roofing · 10+ years in DFW · why he started Becker Roofing · personal note.",'Trust'],
+    ['Team Grid','Sean Becker (Owner) · Andre Coursey (Sales Manager · 15+ yrs construction) · Maru Iabichela · ops + production + project crew.','Team'],
+    ['Five Specialties · Locked','Insurance claim experts · Built for hail wind & Texas heat · Local & trusted (not out-of-town crews) · Family-owned · Texas-certified.','Pitch'],
+    ['Awards & Certifications','CertainTeed Select Shingle Master · Durolast · Genflex Commercial · Xactimate X1 Level 2 · Infrared Roofing Inspection · RCAT · NTRCA · TX License #03-0235.','Trust'],
+    ['Press · Watchdog Hall of Fame','Featured in Dallas Morning News Watchdog Nation Hall of Fame 2023 · third-party validation that cannot be bought.','Trust'],
+    ['Languages Served','English & Spanish · in-house bilingual point of contact for the homeowner.','Local'],
+    ['Final CTA',"Lead form + 'Book a 15-min call directly with Sean'.",'Convert'],
     ['Footer','Sitemap · license · social · phone.','Nav'],
   ]},
   gallery: { title:'Gallery', sections:[
-    ['Hero','"39 roofs across 19 Arizona cities — see the work."','Proof'],
-    ['Filter Bar','By service · by city · by year · by material.','UX'],
-    ['Drone Shots Grid','Wide aerial photos of completed roofs · masonry layout.','Proof'],
-    ['Before / After Sliders','Drag-handle interactive sliders for 12+ projects.','Proof'],
-    ['Featured Project Deep-Dives','Full case study per featured project · client quote · timeline.','Story'],
-    ['Video Reel','Drone flyovers + crew install footage — 60-sec highlight reel.','Proof'],
-    ['Reviews Tied to Projects','Each project links to its corresponding Google review.','Trust'],
-    ['Final CTA',"'Want your roof in the gallery?' → lead form.",'Convert'],
+    ['Hero','"200+ roofs across 12 Northeast Tarrant County cities · see the work."','Proof'],
+    ['Filter Bar','By service · by city · by year · by material (CertainTeed shingle / Durolast / metal).','UX'],
+    ['Drone Shots Grid','Wide aerial photos of completed Keller / NRH / Southlake / Colleyville roofs · masonry layout.','Proof'],
+    ['Before / After Sliders','Drag-handle interactive sliders · 8 hail-damage projects with measured before/after.','Proof'],
+    ['Featured Project Deep-Dives','Full case study per featured project · client quote · timeline · insurance claim path.','Story'],
+    ['Geo-Tagged Alts','Every photo alt-tagged with city name · localized SEO across all 12 service-area towns.','SEO'],
+    ['Reviews Tied to Projects','Each project links to its corresponding Google review (Jon G · Daniel H · Marty from T).','Trust'],
+    ['Final CTA',"'Want your roof in the gallery?' → free-inspection lead form.",'Convert'],
     ['Footer','Sitemap · license · social · phone.','Nav'],
   ]},
   reviews: { title:'Reviews', sections:[
-    ['Hero','4.6★ × 39 Google reviews · profile photos collage.','Trust'],
-    ['Stats Banner','39 reviews · 5.0 avg · 100% recommend · 12 yrs of feedback.','Stat'],
-    ['Source Pills','Google · Facebook · BBB · Yelp · Houzz — clickable to source.','Trust'],
-    ['Reviews Grid','All 39 reviews · paginated · filterable by service / city / year.','Proof'],
-    ['Featured Video Testimonials','6 client testimonials in video form (60–90 sec each).','Proof'],
-    ['Top Photos In Reviews','User-uploaded photos pulled from Google reviews.','Proof'],
+    ['Hero','4.9★ × 63 Google reviews · profile photos collage · with link to live Google Maps profile.','Trust'],
+    ['Stats Banner','63 reviews · 4.9 avg · Watchdog Hall of Fame 2023 · 8 yrs in business.','Stat'],
+    ['Source Pills','Google · Facebook · clickable to source (Becker has no BBB profile by choice).','Trust'],
+    ['Verbatim Reviews Grid','All 63 reviews verbatim · paginated · filterable by service / city / year.','Proof'],
+    ['Featured Verbatim Cards','Jon G · Daniel H · Marty from T · Mark Hamilton S · with dates, cities, services tied.','Proof'],
+    ['Top Photos In Reviews','User-uploaded photos pulled from Google reviews of completed BRE jobs.','Proof'],
     ['Review Schema Markup','AggregateRating + Review schema for AEO + Google rich snippets.','AEO'],
-    ['Final CTA',"'Add your review' → Google review link · '+1 to 525' button.",'Convert'],
+    ['Final CTA',"'Add your review' → direct Google review link · '+1 to 63' button.",'Convert'],
     ['Footer','Sitemap · license · social · phone.','Nav'],
   ]},
   contact: { title:'Contact', sections:[
-    ['Hero','"Call us, text us, or fill the form — we answer in 15 minutes."','Convert'],
-    ['Lead Form (Full)','Name, phone, address, service type, message · 6 fields max.','Convert'],
-    ['Phone + Emergency','Click-to-call · separate emergency hotline for storm calls.','Convert'],
-    ['Service Area Map',"18-city map · click → that city's location page.",'Local'],
-    ['Hours + Holidays','Office hours · emergency 24/7 · holiday closures.','Info'],
-    ['Office Address','Real address · embedded Google map · directions link.','Local'],
-    ['Office / Truck Photo','Real photo of HQ + truck fleet to humanize.','Trust'],
-    ['Quick FAQ','Top 4 contact-related questions (response time, area, free quote, financing).','AEO'],
+    ['Hero','"Call us, text us, or fill the form · we answer in 15 minutes."','Convert'],
+    ['Lead Form (Full)','Full name · phone · property address · service type · SMS-consent · 5 fields max.','Convert'],
+    ['Phone + Emergency','Tap-to-call (817) 898-7175 · separate emergency line for active leak / storm calls.','Convert'],
+    ['Service Area Map',"12-city Northeast Tarrant map · click → that city's location page.",'Local'],
+    ['Hours + Holidays','Mon–Fri 8 AM – 5 PM · emergency tarp service available · holiday closures.','Info'],
+    ['Office Address','8376 Davis Blvd Suite 249, North Richland Hills, TX 76182 · embedded Google map · directions link.','Local'],
+    ['Office / Truck Photo','Real photo of HQ + branded fleet (white box-trailers wrapped with logo + phone).','Trust'],
+    ['Languages Pill','English & Spanish · bilingual point of contact named.','Local'],
+    ['Quick FAQ','Top 4 contact-related questions (response time, service area, free inspection, financing).','AEO'],
     ['Footer','Sitemap · license · social · phone.','Nav'],
   ]},
-  financing: { title:'Financing', sections:[
-    ['Hero','"Roof now, pay over time — 0% APR for qualified buyers."','Convert'],
-    ['Partner Logos','GreenSky · Service Finance · Synchrony — official partner badges.','Trust'],
-    ['Plans Table','0% 12-mo · 6.99% 60-mo · 9.99% 120-mo — side-by-side comparison.','Doc'],
-    ['Monthly Payment Calculator','Slider input · live monthly payment + total cost preview.','UX'],
-    ['How It Works','5 steps: apply · approval (5 min) · sign · install · pay over time.','Process'],
-    ['Approval Criteria','Plain-English credit + income guidelines · "no surprises".','Trust'],
-    ['FAQ','Soft pull? Min credit? Co-signer? Prepayment? — schema-marked.','AEO'],
-    ['Final CTA',"'Pre-qualify in 60 seconds' → application iframe.",'Convert'],
+  membership: { title:'Roofs That Last™ Membership', sections:[
+    ['Hero','"BRE\'s trademarked maintenance program · roofs that actually last."','Brand'],
+    ['What\'s Included Checklist','Annual roof inspection · cloud-stored inspection reports · nail-flashing maintenance · attic carbon-monoxide check.','Doc'],
+    ['Why Membership Matters','Catch a $300 nail-pop before it becomes a $30,000 leak · proactive vs reactive · preserves manufacturer warranty terms.','Pitch'],
+    ['How It Works','5 steps · sign up → first inspection → cloud report uploaded → annual schedule confirmed → priority storm response.','Process'],
+    ['Real Member Stories','Verbatim quotes from members · Sean and Andre named in shepherding stories.','Trust'],
+    ['Pricing Block','Operator-confirmation-pending; renders gracefully without specific numbers until Sean confirms.','Info'],
+    ['CTA Banner',"'Join Roofs That Last™' → form pre-filled with the membership intent.",'Convert'],
     ['Footer','Sitemap · license · social · phone.','Nav'],
   ]},
   services: { title:'Services', sections:[
-    ['Hero','"Every roofing service for Phoenix & Tucson homes — one team, one warranty."','Pitch'],
-    ['8 Service Tiles','Repair · Replacement · Inspection · Emergency · Storm · Tile · Flat / Foam · Insurance Claims.','SEO'],
-    ['Service Comparison Table','Each service: turnaround · materials · price range · warranty.','Doc'],
-    ['Process Timeline','Same 5-step flow for all services · tailored detail per service.','Process'],
-    ['Why Us Strip','4 differentiators that apply across every service.','Pitch'],
-    ['Real Reviews','Top reviews tagged by service.','Trust'],
-    ['Service Area Map','18-city coverage map.','Local'],
-    ['FAQ','Top questions across all services — schema-marked.','AEO'],
+    ['Hero','"Every roofing service for Northeast Tarrant homes · one team, one warranty."','Pitch'],
+    ['6 Service Tiles','Roof Replacement · Roof Repair · Hail & Storm Damage · Insurance Claim Help · Commercial Roofing · Exterior Services.','SEO'],
+    ['Service Comparison Table','Each service · turnaround · materials · ticket range · warranty terms.','Doc'],
+    ['Process Timeline',"BRE's Simple Roofing Process applied across all 6 services · tailored detail per service.",'Process'],
+    ['Five Specialties Strip','Insurance claim experts · Texas heat · Local & trusted · Family-owned · TX-certified.','Pitch'],
+    ['Real Reviews','Top reviews tagged by service (Jon G replacement · Daniel H NRH hail · Marty Arlington repair).','Trust'],
+    ['Service Area Map','12-city Northeast Tarrant coverage map.','Local'],
+    ['FAQ','Top questions across all services · schema-marked for AEO.','AEO'],
     ['Final CTA',"'Get a free roof inspection' → lead form.",'Convert'],
     ['Footer','Sitemap · license · social · phone.','Nav'],
   ]},
   locations: { title:'Locations', sections:[
-    ['Hero','"19 Phoenix & Tucson cities · 39 roofs · one local team."','Local'],
-    ['Coverage Map','Interactive map · 18 pinned cities · click → city page.','Local'],
-    ['City Tiles Grid','Alphabetical 18 cities · each tile shows # roofs done locally.','Local'],
-    ['Service Area Boundary','Visual radius from Scottsdale HQ · drive-time overlay.','Local'],
-    ['Local Stats Per City','Roofs completed · avg HOA · most common roof age.','Stat'],
-    ['Local Reviews','Reviews grouped by city.','Trust'],
-    ['Local Case Studies','1 case study per major city · before/after + quote.','Story'],
-    ['Local SEO Schema','LocalBusiness + Place + Service Area schema for each city.','SEO'],
+    ['Hero','"12 Northeast Tarrant cities · 200+ roofs · one local team · same Sean."','Local'],
+    ['Coverage Map','Interactive Northeast Tarrant map · 12 pinned cities · click → city page.','Local'],
+    ['City Tiles Grid','Keller · NRH · Southlake · Colleyville · Watauga · Hurst · Bedford · Grapevine · Trophy Club · Roanoke · Haltom City · N Fort Worth.','Local'],
+    ['Service Area Boundary','Drive-time radius from 8376 Davis Blvd HQ · 30-min response zone shown.','Local'],
+    ['Local Stats Per City','Roofs completed locally · most common roof age · primary issues (hail / wind / heat).','Stat'],
+    ['Local Reviews','Reviews grouped by city · Daniel H (NRH) · Marty (Arlington) · Jon G (replacement).','Trust'],
+    ['Local Case Studies','1 case study per dedicated city page (Keller · NRH · Southlake · Colleyville) · before/after + quote.','Story'],
+    ['Local SEO Schema','LocalBusiness + Place + Service Area schema for each city · drops the SEO-churn subdomain pattern.','SEO'],
     ['Final CTA',"'Free inspection in [your city]' → form pre-filled with city.",'Convert'],
     ['Footer','Sitemap · license · social · phone.','Nav'],
   ]},
   whyus: { title:'Why Us', sections:[
-    ['Hero','"4 reasons Arizona homeowners pick Camelback over the big-box guys."','Pitch'],
-    ['Differentiator 01 · Owner-Led',"Luke on every job — not a salesperson, not a subcontractor.",'Pitch'],
-    ['Differentiator 02 · 39 5★ Reviews',"More verified reviews than any roofer in Arizona.",'Trust'],
-    ['Differentiator 03 · GAF Master Elite','Top 3% of US roofers · stronger warranty + materials.','Trust'],
-    ['Differentiator 04 · 25-Year Warranty','Workmanship + manufacturer · transferable to next owner.','Trust'],
-    ['Awards Strip','GAF Master Elite · Owens Corning Platinum · BBB A+.','Trust'],
-    ['Process Snapshot','5-step install timeline.','Process'],
-    ['Final CTA',"'See why for yourself' → free inspection form.",'Convert'],
+    ['Hero','"5 reasons Northeast Tarrant homeowners pick Becker Roofing over the storm-chasers."','Pitch'],
+    ['Differentiator 01 · Insurance Claim Experts','Sean & Andre repeatedly named by Google reviewers as having shepherded denied claims through to approved payouts.','Trust'],
+    ['Differentiator 02 · Built for Hail Wind & Texas Heat','Texas-specific material specs · Xactimate X1 Level 2 · infrared roofing inspection certified.','Trust'],
+    ['Differentiator 03 · Local & Trusted','Not out-of-town crews · 8376 Davis Blvd HQ · same neighborhood every job.','Pitch'],
+    ['Differentiator 04 · Family-Owned Since 2018','Sean Becker on the roof · Andre Coursey on the sales call · Maru on the team · single accountable owner.','Pitch'],
+    ['Differentiator 05 · Texas-Certified','TX License #03-0235 · CertainTeed Select Shingle Master · NTRCA · RCAT · Watchdog Hall of Fame 2023.','Trust'],
+    ['Awards Strip','CertainTeed · Durolast · Genflex Commercial · Xactimate · Watchdog Hall of Fame 2023.','Trust'],
+    ['Process Snapshot','5-step Simple Roofing Process · Free Consultation → Inspection → Recommendations → Installation → Final Review.','Process'],
+    ['Final CTA',"'See why for yourself' → free-inspection form.",'Convert'],
     ['Footer','Sitemap · license · social · phone.','Nav'],
   ]},
   stormdamage: { title:'Storm Damage', sections:[
-    ['Hero','"Storm hit your roof? We tarp, file the claim, and rebuild — fast."','Convert'],
-    ['Symptoms Checklist','Missing shingles · dented gutters · ceiling stains · granule loss.','Doc'],
-    ['Insurance Claim Help','We meet the adjuster · document damage · maximize payout.','Trust'],
-    ['Inspection Process','Free 30-min storm inspection · drone + walk-through.','Process'],
-    ['Tarp / Emergency Response','24/7 emergency tarp service · same-day for active leaks.','Convert'],
-    ['Past Storm Cases','Hurricane Ian, Idalia, Helene — case studies w/ payout.','Story'],
-    ['Reviews','Storm-specific 5-star reviews.','Trust'],
-    ['FAQ','Insurance · timing · payment · deductible — schema-marked.','AEO'],
+    ['Hero','"Hail or wind hit your roof? We tarp, document the claim, and rebuild · fast."','Convert'],
+    ['Hail Damage Signs Checklist','Missing shingles · dented gutters · ceiling stains · granule loss · soft hail bruises.','Doc'],
+    ['What To Do After A Hail Or Wind Event','Document damage · don\'t sign on-site contracts with door-knockers · call BRE for a free 30-min documentation visit.','Trust'],
+    ['Insurance Claim Documentation','Sean photographs the damage end-to-end · Xactimate X1 Level 2 estimate built · adjuster-meeting attendance.','Trust'],
+    ['Inspection Process','Free 30-min storm inspection · drone + walk-through + infrared on the attic.','Process'],
+    ['Tarp / Emergency Response','Same-day tarp service for active leaks · Mon–Fri 8a–5p plus emergency line.','Convert'],
+    ['Past Storm Cases','Daniel H · NRH 2023 hail event · Marty · Arlington 2-roof multi-event · case studies w/ payout.','Story'],
+    ['Reviews','Storm-specific 5-star reviews · denied-claim-recovered stories.','Trust'],
+    ['FAQ','Insurance · timing · payment · deductible · door-knocker red flags · schema-marked.','AEO'],
     ['Final CTA',"'Free storm inspection within 24 hrs' → form.",'Convert'],
     ['Footer','Sitemap · license · social · phone.','Nav'],
   ]},
-  insuranceclaims: { title:'Insurance Claims', sections:[
-    ['Hero','"We handle the paperwork. You sign one form. The rest is on us."','Pitch'],
-    ['How We Help','Free claim review · adjuster meeting · payout maximization.','Pitch'],
-    ['Claim Process Timeline','Inspect → File → Adjuster → Approve → Install → Final pay.','Process'],
-    ['Document Checklist','Photos · damage report · adjuster letter · policy doc.','Doc'],
-    ['Common Pitfalls','Why claims get denied · missed deadlines · how to avoid.','Trust'],
-    ['Adjuster Meeting Tips',"Have us there · photograph everything · don't sign on-site.",'Trust'],
-    ['Past Claim Stories','3 case studies · "$X claim, $Y payout" with quotes.','Story'],
-    ['FAQ','Deductible · timeline · denial · re-file — schema-marked.','AEO'],
+  insuranceclaims: { title:'Insurance Claim Help', sections:[
+    ['Hero · The Narrative Spine','"We handle the paperwork. You sign one form. The rest is on us." · BRE\'s differentiator vs every competitor.','Pitch'],
+    ['What Sean Does For Your Claim','Free claim review · damage documentation · adjuster-meeting attendance · Xactimate X1 estimate · payout maximization.','Pitch'],
+    ['Why Sean (Owner-Led Promise)','Sean Becker personally walks the homeowner through · not handed off to a subcontractor · accountability is one owner.','Trust'],
+    ['Our Certifications That Matter For Claims','Xactimate X1 Level 2 · Independent Adjustors License · Infrared Roofing Inspection Certified · CertainTeed Select Shingle Master.','Trust'],
+    ['Claim Process Timeline','Inspect → Document → File → Adjuster meeting → Approval → Install → Final pay.','Process'],
+    ['Common Claim Scenarios','Denied claim · partial claim · door-knocker fraud claim · supplemental claim · written for AEO long-tail capture.','Doc'],
+    ['Past Claim Stories','Jon G · denied claim recovered · Marty · 2 roof claims · case studies · "$X claim, $Y payout" with quotes.','Story'],
+    ['Adjuster Meeting Tips',"Have BRE there · photograph everything · don't sign on-site · don't accept first offer.",'Trust'],
+    ['FAQ','Deductible · timeline · denial · supplemental · door-knockers · schema-marked.','AEO'],
     ['Final CTA',"'Have a claim? Free 30-min review' → form.",'Convert'],
     ['Footer','Sitemap · license · social · phone.','Nav'],
   ]},
   process: { title:'Process', sections:[
-    ['Hero','"5 steps from first call to final warranty stamp."','Process'],
-    ['Step 01 · Inspect','Free 30-min on-site · drone + interior · written report.','Process'],
-    ['Step 02 · Quote',"Same-day written quote · materials, labor, timeline. No pressure.",'Process'],
-    ['Step 03 · Install','1–3 days typical · daily progress photos · clean job site.','Process'],
-    ['Step 04 · Cleanup','Magnetic nail sweep · tarp removal · final walk-through.','Process'],
-    ['Step 05 · Warranty','25-yr workmanship + manufacturer · transferable doc.','Trust'],
-    ['Materials & Crew','GAF Timberline + sub-roof · in-house W2 crew (no subs).','Trust'],
-    ['FAQ','Timing · weather delays · payment milestones — schema-marked.','AEO'],
-    ['Final CTA',"'Start at Step 01' → lead form.",'Convert'],
+    ['Hero','"5 steps from first call to final warranty stamp · BRE\'s Simple Roofing Process."','Process'],
+    ['Step 01 · Free Consultation','15-min phone consult · understand the homeowner\'s situation · schedule the on-site inspection.','Process'],
+    ['Step 02 · Detailed Inspection','30-min on-site · drone + walk-through + infrared attic check · written report.','Process'],
+    ['Step 03 · Clear Recommendations',"Same-day or next-day quote · materials, labor, timeline · no pressure, no door-knocker tactics.",'Process'],
+    ['Step 04 · Professional Installation','1-3 days typical · daily progress photos · clean job site · in-house crew.','Process'],
+    ['Step 05 · Final Review & Support','Magnetic nail sweep · tarp removal · final walk-through · warranty doc handed over.','Trust'],
+    ['Materials & Crew','CertainTeed Select Shingle Master + Durolast + Genflex Commercial · in-house crew (no subs for residential).','Trust'],
+    ['FAQ','Timing · weather delays · payment milestones · schema-marked for AEO.','AEO'],
+    ['Final CTA',"'Start at Step 01' → 15-min call lead form.",'Convert'],
     ['Footer','Sitemap · license · social · phone.','Nav'],
   ]},
   warranty: { title:'Warranty', sections:[
-    ['Hero','"25-year coverage. Transferable. Real claims handled in 48 hrs."','Trust'],
-    ['Warranty Types Table','Workmanship (10-yr) + Manufacturer (15–25 yr) — side-by-side.','Doc'],
-    ['Coverage Details',"What's covered · what's not · clear plain-English breakdown.",'Doc'],
-    ['How to File a Claim','3 steps: photo · email · we inspect within 48 hrs.','Process'],
-    ['Transferable Warranty','Sell your home? Warranty transfers to buyer · adds resale value.','Pitch'],
-    ['Real Warranty Stories','2 case studies · how we honored claims years later.','Story'],
-    ['FAQ',"What voids it · transfer process · cost — schema-marked.",'AEO'],
+    ['Hero','"Real warranty terms · operator-confirmation-pending · we never inflate this."','Trust'],
+    ['Warranty Types Table','Workmanship warranty · CertainTeed manufacturer warranty (Select Shingle Master Gold) · Durolast (commercial) · operator-confirmed lengths.','Doc'],
+    ['Coverage Details',"What's covered · what's not · clear plain-English breakdown · no hidden carve-outs.",'Doc'],
+    ['How To File A Claim','3 steps · photo · email · BRE inspects within 48 hrs · no run-around.','Process'],
+    ['Roofs That Last™ Add-On','Membership program extends maintenance support beyond warranty · proactive vs reactive.','Brand'],
+    ['Real Warranty Stories','Verbatim cases from past members · how BRE honored claims years after install.','Story'],
+    ['FAQ',"What voids it · transfer process · cost · schema-marked.",'AEO'],
     ['Final CTA',"'Have a warranty question?' → quick contact form.",'Convert'],
     ['Footer','Sitemap · license · social · phone.','Nav'],
   ]},
@@ -2321,7 +2793,204 @@ function openPage(id){
   if(!dlg) return;
   dlg.addEventListener('click', function(e){ if(e.target === dlg) dlg.close(); });
 })();
+
+// ===== Setup-fee modal (editable + persisted in localStorage) =====
+function getSetupFee(){
+  try{ return localStorage.getItem('kca-one-time-offer-brexteriors') || '18,000'; }
+  catch(e){ return '18,000'; }
+}
+function saveSetupFee(rawText){
+  var num = parseInt(String(rawText).replace(/[^0-9]/g,''), 10);
+  if(isNaN(num) || num < 0) return false;
+  var formatted = num.toLocaleString('en-US');
+  try{ localStorage.setItem('kca-one-time-offer-brexteriors', formatted); }catch(e){}
+  var amt = document.getElementById('setupFeeAmount');
+  if(amt) amt.textContent = '$' + formatted;
+  return true;
+}
+function openSetupFeeModal(){
+  var amt = document.getElementById('setupFeeAmount');
+  if(amt){ amt.textContent = '$' + getSetupFee(); amt.setAttribute('contenteditable','false'); }
+  var btn = document.getElementById('setupFeeEditBtn');
+  if(btn){ btn.innerHTML = '&#9998; Edit'; btn.classList.remove('is-active'); }
+  document.getElementById('setupFeeModal').showModal();
+}
+function toggleSetupFeeEdit(){
+  var amt = document.getElementById('setupFeeAmount');
+  var btn = document.getElementById('setupFeeEditBtn');
+  if(!amt || !btn) return;
+  if(amt.getAttribute('contenteditable') === 'true'){
+    // Save mode → commit + lock + hide button again
+    saveSetupFee(amt.textContent);
+    amt.setAttribute('contenteditable','false');
+    btn.innerHTML = '&#9998; Edit';
+    btn.classList.remove('is-active');
+  } else {
+    // Edit mode → unlock + focus + reveal button as "Save"
+    amt.setAttribute('contenteditable','true');
+    amt.focus();
+    try{
+      var range = document.createRange();
+      range.selectNodeContents(amt);
+      range.collapse(false);
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+    }catch(e){}
+    btn.innerHTML = '&#10003; Save';
+    btn.classList.add('is-active');
+  }
+}
+// On blur of the amount, auto-commit if in edit mode
+document.addEventListener('DOMContentLoaded', function(){
+  var amt = document.getElementById('setupFeeAmount');
+  if(!amt) return;
+  // Init from storage
+  amt.textContent = '$' + getSetupFee();
+  amt.addEventListener('blur', function(){
+    if(amt.getAttribute('contenteditable') === 'true'){
+      saveSetupFee(amt.textContent);
+      amt.setAttribute('contenteditable','false');
+      var btn = document.getElementById('setupFeeEditBtn');
+      if(btn){ btn.innerHTML = '&#9998; Edit'; btn.classList.remove('is-active'); }
+    }
+  });
+  // Enter key commits (don't insert newline)
+  amt.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); amt.blur(); }
+  });
+});
+// Backdrop click closes
+(function(){
+  var dlg = document.getElementById('setupFeeModal');
+  if(!dlg) return;
+  dlg.addEventListener('click', function(e){ if(e.target === dlg) dlg.close(); });
+})();
+
+// ===== Password gate for §4 SOP-PDF =====
+function openSopPasswordGate(){
+  var input = document.getElementById('sopPwInput');
+  var err = document.getElementById('sopPwError');
+  if(input){ input.value = ''; }
+  if(err){ err.classList.remove('show'); }
+  document.getElementById('sopPwModal').showModal();
+  setTimeout(function(){ if(input) input.focus(); }, 60);
+}
+function submitSopPassword(){
+  var input = document.getElementById('sopPwInput');
+  var err = document.getElementById('sopPwError');
+  if(!input) return;
+  // Accepted codes (case-insensitive). Add more passes as needed.
+  var ACCEPTED = ['kca2026', 'kingcontractor', 'dean'];
+  var entered = (input.value || '').trim().toLowerCase();
+  if(ACCEPTED.indexOf(entered) !== -1){
+    document.getElementById('sopPwModal').close();
+    setTimeout(function(){ document.getElementById('sopDialog').showModal(); }, 80);
+  } else {
+    if(err) err.classList.add('show');
+    input.classList.remove('shake');
+    void input.offsetWidth; // restart animation
+    input.classList.add('shake');
+    setTimeout(function(){ input.classList.remove('shake'); }, 420);
+    input.select();
+  }
+}
+// Enter key submits
+document.addEventListener('DOMContentLoaded', function(){
+  var input = document.getElementById('sopPwInput');
+  if(!input) return;
+  input.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); submitSopPassword(); }
+  });
+});
+// Backdrop click closes the password modal
+(function(){
+  var dlg = document.getElementById('sopPwModal');
+  if(!dlg) return;
+  dlg.addEventListener('click', function(e){ if(e.target === dlg) dlg.close(); });
+})();
+
+// Technical-deep-dive accordions §5-§13: when one closes, native <details> keeps the
+// scroll-byte-offset constant — but the page just shrunk by the section's content height,
+// so the user gets dumped past the accordion stack (often into §14/§15 testimonials).
+// Fix: on each close, scroll the just-closed summary back to the top of the viewport
+// (below the sticky topbar) so the user lands where they expected — at the same accordion
+// row in the stack, ready to open the next one.
+(function(){
+  var topbarFallback = window.innerWidth <= 768 ? 75 : 123;
+  function topbarOffset(){
+    var v = getComputedStyle(document.documentElement).getPropertyValue('--topbar-h').trim();
+    var n = parseInt(v, 10);
+    return isNaN(n) ? topbarFallback : n;
+  }
+  document.querySelectorAll('details.proposal-collapsible').forEach(function(d){
+    d.addEventListener('toggle', function(){
+      if (d.open) return;
+      var s = d.querySelector('.ps-summary');
+      if (!s) return;
+      var targetY = window.scrollY + s.getBoundingClientRect().top - topbarOffset() - 4;
+      window.scrollTo({ top: targetY, behavior: 'instant' });
+    });
+  });
+})();
 </script>
+
+
+
+<!-- ============================ PAGE-LEVEL MODAL DIALOGS — kept at body root so they are never nested inside the §5-§13 accordions (showModal() on a dialog inside a closed <details> misbehaves) ============================ -->
+<!-- SOP modal dialog (native <dialog>, opened by the button above) -->
+  <dialog id="sopDialog" class="sop-dialog" aria-labelledby="sopDialogTitle">
+    <div class="sop-dialog-head">
+      <div class="sop-dialog-title" id="sopDialogTitle">
+        <span class="sop-dialog-title-tag">SOP</span>
+        Ultimate Roofing Website Blueprint
+      </div>
+      <button type="button" class="sop-dialog-close" aria-label="Close" onclick="document.getElementById('sopDialog').close()">×</button>
+    </div>
+    <div class="sop-dialog-body">
+      <iframe class="sop-dialog-pdf" src="dean-blueprint.pdf#toolbar=1&navpanes=0&scrollbar=1" title="Ultimate Roofing Website Blueprint"></iframe>
+    </div>
+  </dialog>
+
+<!-- Shared page-card modal · populated by openPage() in JS at the bottom of <body> -->
+  <dialog id="pageDialog" class="page-card-dialog" aria-labelledby="pageDialogTitle">
+    <div class="pc-modal-head">
+      <span class="pc-modal-ic" id="pageDialogIc">⌂</span>
+      <span class="pc-modal-title" id="pageDialogTitle">Home</span>
+      <span class="pc-modal-meta" id="pageDialogMeta">14 sections · canonical scroll order</span>
+      <button type="button" class="pc-modal-close" aria-label="Close" onclick="document.getElementById('pageDialog').close()">×</button>
+    </div>
+    <div class="pc-modal-body" id="pageDialogBody"></div>
+  </dialog>
+
+<!-- Password gate before §4 SOP-PDF reveal · pw: kca2026 -->
+  <dialog id="sopPwModal" class="sop-pw-modal" aria-labelledby="sopPwTitle">
+    <div class="sop-pw-inner">
+      <button type="button" class="sop-pw-close" aria-label="Close" onclick="document.getElementById('sopPwModal').close()">×</button>
+      <div class="sop-pw-icon">&#128274;</div>
+      <div class="sop-pw-eyebrow">Restricted &middot; KCA Internal</div>
+      <div class="sop-pw-title" id="sopPwTitle">Enter password to view the SOP</div>
+      <p class="sop-pw-sub">The Ultimate Roofing Website Blueprint is KCA proprietary. Ask Dean for the access code.</p>
+      <input type="password" class="sop-pw-input" id="sopPwInput" placeholder="ENTER ACCESS CODE" autocomplete="off" spellcheck="false" maxlength="32">
+      <div class="sop-pw-error" id="sopPwError">&#9888; Wrong code &mdash; try again</div>
+      <button type="button" class="sop-pw-submit" onclick="submitSopPassword()">Unlock SOP &rarr;</button>
+    </div>
+  </dialog>
+
+<!-- Setup-fee reveal modal · shown from §12 Pricing. Amount is editable + persisted in localStorage. -->
+  <dialog id="setupFeeModal" class="setup-fee-modal" aria-labelledby="setupFeeModalTitle">
+    <div class="setup-fee-modal-inner">
+      <button type="button" class="setup-fee-modal-close" aria-label="Close" onclick="document.getElementById('setupFeeModal').close()">×</button>
+      <div class="setup-fee-badge-wrap"><div class="setup-fee-badge" aria-hidden="true"></div></div>
+      <div class="setup-fee-eyebrow" id="setupFeeModalTitle">Special One-Time Offer &middot; Today Only</div>
+      <div class="setup-fee-amount-row">
+        <span class="setup-fee-amount" id="setupFeeAmount" contenteditable="false" spellcheck="false">$18,000</span>
+      </div>
+      <p class="setup-fee-sub">Sign on the call &mdash; lock in this rate instead of the standard <strong>$5,000 setup</strong>. Everything included: build, AI, content, SEO, launch. <strong>100% money-back guaranteed.</strong></p>
+      <button type="button" class="setup-fee-edit" onclick="toggleSetupFeeEdit()" id="setupFeeEditBtn">&#9998; Edit</button>
+      <div style="margin-top:18px"><button type="button" class="setup-fee-cta" onclick="document.getElementById('setupFeeModal').close()">Got it &mdash; let's roll</button></div>
+    </div>
+  </dialog>
 
 </body>
 </html>

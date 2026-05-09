@@ -1,70 +1,37 @@
-# Camelback Roofing — Proposal Deploy Package
+# Becker Roofing and Exteriors — Proposal Deploy Package
 
-KCA proposal for Camelback Roofing, ready to deploy to Vercel as a static site.
+KCA proposal for Becker Roofing and Exteriors, ready to deploy to Vercel as a static site. The live build is bundled alongside the proposal so the cover laptop iframe and §1 phone-demo iframe both render the actual site directly from this repo (no external Vercel app required).
 
 ## What's inside
 
 ```
 _deploy/
 ├── proposal/
-│   ├── proposal.html       (the proposal)
+│   ├── proposal.html        (the proposal)
 │   ├── kca-logo.svg
-│   └── dean-blueprint.pdf  (loaded into the §4 SOP modal)
-├── build/                  (Juan's v2 React site — embedded in cover laptop + §1 phone-demo)
+│   ├── dean-blueprint.pdf   (loaded into the §4 SOP modal)
+│   └── kca-assets/          (KCA branding + competitor screenshots)
+├── build/
+│   └── index.html           (the live BR Exteriors site — embedded in cover laptop + §1 phone-demo)
 ├── assets/
-│   ├── photos/home-hero-tile-roof.png   (used in §3 GMB knowledge panel)
-│   └── logo/camelback-roofing-logo.png
-├── vercel.json             (root → /proposal/proposal redirect, cleanUrls)
+│   ├── logo/becker-roofing-primary.jpg
+│   ├── photos/hero-keller-texas.jpg     (used in §3 GMB knowledge panel)
+│   ├── gallery/gallery-*.jpg            (referenced by build/index.html)
+│   ├── generated/hero-truck-keller-v4.png, mascot-cutout.png
+│   └── team/sean-becker-portrait.jpg, sean-becker-cutout.png, andre-coursey.jpg, maru-iabichela.jpg, team-group-home-garden-show.jpg
+├── vercel.json              (root → /proposal/proposal redirect, cleanUrls)
 └── README.md
 ```
 
-## Deploy with Vercel CLI
+## How the iframes work
 
-```bash
-cd /Users/alijaafari/Desktop/website-factory/clients/camelbackroofing/_deploy
+The proposal at `/proposal/proposal.html` references the build via relative paths:
+- Cover laptop: `<iframe src="../build/index.html">` → resolves to `/build/index.html` on Vercel
+- §1 phone-demo: `<iframe src="../build/index.html">` → resolves to `/build/index.html` on Vercel
+- "Open Live Site" links: `../build/index.html` → resolves to `/build/index.html` on Vercel
 
-# First-time only — installs CLI globally if missing
-npm install -g vercel
+The build at `/build/index.html` references images via `../assets/...` which resolves to `/assets/...` on Vercel.
 
-# Deploy a preview build
-vercel
+## Deploy
 
-# Or deploy directly to production
-vercel --prod
-```
-
-On the first run the CLI will:
-1. Ask to log in (opens a browser OAuth flow — choose your Vercel account)
-2. Ask to set up & deploy this directory — answer **Yes**
-3. Ask which scope (your personal account or a team)
-4. Ask the project name (suggest: `camelback-roofing-proposal`)
-5. Detect framework: choose **Other** (it's static)
-6. Skip build command (leave default)
-7. Skip output directory (leave default — root)
-
-After the first deploy, the project is linked. Subsequent `vercel --prod` from this folder pushes a new version.
-
-## Expected URLs
-
-- `https://<project>.vercel.app/` — redirects to `/proposal/proposal`
-- `https://<project>.vercel.app/proposal/proposal` — the proposal (clean URL via `cleanUrls`)
-- `https://<project>.vercel.app/build/` — Juan's v2 React Camelback site (loaded by the iframes)
-
-## Updating the proposal
-
-When you edit `clients/camelbackroofing/proposal/proposal.html`, copy the updated file into `_deploy/proposal/` and re-run `vercel --prod`:
-
-```bash
-cp ../proposal/proposal.html proposal/proposal.html
-vercel --prod
-```
-
-## Why the structure mirrors the source folder
-
-The proposal references `../build/`, `../assets/photos/...`, and `../assets/logo/...` (relative paths). Mirroring the same `proposal/`, `build/`, `assets/` layout in `_deploy/` keeps every path resolving correctly without modifying the proposal HTML.
-
-## Notes
-
-- Total deploy size: ~54 MB (most is `dean-blueprint.pdf` at 30 MB — well within Vercel hobby limits)
-- The competitor screenshot thumbnails in §3 use a fallback gradient panel (the thum.io live screenshot endpoint is paywalled — fallback always shows)
-- All KCA testimonials in §10 + §11 reference `kingcontractor.com/wp-content/uploads/...` (external CDN), no local copies needed
+Push to `main` on `Koreankat/proposal-test`. Vercel auto-deploys to the connected production URL.
