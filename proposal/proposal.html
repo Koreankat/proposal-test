@@ -1025,6 +1025,18 @@ details.proposal-collapsible[open] > .ps-summary{
 .accept-row .label{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#7A7A7A;margin-bottom:6px}
 .accept-row .line{height:32px;border-bottom:1px solid #030303}
 .accept-row .pre-filled{font-family:'Montserrat',sans-serif;font-size:18px;font-weight:800;color:#030303;padding-bottom:6px;border-bottom:1px solid #030303}
+/* Date input · styled to match the existing baseline */
+.accept-row-date .accept-date-input{font-family:'Montserrat',sans-serif;font-size:18px;font-weight:800;color:#030303;width:100%;height:36px;border:0;border-bottom:1px solid #030303;background:transparent;outline:none;padding:2px 4px;cursor:pointer;-webkit-appearance:none;appearance:none}
+.accept-row-date .accept-date-input:focus{border-bottom-color:#AE312D;border-bottom-width:2px;padding-bottom:1px}
+.accept-row-date .accept-date-input::-webkit-calendar-picker-indicator{cursor:pointer;filter:invert(0.4) sepia(1) saturate(6) hue-rotate(330deg);margin-left:6px}
+/* Signature canvas · click-and-drag to sign */
+.accept-row-sig .label{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.accept-row-sig .accept-sig-clear{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.10em;text-transform:uppercase;color:#AE312D;background:transparent;border:1px solid rgba(174,49,45,0.40);border-radius:4px;padding:4px 10px;cursor:pointer;transition:background 0.15s,color 0.15s,border-color 0.15s}
+.accept-row-sig .accept-sig-clear:hover{background:#AE312D;color:#fff;border-color:#AE312D}
+.accept-row-sig .accept-sig-canvas{display:block;width:100%;height:120px;border-bottom:1px solid #030303;background:#FCFBF7;cursor:crosshair;touch-action:none;border-radius:4px 4px 0 0}
+.accept-row-sig .accept-sig-canvas.is-signed{background:#fff}
+.accept-row-sig .accept-sig-hint{font-family:'Inter',-apple-system,Arial,sans-serif;font-size:10.5px;color:#9A9A9A;margin-top:6px;font-style:italic;letter-spacing:0.02em}
+.accept-row-sig .accept-sig-canvas.is-signed + .accept-sig-hint{display:none}
 
 /* ============================ COMPETITOR GALLERY (added 2026-05-06 per Dean's feedback) ============================ */
 .section-competitors{background:linear-gradient(180deg,#030303 0%,#1F2124 100%);color:#fff;padding:88px 0}
@@ -2490,15 +2502,29 @@ details.proposal-collapsible[open] > .ps-summary{
         <h3>King Contractor Agency</h3>
         <div class="accept-row"><div class="label">Name</div><div class="pre-filled">Dean White, CEO</div></div>
         <div class="accept-row"><div class="label">Company</div><div class="pre-filled">King Contractor Agency LLC</div></div>
-        <div class="accept-row"><div class="label">Date</div><div class="line"></div></div>
-        <div class="accept-row"><div class="label">Signature</div><div class="line"></div></div>
+        <div class="accept-row accept-row-date">
+          <div class="label">Date</div>
+          <input type="date" class="accept-date-input" data-side="kca" aria-label="KCA signature date">
+        </div>
+        <div class="accept-row accept-row-sig">
+          <div class="label"><span>Signature</span><button type="button" class="accept-sig-clear" data-side="kca">Clear</button></div>
+          <canvas class="accept-sig-canvas" data-side="kca" aria-label="KCA signature pad — draw with mouse or finger"></canvas>
+          <div class="accept-sig-hint">Sign with mouse or finger</div>
+        </div>
       </div>
       <div class="accept-side">
         <h3>Client</h3>
         <div class="accept-row"><div class="label">Name</div><div class="pre-filled">Sean Becker</div></div>
         <div class="accept-row"><div class="label">Company</div><div class="pre-filled">Becker Roofing and Exteriors, LLC</div></div>
-        <div class="accept-row"><div class="label">Date</div><div class="line"></div></div>
-        <div class="accept-row"><div class="label">Signature</div><div class="line"></div></div>
+        <div class="accept-row accept-row-date">
+          <div class="label">Date</div>
+          <input type="date" class="accept-date-input" data-side="client" aria-label="Client signature date">
+        </div>
+        <div class="accept-row accept-row-sig">
+          <div class="label"><span>Signature</span><button type="button" class="accept-sig-clear" data-side="client">Clear</button></div>
+          <canvas class="accept-sig-canvas" data-side="client" aria-label="Client signature pad — draw with mouse or finger"></canvas>
+          <div class="accept-sig-hint">Sign with mouse or finger</div>
+        </div>
       </div>
     </div>
     <p style="text-align:center;font-size:12px;color:#7A7A7A;margin-top:24px">By signing you agree to our <a href="https://kingcontractor.com/" style="color:#AE312D;text-decoration:underline">Terms of Agreement</a> available on KingContractor.com.</p>
@@ -2629,6 +2655,106 @@ details.proposal-collapsible[open] > .ps-summary{
 (function(){
   var y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear();
   var p=document.getElementById('prep-date'); if(p) p.textContent=new Date().toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});
+})();
+
+// Acceptance · date pickers + signature pad (per-side localStorage persisted)
+(function(){
+  var SLUG='brexteriors';
+  var dkey=function(side){return 'kca-proposal-date-'+side+'-'+SLUG};
+  var skey=function(side){return 'kca-proposal-sig-'+side+'-'+SLUG};
+
+  // Date inputs · default to today, persist on change
+  var todayISO=new Date().toISOString().split('T')[0];
+  document.querySelectorAll('.accept-date-input').forEach(function(input){
+    var side=input.dataset.side;
+    var saved;try{saved=localStorage.getItem(dkey(side))}catch(e){saved=null}
+    input.value=saved||todayISO;
+    input.addEventListener('change',function(){try{localStorage.setItem(dkey(side),input.value)}catch(e){}});
+  });
+
+  // Signature canvases · mouse + touch, retina-crisp, clearable, persisted as data-URL
+  document.querySelectorAll('.accept-sig-canvas').forEach(function(canvas){
+    var side=canvas.dataset.side;
+    var ctx=canvas.getContext('2d');
+    var dpr=window.devicePixelRatio||1;
+    var hint=canvas.parentElement.querySelector('.accept-sig-hint');
+
+    function setupCanvas(){
+      var rect=canvas.getBoundingClientRect();
+      canvas.width=Math.max(1,Math.round(rect.width*dpr));
+      canvas.height=Math.max(1,Math.round(rect.height*dpr));
+      ctx.setTransform(1,0,0,1,0,0);
+      ctx.scale(dpr,dpr);
+      ctx.lineWidth=2;
+      ctx.lineCap='round';
+      ctx.lineJoin='round';
+      ctx.strokeStyle='#030303';
+    }
+    function restore(){
+      var saved;try{saved=localStorage.getItem(skey(side))}catch(e){saved=null}
+      if(!saved)return;
+      var img=new Image();
+      img.onload=function(){
+        var rect=canvas.getBoundingClientRect();
+        ctx.drawImage(img,0,0,rect.width,rect.height);
+        canvas.classList.add('is-signed');
+      };
+      img.src=saved;
+    }
+    setupCanvas();
+    restore();
+
+    var drawing=false,last=null,dirty=false;
+    function localPos(e){
+      var rect=canvas.getBoundingClientRect();
+      var t=(e.touches&&e.touches[0])||e;
+      return {x:t.clientX-rect.left,y:t.clientY-rect.top};
+    }
+    function start(e){e.preventDefault();drawing=true;last=localPos(e);dirty=true;canvas.classList.add('is-signed')}
+    function move(e){
+      if(!drawing)return;
+      e.preventDefault();
+      var p=localPos(e);
+      ctx.beginPath();
+      ctx.moveTo(last.x,last.y);
+      ctx.lineTo(p.x,p.y);
+      ctx.stroke();
+      last=p;
+    }
+    function end(){
+      if(!drawing)return;
+      drawing=false;
+      if(dirty){try{localStorage.setItem(skey(side),canvas.toDataURL('image/png'))}catch(e){}}
+    }
+
+    canvas.addEventListener('mousedown',start);
+    canvas.addEventListener('mousemove',move);
+    canvas.addEventListener('mouseup',end);
+    canvas.addEventListener('mouseleave',end);
+    canvas.addEventListener('touchstart',start,{passive:false});
+    canvas.addEventListener('touchmove',move,{passive:false});
+    canvas.addEventListener('touchend',end);
+
+    // Re-fit on resize (signature data-URL re-rendered at new dimensions)
+    var resizeT;
+    window.addEventListener('resize',function(){
+      clearTimeout(resizeT);
+      resizeT=setTimeout(function(){setupCanvas();restore()},120);
+    });
+  });
+
+  // Clear buttons · wipe canvas + drop the persisted signature
+  document.querySelectorAll('.accept-sig-clear').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var side=btn.dataset.side;
+      var canvas=document.querySelector('.accept-sig-canvas[data-side="'+side+'"]');
+      if(!canvas)return;
+      var ctx=canvas.getContext('2d');
+      ctx.clearRect(0,0,canvas.width,canvas.height);
+      canvas.classList.remove('is-signed');
+      try{localStorage.removeItem('kca-proposal-sig-'+side+'-'+SLUG)}catch(e){}
+    });
+  });
 })();
 
 // KCA written-reviews carousel arrows
