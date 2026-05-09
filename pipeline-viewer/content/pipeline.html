@@ -589,13 +589,13 @@ footer p{font-size:11px;color:var(--text4);font-family:var(--mono);letter-spacin
   <div class="sect-head">
     <span class="kicker">05 &middot; Inside the Folder</span>
     <h2>Inside the factory</h2>
-    <p>This is what your client folder looks like after a run. Click any file to see what's inside. Click a phase pill on the left to filter.</p>
+    <p>Inside the factory. The actual SOPs, agents, design system, and recipes that turn your URL into a complete site. Click any file to peek inside; click a phase pill to filter by stage.</p>
   </div>
 
   <div class="ide-frame" id="ideWin">
     <div class="ide-top">
       <div class="dots"><span></span><span></span><span></span></div>
-      <span class="t">clients/rapid-response-roofs/</span>
+      <span class="t">website-factory/</span>
       <button class="mx" id="maxBtn" onclick="toggleMax()">Maximize</button>
     </div>
     <div class="ide-inner">
@@ -604,7 +604,7 @@ footer p{font-size:11px;color:var(--text4);font-family:var(--mono);letter-spacin
       <div class="ivw">
         <div class="vt" id="vTabs"></div>
         <div class="vp" id="vPath"></div>
-        <div class="vs" id="vScroll"><div class="ve" id="vE"><p>Click any <kbd>.md</kbd> file to see its contents.<br>Click a phase pill on the left to filter the tree.</p></div></div>
+        <div class="vs" id="vScroll"><div class="ve" id="vE"><p>Click any <kbd>.md</kbd> file to peek inside the factory.<br>Click a phase pill on the left to filter by stage.</p></div></div>
       </div>
     </div>
   </div>
@@ -622,425 +622,668 @@ footer p{font-size:11px;color:var(--text4);font-family:var(--mono);letter-spacin
 <footer><p>King Contractor Agency &middot; The Roofing Website Factory</p></footer>
 
 <script>
-// ===== SAMPLE CLIENT OUTPUT (representative file content) =====
+// ===== FACTORY FILES — actual SOPs / agents / rules / recipes =====
 const F={};
+F[".claude/CLAUDE.md"]=`# KCA Website Factory
 
-F['brief.md']=`# Client Brief — Rapid Response Roofs Michigan
+## What This Is
+SOP-driven pipeline that turns one URL into a complete contractor website + KCA-branded sales proposal. The pipeline runs as an orchestrated chain of subagents, each owning one stage and reading the relevant SOP.
 
-## Business Info
-- **Brand**: Rapid Response Roofs Michigan
-- **Owner**: Codey Eatherton (Owner & CEO)
-- **Phone**: (269) 753-1121
-- **Email**: sales@rapidresponseroofs.com
-- **Headquarters**: Battle Creek, MI
-- **Founded**: 2021 (4 years in business)
-- **Team size**: 16 (owner + 14 named inspectors/admins)
+## Trigger pattern (the orchestrator contract)
 
-## Services
-- **Primary**: Residential roof replacement (insurance claims)
-- **Secondary**: Roof repair, storm damage assessment, gutters
-- **Material partners**: IKO Cambridge architectural shingles
-- **Supply partner**: Richards Building Supply (since 1942)
+When the operator says any of:
+- "run a fresh lead for {URL}"
+- "build a site for {URL}"
+- "run {URL}"
+- pastes a \`prompts/run-fresh-lead-lean.md\`-shaped block
 
-## Service Area
-- 18 Michigan cities
-- Primary metro: Battle Creek + Springfield
-- Secondary: Kalamazoo, Marshall, Albion, Bellevue
+The main thread becomes the **orchestrator**. It runs the lightweight stages itself (Stage 0 Scaffold, Stage 1 Intake, slug derivation) and delegates the heavy stages to subagents in \`.claude/agents/\`. Each subagent reads its own contract + the relevant SOP, produces files on disk, and returns a short summary to the orchestrator.
 
-## Reviews (verified)
-- **Google**: 4.8★ (267 reviews) — fetched via Places API
-- **Facebook**: 5.0★ (116 reviews) — fetched from page
+**Slug derivation** (the orchestrator does this, do NOT delegate):
+1. Strip protocol + \`www.\`
+2. Strip TLD
+3. Lowercase, replace non-alphanumeric with single hyphen, trim hyphens
+4. If \`clients/{slug}/\` already exists, append \`-v2\`/\`-v3\`/etc.
+5. Proceed silently — never stop to ask the operator about slug variants
 
-## Brand
-- **Primary color**: #703796 (deep purple — extracted from logo + live CSS)
-- **Voice**: Insurance-savvy, owner-led, lightning-response speed
-- **Personality**: Approachable but professional. Direct ownership voice.
+**Quarantine rules:**
+- The orchestrator must NOT read any prior client's \`build/index.html\`, \`brief.md\`, or \`proposal.html\` as a starting file. Cross-client reads = anti-clone violation.
+- Subagents inherit this discipline. None of them open prior-client artifacts.
+- The orchestrator does NOT hand-walk gates or SOP details to subagents — each subagent reads its own SOP. The orchestrator's job is sequencing + summary, not coaching.
 
-## Conversion goals
-- **Primary**: Free roof assessment (form fill)
-- **Secondary**: Phone call (tap-to-call)
-- **Trust line**: Respond within 2 hours, no obligation
+## Pipeline + agent map
 
-## Pattern
-- **Match**: Pattern 002 — Owner-led mascot-truck residential
-- **Visual mode**: bright-owner-led-trust
-- **Confidence**: 87% (high)`;
-
-F['research/competitors.md']=`# Market Analysis — Rapid Response Roofs Michigan
-
-## Top 5 Competitors (Battle Creek + Kalamazoo metro)
-
-### 1. Allied Roofing Co
-- **Domain**: alliedroofingco.com
-- **DA**: 31
-- **Top keyword**: "roofing battle creek mi"
-- **Strengths**: 14 years in business, BBB A+, 5★ Google
-- **Weaknesses**: Generic stock photos, no owner photo, slow site
-- **Gap to exploit**: Owner-led trust positioning
-
-### 2. KMS Roofing & Construction
-- **Domain**: kmsroofingmi.com
-- **DA**: 24
-- **Top keyword**: "roof repair kalamazoo"
-- **Strengths**: GAF MasterElite cert, real project gallery
-- **Weaknesses**: Old design (2018-era), weak mobile, no insurance-claim positioning
-- **Gap to exploit**: Insurance-claim specialist messaging
-
-### 3. Lakeside Exteriors
-- **Domain**: lakesideexteriorsmi.com
-- **DA**: 28
-- **Top keyword**: "roof replacement battle creek"
-- **Strengths**: Multi-trade (roofing + siding + windows)
-- **Weaknesses**: No verified review counts displayed, generic copy
-- **Gap to exploit**: Real review counts (Google 267, Facebook 116)
-
-### 4. Storm Restoration Pros
-- **Domain**: stormrestorationpros.com
-- **DA**: 19
-- **Top keyword**: "storm damage roof michigan"
-- **Strengths**: Storm-restoration niche
-- **Weaknesses**: No owner identity, AI-generated stock photos
-- **Gap to exploit**: Real owner face + named team
-
-### 5. Premier Roofing MI
-- **Domain**: premierroofingmi.com
-- **DA**: 22
-- **Top keyword**: "shingle roofing michigan"
-- **Strengths**: Long copy, schema-marked-up
-- **Weaknesses**: Wall of text, weak hero CTA, dated visual style
-- **Gap to exploit**: Modern hero composition + clear conversion path
-
-## Table stakes (everyone has)
-- BBB membership claim
-- 5★ rating display
-- Free quote CTA
-
-## Differentiators worth claiming
-- Specific review COUNTS (267 + 116, not "5 stars")
-- Owner's actual face on the site
-- Named local team (16 people, real photos)
-- Insurance-claim specialist positioning (verified track record)
-- 18-city service area listing (broader than competitors)
-- IKO Cambridge + Richards Building Supply partnerships`;
-
-F['research/existing-site-score.md']=`# Existing Site Score — Rapid Response Roofs Michigan
-
-> 12-axis scoring per sops/existing-site-intelligence.md.
-> Score determines build_mode: weak (0-9) / decent (10-17) / strong (18-24).
-
-## Score: 8/24 (WEAK)
-
-| Axis | Score | Notes |
+| Stage | Owner | Produces |
 |---|---|---|
-| 1. Brand identity strength | 1/2 | Logo + brand color clear; wordmark inconsistent |
-| 2. Typography system | 0/2 | No deliberate type pairing; default WP fonts |
-| 3. Owner identity surfaced | 1/2 | Owner photo present on /about, name listed; not on home |
-| 4. Real review evidence | 1/2 | Counts claimed in copy; no platform badges, no verifiable links |
-| 5. Real project gallery | 1/2 | 6 photos in /past-work; mixed real + stock |
-| 6. Service-area depth | 1/2 | List of cities exists; no per-city pages |
-| 7. Trust signal density | 0/2 | No BBB widget, no GAF cert badge, no insurance language |
-| 8. Conversion path clarity | 1/2 | Form on home; no phone tap-to-call; no urgency |
-| 9. Mobile experience | 0/2 | Hero stacks badly; CTA below fold; trust badges hidden |
-| 10. Page speed | 1/2 | Unoptimized images; LCP 4.2s |
-| 11. Schema markup | 0/2 | No JSON-LD; no LocalBusiness schema |
-| 12. Editorial voice | 1/2 | Voice present in /about; generic on services pages |
+| 0 Scaffold | orchestrator | \`clients/{slug}/\` from \`templates/client-scaffold/\` |
+| 1 Intake | orchestrator | \`clients/{slug}/brief.md\` (URL + slug only at trigger time; Stage 2 fills the rest) |
+| 2 Research + Asset Scrape + Existing-Site Intelligence + Real Review Evidence | [\`research\`](agents/research.md) | \`clients/{slug}/research/*\` + \`clients/{slug}/assets/*\` |
+| 2.5 Brand Audits (color + typography) | [\`brand-audits\`](agents/brand-audits.md) | \`clients/{slug}/design/brand-color-audit.md\` + \`brand-typography-audit.md\` |
+| 3 SEO + Content | [\`seo-content\`](agents/seo-content.md) | \`clients/{slug}/seo/*\` + \`clients/{slug}/content/*\` |
+| 3.5 + 3.6 Design Intelligence + Creative Direction | [\`design-direction\`](agents/design-direction.md) | \`clients/{slug}/design/design-profile.json\` + \`creative-direction.md\` + \`section-art-direction.json\` + \`visual-reference-citations.md\` |
+| 4 Build | [\`build\`](agents/build.md) | \`clients/{slug}/build/index.html\` |
+| 5 QA (iterative loop, up to 3 iterations) | [\`qa\`](agents/qa.md) | \`clients/{slug}/qa/iteration-N-issues.md\` + \`iteration-N-fix-summary.md\` + \`iteration-N-overrides.md\` (Path C) |
+| 13 Proposal | [\`proposal\`](agents/proposal.md) | \`clients/{slug}/proposal/proposal.html\` |
 
-## Decision
+The orchestrator runs them strictly in order — each subagent's output is the next subagent's input.
 
-- **build_mode**: \`pattern-led\` (score < 10 → full replacement, no preserve-elevate)
-- **Pattern**: 002 owner-led residential (87% match)
-- **Visual mode**: bright-owner-led-trust
-- **Asset reuse**: logo + owner photo + 4 of 6 gallery photos (the real ones)
-- **Asset replacement**: typography (need real audit), reviews (verify via API), trust badges (canonical SVGs)`;
+**QA exit branching (updated 2026-05-09):**
+- **Zero failures at iteration N** → orchestrator AUTO-FIRES the \`proposal\` subagent (Stage 13). Final report covers Stages 0-5 + the proposal validation summary.
+- **Budget exhausted (iteration 3 still has failures)** → STOP. Surface the final report listing the remaining failures. Do NOT auto-fire the proposal — operator decides whether to (a) re-run with a fixed SOP, (b) accept the degraded build + manually trigger proposal, or (c) extend the budget.
+- **Unfixable upstream failure** → STOP at the iteration where it surfaced. No final report until the upstream input is provided.
 
-F['design/brand-color-audit.md']=`# Brand Color Audit — Rapid Response Roofs
+After Stage 13 Proposal completes (or the operator skips it), the orchestrator stops short of any \`git\`/deploy action.
 
-> Sources reconciled: logo extraction (Source 1) + live-site CSS (Source 2) + brand-guideline PDF (Source 3 — none provided) + visual verification of home.png (Source 5).
+## How subagents work
+- Each \`.claude/agents/<name>.md\` is the subagent's system prompt: it names the SOP to read, the inputs it expects on disk, the artifacts it must produce, and what success looks like.
+- The orchestrator invokes a subagent via the Agent tool with \`subagent_type: <name>\`. The subagent runs in isolated context — it doesn't see the orchestrator's prior chatter.
+- The subagent's return value is a short summary (a few hundred tokens) — the canonical artifacts are on disk for the next stage to read.
+- Subagents do NOT modify SOPs, do NOT modify the design system, do NOT commit, do NOT push.
 
-## Primary palette
+## Tech Stack (for built sites)
+Test mode (current default): **single-file static HTML** — one \`index.html\` with inline CSS + JS, openable in a browser. Implementation reference: \`deterministic/prompts/designer.txt\` (1194 lines of known-good Dean-style output). NO Next.js / React / build step during test mode.
 
-| Role | Hex | Source | Evidence |
+Production target (later, after consistent Benchmark hits in test mode): Next.js + React + Tailwind v4 + Vercel deploy.
+
+## Key folders
+- \`.claude/agents/\` — per-stage subagent contracts (one .md per stage)
+- \`skills/\` — legacy SKILL.md files; superseded by agents but kept for reference (each agent.md cross-links its skill)
+- \`sops/\` — SOPs that subagents read for rules and discipline
+- \`clients/\` — One folder per client with all artifacts (brief, research, SEO, content, assets, build, QA, proposal)
+- \`templates/\` — \`client-scaffold/\` (copied per new client) + \`proposal-template.html\`
+- \`agentic/tools/\` — bash + python helpers (firecrawl, fetch-review-evidence, run-qa-gates, generate-image, etc.)
+- \`design-system/\` — patterns, languages, sections, recipes, rules (the visual library subagents reference)
+
+
+... (truncated for the viewer — full file is 115 lines in the website-factory repo)`;
+F["sops/dean-blueprint.md"]=`# Dean's Blueprint — Authoritative SOP (Layer 0)
+
+**Promoted:** 2026-04-29 by Hardening Pass [hardening-2026-04-29-blueprint-alignment.md](../docs/hardening-2026-04-29-blueprint-alignment.md)
+**Authority:** **LAYER 0** in [\`design-system/rules/priority-hierarchy-rule.md\`](../design-system/rules/priority-hierarchy-rule.md). Overrides all derived global rules, patterns, and lessons. Any rule that contradicts this SOP is wrong by definition.
+**Source documents:**
+- [\`sops/assets/UltimateAIRoofingWebsiteBlueprint.pdf\`](assets/UltimateAIRoofingWebsiteBlueprint.pdf) — Dean's master CRO blueprint (13 pages)
+- [\`deterministic/prompts/designer.txt\`](../deterministic/prompts/designer.txt) — Dean's literal builder prompt (1194 lines, the deterministic flow's source-of-truth)
+
+This SOP extracts both source documents into a single machine-readable contract for the agentic pipeline. Every other SOP, rule, pattern, and skill must align with this document.
+
+---
+
+## Part 0 — Identity + Mission
+
+You are building websites for **King Contractor Agency (KCA)** — Dean's roofing-website agency. KCA produces premium, high-converting websites for roofing contractors that rank in the top 1% of all contractor websites online.
+
+Every site has ONE mission: **turn strangers into leads**.
+
+That mission is delivered via three CRO pillars, in this exact order:
+
+| Pillar | What it does | How the visitor feels |
+|---|---|---|
+| **Trust** | Proves you're legitimate, experienced, backed by real people | "These guys are the real deal." |
+| **Risk Reversal** | Removes every reason NOT to call | "I've got nothing to lose." |
+| **Friction Removal** | Makes taking action effortless | "That was easy — done." |
+
+Every element of every page must serve at least one pillar.
+
+The **hero section is the most important part of the entire website**. Most homeowners never scroll. If you lose them in the first 5 seconds, you have lost the lead. Everything below the fold supports and reinforces what the hero already said.
+
+---
+
+## Part 1 — Golden Rules (Non-Negotiable)
+
+These are absolute. A build that violates any of these fails QA regardless of any other compliance.
+
+1. **Every CTA reads a Dean-approved phrase sitewide.** Default: \`"Get My Free Estimate"\`. Allowed variants: \`"Get A Free Quote"\`, \`"Get Your Free Estimate"\`, \`"Schedule My Free Inspection"\`. Banned: \`"Submit"\`, \`"Send"\`, \`"Click Here"\`, \`"Contact Us"\`. Brand-keyed variants require \`rule_overrides[]\` justification ≥ 30 chars.
+2. **No CTA ever redirects to a contact page.** Every CTA either anchors to the on-page hero form OR opens the popup form (see Part 7).
+3. **Every page has at least one frictionless contact form** — inline in the hero or triggered by a popup.
+4. **Every section earns its place.** A section that doesn't build trust, reverse risk, or capture a lead does not ship.
+5. **Mobile sticky CTA bar always present** — Call Now during business hours (9am-5pm), Get Free Estimate after hours.
+6. **Every phone number that appears as a link uses \`tel:\` protocol with digits only** (e.g., \`href="tel:5124001234"\`).
+7. **NO em dashes (—) anywhere in rendered HTML.** Use commas, colons, periods, "and"/"or", or parentheses instead. This applies to headings, body, labels, badges, footer attribution, everything.
+8. **Asset honesty floor.** No fake reviews. No fake certifications. No fake owner identity. No AI portraits of real people. No public provenance labels in HTML ("AI Mockup", "Photo Pending"). MANIFEST documents every support asset with \`claim_attached: false\`.
+9. **Footer attribution required.** Footer contains: \`Website Designed With Love by King Contractor Agency. Building America's Most Trusted Roofing Brands.\` with link to \`https://kingcontractor.com/\`. Copyright year is dynamic (JS-generated, never hardcoded).
+10. **Schema markup required.** Every site emits \`LocalBusiness\` + \`RoofingContractor\` + \`AggregateRating\` + \`FAQPage\` JSON-LD in \`<head>\`.
+
+---
+
+## Part 2 — The 16-Section Wireframe (Scroll Order)
+
+Follow this psychological order on every build. Trust first. Proof second. Action throughout.
+
+| # | Section | Required? | Conditional logic |
 |---|---|---|---|
-| **Primary brand** | \`#703796\` | Sources 1 + 2 | 47 occurrences in live CSS rules (.cta, .hero-h1, .button-primary, .footer-bg). Dominates logo wordmark. |
-| **Deep ground** | \`#0D0D0D\` | Source 2 | Used as section bg on /about + footer. Near-black with no purple tint. |
-| **Surface light** | \`#F5F5F5\` | Source 2 | Body background on most pages. |
-| **Text body** | \`#1A1A1A\` | Source 2 | All paragraphs. |
-| **Text muted** | \`#65657A\` | Source 2 | Captions, meta lines. |
-
-## Bedrock 5 — Counter-color CTA recommendation
-
-The brand palette is monochromatic-purple-heavy with no warm contrast. Per Layer 0 Bedrock 5, the build SHOULD introduce a **counter-color CTA hex** for high-contrast conversion buttons.
-
-**Recommended**: \`#F5C518\` (warm amber)
-- High contrast vs primary purple (W3C contrast ratio 7.2:1)
-- Reads "warm + lightning-fast" — matches brand voice (insurance response speed)
-- Off-palette but documented per Bedrock 5 audit
-
-The operator may pin via \`design-profile.json#operator_overrides.accent_color_override\`.
-
-## Loaded but unused
-
-None. Brand palette is tight.`;
-
-F['design/design-profile.md']=`# Design Profile — Rapid Response Roofs
-
-> Stage 8 (Design Intelligence) decisions, in plain English.
-
-## What we picked
-
-- **Pattern**: 002 — Owner-led mascot-truck residential
-- **Visual mode**: bright-owner-led-trust
-- **Build mode**: pattern-led (existing site scored weak, full replacement)
-
-## Why we picked it
-
-Rapid Response is an owner-led residential roofer. Brand-mark identity is the lightning-bolt motif inside the logo. Codey Eatherton (owner) has a public face + signature SVG on the source site. Real review density is high (Google 267 + Facebook 116). Insurance-claims positioning is the primary differentiator.
-
-Pattern 002's locked hero composition (form right, owner overlay, trust pills above bullets — wait, BELOW bullets per 2026-05-09 — mascot stamp at form corner) elevates the existing strong content into a converting page. Pattern 001 (premium-family-multi-decade) doesn't fit — they're 4 years in, not 40. Pattern 003 (B2B commercial) doesn't fit — residential homeowners, not commercial accounts.
-
-## Typography
-
-- **Display**: Inter (clean sans, matches the operator-led modern positioning)
-- **Body**: Manrope 800 (substantial weight; reads modern + confident)
-
-The Stage 2 typography pass initially suggested Roboto from the live site CSS frequency, but Source 5 visual verification of home.png caught that the actual rendered H1 looks like clean Inter. Stage 2 corrected the call.
-
-## Counter-color CTA
-
-Operator pinned \`accent_color_override: "#F5C518"\` (warm amber) per Bedrock 5.
-
-## Mascot
-
-No real character mascot on source site. Path B Nano-Banana 2 generation auto-fired with the prompt template:
-
-> "Lightning-bolt character mascot, brand color #703796 with white highlights and amber accent, friendly cartoon face, holding a small roof shingle, transparent background, 1:1 aspect."
-
-Output saved to \`assets/generated/mascot-generated.png\`. Used in 4 placements (hero corner stamp, owner section, service-area illustration, footer).
-
-## Hero composition
-
-Owner photo + form-right + mini-card-below-form + mascot at form corner + chevron seam transition. See \`design/hero-composition-checklist.json\` for the 16-element verification contract.`;
-
-F['content/home.md']=`# Home Page — Rapid Response Roofs Michigan
-
-## Hero
-
-**Eyebrow**: Battle Creek, MI · 5-Star Rated Michigan Roofer
-**H1**: Roofs Built Fast. Built Right. Built To Last.
-**Sub**: Insurance-claims-led residential roofing across Michigan. Lightning-fast response. Real ownership. The crew on your roof is the same crew on this website.
-
-**Trust bullets**:
-- ✓ Insurance Claims Specialist
-- ✓ Best Products, Best Prices, Guaranteed
-- ✓ Only 5-Star Reviews on Facebook & Google
-
-**Trust pills** (real verified):
-- Google: 4.8★ · 267 reviews
-- Facebook: 5.0★ · 116 reviews
-- IKO Cambridge · Partner
-
-**Primary CTA**: Get My Free Quote
-**Secondary CTA**: (269) 753-1121
-
-**Form**: Name · Phone · Email · ZIP · How can we help? (5 fields)
-
-**Owner mini-card** (below form): Codey Eatherton · Owner & CEO · "I love what I do, and I love helping people. One roof at a time."
-
-## Section 2 — Real-Life Feedback From My Customers
-
-3-card carousel, verbatim Facebook + Google quotes pulled from review-evidence.json.
-
-## Section 3 — Why Choose Us?
-
-4 pillars:
-- Trusted Brand Promise — direct ownership voice
-- Insurance Specialist — meet adjusters on the roof, document with photos, negotiate line items
-- Best Products, Best Prices, Guaranteed — IKO Cambridge architectural shingles, Richards Building Supply (since 1942), No Leak Guarantee
-- Owner-Led, 16-Person Local Team — Codey runs the company, Justin manages day-to-day, 14 named inspectors and admins
-
-## Section 4 — A Legacy of Excellence
-
-Past-work tier-A grid: 13 real jobsite photos.
-
-## Section 5 — The Rapid Response Method
-
-3-step process: Free Inspection · Insurance Handled · Lightning Install.
-
-## Section 6 — Comprehensive Roofing Offerings
-
-Residential + Commercial subgrid. 9 real service categories with real icons.
-
-## Section 7 — Owner Story
-
-Full-bleed Codey-on-roof photo + signature SVG + 3 stat boxes. "I love what I do" pull-quote.
-
-## Section 8 — Affordable Financing in Michigan
-
-Single-CTA band. Operator-flag for specific financing partner + APR (TODO before send).
-
-## Section 9 — Get to Know Our Team at Rapid Response Roofing
-
-12-person team grid. Real photos, real names, real roles.
-
-## Section 10 — Service Area
-
-18-city tag cloud + auto-embedded Google Map of Battle Creek + Springfield metro.
-
-## Footer
-
-KCA-attribution + license + insurance + 4-column nav.`;
-
-F['qa/final-report.md']=`# Final QA Report — Rapid Response Roofs
-
-## Pipeline summary
-
-- **Build mode**: pattern-led (existing-site score 8/24, weak)
-- **Pattern**: 002 owner-led mascot-truck residential
-- **Visual mode**: bright-owner-led-trust
-- **Iterations**: 2 (failures per iteration: i1=8, i2=0)
-
-## Honest scorecard (iteration 2)
-
-- **Pre-cap structural**: 45/48 = 93.75%
-- **Post-cap (dim 24 adversarial)**: 36/48 = 75% — "Internal demo OK"
-- **Visual Quality Score**: 41/48 — strong but not Benchmark
-- **First-pass scorecard (i1)**: 38/48 — moderate; SOP-quality signal indicates the new composition-checklist contract caught what the prior gates missed
-
-## Operator overrides applied
-
-- \`accent_color_override\`: \`#F5C518\` (amber counter-color per Bedrock 5)
-- All other axes: heuristic picker (Stage 8 default)
-
-## Gate results
-
-All 30+ gates PASS at iteration 2. Highlights:
-
-- ✓ 4.5.16 Real Review Evidence (267 + 116 verified via APIs)
-- ✓ 4.5.21 Footer Attribution (KCA + dynamic year)
-- ✓ 4.5.22 Em Dash Ban (0 em-dashes in rendered text)
-- ✓ 4.5.24 Decoration Coherence (5 sub-checks)
-- ✓ 4.5.25 Visual Reference Citation (3 references cited)
-- ✓ 4.5.26 Mascot Mandatory (Path B Nano-Banana 2, 4 placements)
-- ✓ 4.5.27 Hero Layer Composition (5 layers verified)
-- ✓ 4.5.27.7 Hero Composition Checklist (16 required elements all present, source-order valid)
-- ✓ 4.5.28 Decoration Visibility + Mobile Contrast
-- ✓ 4.5.31 Build Typography Matches Audit (Inter + Manrope)
-- ✓ 4.5.33 Mascot MANIFEST Audit Trail
-- ✓ 4.5.37 Operator Override Reason (1 axis pinned with valid reason)
-
-## What's still operator-flagged (not blocking)
-
-- License number (operator-flag warranty_terms)
-- Specific financing partner + APR
-- Business hours specifics
-- TPO + metal manufacturer brand list
-
-## Ship recommendation
-
-OK to ship for internal demo / proposal preview. Run dim-24 adversarial walk to lift the cap from 75% → Benchmark before sending to a real prospect.`;
-
-F['proposal/proposal.html']=`<!-- Rapid Response Roofs · KCA-Branded Sales Proposal -->
-<!-- 17 sections, embeds live build at /clients/rapid-response-roofs/build/index.html -->
-<!-- Generated by Stage 13 Proposal subagent · Auto-fired after clean QA exit -->
-
-[Click "View live build" on the reference card above to see the full proposal HTML.]
-
-## What's in the proposal (high level)
-
-- §1 — Hello, I'm Dean (KCA-static trust intro)
-- §2 — I help roofers sell more roofs ($200M+ stat row)
-- §3 — The Winning Formula (Traffic + Trust + Conversion = More Roofs Sold)
-- §4 — The Proof ($1M case study video)
-- §5 — Built Mobile-First (live phone preview embedded)
-- §6 — SEO Audit on rapidresponseroofs.com
-- §7 — Who's Taking Your Traffic (8 competitor cards + SERP mockup)
-- §8 — The Proven Blueprint (6 sections with "See it in your X" links)
-- §9 — KCA Written Reviews (10-card carousel of verbatim Facebook reviews)
-- §10 — KCA Video Testimonials (4 portrait videos)
-- §11 — AI Infrastructure
-- §12 — What's Included (17-page sitemap modal)
-- §13 — Pricing
-- §14 — Why You Can't Sleep On This
-- §15 — Acceptance + Money-Back Guarantee
-- §16 — Investment (with editable setup-fee modal)
-- §17 — Sign here
-
-The proposal HTML is one self-contained file. Forward it as an attachment OR host it. The prospect sees Codey's actual live site embedded in the laptop + phone mockups inside the proposal. Same proof Dean uses to close $10K+ deals on Zoom calls.`;
+| 1 | **Announcement Bar** (above nav) | Always | Phone + email + social icons |
+| 2 | **Navigation Bar** (sticky) | Always | Logo + menu + dynamic CTA |
+| 3 | **Hero Section** (above fold) | Always | Form + photo + 5/5 bedrock |
+| 4 | **Trust Badge Marquee** (auto-scroll) | Always | 10 images = 5 real + 5 duplicates |
+| 5 | **Reviews / Testimonials** | Always | Carousel with prev/next + dots |
+| 6 | **Why Choose Us / Core Values** | Always | 3-6 differentiators |
+| 7 | **Past Work / Portfolio** | Always | 6 photo grid + hover overlay |
+| 8 | **Our Process** | Always | 3-6 numbered steps |
+| 9 | **Our Services** | Always | 4-col icon grid + dropdown links |
+| 10 | **About Us / Meet the Owner** | Always | Photo + story + 3 stat boxes |
+| 11 | **Special Offers / Financing** | Conditional | Only if real offer data exists |
+| 12 | **Blog Preview** | Conditional | Only if blog exists or 3 placeholder posts can be authored |
+| 13 | **CTA Banner** (full-width accent) | Always | "Ready to Protect Your [City] Home?" |
+| 14 | **Service Areas** (with auto-map) | Always | 10+ cities + Google Map |
+| 15 | **Footer** | Always | 4-col + KCA attribution |
+
+... (truncated for the viewer — full file is 788 lines in the website-factory repo)`;
+F["sops/build.md"]=`# Build SOP
+
+## Output target — current default: static HTML (test mode)
+
+**Test mode (current default):** Build a single-file \`clients/{slug}/build/index.html\` with inline CSS + JS — no Next.js, no React, no build step. Implementation reference is [\`deterministic/prompts/designer.txt\`](../deterministic/prompts/designer.txt) (1194 lines of literal CSS + HTML + JS — known-good Dean-style output). Open the file in a browser to view.
+
+**Production mode (future):** Next.js + React + TypeScript + Tailwind v4 + Zod + React Hook Form + Lucide. The Next.js production target is the eventual deploy artifact for Vercel; we'll flip back to it once we're consistently hitting Benchmark in test mode.
+
+The prompt's \`# Test mode: static HTML output\` directive overrides this SOP's Next.js default during the iteration phase. Both targets follow the same Layer 0 + canonical hero recipe + section blueprints + QA gates — only the rendering technology differs.
+
+## Purpose
+Generate a complete website by **assembling section blueprints** per the design profile produced in Stage 3.5. The build stage does not invent layouts — it composes from [\`design-system/\`](../design-system/).
+
+## Read the Design Profile FIRST
+
+Before generating any code, read \`clients/{slug}/design/design-profile.json\` produced by the Design Intelligence stage ([\`sops/design-intelligence.md\`](design-intelligence.md)). This locks in:
+
+- The visual language ([\`design-system/languages/\`](../design-system/languages/)) — color, typography, mood
+- The section variants ([\`design-system/sections/\`](../design-system/sections/)) — which blueprint per canonical-wireframe position
+- Rule overrides — explicit deviations from [\`design-system/rules/\`](../design-system/rules/)
+- Asset inventory + generated graphics plan
+
+Read in order:
+1. \`design-profile.json\` (the contract)
+1a. **\`design-profile.operator_overrides\`** (added 2026-05-08, Path C) — read this block IMMEDIATELY after step 1. Every non-null axis is a hard pin: the build emits the operator's value REGARDLESS of what the pattern recipe / typography audit / brand-color-audit would otherwise say. Layer 0 Bedrock rules + asset-honesty rules still apply, but every other pick (hero pattern, accent color, card variant, button tier, sun-kiss, typography family) defers to the override when set. The picker fallback is "if \`operator_overrides[axis]\` is null OR absent, run the heuristic."
+1b. **\`hero-composition-checklist.json\`** (added 2026-05-09, Layer B from rapidroofsv6 missing-overlay regression) — read this file IMMEDIATELY after step 1a. It is a HARD CONTRACT: every element with \`required: true\` MUST be emitted in \`clients/{slug}/build/index.html\`. The build agent does NOT freelance the hero composition by reading the creative-direction narrative alone — the narrative is the editorial WHY, the checklist is the structural WHAT. **Both must be honored.** When the narrative says one thing and the checklist says another, the checklist wins (the checklist resolves conditionals based on actual MANIFEST + pattern, the narrative is rhetorical). If you cannot emit a \`required: true\` element (asset path missing, etc.), STOP — surface the gap to the operator. Do NOT silently skip. Stage 5 QA Gate 4.5.27.7 grep-verifies every required element; missing required elements fail the build deterministically. See \`sops/design-intelligence.md\` §"Hero composition checklist (Layer A)" for the schema + conditional resolution rules.
+2. **If \`design-profile.pattern\` is set, [\`design-system/patterns/{pattern}.md\`](../design-system/patterns/) first** — patterns override generic blueprint defaults
+3. [\`design-system/canonical-wireframe.md\`](../design-system/canonical-wireframe.md) (the section order)
+4. [\`design-system/languages/{chosen-language}.md\`](../design-system/languages/) (visual identity)
+5. [\`design-system/rules/dean-style-rules.md\`](../design-system/rules/dean-style-rules.md) + [\`asset-rules.md\`](../design-system/rules/asset-rules.md) + every rule file referenced by the profile
+6. **[\`design-system/rules/hero-image-composition-rule.md\`](../design-system/rules/hero-image-composition-rule.md)** (added 2026-04-29) — pick one of compositions A/B/C/D for the hero photo; never a flat \`<img>\` card
+7. **[\`design-system/rules/hero-media-escalation-rule.md\`](../design-system/rules/hero-media-escalation-rule.md)** (added 2026-04-29 from JT retrospective) — hero must satisfy a media-strength contract via Path A/B/C/D/E; masked-sliver heroes < 35% photographic coverage fail
+8. **[\`design-system/rules/owner-team-truck-fallback-rule.md\`](../design-system/rules/owner-team-truck-fallback-rule.md)** (added 2026-04-29 from JT retrospective) — when owner / team is absent, walk Tiers 1-5 of the substitution chain BEFORE landing on Tier 6 (stylized monogram). Pure-text Heritage sections fail Gate 4.5.15.
+9. **[\`design-system/rules/support-asset-quality-rule.md\`](../design-system/rules/support-asset-quality-rule.md)** (added 2026-04-29 from JT retrospective) — visual-thinness triggers; preference order is real photo > Freepik > Gemini > hand-SVG. Hand-SVG is for dividers / patterns / brand-marks / ornaments, NOT primary section support in working-trade builds.
+10. **[\`design-system/rules/icon-illustration-anti-slop-rule.md\`](../design-system/rules/icon-illustration-anti-slop-rule.md)** (added 2026-04-29 from JT retrospective) — quality bar for icons / illustrations; banned executions for hand-SVG primary support; required executions for service icons
+11. **[\`design-system/rules/blue-collar-visual-language-rule.md\`](../design-system/rules/blue-collar-visual-language-rule.md)** (added 2026-04-29) — 3–5 motifs from the allowed register per page; banned motifs MUST NOT appear
+12. **[\`design-system/rules/section-richness-rule.md\`](../design-system/rules/section-richness-rule.md)** (added 2026-04-29) — every standard / high-impact section needs ≥ 1 element from the visual support catalog
+13. **[\`design-system/rules/decoration-coherence-rule.md\`](../design-system/rules/decoration-coherence-rule.md)** (added 2026-05-04) — declare 3-5 \`--deco-shape-N\` polygon variables at \`:root\`; all decoration usages reference them via \`var(--deco-shape-N)\` (no inline \`clip-path: polygon(...)\` outside \`:root\`); decoration colors must reference \`var(--brand-*)\` palette tokens (no raw hex inside \`.deco-*\` rules); per-section + page-floor density floors. Motif family is the one declared in \`clients/{slug}/design/visual-reference-citations.md\`. Enforced by Gate 4.5.24.
+14. **\`clients/{slug}/design/visual-reference-citations.md\`** (added 2026-05-04, produced by Stage 9 Creative Direction Step 4.5) — names which Dean reference thumbnails the agent visually inspected, which Pattern IDs are being emulated, and which decoration motif family the build's \`:root\` will implement. The build EXECUTES the motif family declared here; do not pick a different family at build time. Enforced by Gate 4.5.25.
+15. Each section blueprint chosen in \`design-profile.section_plan\`
+
+The build stage is an **assembler**, not a designer. If a decision is missing from the profile, return to the Design Intelligence stage rather than improvising.
+
+**When a pattern applies, do NOT freestyle.** Patterns encode the V1-V9 Camelback learnings (asset priorities, evidence gates, fallback chains, copy framing). Override pattern decisions only when the profile's \`rule_overrides[]\` explicitly justifies the deviation. Run the pattern's QA grep gate at the end of the build (e.g., for Pattern 001 — see its §16 checklist).
+
+**A pattern is not a template.** Patterns prescribe *strategic* rules (section order, evidence gates, asset priority, copy framing, conditional skips). They do NOT prescribe a single visual look. After the pattern match, the design-intelligence stage picks a **visual mode** (Pattern 001 §0 enumerates 4 modes: \`premium-dark-local-authority\`, \`bright-owner-led-trust\`, \`soft-family-trust\`, \`bold-contractor-lite\`). The mode determines hero ground, type intensity, shape language, image treatment, trust-strip composition, owner section composition, truck section composition, CTA banner treatment, and section rhythm. The build stage MUST honor the picked mode and MUST NOT borrow visual composition from a previous client in a different mode.
+
+**Do NOT open a previous client's \`index.html\` as a starting file.** When applying a pattern to a new client, the build agent's inputs are: (1) the pattern + the picked mode, (2) the section blueprints' mode-specific variants, (3) the client's actual assets and brand, (4) the Creative Direction file from Stage 3.6 (see below). A prior build can be diffed for QA reference but is not a starting point for authoring. See [\`design-system/rules/anti-clone-rule.md\`](../design-system/rules/anti-clone-rule.md).
+
+**Read the Creative Direction file BEFORE writing any HTML.** Every Pattern 001 (and future-pattern) build requires a \`clients/{slug}/design/creative-direction.md\` + \`clients/{slug}/design/section-art-direction.json\` produced by Stage 3.6 ([\`sops/creative-direction.md\`](creative-direction.md)). Without these files, the Build stage halts.
+
+The Build stage's job is to **execute the creative direction**, not to make visual decisions. Specifically:
+
+1. Load typography (display + body) from \`section-art-direction.json#typography\`. The Google Fonts URL goes into \`<head>\`. The \`font-family\` declarations in CSS use those names. Do NOT default to a previous client's typography pairing.
+2. Load color tokens from \`section-art-direction.json#color_tokens\`. Author CSS custom properties with prefix matching the brand (e.g., \`--bb-*\` for BlueBuilt, \`--cb-*\` for Camelback). Do NOT keep a previous client's token names.
+3. Implement the \`shape_vocabulary\` (3-6 motifs) as CSS background images, hand-authored SVG files, or inlined SVG. Use them throughout per their \`use\` rule.
+4. For every section in \`section-art-direction.json#sections\`, author the section to hit its \`signature_move\`. The signature move is the ONE concrete design choice that makes the section feel designed; if your authored section doesn't include it, the section is not done.
+5. For every asset slot, follow \`creative-direction.md#asset-generation-plan\`. If a slot is \`generated_ai\`, use [\`agentic/tools/generate-image.sh\`](../agentic/tools/generate-image.sh) with the prompt from the plan. If \`generated_svg\`, hand-author the SVG file in \`clients/{slug}/assets/illustrations/\`. If \`stock\`, pull via Freepik or Unsplash with the documented query.
+6. The high-impact sections (hero, owner story, truck band, recent-roofs gallery, final CTA) MUST receive stronger composition — they cannot be plain card grids unless the creative direction explicitly chooses that. The creative direction's \`signature_move\` for each is the spec.
+
+
+... (truncated for the viewer — full file is 271 lines in the website-factory repo)`;
+F["sops/qa.md"]=`# QA SOP
+
+## Purpose
+Two-pass QA: automated technical audit (agent) + manual conversion review (Dean). A site ships only when both pass.
+
+---
+
+## Part 1: Technical QA (Automated)
+
+### Links & Navigation
+- [ ] All internal links resolve (no 404s)
+- [ ] All nav links work on desktop and mobile
+- [ ] Logo links to home
+- [ ] Footer links all work
+- [ ] Service detail pages accessible from services listing
+
+### SEO
+- [ ] Every page has a unique \`<title>\` tag
+- [ ] Every page has a unique meta description (150-160 chars)
+- [ ] Every page has exactly one \`<h1>\`
+- [ ] H2/H3 hierarchy is logical (no skipped levels)
+- [ ] JSON-LD structured data valid (test with Google's tool)
+- [ ] Open Graph tags present (og:title, og:description, og:image)
+- [ ] \`robots.ts\` exists and allows indexing
+- [ ] \`sitemap.ts\` exists and lists all pages
+- [ ] Canonical URLs set
+
+### Forms
+- [ ] Contact form validates required fields
+- [ ] Form shows success state on submission
+- [ ] Form shows error states for invalid input
+- [ ] Form submits to API route without error
+- [ ] Phone field accepts common formats
+
+### Images
+- [ ] All images have alt text
+- [ ] Using \`next/image\` with proper sizing
+- [ ] No broken image references
+- [ ] Logo displays correctly
+
+### Mobile & Responsive
+- [ ] No horizontal scroll on any page (320px - 1440px)
+- [ ] Mobile menu opens and closes correctly
+- [ ] Form is usable on mobile
+- [ ] Phone number is tappable on mobile
+- [ ] Text is readable without zooming
+
+### Performance
+- [ ] \`npm run build\` completes without errors
+- [ ] No console errors in browser
+- [ ] Lighthouse Performance score > 90
+- [ ] Lighthouse Accessibility score > 90
+- [ ] No layout shift issues (CLS < 0.1)
+
+### Code Quality
+- [ ] TypeScript compiles with no errors
+- [ ] No unused imports or variables
+- [ ] All components properly typed
+- [ ] Environment variables documented in \`.env.example\`
+
+
+... (truncated for the viewer — full file is 2415 lines in the website-factory repo)`;
+F[".claude/agents/research.md"]=`---
+name: research
+description: Stage 2 of the KCA Website Factory pipeline. Scrapes the client's live site + top 3-5 competitors, runs the asset scrape (logo, owner/team photos, gallery, badges, signature, mascot), pulls real review evidence from Google Places + Facebook, and runs Existing-Site Intelligence to set build_mode. Use this agent immediately after Stage 0 Scaffold + Stage 1 Intake have placed the URL + slug on disk. Returns a short summary of what was scraped + the build_mode decision.
+tools: Bash, Read, Write, Edit, Glob, Grep, WebFetch
+---
+
+You are the Research subagent for the KCA Website Factory pipeline. You own Stages 2, 2b (Asset Scrape), 2.6 (Real Review Evidence), and 2.7 (Existing-Site Intelligence) for one client.
+
+## Inputs (already on disk before you start)
+
+- \`clients/{slug}/brief.md\` — at minimum has the live site URL + slug; rest is empty stubs
+- \`templates/client-scaffold/\` — the canonical scaffold structure that was copied to \`clients/{slug}/\`
+- \`sops/research.md\`, \`sops/asset-scrape.md\`, \`sops/existing-site-intelligence.md\` — your authority
+
+## What you must produce on disk
+
+\`\`\`
+clients/{slug}/
+├── research/
+│   ├── existing-site.md              # Stage 2 — scraped overview of the live site
+│   ├── existing-site-score.md        # Stage 2.7 — 12-axis score 0-24, sets build_mode
+│   ├── existing-site-visual-inventory.md  # Stage 2.7 — required when score >= 10
+│   ├── market-analysis.md            # Stage 2 — competitor analysis
+│   ├── scraped-assets.md             # Stage 2b — what got scraped, where it lives
+│   ├── review-evidence.json          # Stage 2.6 — Google Places + Facebook review data
+│   ├── raw/                          # Raw scraped HTML, screenshots, JSON
+│   └── competitors/                  # One subfolder per competitor
+└── assets/
+    ├── logo/                         # Primary + favicon, scraped or generated fallback
+    ├── team/                         # Owner + team photos, signature SVG when present
+    ├── photos/                       # Truck/fleet/jobsite + gallery
+    ├── photos/badges/                # BBB / Google / Facebook / cert real images
+    └── MANIFEST.json                 # Inventory: source, file path, claim_attached, provenance
+\`\`\`
+
+You also update \`brief.md\` to fill in: brand name, owner, phone, city/state, services, Facebook URL, BBB membership, certs (the data Stage 2 scrapes).
+
+## Procedure
+
+1. Read \`sops/research.md\` end-to-end. It defines: Firecrawl SERP search subcommand, HTTP liveness gate, Stage 2 PNG capture, competitor selection, the existing-site scrape format.
+2. Read \`sops/asset-scrape.md\`. Pay attention to §2 (owner cutout via \`agentic/tools/remove-bg.sh\` Path B; Nano-Banana face synthesis BANNED), §2b (skip rule when no real asset exists; never substitute generic Gemini), and the MANIFEST audit-trail requirements.
+3. Read \`sops/existing-site-intelligence.md\`. The 12-axis score sets \`build_mode\` (\`pattern-led\` / \`hybrid\` / \`preserve-elevate\`), which gates everything downstream.
+4. Run the live-site scrape (\`agentic/tools/firecrawl-scrape.sh\` with \`crawl\` + \`scrape\` subcommands; capture homepage + key inner pages).
+5. **SKIPPED** (2026-05-09 perf optimization per \`sops/research.md\` Step 2 STATUS block) — do NOT run the Firecrawl SERP search for competitors. Skip producing \`competitors.txt\` / \`competitors-rejected.txt\` / \`competitors/\` directory. Proposal §7 uses generic placeholder SERP rows now and doesn't need real competitor data. **\`agentic/tools/firecrawl-scrape.sh search\` is NOT called this run.**
+6. **SKIPPED** (2026-05-09 perf optimization) — do NOT run \`capture-competitor-screenshots.sh\`. The 8-screenshot capture sequence was costing 5-8 minutes per run; proposal §7 no longer references the screenshots. **\`agentic/tools/capture-competitor-screenshots.sh\` is NOT invoked this run.**
+7. Run asset scrape per \`sops/asset-scrape.md\`. Write each asset to \`clients/{slug}/assets/<class>/\` and append a row to \`assets/MANIFEST.json\` with \`source\`, \`path\`, \`claim_attached\`, \`provenance\`.
+8. If the owner is photographed but no transparent-background cutout exists, run \`agentic/tools/remove-bg.sh <input>\` to produce a hero-overlay-ready cutout. NEVER use Nano-Banana to synthesize an owner face.
+9. Run \`agentic/tools/fetch-review-evidence.sh all --slug {slug} --brand "<scraped>" --city "<scraped>" --state "<scraped>" [--facebook-url "<scraped-fb>"]\`. Output is \`research/review-evidence.json\`. Stage 5 QA Gate 4.5.16 fails the build without this file.
+10. Score the live site on the 12-axis rubric per \`sops/existing-site-intelligence.md\`. Write \`research/existing-site-score.md\`. If score ≥ 10, also write \`research/existing-site-visual-inventory.md\` per §"required when score ≥ 10" (Stage 3.5 + Stage 4 both need it).
+11. Update \`brief.md\` with all the scraped facts (brand, owner, phone, geo, services, certs).
+
+## Discipline
+
+- Real-evidence first. If a logo / owner photo / project photo is missing, mark it absent in MANIFEST — do NOT substitute generic AI/stock and label it as the client's. Asset honesty is a Layer 0 rule.
+- Every scraped asset gets a MANIFEST row. The QA mascot-MANIFEST audit (Gate 4.5.33) fails the build if any provenance row is missing.
+- Never edit SOPs, design system rules, or other clients' folders.
+- Live-site PNG capture is YOUR job (not Stage 6). Save to \`research/raw/home.png\`. Stage 2.5's typography Source #5 (visual verification) reads this file.
+
+## Return to orchestrator
+
+
+... (truncated for the viewer — full file is 70 lines in the website-factory repo)`;
+F[".claude/agents/build.md"]=`---
+name: build
+description: Stage 4 of the KCA Website Factory pipeline. Assembles the single-file static HTML build (clients/{slug}/build/index.html) from design-profile.json + creative-direction + section blueprints + content + assets. Test-mode default is single-file HTML with inline CSS+JS. Use this after the design-direction agent completes.
+tools: Bash, Read, Write, Edit, Glob, Grep
+---
+
+You are the Build subagent. You are an ASSEMBLER, not a designer. Every visual decision is already locked in \`design-profile.json\` + \`creative-direction.md\` + \`section-art-direction.json\`. Your job is to translate those decisions into one HTML file with inline CSS + JS that opens directly in a browser.
+
+## Inputs
+
+- \`clients/{slug}/design/design-profile.json\` — the contract (incl. \`operator_overrides\` block — read FIRST after the file itself)
+- \`clients/{slug}/design/creative-direction.md\` + \`section-art-direction.json\` + \`visual-reference-citations.md\`
+- \`clients/{slug}/content/final/*.md\` — final copy
+- \`clients/{slug}/assets/MANIFEST.json\` — what's on disk
+- \`clients/{slug}/research/review-evidence.json\` — review verbatim quotes
+- \`sops/build.md\` — your authority
+- \`design-system/recipes/hero-canonical.md\` — the 5-layer hero stack
+- \`design-system/sections/*.md\` — section blueprints
+- \`design-system/rules/*.md\` — every rule the design profile references
+- \`deterministic/prompts/designer.txt\` — implementation reference for the CSS/HTML/JS pattern (1194 lines of known-good Dean-style output; read it as a stylistic anchor, NOT a copy source)
+
+## What you produce
+
+\`\`\`
+clients/{slug}/build/
+└── index.html   # Single file, inline CSS + JS, openable in browser
+\`\`\`
+
+## Procedure
+
+1. Read \`sops/build.md\` end-to-end.
+2. Read \`design-profile.json\` + IMMEDIATELY read \`operator_overrides\`. Every non-null override is a HARD pin: emit the operator's value regardless of pattern recipe / typography audit / brand-color-audit defaults. Layer 0 + asset honesty rules still apply, but every other axis defers to the override.
+3. If \`pattern\` is set, read the pattern's recipe file (\`design-system/patterns/00X-*.md\`). The pattern's strategic rules are mandatory. Visual mode is from \`visual_mode\`.
+4. Read \`design-system/recipes/hero-canonical.md\`. The hero stack (UPDATED 2026-05-09): generated bg via Nano-Banana-2 (\`<div class="hero-bg">\`, scene includes branded vehicle on opposite-third from form, see Layer 1 spec) → dark gradient \`.hero-overlay\` (alphas tuned for generated bg) → truck cut-out \`<img class="hero-bg-truck">\` (separate file from bg, optional — bg already carries the vehicle) → form card with mini-card BELOW form fields. **Hero owner-overlay floating cut-out REMOVED 2026-05-09** — owner identity goes in (a) the bg's branded vehicle + (b) the \`.hero-form-owner-card\` mini-card below the form. **Hero mascot stamp REMOVED 2026-05-09** — mascot lives in non-hero sections only. **Hero side decorations REMOVED 2026-05-09** — generated bg needs to breathe.
+
+4a. **Hero bg generation (NEW STANDING RULE 2026-05-09).** Before assembling the hero markup, fire the bg generation:
+
+\`\`\`bash
+agentic/tools/generate-image.sh \\
+  --prompt "<populated template per design-system/recipes/hero-canonical.md §Layer 1>" \\
+  --aspect 16:9 \\
+  --out "clients/{slug}/assets/generated/hero-{trade}-{city}.png" \\
+  --model nano-banana-2 \\
+  --image "clients/{slug}/assets/logo/{slug}-primary.jpg"
+\`\`\`
+
+Trade → vehicle: residential = pickup (\`truck\`), commercial = box truck (\`boxtruck\`), HVAC/plumbing/electrical = van (\`van\`). Hard exclusions per trade interpolated into \`{{HARD_EXCLUSIONS}}\`. **Multimodal \`--image\` is LOGO ONLY** — passing scraped vehicle/gallery photos corrupts the model's vehicle priors and produces wrong-class vehicles. 3-retry budget. If all 3 fail, fall back to the scraped hero photo per \`sops/asset-scrape.md\` §3b. See \`sops/build.md\` §"Hero background generation — per-lead, mandatory" for the full contract.
+5. Author the \`<head>\`: title tag (SEO-optimized), meta description, Google Fonts link tag with EXACTLY the families + weights from \`design-profile.typography\`, favicon, OG/Twitter meta.
+6. Author the inline \`<style>\` block: declare \`--brand-*\` palette tokens, \`--deco-shape-N\` polygon tokens (3-5 from \`creative-direction.md\`), \`font-family\` rules per typography contract, then section-specific styles per the chosen blueprints.
+7. Author \`<body>\`: announcement bar → nav → hero → trust marquee → reviews → why-us → past-work → process → services → owner-story → financing → final-cta-banner → service-area → footer. Skip conditional sections per \`design-profile.section_plan\`.
+8. Decoration: at least one decoration per high-impact section at ≥0.40 opacity (Gate 4.5.28 floor raised 2026-05-08). Mobile: solid-bg cards OR hide/shrink side decorations (Gate 4.5.28.2).
+9. Mascot placements: 3-6 total per \`design-system/rules/mascot-rules.md\`. Pattern 003 = banned. Path A real / Path B Nano-Banana / Path C logo-emblem-stamp per \`design-profile.generated_graphics_plan\`. Hero form-corner stamp is the canonical first placement.
+10. Author the \`<script>\` block at end of body: form submit handler, sticky-mobile-CTA scroll behavior, scroll-to-top, accordion (if used), nav active-section highlight.
+11. Inline every CSS rule and every JS function. NO external CSS/JS files. NO build step. NO Next.js. Test mode is single-file HTML.
+
+## Discipline
+
+- Operator overrides come BEFORE the heuristic at every axis. Read \`operator_overrides\` first, then fall back to the picker.
+- Layer 0 rules: em-dash ban (rendered text), KCA attribution in footer, ≤2-line headings, no AI slop, no fake provenance chips ("AI-generated" must NOT appear in rendered HTML — provenance lives in MANIFEST).
+- Asset honesty: never label a Gemini portrait as the real owner; never label a Freepik aerial as a recent project.
+
+... (truncated for the viewer — full file is 78 lines in the website-factory repo)`;
+F[".claude/agents/qa.md"]=`---
+name: qa
+description: Stage 5 of the KCA Website Factory pipeline. Runs the iterative QA loop (up to 3 iterations) over the built site. Each iteration invokes the mechanical gate runner first, appends agent-graded findings, applies a fix pass to the build, then re-runs. Loop exits at zero failures or budget exhaustion. Use this immediately after the build agent completes.
+tools: Bash, Read, Write, Edit, Glob, Grep
+---
+
+You are the QA subagent. You run the Stage 5 iteration loop per \`sops/qa.md\` and produce the final report.
+
+## Inputs
+
+- \`clients/{slug}/build/index.html\` — the build to audit
+- \`clients/{slug}/design/design-profile.json\` (incl. \`operator_overrides\`)
+- \`clients/{slug}/design/creative-direction.md\` + \`section-art-direction.json\` + \`visual-reference-citations.md\`
+- \`clients/{slug}/research/review-evidence.json\`
+- \`clients/{slug}/assets/MANIFEST.json\`
+- \`sops/qa.md\` — your authority (every Part)
+- \`agentic/tools/run-qa-gates.sh\` — mechanical gate runner
+
+## What you produce per iteration
+
+\`\`\`
+clients/{slug}/qa/
+├── iteration-N-issues.md       # Mechanical-runner output + agent-appended findings
+├── iteration-N-fix-summary.md  # One line per ticked box, written at end of fix pass
+└── iteration-N-overrides.md    # Path C operator-overrides surfacing (Gate 4.5.37)
+\`\`\`
+
+After loop exits, you also produce the Part 5 final report (returned to orchestrator + optionally written to \`clients/{slug}/qa/final-report.md\`).
+
+## Procedure
+
+For N = 1 to 3:
+
+1. Run \`./agentic/tools/run-qa-gates.sh --slug {slug} --iteration N\`. The runner mechanizes 4.5.16, 4.5.18, 4.5.21, 4.5.22, 4.5.24, 4.5.25, 4.5.26, 4.5.27, 4.5.28, 4.5.31, 4.5.33, 4.5.37. Output goes to \`iteration-N-issues.md\`. Sidecar: \`iteration-N-overrides.md\` lists every pinned operator override (Path C).
+2. Run the agent-graded gates per \`sops/qa.md\`:
+   - Part 1 Technical QA
+   - Part 2 Conversion review
+   - Part 3 Visual review (adversarial checklist) + Part 3.5 anti-clone gate
+   - Part 3.6 Creative-direction adherence
+   - The not-yet-mechanized 4.5.x gates (4.5.4 Hero Form Strength, 4.5.10 Hero Image Composition, 4.5.12 Hero Media Coverage, 4.5.13 Section Photo Density, 4.5.17 Hero Canonical Recipe, 4.5.19 Sitewide UX Components, 4.5.23 Platform Mark SVG Provenance, 4.5.32 Icon-on-Card Contrast, 4.5.34 Button Tier, 4.5.35 Hero BG Source, 4.5.36 Card Diversity)
+   - Part 5 Scorecard (24 dimensions, dim 24 = adversarial visual quality)
+3. Append every agent-graded failure to \`iteration-N-issues.md\` using the same checklist format as the mechanical runner.
+4. If \`ISSUE_COUNT > 0\` AND \`N < 3\`: run the FIX pass. Work issues top-to-bottom. Edit \`clients/{slug}/build/index.html\` directly. Write \`iteration-N-fix-summary.md\` (one line per ticked box: what was changed, why). Increment N and continue.
+5. If \`ISSUE_COUNT == 0\` OR \`N == 3\` AND failures persist OR an unfixable upstream failure surfaces: EXIT the loop.
+
+## Iteration-loop discipline
+
+- Fix the BUILD, not the GATE. Never relax a pattern, lower a threshold, or rephrase a check to make a failure go away.
+- Each iteration's \`iteration-N-issues.md\` is preserved. Never overwrite a prior iteration's issue list.
+- If an upstream input is missing (e.g., \`review-evidence.json\` was never produced because Stage 2 failed): STOP the loop. Surface to the orchestrator. Do not stub data.
+- Do NOT introduce architectural decisions during iteration. If a no-gate visual concern surfaces ("the hero feels flat but no gate caught it"), record it under §"Recommended new gate" in the final report — do not silently adjust.
+- Every iteration includes re-reading the just-edited build, re-running every Part 1 → 4.5 gate, and writing both artifacts. The 3-iteration budget is deliberate.
+
+## Path C — operator-overrides surfacing
+
+\`run-qa-gates.sh\` Gate 4.5.37 writes \`iteration-N-overrides.md\` which lists every non-null axis from \`design-profile.json#operator_overrides\` plus the operator's reason. The corpus accumulates across runs and feeds future Path B (evidence-keyed rules) promotion analysis. Read the log; if an override would have violated a Layer 0 / asset-honesty / mandatory gate, log it as \`applied: false\` with the violated gate ID. Operator overrides do NOT bypass Layer 0.
+
+## Final report shape (Part 5 of \`sops/qa.md\`)
+
+After loop exits, return to orchestrator:
+
+... (truncated for the viewer — full file is 79 lines in the website-factory repo)`;
+F["design-system/patterns/002-roofing-owner-led-mascot-truck-residential.md"]=`# Pattern 002 — Roofing: Owner-Led, Mascot, Truck-Driven, Residential
+
+**Source iteration:** BlueBuilt Roofing &amp; Siding v1→v5 ([retrospective](../../clients/bluebuilt-roofs/qa/bluebuilt-journey-retrospective.md))
+**Status:** Stable (initial release post-BlueBuilt-v5)
+**Base language:** [\`trust-family\`](../languages/trust-family.md) with **bold-contractor-lite** visual treatment
+**Companion pattern:** [\`001-roofing-trust-family-premium-local\`](001-roofing-trust-family-premium-local.md) — premium-dark archetype (Camelback)
+**Build skeleton (recipe):** [\`002-roofing-owner-led-mascot-truck-residential.recipe.md\`](002-roofing-owner-led-mascot-truck-residential.recipe.md) — explicit HTML/CSS/asset-priority/Freepik/Gemini recipes for all 11 sections, used by Stage 4 Build
+**Mascot governance:** [\`design-system/rules/mascot-rules.md\`](../rules/mascot-rules.md) — 3-6 strategic uses cap, allowed roles, banned uses
+**Visual density:** [\`creative-direction-rules.md\` → Visual Density rule](../rules/creative-direction-rules.md) — default \`72px\` section padding, no SaaS empty space
+
+---
+
+## 1. Ideal client profile
+
+A lead matches this pattern when **≥ 6 of these signals** are present in the brief or scrape:
+
+- [x] **Owner-led residential roofer** (not premium luxury, not pure storm-chaser, not multi-state franchise)
+- [x] **Real owner photo** is publicly available (face shot, name confirmed via /about page or BBB)
+- [x] **Real branded service truck photo** exists (with the brand visible on the door — even at low resolution, it's recoverable)
+- [x] **Real project photos** (CompanyCam-style, drone aerials, before/after) — at least 6+
+- [x] **Real brand mascot or character** (a dog, an animal, a cartoon owner — distinct from a logo wordmark)
+- [x] **Single-metro suburban market** (one major suburban ring with 10+ adjacent cities — Marietta + 17 North Atlanta suburbs, NOT multi-state)
+- [x] **Tone is warm-professional, anti-gimmick** ("rooted in referrals, not gimmicks", "owner-led", "we treat every home like our own") — NOT premium luxury, NOT aggressive storm-chaser
+- [x] **Reviews + BBB are real and visible** (Google count + Facebook count + BBB rating all confirmable on live site)
+- [x] **Brand color is blue-led** (navy + steel blue + white) — NOT warm/copper, NOT bright orange/red as primary
+- [x] **Open 7 days OR same-day estimates** (responsiveness signal)
+
+## 2. When to use
+
+- Owner-led residential roofer in a single-metro suburban market, with strong real assets (owner + truck + drone + mascot)
+- Brand identity is blue-led, anti-gimmick, neighborly
+- Pattern 001's premium-dark mode would force a wrong tone; Pattern 001's bright-owner-led-trust mode B is the closest predecessor but lacks the mascot-truck-residential specificity
+- The client has all the conversion-architecture signals: quote/estimate intent, lead-gen-first, 5-field form is acceptable
+
+## 3. When NOT to use
+
+- Premium-luxury roofer with copper / warm palette → Pattern 001 Mode A (premium-dark-local-authority)
+- Multi-state franchise with multiple service areas → Pattern 001 Mode A or D
+- Pure storm-chaser / insurance-restoration → future \`roofing-storm-chaser\` pattern
+- Solo-owner trade with no team and no mascot → Pattern 001 Mode B (generic bright-owner-led-trust)
+- Architectural / luxury roofers ($30K+ AOV) → \`premium-clean\` language directly
+- Brand-new contractors (< 5 years) without team or local roots → not a Pattern 002 candidate
+
+## 4. Required / preferred inputs
+
+### Required (gate)
+
+- Client logo (color + white variants)
+- Real address + phone + email + business hours
+- Real owner photo (face shot, name)
+- Real branded truck photo (any resolution; if too low for full-bleed, escalate via Tier 4)
+- Real project photos (≥ 6 — drone or CompanyCam aerials preferred)
+- BBB profile data (rating, accreditation date)
+- Real Google review count + rating (from scrape, even without Places API)
+
+### Strongly preferred
+
+- Real brand mascot asset (the BlueBuilt "Blue" dog is the canonical example)
+- Real client/partner manufacturer badges (≥ 4)
+- Reviewer-name pairings from scraped homepage testimonials (4+ named reviewers)
+
+... (truncated for the viewer — full file is 361 lines in the website-factory repo)`;
+F["design-system/recipes/hero-canonical.md"]=`# Hero — Canonical Recipe
+
+**Promoted:** 2026-04-29 by Hardening Pass [hardening-2026-04-29-blueprint-alignment.md](../../docs/hardening-2026-04-29-blueprint-alignment.md)
+**Authority:** **Layer 0 derivative** — this recipe IS the hero spec from [\`sops/dean-blueprint.md\`](../../sops/dean-blueprint.md) Part 3, expressed as a build-ready composition contract. Pattern 001 / 002 / 003 inherit this recipe; brand-keyed slots are explicitly delineated.
+**Replaces:** the 4-path ambiguity in [\`hero-image-composition-rule.md\`](../rules/hero-image-composition-rule.md) (Paths A/B/C/D/E remain as escalation tiers FOR THE PHOTO, but the section composition is now locked to this recipe).
+**Enforced by:** [\`sops/qa.md\`](../../sops/qa.md) Gates 4.5.16 (Real Review Evidence) + 4.5.17 (Hero Canonical Recipe Compliance) + 3.6.6 (Hero 5/5 Bedrock).
+
+---
+
+## Why this exists
+
+Before this recipe, \`hero-image-composition-rule.md\` allowed 4 paths (split-fade, full-bleed dark, photo-mosaic, frame-broken portrait). Across 7 client builds we got 7 different hero shapes. Dean's meeting feedback ("hero section layout is inconsistent") was the symptom; the abstracted permissive rule was the cause.
+
+This recipe collapses the abstraction. **One canonical composition. Brand-variable in named slots only.** Different brands look different — same brand vs another always look different — but every build is recognizably a Dean-factory hero.
+
+---
+
+## The locked composition
+
+\`\`\`
+┌──────────────────────────────────────────────────────────┐
+│ ANNOUNCEMENT BAR  phone · email · social                 │  Section 1
+├──────────────────────────────────────────────────────────┤
+│ NAV BAR (sticky)  logo · menu · dynamic CTA              │  Section 2
+├──────────────────────────────────────────────────────────┤
+│ HERO SECTION (640-800px tall)                            │  Section 3
+│ ─────────────────────────────────────────────────────────│
+│ ▒ background: real photo, full-bleed, object-fit: cover ▒│
+│ ▒ overlay: dark gradient 90% → 30% (left to right)      ▒│
+│                                                           │
+│  ┌────────────────────────────┐ ┌──────────────────────┐ │
+│  │ COPY COLUMN (60%)          │ │ FORM CARD (40%)      │ │
+│  │                            │ │                      │ │
+│  │ License # subtle           │ │ ┌──────────────────┐ │ │
+│  │ Eyebrow [City, ★ Service]  │ │ │ Owner mini-card  │ │ │
+│  │                            │ │ │ (when avail.)    │ │ │
+│  │ ┌─────┐┌─────┐┌─────┐      │ │ └──────────────────┘ │ │
+│  │ │  G  ││  f  ││ BBB │      │ │                      │ │
+│  │ │ ★4.8││ ★4.9││ A+  │      │ │ Eyebrow chip         │ │
+│  │ │ (47)││ (23)││     │      │ │ "Get Your Free Quote"│ │
+│  │ └─────┘└─────┘└─────┘      │ │                      │ │
+│  │                            │ │ "We call you back    │ │
+│  │ ╔══════════════════════╗   │ │  in 5 minutes!"      │ │
+│  │ ║ H1 BIG BOLD DISPLAY  ║   │ │                      │ │
+│  │ ║ #1 [Service] in      ║   │ │ ┌──────────────────┐ │ │
+│  │ ║ [City], [State] |    ║   │ │ │ Name             │ │ │
+│  │ ║ [Brand]              ║   │ │ │ Phone            │ │ │
+│  │ ╚══════════════════════╝   │ │ │ Email            │ │ │
+│  │                            │ │ │ Address (or Zip) │ │ │
+│  │ Sub-headline 1-2 sentences │ │ │ How can we help? │ │ │
+│  │                            │ │ └──────────────────┘ │ │
+│  │ ✓ Trust bullet 1            │ │                      │ │
+│  │ ✓ Trust bullet 2            │ │ ┌──────────────────┐ │ │
+│  │ ✓ Trust bullet 3            │ │ │GET MY FREE       │ │ │
+│  │                            │ │ │   ESTIMATE  →    │ │ │
+│  │ ┌──────────────┐  ┌──────┐ │ │ └──────────────────┘ │ │
+│  │ │ GET FREE QUOTE│  │ ☎ Call│ │ │ "Free. No oblig.    │ │
+│  │ │   →           │  │ NOW   │ │ │  Respond < 2hr."    │ │
+│  │ └──────────────┘  └──────┘ │ │                      │ │
+│  └────────────────────────────┘ └──────────────────────┘ │
+
+... (truncated for the viewer — full file is 664 lines in the website-factory repo)`;
+F["prompts/run-fresh-lead-lean.md"]=`# Run Fresh Lead — Lean Prompt (legacy paste-prompt)
+
+**Status as of 2026-05-08:** legacy. The CLAUDE.md orchestrator (\`.claude/CLAUDE.md\`) now handles fresh-lead runs natively — Claude reads it on every conversation start and recognizes the trigger pattern without any pasted prompt.
+
+The single line below is now sufficient to start a run:
+
+\`\`\`
+run a fresh lead for {URL}
+\`\`\`
+
+Or, with a slug override:
+
+\`\`\`
+run a fresh lead for {URL} as slug {slug}
+\`\`\`
+
+CLAUDE.md handles slug derivation, agent sequencing, quarantine rules (no cross-client reads), and the stop-before-deploy guardrail. Each pipeline stage runs as a subagent in \`.claude/agents/\`.
+
+---
+
+## Why this file still exists
+
+A few reasons to keep it around:
+
+1. **Cold-context paste fallback** — if you're using a Claude surface that doesn't auto-load CLAUDE.md (rare), paste the block below.
+2. **Reference for the verbose version** — \`run-fresh-lead-verbose.md\` is still the belt-and-suspenders option for unusual leads (storm-restoration, commercial-only, no-owner-photo). It hand-walks discipline reminders front-loaded.
+3. **System hygiene** — this file documents what the trigger USED to look like, so future Hardening Pass auditors understand the migration.
+
+---
+
+## Cold-context paste (only if CLAUDE.md is not loaded)
+
+\`\`\`
+Working directory: /Users/alijaafari/Desktop/website-factory
+
+Read .claude/CLAUDE.md first — it defines the orchestrator pattern. Then:
+
+Run a fresh lead through the KCA Website Factory pipeline.
+
+- Live site URL: {LEAD: url}
+- Slug override: {LEAD: slug}  (leave blank to auto-derive)
+
+Quarantine: do NOT read any prior client's build/index.html, brief.md, or proposal.html as a starting file. Cross-client reads = anti-clone violation.
+
+Do NOT hand-walk SOPs from this prompt. Each subagent reads its own SOP at the relevant stage. The pipeline is the test subject; this prompt is just the trigger.
+
+Stop before any git/Vercel/external action. Surface the Stage 5 final report and wait.
+\`\`\`
+
+That's it. The orchestrator (CLAUDE.md) and the per-stage subagents (.claude/agents/*.md) handle everything else.
+`;
 
 // ===== TREE =====
 const T=[
-{n:'rapid-response-roofs',t:'f',children:[
-{n:'brief.md',t:'d',p:'brief.md',s:'discovery'},
-{n:'research',t:'f',s:'discovery',children:[
-  {n:'competitors.md',t:'d',p:'research/competitors.md',s:'discovery'},
-  {n:'existing-site-score.md',t:'d',p:'research/existing-site-score.md',s:'discovery'},
-  {n:'review-evidence.json',t:'d',p:null,s:'capture'},
-  {n:'raw',t:'f',s:'capture',children:[
-    {n:'home.png',t:'d',p:null,s:'capture'},
-    {n:'home.html',t:'d',p:null,s:'capture'}
+{n:'website-factory',t:'f',children:[
+  {n:'.claude',t:'f',children:[
+    {n:'CLAUDE.md',t:'d',p:'.claude/CLAUDE.md',s:'discovery'},
+    {n:'agents',t:'f',s:'strategy',children:[
+      {n:'research.md',t:'d',p:'.claude/agents/research.md',s:'discovery'},
+      {n:'build.md',t:'d',p:'.claude/agents/build.md',s:'build'},
+      {n:'qa.md',t:'d',p:'.claude/agents/qa.md',s:'polish'}
+    ]}
+  ]},
+  {n:'sops',t:'f',children:[
+    {n:'dean-blueprint.md',t:'d',p:'sops/dean-blueprint.md',s:'discovery'},
+    {n:'build.md',t:'d',p:'sops/build.md',s:'build'},
+    {n:'qa.md',t:'d',p:'sops/qa.md',s:'polish'}
+  ]},
+  {n:'design-system',t:'f',children:[
+    {n:'patterns',t:'f',s:'decode',children:[
+      {n:'002-roofing-owner-led-mascot-truck-residential.md',t:'d',p:'design-system/patterns/002-roofing-owner-led-mascot-truck-residential.md',s:'decode'}
+    ]},
+    {n:'recipes',t:'f',s:'build',children:[
+      {n:'hero-canonical.md',t:'d',p:'design-system/recipes/hero-canonical.md',s:'build'}
+    ]}
+  ]},
+  {n:'prompts',t:'f',children:[
+    {n:'run-fresh-lead-lean.md',t:'d',p:'prompts/run-fresh-lead-lean.md',s:'discovery'}
   ]}
-]},
-{n:'assets',t:'f',s:'capture',children:[
-  {n:'logo',t:'f',s:'capture',children:[
-    {n:'rapid-response-primary.png',t:'d',p:null,s:'capture'},
-    {n:'rapid-response-favi.png',t:'d',p:null,s:'capture'}
-  ]},
-  {n:'team',t:'f',s:'capture',children:[
-    {n:'codey-eatherton-portrait.jpg',t:'d',p:null,s:'capture'},
-    {n:'codey-eatherton-cutout.png',t:'d',p:null,s:'capture'},
-    {n:'codey-eatherton-signature.svg',t:'d',p:null,s:'capture'}
-  ]},
-  {n:'photos',t:'f',s:'capture',children:[
-    {n:'gallery',t:'f',s:'capture',children:[]},
-    {n:'badges',t:'f',s:'capture',children:[]}
-  ]},
-  {n:'generated',t:'f',s:'capture',children:[
-    {n:'mascot-generated.png',t:'d',p:null,s:'capture'}
-  ]},
-  {n:'MANIFEST.json',t:'d',p:null,s:'capture'}
-]},
-{n:'design',t:'f',s:'decode',children:[
-  {n:'brand-color-audit.md',t:'d',p:'design/brand-color-audit.md',s:'decode'},
-  {n:'brand-typography-audit.md',t:'d',p:null,s:'decode'},
-  {n:'design-profile.json',t:'d',p:null,s:'decode'},
-  {n:'design-profile.md',t:'d',p:'design/design-profile.md',s:'decode'},
-  {n:'creative-direction.md',t:'d',p:null,s:'decode'},
-  {n:'hero-composition-checklist.json',t:'d',p:null,s:'decode'},
-  {n:'visual-reference-citations.md',t:'d',p:null,s:'decode'}
-]},
-{n:'seo',t:'f',s:'strategy',children:[
-  {n:'keywords.md',t:'d',p:null,s:'strategy'},
-  {n:'sitemap-plan.md',t:'d',p:null,s:'strategy'},
-  {n:'page-briefs',t:'f',s:'strategy',children:[
-    {n:'home.md',t:'d',p:null,s:'strategy'},
-    {n:'about.md',t:'d',p:null,s:'strategy'},
-    {n:'services.md',t:'d',p:null,s:'strategy'}
-  ]}
-]},
-{n:'content',t:'f',s:'strategy',children:[
-  {n:'final',t:'f',s:'strategy',children:[
-    {n:'home.md',t:'d',p:'content/home.md',s:'strategy'},
-    {n:'about.md',t:'d',p:null,s:'strategy'},
-    {n:'services',t:'f',s:'strategy',children:[]}
-  ]}
-]},
-{n:'build',t:'f',s:'build',children:[
-  {n:'index.html',t:'d',p:null,s:'build'},
-  {n:'assets',t:'f',s:'build',children:[]}
-]},
-{n:'qa',t:'f',s:'polish',children:[
-  {n:'iteration-1-issues.md',t:'d',p:null,s:'polish'},
-  {n:'iteration-1-fix-summary.md',t:'d',p:null,s:'polish'},
-  {n:'iteration-2-issues.md',t:'d',p:null,s:'polish'},
-  {n:'iteration-2-overrides.md',t:'d',p:null,s:'polish'},
-  {n:'final-report.md',t:'d',p:'qa/final-report.md',s:'polish'}
-]},
-{n:'proposal',t:'f',s:'deliver',children:[
-  {n:'proposal.html',t:'d',p:'proposal/proposal.html',s:'deliver'},
-  {n:'kca-assets',t:'f',s:'deliver',children:[]}
-]}
 ]}
 ];
+
 
 const SC={discovery:'#3ecfcf',capture:'#e5a63e',decode:'#ec5f8a',strategy:'#9580f0',build:'#3ec98a',polish:'#f08e5e',deliver:'#eeb644'};
 let tabs=[],aTab=null,aStg=null,tI=[];
@@ -1102,7 +1345,7 @@ function toggleMax(){const w=document.getElementById('ideWin'),b=document.getEle
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.getElementById('ideWin').classList.contains('max'))toggleMax()});
 const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('v')}),{threshold:.05});
 document.querySelectorAll('.fi').forEach(e=>obs.observe(e));
-oF('brief.md','brief.md','discovery');
+oF('.claude/CLAUDE.md','CLAUDE.md','discovery');
 </script>
 </body>
 </html>
