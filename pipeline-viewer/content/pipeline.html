@@ -1261,21 +1261,52 @@ const T=[
     {n:'CLAUDE.md',t:'d',p:'.claude/CLAUDE.md',s:'discovery'},
     {n:'agents',t:'f',s:'strategy',children:[
       {n:'research.md',t:'d',p:'.claude/agents/research.md',s:'discovery'},
+      {n:'brand-audits.md',t:'d',p:null,s:'capture'},
+      {n:'seo-content.md',t:'d',p:null,s:'strategy'},
+      {n:'design-direction.md',t:'d',p:null,s:'decode'},
       {n:'build.md',t:'d',p:'.claude/agents/build.md',s:'build'},
-      {n:'qa.md',t:'d',p:'.claude/agents/qa.md',s:'polish'}
+      {n:'qa.md',t:'d',p:'.claude/agents/qa.md',s:'polish'},
+      {n:'proposal.md',t:'d',p:null,s:'deliver'}
     ]}
   ]},
   {n:'sops',t:'f',children:[
     {n:'dean-blueprint.md',t:'d',p:'sops/dean-blueprint.md',s:'discovery'},
+    {n:'intake.md',t:'d',p:null,s:'discovery'},
+    {n:'research.md',t:'d',p:null,s:'discovery'},
+    {n:'asset-scrape.md',t:'d',p:null,s:'capture'},
+    {n:'existing-site-intelligence.md',t:'d',p:null,s:'decode'},
+    {n:'seo-content.md',t:'d',p:null,s:'strategy'},
+    {n:'design-intelligence.md',t:'d',p:null,s:'decode'},
+    {n:'creative-direction.md',t:'d',p:null,s:'decode'},
     {n:'build.md',t:'d',p:'sops/build.md',s:'build'},
-    {n:'qa.md',t:'d',p:'sops/qa.md',s:'polish'}
+    {n:'qa.md',t:'d',p:'sops/qa.md',s:'polish'},
+    {n:'proposal.md',t:'d',p:null,s:'deliver'}
   ]},
   {n:'design-system',t:'f',children:[
     {n:'patterns',t:'f',s:'decode',children:[
-      {n:'002-roofing-owner-led-mascot-truck-residential.md',t:'d',p:'design-system/patterns/002-roofing-owner-led-mascot-truck-residential.md',s:'decode'}
+      {n:'001-trust-family-premium-local.md',t:'d',p:null,s:'decode'},
+      {n:'002-owner-led-mascot-truck-residential.md',t:'d',p:'design-system/patterns/002-roofing-owner-led-mascot-truck-residential.md',s:'decode'},
+      {n:'003-b2b-commercial.md',t:'d',p:null,s:'decode'}
     ]},
     {n:'recipes',t:'f',s:'build',children:[
       {n:'hero-canonical.md',t:'d',p:'design-system/recipes/hero-canonical.md',s:'build'}
+    ]},
+    {n:'rules',t:'f',s:'strategy',children:[
+      {n:'mascot-rules.md',t:'d',p:null,s:'decode'},
+      {n:'chamfer-edge-rule.md',t:'d',p:null,s:'strategy'},
+      {n:'decoration-coherence-rule.md',t:'d',p:null,s:'strategy'},
+      {n:'asset-rules.md',t:'d',p:null,s:'capture'},
+      {n:'typography-rules.md',t:'d',p:null,s:'decode'},
+      {n:'card-style-rule.md',t:'d',p:null,s:'strategy'},
+      {n:'button-style-rule.md',t:'d',p:null,s:'strategy'},
+      {n:'form-rules.md',t:'d',p:null,s:'strategy'},
+      {n:'cta-rules.md',t:'d',p:null,s:'build'},
+      {n:'hero-rules.md',t:'d',p:null,s:'build'}
+    ]},
+    {n:'sections',t:'f',s:'build',children:[
+      {n:'hero-form-right.md',t:'d',p:null,s:'build'},
+      {n:'blog-preview-section.md',t:'d',p:null,s:'strategy'},
+      {n:'owner-story-section.md',t:'d',p:null,s:'build'}
     ]}
   ]},
   {n:'prompts',t:'f',children:[
@@ -1283,6 +1314,7 @@ const T=[
   ]}
 ]}
 ];
+
 
 
 const SC={discovery:'#3ecfcf',capture:'#e5a63e',decode:'#ec5f8a',strategy:'#9580f0',build:'#3ec98a',polish:'#f08e5e',deliver:'#eeb644'};
