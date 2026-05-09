@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Roofing Website Factory · Behind the Curtain</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0d0d0f;--bg2:#15151a;--bg3:#1a1a20;--bg-hover:#212126;--bg-active:#27272d;
+  --border:#27272d;--border2:#303038;
+  --text:#ededf0;--text2:#a0a0ad;--text3:#65657a;--text4:#42424f;
+  --discovery:#3ecfcf;--capture:#e5a63e;--decode:#ec5f8a;--strategy:#9580f0;--build:#3ec98a;--polish:#f08e5e;--deliver:#eeb644;
+  --gold:#eeb644;
+  --font:'Inter',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text2);font-family:var(--font);font-size:14px;line-height:1.65}
+::selection{background:#9580f030;color:var(--text)}
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
+
+/* ===== LAYOUT ===== */
+.page{max-width:960px;margin:0 auto;padding:0 32px}
+
+/* ===== HEADER ===== */
+header{padding:64px 0 56px;border-bottom:1px solid var(--border)}
+.header-eyebrow{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:inline-block}
+header h1{font-size:clamp(32px,4vw,52px);font-weight:800;color:var(--text);letter-spacing:-.025em;line-height:1.05;margin-bottom:14px;max-width:18ch}
+header h1 em{font-style:normal;color:var(--gold)}
+header .lede{color:var(--text2);font-size:clamp(15px,1.4vw,18px);max-width:62ch;line-height:1.6}
+header .lede strong{color:var(--text);font-weight:600}
+
+/* ===== SECTIONS ===== */
+.sect{padding:56px 0;border-bottom:1px solid var(--border)}
+.sect:last-of-type{border-bottom:none}
+.sect-head{margin-bottom:32px}
+.sect-head .kicker{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--text4);margin-bottom:8px;display:block}
+.sect-head h2{font-size:clamp(22px,2.4vw,28px);font-weight:700;color:var(--text);margin-bottom:6px;letter-spacing:-.015em}
+.sect-head p{color:var(--text3);font-size:14px;max-width:64ch}
+
+/* ===== CALLOUT ===== */
+.callout{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:18px 22px;margin-bottom:32px;display:flex;gap:14px;align-items:flex-start;font-size:13.5px;color:var(--text2);line-height:1.6}
+.callout .icon{font-size:18px;flex-shrink:0;margin-top:1px}
+.callout strong{color:var(--text);font-weight:600}
+
+/* ===== TWO-UP ===== */
+.two-up{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:24px}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:22px}
+.card-label{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px;display:inline-block;padding:2px 8px;border-radius:4px}
+.card h3{font-size:15px;font-weight:600;color:var(--text);margin-bottom:8px}
+.card p{font-size:13.5px;color:var(--text3);line-height:1.6}
+.card p strong{color:var(--text2);font-weight:500}
+
+/* ===== PROMISE STATS (hero of "what this is") ===== */
+.promise-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:var(--bg2);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:24px}
+.promise-stat{padding:22px 20px;border-right:1px solid var(--border)}
+.promise-stat:last-child{border-right:none}
+.promise-stat .num{font-family:var(--font);font-size:clamp(22px,2.4vw,28px);font-weight:800;color:var(--gold);letter-spacing:-.02em;line-height:1;margin-bottom:6px}
+.promise-stat .lbl{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--text3)}
+
+/* ===== STAGE PIPELINE ===== */
+.phases{display:flex;flex-direction:column;gap:12px;margin-bottom:14px}
+.phase{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:0;overflow:hidden}
+.phase-head{padding:18px 22px;display:flex;align-items:center;gap:14px;border-bottom:1px solid var(--border)}
+.phase-num{font-family:var(--mono);font-size:11px;font-weight:600;padding:3px 9px;border-radius:4px;letter-spacing:.06em;text-transform:uppercase}
+.phase-title{font-size:15px;font-weight:700;color:var(--text);letter-spacing:-.005em;flex:1}
+.phase-time{font-family:var(--mono);font-size:11px;color:var(--text3);letter-spacing:.04em}
+.phase-stages{padding:14px 22px 18px;display:flex;flex-direction:column;gap:0}
+.stage-row{display:grid;grid-template-columns:48px 1fr;gap:14px;padding:11px 0;border-bottom:1px dashed var(--border)}
+.stage-row:last-child{border-bottom:none}
+.stage-num-pill{font-family:var(--mono);font-size:10px;font-weight:600;color:var(--text3);background:var(--bg);border:1px solid var(--border);border-radius:4px;padding:3px 7px;letter-spacing:.04em;text-align:center;height:fit-content;margin-top:2px}
+.stage-content h4{font-size:13.5px;font-weight:600;color:var(--text);margin-bottom:3px;letter-spacing:-.005em}
+.stage-content p{font-size:12.5px;color:var(--text3);line-height:1.55}
+.stage-content p strong{color:var(--text2);font-weight:500}
+
+/* phase color accents */
+.c-discovery{background:#3ecfcf12;color:var(--discovery);border:1px solid #3ecfcf28}
+.c-capture{background:#e5a63e12;color:var(--capture);border:1px solid #e5a63e28}
+.c-decode{background:#ec5f8a12;color:var(--decode);border:1px solid #ec5f8a28}
+.c-strategy{background:#9580f012;color:var(--strategy);border:1px solid #9580f028}
+.c-build{background:#3ec98a12;color:var(--build);border:1px solid #3ec98a28}
+.c-polish{background:#f08e5e12;color:var(--polish);border:1px solid #f08e5e28}
+.c-deliver{background:#eeb64412;color:var(--deliver);border:1px solid #eeb64428}
+
+/* ===== ANT WALK CONNECTORS ===== */
+.chain{display:flex;align-items:center;gap:0;flex-wrap:wrap;margin-top:24px;padding:14px 18px;background:var(--bg2);border:1px solid var(--border);border-radius:8px}
+.chain-node{font-family:var(--mono);font-size:11px;padding:5px 10px;background:var(--bg);border:1px solid var(--border);border-radius:5px;color:var(--text2);white-space:nowrap;font-weight:500}
+.chain-node.dim{color:var(--text3);background:transparent}
+.chain-node.bright{color:var(--gold);border-color:#eeb64445;background:#eeb64408}
+.chain-ant{width:22px;height:1px;position:relative;margin:0 2px}
+.chain-ant::before{content:'';position:absolute;inset:0;border-top:1.5px dashed var(--border2);animation:antWalk 1.2s linear infinite}
+.chain-ant::after{content:'›';position:absolute;right:-2px;top:50%;transform:translateY(-50%);font-size:11px;color:var(--text4);background:var(--bg2);padding-left:2px}
+@keyframes antWalk{to{stroke-dashoffset:-20;background-position:20px 0}}
+
+/* ===== WHAT YOU GET — folder grid ===== */
+.folder-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.folder-card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:18px;transition:background .15s}
+.folder-card:hover{background:var(--bg3)}
+.folder-name{font-family:var(--mono);font-size:13px;font-weight:500;margin-bottom:4px;display:flex;align-items:center;gap:7px;color:var(--text)}
+.folder-name::before{content:'\1F4C1';margin-right:1px}
+.folder-stage{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
+.folder-desc{font-size:12.5px;color:var(--text3);line-height:1.55}
+
+/* ===== SEE IT LIVE — reference builds ===== */
+.refs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px}
+.ref-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:0;overflow:hidden;transition:border-color .15s}
+.ref-card:hover{border-color:#eeb64445}
+.ref-thumb{height:140px;background:linear-gradient(135deg,#1c1c20,#27272d);position:relative;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:center}
+.ref-thumb-label{font-family:var(--mono);font-size:10px;color:var(--text4);letter-spacing:.1em;text-transform:uppercase}
+.ref-thumb.altus{background:linear-gradient(135deg,#011620 0%,#1E3A8A 60%,#0EA5E9 100%)}
+.ref-thumb.altus .ref-thumb-label{color:#64C4EE}
+.ref-thumb.rapidresponse{background:linear-gradient(135deg,#0D0D0D 0%,#703796 60%,#a35cd1 100%)}
+.ref-thumb.rapidresponse .ref-thumb-label{color:#e0c2f5}
+.ref-body{padding:18px}
+.ref-body .ref-tag{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--text4);margin-bottom:6px;display:block}
+.ref-body h3{font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px;letter-spacing:-.005em}
+.ref-body p{font-size:12.5px;color:var(--text3);line-height:1.55;margin-bottom:12px}
+.ref-link{font-family:var(--mono);font-size:11px;font-weight:500;color:var(--gold);letter-spacing:.04em;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.ref-link:hover{color:#fff}
+
+/* ===== AGENCY VS FACTORY comparison ===== */
+.compare{background:var(--bg2);border:1px solid var(--border);border-radius:10px;overflow:hidden}
+.compare-row{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:0;border-bottom:1px solid var(--border)}
+.compare-row:last-child{border-bottom:none}
+.compare-row.head{background:var(--bg3)}
+.compare-cell{padding:14px 18px;font-size:13px;color:var(--text2);border-right:1px solid var(--border)}
+.compare-cell:last-child{border-right:none}
+.compare-row.head .compare-cell{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text3)}
+.compare-row.head .compare-cell.factory{color:var(--gold)}
+.compare-cell.dim{color:var(--text3)}
+.compare-cell.bright{color:var(--text)}
+.compare-cell.factory{color:var(--gold);font-weight:500}
+.compare-cell .ico{margin-right:6px;font-size:12px}
+
+/* ===== IDE ===== */
+.ide-sect{padding:56px 0;border-bottom:1px solid var(--border)}
+.ide-frame{background:var(--bg2);border:1px solid var(--border);border-radius:10px;overflow:hidden;height:580px;display:flex;flex-direction:column}
+.ide-frame.max{position:fixed;top:24px;left:24px;right:24px;bottom:24px;height:auto;z-index:100;box-shadow:0 24px 80px rgba(0,0,0,.6)}
+.ide-top{display:flex;align-items:center;gap:12px;padding:12px 16px;background:var(--bg3);border-bottom:1px solid var(--border)}
+.dots{display:flex;gap:6px}
+.dots span{width:11px;height:11px;border-radius:50%;background:var(--border2)}
+.dots span:first-child{background:#ec5f8a}
+.dots span:nth-child(2){background:#eeb644}
+.dots span:nth-child(3){background:#3ec98a}
+.ide-top .t{font-family:var(--mono);font-size:12px;color:var(--text3);flex:1;text-align:center}
+.mx{font-family:var(--mono);font-size:11px;color:var(--text2);background:transparent;border:1px solid var(--border);padding:4px 12px;border-radius:5px;cursor:pointer;transition:background .15s}
+.mx:hover{background:var(--bg-hover)}
+.ide-inner{display:grid;grid-template-columns:auto 240px 1fr;flex:1;min-height:0}
+.ip{background:var(--bg2);border-right:1px solid var(--border);padding:14px 8px;display:flex;flex-direction:column;gap:6px;width:50px;align-items:center}
+.ipb{width:34px;height:34px;border-radius:5px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;font-weight:600;transition:background .15s,transform .15s}
+.ipb:hover{transform:translateY(-1px)}
+.ipb.on{outline:2px solid currentColor;outline-offset:1px}
+.isb{background:var(--bg2);border-right:1px solid var(--border);overflow-y:auto}
+.isb-h{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--text4);padding:14px 16px 10px}
+.isb-s{padding:0 8px 14px}
+.tr{display:flex;align-items:center;gap:6px;padding:5px 8px;border-radius:4px;font-family:var(--mono);font-size:12px;color:var(--text2);cursor:pointer;transition:background .12s}
+.tr:hover{background:var(--bg-hover)}
+.tr.sel{background:var(--bg-active);color:var(--text)}
+.tr.dm{opacity:.3}
+.tr .ic{font-size:11px;flex-shrink:0}
+.tr .ch{font-size:9px;color:var(--text4);width:10px;flex-shrink:0;transition:transform .15s}
+.tr .ch.op{transform:rotate(90deg)}
+.tr .lb{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tr .lb.fd{color:var(--text)}
+.tr .sd{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-left:auto}
+.tc{padding-left:14px}
+.tc.hd{display:none}
+.ivw{display:flex;flex-direction:column;background:var(--bg);min-height:0;overflow:hidden}
+.vt{display:flex;background:var(--bg2);border-bottom:1px solid var(--border);overflow-x:auto;flex-shrink:0}
+.vtb{display:flex;align-items:center;gap:8px;padding:10px 14px;font-family:var(--mono);font-size:11px;color:var(--text3);border-right:1px solid var(--border);cursor:pointer;white-space:nowrap}
+.vtb.act{background:var(--bg);color:var(--text);border-bottom:2px solid var(--gold);margin-bottom:-1px}
+.vtb .td{width:7px;height:7px;border-radius:50%}
+.vtb .tx{margin-left:6px;color:var(--text4);font-size:14px;width:14px;height:14px;display:flex;align-items:center;justify-content:center;border-radius:3px}
+.vtb .tx:hover{background:var(--bg-hover);color:var(--text2)}
+.vp{display:none;padding:7px 16px;font-family:var(--mono);font-size:11px;color:var(--text3);background:var(--bg2);border-bottom:1px solid var(--border);flex-shrink:0}
+.vp .cr{color:var(--text3)}
+.vp .sp{color:var(--text4);margin:0 5px}
+.vs{flex:1;overflow:auto;min-height:0}
+.ve{padding:64px 24px;text-align:center;color:var(--text4)}
+.ve p{font-size:13px;line-height:1.7}
+.ve kbd{font-family:var(--mono);font-size:10px;background:var(--bg2);padding:2px 6px;border-radius:3px;border:1px solid var(--border);color:var(--text2)}
+.md{font-family:var(--mono);font-size:12.5px;line-height:1.7;color:var(--text2)}
+.ln{display:grid;grid-template-columns:42px 1fr;gap:0;padding:0}
+.nn{color:var(--text4);text-align:right;padding:0 14px 0 0;user-select:none;font-size:11px}
+.lc{padding:0 18px;white-space:pre-wrap;word-break:break-word}
+.lc.h1{font-family:var(--font);font-size:18px;font-weight:700;color:var(--text);padding:18px 18px 6px;letter-spacing:-.01em}
+.lc.h2{font-family:var(--font);font-size:15px;font-weight:600;color:var(--text);padding:16px 18px 4px}
+.lc.h3{font-family:var(--font);font-size:13px;font-weight:600;color:var(--text2);padding:12px 18px 4px}
+.lc.fm{color:var(--text4);font-style:italic}
+.lc.cb{color:var(--gold);background:#eeb64408}
+.lc.hr{color:var(--text4)}
+.lc .ci{background:var(--bg2);color:var(--gold);padding:1px 5px;border-radius:3px;font-size:11.5px}
+.lc .bd{color:var(--text);font-weight:600;font-family:var(--font)}
+.lc .ck{color:var(--text3);margin-right:4px}
+.lc .bl{color:var(--gold);font-weight:600;margin-right:4px}
+
+/* ===== CTA / FOOTER ===== */
+.final-cta{padding:80px 0 64px;border-top:1px solid var(--border);text-align:center}
+.final-cta h2{font-size:clamp(22px,2.4vw,28px);font-weight:700;color:var(--text);margin-bottom:14px;max-width:24ch;margin-left:auto;margin-right:auto;letter-spacing:-.015em}
+.final-cta p{color:var(--text3);font-size:14px;max-width:54ch;margin:0 auto 30px;line-height:1.6}
+.cta-btn{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:#0d0d0f;font-family:var(--font);font-weight:700;font-size:14px;padding:14px 28px;border-radius:6px;text-decoration:none;letter-spacing:.02em;text-transform:uppercase;border:1px solid var(--gold);transition:transform .15s,background .15s}
+.cta-btn:hover{transform:translateY(-2px);background:#fff;border-color:#fff}
+footer{padding:32px 0;text-align:center;border-top:1px solid var(--border)}
+footer p{font-size:11px;color:var(--text4);font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase}
+
+/* ===== FADE-IN ===== */
+.fi{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
+.fi.v{opacity:1;transform:translateY(0)}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  .page{padding:0 20px}
+  .promise-grid{grid-template-columns:1fr 1fr}
+  .promise-stat{border-right:none;border-bottom:1px solid var(--border)}
+  .promise-stat:nth-child(2){border-right:none}
+  .promise-stat:nth-last-child(-n+2){border-bottom:none}
+  .two-up{grid-template-columns:1fr}
+  .refs-grid{grid-template-columns:1fr}
+  .compare-row{grid-template-columns:1fr}
+  .compare-cell{border-right:none;border-bottom:1px solid var(--border)}
+  .compare-cell:last-child{border-bottom:none}
+  .ide-frame{height:480px}
+  .ide-inner{grid-template-columns:auto 180px 1fr}
+  .chain{flex-direction:column;align-items:flex-start;gap:6px}
+  .chain-ant{width:1px;height:14px;margin:0}
+  .chain-ant::before{border-top:none;border-left:1.5px dashed var(--border2);inset:0;width:0;height:100%}
+  .chain-ant::after{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+
+<!-- HEADER -->
+<header class="fi">
+  <span class="header-eyebrow">Behind the Curtain</span>
+  <h1>The Roofing Website <em>Factory.</em></h1>
+  <p class="lede">From <strong>one URL</strong> to a complete contractor website + sales-ready proposal. <strong>No templates. No copy-paste. No mistakes.</strong> Watch what happens when 13 specialized AI agents take your business and build it a website that actually converts.</p>
+</header>
+
+<!-- WHAT THIS IS -->
+<section class="sect fi">
+  <div class="sect-head">
+    <span class="kicker">01 &middot; The Promise</span>
+    <h2>What this is</h2>
+    <p>An AI-powered factory for contractor websites. You give it your existing site URL. It returns a brand-new website built from scratch &mdash; styled around YOUR brand, written for YOUR market, populated with YOUR real reviews and project photos. Plus a sales-ready proposal you can forward to your prospect the same day.</p>
+  </div>
+
+  <div class="promise-grid">
+    <div class="promise-stat"><div class="num">1 URL</div><div class="lbl">in</div></div>
+    <div class="promise-stat"><div class="num">0</div><div class="lbl">templates</div></div>
+    <div class="promise-stat"><div class="num">13</div><div class="lbl">stages</div></div>
+    <div class="promise-stat"><div class="num">30+</div><div class="lbl">quality gates</div></div>
+  </div>
+
+  <div class="callout">
+    <span class="icon">&#9889;</span>
+    <div><strong>It's not WordPress, Webflow, or a template builder.</strong> It's a from-scratch agency-quality build &mdash; same kind of work a $10K design studio would deliver in 3 months &mdash; produced in a single automated run. Every site is unique. Every section is brand-DNA-fitted. Every claim is backed by real evidence pulled from your existing online presence.</div>
+  </div>
+
+  <div class="two-up">
+    <div class="card">
+      <div class="card-label c-discovery">What goes in</div>
+      <h3>One URL. Your existing site.</h3>
+      <p>That's the only required input. The factory pulls everything else &mdash; your brand colors, typography, owner photo, project gallery, Google &amp; Facebook reviews, certifications, service area, the works. <strong>You don't fill out a form.</strong></p>
+    </div>
+    <div class="card">
+      <div class="card-label c-deliver">What comes out</div>
+      <h3>A site + a proposal. Sales-ready.</h3>
+      <p>A complete <strong>conversion-tuned website</strong> styled around your brand DNA, audited against 30+ quality gates, mobile-optimized, ready to deploy. PLUS a <strong>$10K-style sales proposal</strong> embedding your live site &mdash; ready to forward to your prospect.</p>
+    </div>
+  </div>
+</section>
+
+<!-- THE 13 STAGES -->
+<section class="sect fi">
+  <div class="sect-head">
+    <span class="kicker">02 &middot; The Process</span>
+    <h2>The 13 stages</h2>
+    <p>Each stage feeds the next. Nothing is assumed. Everything is derived from your real data. 13 specialized agents, each doing one thing perfectly, hand the work down the line like a Toyota assembly line for websites.</p>
+  </div>
+
+  <div class="phases">
+
+    <!-- PHASE 1 -->
+    <div class="phase">
+      <div class="phase-head">
+        <span class="phase-num c-discovery">Phase 1</span>
+        <span class="phase-title">Discovery</span>
+      </div>
+      <div class="phase-stages">
+        <div class="stage-row">
+          <span class="stage-num-pill">01</span>
+          <div class="stage-content">
+            <h4>Intake</h4>
+            <p>You give us your URL. We set up your project folder, scaffold the build, and start the run. <strong>Zero forms to fill out.</strong></p>
+          </div>
+        </div>
+        <div class="stage-row">
+          <span class="stage-num-pill">02</span>
+          <div class="stage-content">
+            <h4>Research</h4>
+            <p>We map your local market and identify your top 3-5 competitors. We study what's ranking, what's converting, and where the gaps are &mdash; the openings YOUR site will exploit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHASE 2 -->
+    <div class="phase">
+      <div class="phase-head">
+        <span class="phase-num c-capture">Phase 2</span>
+        <span class="phase-title">Capture</span>
+      </div>
+      <div class="phase-stages">
+        <div class="stage-row">
+          <span class="stage-num-pill">03</span>
+          <div class="stage-content">
+            <h4>Asset Scrape</h4>
+            <p>We pull your <strong>real assets</strong> from your existing site &mdash; logo, owner photo, team photos, project gallery, badges, certifications, service-area cities. Your stuff, not stock.</p>
+          </div>
+        </div>
+        <div class="stage-row">
+          <span class="stage-num-pill">04</span>
+          <div class="stage-content">
+            <h4>Real Review Evidence</h4>
+            <p>We fetch your verified <strong>Google + Facebook reviews</strong> direct from the platforms. The 5-star ratings on your new site come from real customers &mdash; not "lorem ipsum five stars."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHASE 3 -->
+    <div class="phase">
+      <div class="phase-head">
+        <span class="phase-num c-decode">Phase 3</span>
+        <span class="phase-title">Brand DNA</span>
+      </div>
+      <div class="phase-stages">
+        <div class="stage-row">
+          <span class="stage-num-pill">05</span>
+          <div class="stage-content">
+            <h4>Brand Audit</h4>
+            <p>We extract your <strong>brand colors</strong> from your logo + live site CSS. We extract your <strong>typography</strong> from the same. Your new site stays YOU &mdash; same brand DNA, executed at agency quality.</p>
+          </div>
+        </div>
+        <div class="stage-row">
+          <span class="stage-num-pill">06</span>
+          <div class="stage-content">
+            <h4>Existing-Site Intelligence</h4>
+            <p>We score your current site on 12 axes &mdash; what's working, what's worth keeping, what to replace. <strong>Strong site? We preserve the spine.</strong> Blank slate? We build clean from scratch.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHASE 4 -->
+    <div class="phase">
+      <div class="phase-head">
+        <span class="phase-num c-strategy">Phase 4</span>
+        <span class="phase-title">Strategy</span>
+      </div>
+      <div class="phase-stages">
+        <div class="stage-row">
+          <span class="stage-num-pill">07</span>
+          <div class="stage-content">
+            <h4>SEO + Content</h4>
+            <p>We do <strong>keyword research</strong> on your local market, build your sitemap, and write <strong>conversion-focused copy</strong> for every page. Headlines that hook. Bullets that close. CTAs that convert.</p>
+          </div>
+        </div>
+        <div class="stage-row">
+          <span class="stage-num-pill">08</span>
+          <div class="stage-content">
+            <h4>Design Intelligence</h4>
+            <p>We pick your visual style based on your brand voice &mdash; <strong>owner-led residential</strong>, <strong>premium-family</strong>, or <strong>commercial-industrial</strong>. The right vibe for your specific market and customer.</p>
+          </div>
+        </div>
+        <div class="stage-row">
+          <span class="stage-num-pill">09</span>
+          <div class="stage-content">
+            <h4>Creative Direction</h4>
+            <p>We choose your <strong>hero composition</strong>, your color motifs, your character mascot (we generate one if you don't have one yet, using AI). Every section gets a "signature move" so the site feels designed, not assembled.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHASE 5 -->
+    <div class="phase">
+      <div class="phase-head">
+        <span class="phase-num c-build">Phase 5</span>
+        <span class="phase-title">Build</span>
+      </div>
+      <div class="phase-stages">
+        <div class="stage-row">
+          <span class="stage-num-pill">10</span>
+          <div class="stage-content">
+            <h4>Build</h4>
+            <p>We assemble your site. <strong>One file, ~2,500 lines</strong> of polished HTML/CSS/JS. Every section coherent. Mobile-first. Accessible. Conversion-tuned. Ready to open in a browser the moment it ships.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHASE 6 -->
+    <div class="phase">
+      <div class="phase-head">
+        <span class="phase-num c-polish">Phase 6</span>
+        <span class="phase-title">Quality</span>
+      </div>
+      <div class="phase-stages">
+        <div class="stage-row">
+          <span class="stage-num-pill">11</span>
+          <div class="stage-content">
+            <h4>QA Audit</h4>
+            <p>We audit against <strong>30+ quality gates</strong>: typography matches your brand, decorations visible, real assets present, no AI-slop language, mobile responsive, every CTA works, every link resolves.</p>
+          </div>
+        </div>
+        <div class="stage-row">
+          <span class="stage-num-pill">12</span>
+          <div class="stage-content">
+            <h4>Auto-Iterate</h4>
+            <p>If anything fails QA, we <strong>fix it automatically</strong> &mdash; up to 3 iterations. Every fix is documented. Most builds ship clean on iteration 1 or 2.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHASE 7 -->
+    <div class="phase">
+      <div class="phase-head">
+        <span class="phase-num c-deliver">Phase 7</span>
+        <span class="phase-title">Sales-Ready</span>
+      </div>
+      <div class="phase-stages">
+        <div class="stage-row">
+          <span class="stage-num-pill">13</span>
+          <div class="stage-content">
+            <h4>Proposal</h4>
+            <p>We generate a <strong>$10K-style sales proposal</strong>. Branded cover. Embeds your live site in a laptop + phone mockup. Includes competitive analysis, the $1M case study, sales psychology that closes. <strong>Forward it to your prospect &mdash; they sign.</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="chain">
+    <span class="chain-node dim">Your URL</span><span class="chain-ant"></span>
+    <span class="chain-node">Brief</span><span class="chain-ant"></span>
+    <span class="chain-node">Research</span><span class="chain-ant"></span>
+    <span class="chain-node">Assets</span><span class="chain-ant"></span>
+    <span class="chain-node">Brand DNA</span><span class="chain-ant"></span>
+    <span class="chain-node">Content</span><span class="chain-ant"></span>
+    <span class="chain-node">Build</span><span class="chain-ant"></span>
+    <span class="chain-node">QA</span><span class="chain-ant"></span>
+    <span class="chain-node bright">Proposal</span><span class="chain-ant"></span>
+    <span class="chain-node dim">Sent to prospect</span>
+  </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<section class="sect fi">
+  <div class="sect-head">
+    <span class="kicker">03 &middot; The Deliverable</span>
+    <h2>What you get</h2>
+    <p>One folder per client. Every output organized, every decision tracked. Whatever you need to know about how your site got built, it's documented inside.</p>
+  </div>
+
+  <div class="folder-grid">
+    <div class="folder-card">
+      <div class="folder-name">brief.md</div>
+      <div class="folder-stage" style="color:var(--discovery)">Phase 1 &middot; Discovery</div>
+      <div class="folder-desc">Your business, fully documented. Brand name, owner, services, geography, certifications, reviews, competitors. Single source of truth.</div>
+    </div>
+    <div class="folder-card">
+      <div class="folder-name">research/</div>
+      <div class="folder-stage" style="color:var(--discovery)">Phase 1 &middot; Discovery</div>
+      <div class="folder-desc">Your market mapped. 5 competitor analyses. Existing-site score (12 axes). Verified review evidence.</div>
+    </div>
+    <div class="folder-card">
+      <div class="folder-name">assets/</div>
+      <div class="folder-stage" style="color:var(--capture)">Phase 2 &middot; Capture</div>
+      <div class="folder-desc">Your real stuff. Logo files, owner photo, team photos, project gallery, certification badges &mdash; all extracted from your existing online presence.</div>
+    </div>
+    <div class="folder-card">
+      <div class="folder-name">design/</div>
+      <div class="folder-stage" style="color:var(--decode)">Phase 3 &middot; Brand DNA</div>
+      <div class="folder-desc">Your brand DNA, decoded. Color audit, typography audit, design profile, creative direction, hero composition checklist.</div>
+    </div>
+    <div class="folder-card">
+      <div class="folder-name">seo/</div>
+      <div class="folder-stage" style="color:var(--strategy)">Phase 4 &middot; Strategy</div>
+      <div class="folder-desc">Keyword research. Sitemap plan (17 pages typical). Per-page briefs documenting target keyword, intent, conversion goal.</div>
+    </div>
+    <div class="folder-card">
+      <div class="folder-name">content/</div>
+      <div class="folder-stage" style="color:var(--strategy)">Phase 4 &middot; Strategy</div>
+      <div class="folder-desc">Final approved copy, page by page. Conversion-tuned, brand-voice-matched, SEO-aligned, em-dash-free.</div>
+    </div>
+    <div class="folder-card">
+      <div class="folder-name">build/</div>
+      <div class="folder-stage" style="color:var(--build)">Phase 5 &middot; Build</div>
+      <div class="folder-desc">Your live site. One file. Open in a browser &mdash; that's the deliverable. Ready to deploy anywhere.</div>
+    </div>
+    <div class="folder-card">
+      <div class="folder-name">qa/</div>
+      <div class="folder-stage" style="color:var(--polish)">Phase 6 &middot; Quality</div>
+      <div class="folder-desc">Iteration history. Issues found per round, fixes applied, final scorecard. Every quality decision documented.</div>
+    </div>
+    <div class="folder-card">
+      <div class="folder-name">proposal/</div>
+      <div class="folder-stage" style="color:var(--deliver)">Phase 7 &middot; Sales-Ready</div>
+      <div class="folder-desc">Your branded sales proposal. Forward to your prospect; they see your live site in the proposal itself.</div>
+    </div>
+  </div>
+</section>
+
+<!-- AGENCY VS FACTORY -->
+<section class="sect fi">
+  <div class="sect-head">
+    <span class="kicker">04 &middot; The Comparison</span>
+    <h2>How it's different</h2>
+    <p>What you'd get from a traditional roofing-website agency vs what the factory ships.</p>
+  </div>
+
+  <div class="compare">
+    <div class="compare-row head">
+      <div class="compare-cell"></div>
+      <div class="compare-cell">Traditional agency</div>
+      <div class="compare-cell factory">The Factory</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell bright">Cost</div>
+      <div class="compare-cell dim">$5K &ndash; $15K typical</div>
+      <div class="compare-cell factory">A fraction of that</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell bright">Time to ship</div>
+      <div class="compare-cell dim">6 &ndash; 12 weeks</div>
+      <div class="compare-cell factory">Same day</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell bright">Templates</div>
+      <div class="compare-cell dim">Usually a starter template, customized</div>
+      <div class="compare-cell factory">Never. Every site built from scratch.</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell bright">Real assets used</div>
+      <div class="compare-cell dim">Sometimes &mdash; you supply, they integrate</div>
+      <div class="compare-cell factory">Always &mdash; we extract from your existing site</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell bright">Brand DNA fit</div>
+      <div class="compare-cell dim">Designer's interpretation, often generic</div>
+      <div class="compare-cell factory">Audited from your actual brand &mdash; colors, type, voice</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell bright">Real reviews verified</div>
+      <div class="compare-cell dim">Often "5 stars" placeholder, never verified</div>
+      <div class="compare-cell factory">Pulled directly from Google + Facebook APIs</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell bright">Iterations</div>
+      <div class="compare-cell dim">Slow back-and-forth email, weeks per round</div>
+      <div class="compare-cell factory">Auto-fixed, up to 3 rounds, all in one run</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell bright">Quality verification</div>
+      <div class="compare-cell dim">Designer's eye + maybe Lighthouse score</div>
+      <div class="compare-cell factory">30+ mechanical gates + adversarial visual review</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell bright">Sales proposal</div>
+      <div class="compare-cell dim">Not included. Hire someone separately.</div>
+      <div class="compare-cell factory">Branded, embedded live preview, included</div>
+    </div>
+  </div>
+</section>
+
+<!-- INSIDE THE FACTORY (file viewer) -->
+<section id="explorer" class="ide-sect fi">
+  <div class="sect-head">
+    <span class="kicker">05 &middot; Inside the Folder</span>
+    <h2>Inside the factory</h2>
+    <p>This is what your client folder looks like after a run. Click any file to see what's inside. Click a phase pill on the left to filter.</p>
+  </div>
+
+  <div class="ide-frame" id="ideWin">
+    <div class="ide-top">
+      <div class="dots"><span></span><span></span><span></span></div>
+      <span class="t">clients/rapid-response-roofs/</span>
+      <button class="mx" id="maxBtn" onclick="toggleMax()">Maximize</button>
+    </div>
+    <div class="ide-inner">
+      <div class="ip" id="ideP"></div>
+      <div class="isb"><div class="isb-h">Explorer</div><div class="isb-s" id="treeR"></div></div>
+      <div class="ivw">
+        <div class="vt" id="vTabs"></div>
+        <div class="vp" id="vPath"></div>
+        <div class="vs" id="vScroll"><div class="ve" id="vE"><p>Click any <kbd>.md</kbd> file to see its contents.<br>Click a phase pill on the left to filter the tree.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="final-cta fi">
+  <h2>Want this for your roofing business?</h2>
+  <p>Talk to Dean. He'll show you the exact build for your market &mdash; same factory, your brand, your prospects, your sales proposal ready to send Monday morning.</p>
+  <a class="cta-btn" href="#">Book a Call &rarr;</a>
+</section>
+
+</div>
+
+<footer><p>King Contractor Agency &middot; The Roofing Website Factory</p></footer>
+
+<script>
+// ===== SAMPLE CLIENT OUTPUT (representative file content) =====
+const F={};
+
+F['brief.md']=`# Client Brief — Rapid Response Roofs Michigan
+
+## Business Info
+- **Brand**: Rapid Response Roofs Michigan
+- **Owner**: Codey Eatherton (Owner & CEO)
+- **Phone**: (269) 753-1121
+- **Email**: sales@rapidresponseroofs.com
+- **Headquarters**: Battle Creek, MI
+- **Founded**: 2021 (4 years in business)
+- **Team size**: 16 (owner + 14 named inspectors/admins)
+
+## Services
+- **Primary**: Residential roof replacement (insurance claims)
+- **Secondary**: Roof repair, storm damage assessment, gutters
+- **Material partners**: IKO Cambridge architectural shingles
+- **Supply partner**: Richards Building Supply (since 1942)
+
+## Service Area
+- 18 Michigan cities
+- Primary metro: Battle Creek + Springfield
+- Secondary: Kalamazoo, Marshall, Albion, Bellevue
+
+## Reviews (verified)
+- **Google**: 4.8★ (267 reviews) — fetched via Places API
+- **Facebook**: 5.0★ (116 reviews) — fetched from page
+
+## Brand
+- **Primary color**: #703796 (deep purple — extracted from logo + live CSS)
+- **Voice**: Insurance-savvy, owner-led, lightning-response speed
+- **Personality**: Approachable but professional. Direct ownership voice.
+
+## Conversion goals
+- **Primary**: Free roof assessment (form fill)
+- **Secondary**: Phone call (tap-to-call)
+- **Trust line**: Respond within 2 hours, no obligation
+
+## Pattern
+- **Match**: Pattern 002 — Owner-led mascot-truck residential
+- **Visual mode**: bright-owner-led-trust
+- **Confidence**: 87% (high)`;
+
+F['research/competitors.md']=`# Market Analysis — Rapid Response Roofs Michigan
+
+## Top 5 Competitors (Battle Creek + Kalamazoo metro)
+
+### 1. Allied Roofing Co
+- **Domain**: alliedroofingco.com
+- **DA**: 31
+- **Top keyword**: "roofing battle creek mi"
+- **Strengths**: 14 years in business, BBB A+, 5★ Google
+- **Weaknesses**: Generic stock photos, no owner photo, slow site
+- **Gap to exploit**: Owner-led trust positioning
+
+### 2. KMS Roofing & Construction
+- **Domain**: kmsroofingmi.com
+- **DA**: 24
+- **Top keyword**: "roof repair kalamazoo"
+- **Strengths**: GAF MasterElite cert, real project gallery
+- **Weaknesses**: Old design (2018-era), weak mobile, no insurance-claim positioning
+- **Gap to exploit**: Insurance-claim specialist messaging
+
+### 3. Lakeside Exteriors
+- **Domain**: lakesideexteriorsmi.com
+- **DA**: 28
+- **Top keyword**: "roof replacement battle creek"
+- **Strengths**: Multi-trade (roofing + siding + windows)
+- **Weaknesses**: No verified review counts displayed, generic copy
+- **Gap to exploit**: Real review counts (Google 267, Facebook 116)
+
+### 4. Storm Restoration Pros
+- **Domain**: stormrestorationpros.com
+- **DA**: 19
+- **Top keyword**: "storm damage roof michigan"
+- **Strengths**: Storm-restoration niche
+- **Weaknesses**: No owner identity, AI-generated stock photos
+- **Gap to exploit**: Real owner face + named team
+
+### 5. Premier Roofing MI
+- **Domain**: premierroofingmi.com
+- **DA**: 22
+- **Top keyword**: "shingle roofing michigan"
+- **Strengths**: Long copy, schema-marked-up
+- **Weaknesses**: Wall of text, weak hero CTA, dated visual style
+- **Gap to exploit**: Modern hero composition + clear conversion path
+
+## Table stakes (everyone has)
+- BBB membership claim
+- 5★ rating display
+- Free quote CTA
+
+## Differentiators worth claiming
+- Specific review COUNTS (267 + 116, not "5 stars")
+- Owner's actual face on the site
+- Named local team (16 people, real photos)
+- Insurance-claim specialist positioning (verified track record)
+- 18-city service area listing (broader than competitors)
+- IKO Cambridge + Richards Building Supply partnerships`;
+
+F['research/existing-site-score.md']=`# Existing Site Score — Rapid Response Roofs Michigan
+
+> 12-axis scoring per sops/existing-site-intelligence.md.
+> Score determines build_mode: weak (0-9) / decent (10-17) / strong (18-24).
+
+## Score: 8/24 (WEAK)
+
+| Axis | Score | Notes |
+|---|---|---|
+| 1. Brand identity strength | 1/2 | Logo + brand color clear; wordmark inconsistent |
+| 2. Typography system | 0/2 | No deliberate type pairing; default WP fonts |
+| 3. Owner identity surfaced | 1/2 | Owner photo present on /about, name listed; not on home |
+| 4. Real review evidence | 1/2 | Counts claimed in copy; no platform badges, no verifiable links |
+| 5. Real project gallery | 1/2 | 6 photos in /past-work; mixed real + stock |
+| 6. Service-area depth | 1/2 | List of cities exists; no per-city pages |
+| 7. Trust signal density | 0/2 | No BBB widget, no GAF cert badge, no insurance language |
+| 8. Conversion path clarity | 1/2 | Form on home; no phone tap-to-call; no urgency |
+| 9. Mobile experience | 0/2 | Hero stacks badly; CTA below fold; trust badges hidden |
+| 10. Page speed | 1/2 | Unoptimized images; LCP 4.2s |
+| 11. Schema markup | 0/2 | No JSON-LD; no LocalBusiness schema |
+| 12. Editorial voice | 1/2 | Voice present in /about; generic on services pages |
+
+## Decision
+
+- **build_mode**: \`pattern-led\` (score < 10 → full replacement, no preserve-elevate)
+- **Pattern**: 002 owner-led residential (87% match)
+- **Visual mode**: bright-owner-led-trust
+- **Asset reuse**: logo + owner photo + 4 of 6 gallery photos (the real ones)
+- **Asset replacement**: typography (need real audit), reviews (verify via API), trust badges (canonical SVGs)`;
+
+F['design/brand-color-audit.md']=`# Brand Color Audit — Rapid Response Roofs
+
+> Sources reconciled: logo extraction (Source 1) + live-site CSS (Source 2) + brand-guideline PDF (Source 3 — none provided) + visual verification of home.png (Source 5).
+
+## Primary palette
+
+| Role | Hex | Source | Evidence |
+|---|---|---|---|
+| **Primary brand** | \`#703796\` | Sources 1 + 2 | 47 occurrences in live CSS rules (.cta, .hero-h1, .button-primary, .footer-bg). Dominates logo wordmark. |
+| **Deep ground** | \`#0D0D0D\` | Source 2 | Used as section bg on /about + footer. Near-black with no purple tint. |
+| **Surface light** | \`#F5F5F5\` | Source 2 | Body background on most pages. |
+| **Text body** | \`#1A1A1A\` | Source 2 | All paragraphs. |
+| **Text muted** | \`#65657A\` | Source 2 | Captions, meta lines. |
+
+## Bedrock 5 — Counter-color CTA recommendation
+
+The brand palette is monochromatic-purple-heavy with no warm contrast. Per Layer 0 Bedrock 5, the build SHOULD introduce a **counter-color CTA hex** for high-contrast conversion buttons.
+
+**Recommended**: \`#F5C518\` (warm amber)
+- High contrast vs primary purple (W3C contrast ratio 7.2:1)
+- Reads "warm + lightning-fast" — matches brand voice (insurance response speed)
+- Off-palette but documented per Bedrock 5 audit
+
+The operator may pin via \`design-profile.json#operator_overrides.accent_color_override\`.
+
+## Loaded but unused
+
+None. Brand palette is tight.`;
+
+F['design/design-profile.md']=`# Design Profile — Rapid Response Roofs
+
+> Stage 8 (Design Intelligence) decisions, in plain English.
+
+## What we picked
+
+- **Pattern**: 002 — Owner-led mascot-truck residential
+- **Visual mode**: bright-owner-led-trust
+- **Build mode**: pattern-led (existing site scored weak, full replacement)
+
+## Why we picked it
+
+Rapid Response is an owner-led residential roofer. Brand-mark identity is the lightning-bolt motif inside the logo. Codey Eatherton (owner) has a public face + signature SVG on the source site. Real review density is high (Google 267 + Facebook 116). Insurance-claims positioning is the primary differentiator.
+
+Pattern 002's locked hero composition (form right, owner overlay, trust pills above bullets — wait, BELOW bullets per 2026-05-09 — mascot stamp at form corner) elevates the existing strong content into a converting page. Pattern 001 (premium-family-multi-decade) doesn't fit — they're 4 years in, not 40. Pattern 003 (B2B commercial) doesn't fit — residential homeowners, not commercial accounts.
+
+## Typography
+
+- **Display**: Inter (clean sans, matches the operator-led modern positioning)
+- **Body**: Manrope 800 (substantial weight; reads modern + confident)
+
+The Stage 2 typography pass initially suggested Roboto from the live site CSS frequency, but Source 5 visual verification of home.png caught that the actual rendered H1 looks like clean Inter. Stage 2 corrected the call.
+
+## Counter-color CTA
+
+Operator pinned \`accent_color_override: "#F5C518"\` (warm amber) per Bedrock 5.
+
+## Mascot
+
+No real character mascot on source site. Path B Nano-Banana 2 generation auto-fired with the prompt template:
+
+> "Lightning-bolt character mascot, brand color #703796 with white highlights and amber accent, friendly cartoon face, holding a small roof shingle, transparent background, 1:1 aspect."
+
+Output saved to \`assets/generated/mascot-generated.png\`. Used in 4 placements (hero corner stamp, owner section, service-area illustration, footer).
+
+## Hero composition
+
+Owner photo + form-right + mini-card-below-form + mascot at form corner + chevron seam transition. See \`design/hero-composition-checklist.json\` for the 16-element verification contract.`;
+
+F['content/home.md']=`# Home Page — Rapid Response Roofs Michigan
+
+## Hero
+
+**Eyebrow**: Battle Creek, MI · 5-Star Rated Michigan Roofer
+**H1**: Roofs Built Fast. Built Right. Built To Last.
+**Sub**: Insurance-claims-led residential roofing across Michigan. Lightning-fast response. Real ownership. The crew on your roof is the same crew on this website.
+
+**Trust bullets**:
+- ✓ Insurance Claims Specialist
+- ✓ Best Products, Best Prices, Guaranteed
+- ✓ Only 5-Star Reviews on Facebook & Google
+
+**Trust pills** (real verified):
+- Google: 4.8★ · 267 reviews
+- Facebook: 5.0★ · 116 reviews
+- IKO Cambridge · Partner
+
+**Primary CTA**: Get My Free Quote
+**Secondary CTA**: (269) 753-1121
+
+**Form**: Name · Phone · Email · ZIP · How can we help? (5 fields)
+
+**Owner mini-card** (below form): Codey Eatherton · Owner & CEO · "I love what I do, and I love helping people. One roof at a time."
+
+## Section 2 — Real-Life Feedback From My Customers
+
+3-card carousel, verbatim Facebook + Google quotes pulled from review-evidence.json.
+
+## Section 3 — Why Choose Us?
+
+4 pillars:
+- Trusted Brand Promise — direct ownership voice
+- Insurance Specialist — meet adjusters on the roof, document with photos, negotiate line items
+- Best Products, Best Prices, Guaranteed — IKO Cambridge architectural shingles, Richards Building Supply (since 1942), No Leak Guarantee
+- Owner-Led, 16-Person Local Team — Codey runs the company, Justin manages day-to-day, 14 named inspectors and admins
+
+## Section 4 — A Legacy of Excellence
+
+Past-work tier-A grid: 13 real jobsite photos.
+
+## Section 5 — The Rapid Response Method
+
+3-step process: Free Inspection · Insurance Handled · Lightning Install.
+
+## Section 6 — Comprehensive Roofing Offerings
+
+Residential + Commercial subgrid. 9 real service categories with real icons.
+
+## Section 7 — Owner Story
+
+Full-bleed Codey-on-roof photo + signature SVG + 3 stat boxes. "I love what I do" pull-quote.
+
+## Section 8 — Affordable Financing in Michigan
+
+Single-CTA band. Operator-flag for specific financing partner + APR (TODO before send).
+
+## Section 9 — Get to Know Our Team at Rapid Response Roofing
+
+12-person team grid. Real photos, real names, real roles.
+
+## Section 10 — Service Area
+
+18-city tag cloud + auto-embedded Google Map of Battle Creek + Springfield metro.
+
+## Footer
+
+KCA-attribution + license + insurance + 4-column nav.`;
+
+F['qa/final-report.md']=`# Final QA Report — Rapid Response Roofs
+
+## Pipeline summary
+
+- **Build mode**: pattern-led (existing-site score 8/24, weak)
+- **Pattern**: 002 owner-led mascot-truck residential
+- **Visual mode**: bright-owner-led-trust
+- **Iterations**: 2 (failures per iteration: i1=8, i2=0)
+
+## Honest scorecard (iteration 2)
+
+- **Pre-cap structural**: 45/48 = 93.75%
+- **Post-cap (dim 24 adversarial)**: 36/48 = 75% — "Internal demo OK"
+- **Visual Quality Score**: 41/48 — strong but not Benchmark
+- **First-pass scorecard (i1)**: 38/48 — moderate; SOP-quality signal indicates the new composition-checklist contract caught what the prior gates missed
+
+## Operator overrides applied
+
+- \`accent_color_override\`: \`#F5C518\` (amber counter-color per Bedrock 5)
+- All other axes: heuristic picker (Stage 8 default)
+
+## Gate results
+
+All 30+ gates PASS at iteration 2. Highlights:
+
+- ✓ 4.5.16 Real Review Evidence (267 + 116 verified via APIs)
+- ✓ 4.5.21 Footer Attribution (KCA + dynamic year)
+- ✓ 4.5.22 Em Dash Ban (0 em-dashes in rendered text)
+- ✓ 4.5.24 Decoration Coherence (5 sub-checks)
+- ✓ 4.5.25 Visual Reference Citation (3 references cited)
+- ✓ 4.5.26 Mascot Mandatory (Path B Nano-Banana 2, 4 placements)
+- ✓ 4.5.27 Hero Layer Composition (5 layers verified)
+- ✓ 4.5.27.7 Hero Composition Checklist (16 required elements all present, source-order valid)
+- ✓ 4.5.28 Decoration Visibility + Mobile Contrast
+- ✓ 4.5.31 Build Typography Matches Audit (Inter + Manrope)
+- ✓ 4.5.33 Mascot MANIFEST Audit Trail
+- ✓ 4.5.37 Operator Override Reason (1 axis pinned with valid reason)
+
+## What's still operator-flagged (not blocking)
+
+- License number (operator-flag warranty_terms)
+- Specific financing partner + APR
+- Business hours specifics
+- TPO + metal manufacturer brand list
+
+## Ship recommendation
+
+OK to ship for internal demo / proposal preview. Run dim-24 adversarial walk to lift the cap from 75% → Benchmark before sending to a real prospect.`;
+
+F['proposal/proposal.html']=`<!-- Rapid Response Roofs · KCA-Branded Sales Proposal -->
+<!-- 17 sections, embeds live build at /clients/rapid-response-roofs/build/index.html -->
+<!-- Generated by Stage 13 Proposal subagent · Auto-fired after clean QA exit -->
+
+[Click "View live build" on the reference card above to see the full proposal HTML.]
+
+## What's in the proposal (high level)
+
+- §1 — Hello, I'm Dean (KCA-static trust intro)
+- §2 — I help roofers sell more roofs ($200M+ stat row)
+- §3 — The Winning Formula (Traffic + Trust + Conversion = More Roofs Sold)
+- §4 — The Proof ($1M case study video)
+- §5 — Built Mobile-First (live phone preview embedded)
+- §6 — SEO Audit on rapidresponseroofs.com
+- §7 — Who's Taking Your Traffic (8 competitor cards + SERP mockup)
+- §8 — The Proven Blueprint (6 sections with "See it in your X" links)
+- §9 — KCA Written Reviews (10-card carousel of verbatim Facebook reviews)
+- §10 — KCA Video Testimonials (4 portrait videos)
+- §11 — AI Infrastructure
+- §12 — What's Included (17-page sitemap modal)
+- §13 — Pricing
+- §14 — Why You Can't Sleep On This
+- §15 — Acceptance + Money-Back Guarantee
+- §16 — Investment (with editable setup-fee modal)
+- §17 — Sign here
+
+The proposal HTML is one self-contained file. Forward it as an attachment OR host it. The prospect sees Codey's actual live site embedded in the laptop + phone mockups inside the proposal. Same proof Dean uses to close $10K+ deals on Zoom calls.`;
+
+// ===== TREE =====
+const T=[
+{n:'rapid-response-roofs',t:'f',children:[
+{n:'brief.md',t:'d',p:'brief.md',s:'discovery'},
+{n:'research',t:'f',s:'discovery',children:[
+  {n:'competitors.md',t:'d',p:'research/competitors.md',s:'discovery'},
+  {n:'existing-site-score.md',t:'d',p:'research/existing-site-score.md',s:'discovery'},
+  {n:'review-evidence.json',t:'d',p:null,s:'capture'},
+  {n:'raw',t:'f',s:'capture',children:[
+    {n:'home.png',t:'d',p:null,s:'capture'},
+    {n:'home.html',t:'d',p:null,s:'capture'}
+  ]}
+]},
+{n:'assets',t:'f',s:'capture',children:[
+  {n:'logo',t:'f',s:'capture',children:[
+    {n:'rapid-response-primary.png',t:'d',p:null,s:'capture'},
+    {n:'rapid-response-favi.png',t:'d',p:null,s:'capture'}
+  ]},
+  {n:'team',t:'f',s:'capture',children:[
+    {n:'codey-eatherton-portrait.jpg',t:'d',p:null,s:'capture'},
+    {n:'codey-eatherton-cutout.png',t:'d',p:null,s:'capture'},
+    {n:'codey-eatherton-signature.svg',t:'d',p:null,s:'capture'}
+  ]},
+  {n:'photos',t:'f',s:'capture',children:[
+    {n:'gallery',t:'f',s:'capture',children:[]},
+    {n:'badges',t:'f',s:'capture',children:[]}
+  ]},
+  {n:'generated',t:'f',s:'capture',children:[
+    {n:'mascot-generated.png',t:'d',p:null,s:'capture'}
+  ]},
+  {n:'MANIFEST.json',t:'d',p:null,s:'capture'}
+]},
+{n:'design',t:'f',s:'decode',children:[
+  {n:'brand-color-audit.md',t:'d',p:'design/brand-color-audit.md',s:'decode'},
+  {n:'brand-typography-audit.md',t:'d',p:null,s:'decode'},
+  {n:'design-profile.json',t:'d',p:null,s:'decode'},
+  {n:'design-profile.md',t:'d',p:'design/design-profile.md',s:'decode'},
+  {n:'creative-direction.md',t:'d',p:null,s:'decode'},
+  {n:'hero-composition-checklist.json',t:'d',p:null,s:'decode'},
+  {n:'visual-reference-citations.md',t:'d',p:null,s:'decode'}
+]},
+{n:'seo',t:'f',s:'strategy',children:[
+  {n:'keywords.md',t:'d',p:null,s:'strategy'},
+  {n:'sitemap-plan.md',t:'d',p:null,s:'strategy'},
+  {n:'page-briefs',t:'f',s:'strategy',children:[
+    {n:'home.md',t:'d',p:null,s:'strategy'},
+    {n:'about.md',t:'d',p:null,s:'strategy'},
+    {n:'services.md',t:'d',p:null,s:'strategy'}
+  ]}
+]},
+{n:'content',t:'f',s:'strategy',children:[
+  {n:'final',t:'f',s:'strategy',children:[
+    {n:'home.md',t:'d',p:'content/home.md',s:'strategy'},
+    {n:'about.md',t:'d',p:null,s:'strategy'},
+    {n:'services',t:'f',s:'strategy',children:[]}
+  ]}
+]},
+{n:'build',t:'f',s:'build',children:[
+  {n:'index.html',t:'d',p:null,s:'build'},
+  {n:'assets',t:'f',s:'build',children:[]}
+]},
+{n:'qa',t:'f',s:'polish',children:[
+  {n:'iteration-1-issues.md',t:'d',p:null,s:'polish'},
+  {n:'iteration-1-fix-summary.md',t:'d',p:null,s:'polish'},
+  {n:'iteration-2-issues.md',t:'d',p:null,s:'polish'},
+  {n:'iteration-2-overrides.md',t:'d',p:null,s:'polish'},
+  {n:'final-report.md',t:'d',p:'qa/final-report.md',s:'polish'}
+]},
+{n:'proposal',t:'f',s:'deliver',children:[
+  {n:'proposal.html',t:'d',p:'proposal/proposal.html',s:'deliver'},
+  {n:'kca-assets',t:'f',s:'deliver',children:[]}
+]}
+]}
+];
+
+const SC={discovery:'#3ecfcf',capture:'#e5a63e',decode:'#ec5f8a',strategy:'#9580f0',build:'#3ec98a',polish:'#f08e5e',deliver:'#eeb644'};
+let tabs=[],aTab=null,aStg=null,tI=[];
+
+// PIPE BAR
+const pb=document.getElementById('ideP');
+['discovery','capture','decode','strategy','build','polish','deliver'].forEach((s,i)=>{
+  const b=document.createElement('div');
+  b.className='ipb c-'+s;
+  b.dataset.s=s;
+  b.title=s.charAt(0).toUpperCase()+s.slice(1);
+  b.textContent=String(i+1).padStart(2,'0');
+  b.onclick=()=>fS(s);
+  pb.appendChild(b);
+});
+
+let fIdx=0;
+const folderMap={};
+function bT(items,c,d){items.forEach(item=>{
+const r=document.createElement('div');r.className='tr';r.style.paddingLeft=(8+d*12)+'px';
+if(item.s)r.dataset.stage=item.s;
+const hk=item.t==='f'&&item.children&&item.children.length>0;
+let h='';
+if(hk)h+='<span class="ch op">&#9654;</span>';
+else if(item.t==='f')h+='<span class="ch" style="visibility:hidden">&#9654;</span>';
+else h+='<span style="width:14px;display:inline-block;flex-shrink:0"></span>';
+h+=`<span class="ic">${item.t==='f'?'&#128193;':'&#128196;'}</span><span class="lb ${item.t==='f'?'fd':''}">${item.n}</span>`;
+if(item.s&&SC[item.s])h+=`<span class="sd" style="background:${SC[item.s]}"></span>`;
+r.innerHTML=h;c.appendChild(r);tI.push({el:r,item});
+if(item.t==='d'&&item.p&&F[item.p]){
+  r.style.cursor='pointer';
+  r.dataset.filePath=item.p;
+  r.dataset.fileName=item.n;
+  r.dataset.fileStage=item.s||'';
+}
+else if(item.t==='d'&&!item.p){r.style.cursor='default';r.querySelector('.lb').style.opacity='.5'}
+if(hk){const cc=document.createElement('div');cc.className='tc';const fi='f'+fIdx++;folderMap[fi]=cc;c.appendChild(cc);r.style.cursor='pointer';r.dataset.folderId=fi;bT(item.children,cc,d+1)}
+})}
+bT(T,document.getElementById('treeR'));
+
+document.getElementById('treeR').addEventListener('click',function(e){
+  const fileEl=e.target.closest('[data-file-path]');
+  const folderEl=e.target.closest('[data-folder-id]');
+  if(fileEl){e.stopPropagation();oF(fileEl.dataset.filePath,fileEl.dataset.fileName,fileEl.dataset.fileStage);return}
+  if(folderEl){e.stopPropagation();const cc=folderMap[folderEl.dataset.folderId];if(cc){cc.classList.toggle('hd');folderEl.querySelector('.ch').classList.toggle('op')}}
+});
+
+function oF(p,n,s){tI.forEach(t=>t.el.classList.remove('sel'));const m=tI.find(t=>t.item.p===p);if(m)m.el.classList.add('sel');if(!tabs.find(t=>t.p===p)){tabs.push({p,n,s})}aTab=p;rT();rV()}
+function cTab(p,e){e.stopPropagation();tabs=tabs.filter(t=>t.p!==p);if(aTab===p)aTab=tabs.length?tabs[tabs.length-1].p:null;tI.forEach(t=>t.el.classList.remove('sel'));if(aTab){const m=tI.find(t=>t.item.p===aTab);if(m)m.el.classList.add('sel')}rT();rV()}
+function rT(){const b=document.getElementById('vTabs');b.innerHTML='';tabs.forEach(t=>{const e=document.createElement('div');e.className='vtb'+(t.p===aTab?' act':'');const dc=t.s&&SC[t.s]?SC[t.s]:'var(--text4)';e.innerHTML=`<span class="td" style="background:${dc}"></span>${t.n}<span class="tx" onclick="cTab('${t.p}',event)">&times;</span>`;e.onclick=()=>oF(t.p,t.n,t.s);b.appendChild(e)})}
+const _vScroll=document.getElementById('vScroll'),_vPath=document.getElementById('vPath'),_vE=document.getElementById('vE');
+function rV(){if(!aTab||!F[aTab]){_vPath.style.display='none';_vScroll.innerHTML='';_vScroll.appendChild(_vE);_vE.style.display='';return}_vE.style.display='none';if(_vE.parentNode)_vE.parentNode.removeChild(_vE);_vPath.style.display='flex';_vPath.innerHTML=aTab.split('/').map((p,i,a)=>`<span class="cr">${p}</span>${i<a.length-1?'<span class="sp">/</span>':''}`).join('');const raw=F[aTab],lines=raw.split('\n');let inFM=false,fmC=0,inCB=false;const html=lines.map((l,i)=>{const n=i+1;let cls='',r=esc(l);if(l.trim()==='---'){fmC++;if(fmC<=2)inFM=fmC===1;if(fmC===2){inFM=false;return ln(n,r,'fm')}return ln(n,r,inFM?'fm':'hr')}if(inFM)return ln(n,r,'fm');if(l.trim().startsWith('```')){inCB=!inCB;return ln(n,r,'cb')}if(inCB)return ln(n,r,'cb');if(l.startsWith('# '))cls='h1';else if(l.startsWith('## '))cls='h2';else if(l.startsWith('### '))cls='h3';r=r.replace(/`([^`]+)`/g,'<span class="ci">$1</span>');r=r.replace(/\*\*([^*]+)\*\*/g,'<span class="bd">$1</span>');if(/^\s*- \[ \]/.test(l))r=r.replace(/- \[ \]/,'<span class="ck">☐</span>');else if(/^\s*[-*]\s/.test(l)&&!cls)r=r.replace(/^(\s*)([-*])/,'$1<span class="bl">$2</span>');if(/^\d+\./.test(l.trim())&&!cls)r=r.replace(/^(\s*)(\d+\.)/,'$1<span class="bl">$2</span>');return ln(n,r,cls)}).join('');_vScroll.innerHTML=`<div class="md">${html}</div>`}
+function ln(n,c,cls){return`<div class="ln"><span class="nn">${n}</span><span class="lc ${cls||''}">${c}</span></div>`}
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+function fS(stage){if(aStg===stage){aStg=null;document.querySelectorAll('.ipb').forEach(s=>s.classList.remove('on'));tI.forEach(t=>t.el.classList.remove('dm'));return}aStg=stage;document.querySelectorAll('.ipb').forEach(s=>s.classList.toggle('on',s.dataset.s===stage));tI.forEach(t=>{const is=t.item.s;if(!is)t.el.classList.remove('dm');else t.el.classList.toggle('dm',is!==stage)})}
+const ideParent=document.getElementById('ideWin').parentElement;
+const idePlaceholder=document.createElement('div');idePlaceholder.id='idePH';
+function toggleMax(){const w=document.getElementById('ideWin'),b=document.getElementById('maxBtn');if(!w.classList.contains('max')){ideParent.insertBefore(idePlaceholder,null);document.body.appendChild(w);w.classList.add('max');b.textContent='Exit';document.body.style.overflow='hidden'}else{w.classList.remove('max');idePlaceholder.replaceWith(w);b.textContent='Maximize';document.body.style.overflow=''}}
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.getElementById('ideWin').classList.contains('max'))toggleMax()});
+const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('v')}),{threshold:.05});
+document.querySelectorAll('.fi').forEach(e=>obs.observe(e));
+oF('brief.md','brief.md','discovery');
+</script>
+</body>
+</html>
