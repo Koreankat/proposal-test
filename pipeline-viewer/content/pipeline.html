@@ -1078,6 +1078,73 @@ For N = 1 to 3:
 After loop exits, return to orchestrator:
 
 ... (truncated for the viewer — full file is 79 lines in the website-factory repo)`;
+F["skills/02-research/SKILL.md"]=`---
+name: client-research
+description: Scrape client's existing site and top competitors to build a research package
+---
+
+# Client Research Skill
+
+## What This Does
+Takes a client brief and scrapes their existing website plus the top 3-5 competitors ranking for their primary keyword + location. Produces structured research files.
+
+## Instructions
+
+1. Read the research SOP at \`sops/research.md\` for scraping rules and analysis framework
+2. Read the asset scrape SOP at \`sops/asset-scrape.md\` for image/asset extraction rules
+3. Read \`clients/{slug}/brief.md\` for business info, URL, location, primary service
+4. Scrape the client's existing website using \`agentic/tools/firecrawl-scrape.sh\` (Firecrawl-first, curl-fallback — see \`sops/research.md\` Step 1 for the canonical pattern). Run \`firecrawl-scrape.sh map\` first to discover the URL graph, then \`firecrawl-scrape.sh scrape\` per priority page (\`/\`, \`/about-us/\`, \`/our-team/\`, \`/gallery/\`, \`/reviews/\`, \`/certifications/\`, service pages). Persist outputs to \`clients/{slug}/research/raw/<prefix>.{html,md,json,png}\`. Only fall back to WebFetch for a single URL if the wrapper reports \`success: false\` for that URL (DNS / 5xx / no parseable HTML).
+5. **Scrape assets from client's site** — logo, team photos, project photos, badges, certifications (see asset-scrape SOP). The wrapper already extracts \`<img>\` + \`background-image\` URLs into \`images[]\` in the JSON; classify each, then \`curl -L\` the binaries into \`clients/{slug}/assets/<category>/\`. This always runs regardless of what was provided during intake.
+6. **Fetch real review evidence (mandatory)** — run \`agentic/tools/fetch-review-evidence.sh all --slug {slug} --brand "{brand}" --city "{city}" --state "{state}" [--facebook-url "{fb_url}"]\`. This produces \`clients/{slug}/research/review-evidence.json\` which drives the Hero trust pill row (Google + Facebook + BBB). Layer 0 ([\`sops/dean-blueprint.md\`](../../sops/dean-blueprint.md) Part 3.a) requires this — Gate 4.5.16 fails any build without the artifact. The tool exhausts Google Places API → Facebook scrape → BBB lookup before allowing JTR-003 heritage substitution. See \`sops/research.md\` Step 4.
+7. Identify top 3-5 competitors ranking for \`{primary service} {location}\`
+8. Scrape each competitor site using the same wrapper
+9. Write analysis files to \`clients/{slug}/research/\`
+10. Update \`clients/{slug}/brief.md\` Assets Status with scraped file paths
+
+## Required Input
+- Client slug (folder must exist with \`brief.md\`)
+
+## Output
+- \`clients/{slug}/research/raw/\` — wrapper artifacts (\`<prefix>.html\`, \`<prefix>.md\`, \`<prefix>.json\`, \`<prefix>.png\` when available) for each priority page; \`site-map.json\` for the URL graph
+- \`clients/{slug}/research/existing-site.md\` — full scrape of current site (synthesized from \`raw/\`)
+- \`clients/{slug}/research/scraped-assets.md\` — manifest of all downloaded assets + gap analysis
+- \`clients/{slug}/research/review-evidence.json\` — Google Places + Facebook + BBB review evidence (Gate 4.5.16 input; drives hero trust pill row)
+- \`clients/{slug}/research/competitors/competitor-{n}.md\` — one per competitor
+- \`clients/{slug}/research/market-analysis.md\` — competitive landscape summary
+- \`clients/{slug}/assets/\` — downloaded images (logo, team, gallery, badges)
+`;
+F["skills/04-build/SKILL.md"]=`---
+name: site-build
+description: Generate a complete Next.js contractor website from content, assets, and SOPs
+---
+
+# Site Build Skill
+
+## What This Does
+Takes final copy, assets, and design SOPs to generate a complete production-ready Next.js website.
+
+## Instructions
+
+1. Read the build SOP at \`sops/build.md\` for component rules and conversion standards
+2. Read the design SOP at \`sops/design.md\` for design system, typography, colors, layout
+3. Read the homepage wireframe PDF at \`sops/assets/UltimateAIRoofingWebsiteBlueprint.pdf\` for home page section layout and visual structure
+4. Read \`clients/{slug}/seo/sitemap-plan.md\` for page structure
+5. Read all content files from \`clients/{slug}/content/\`
+6. Read \`clients/{slug}/onboarding/brand-guidelines.md\` for colors, fonts, tone
+7. Check \`clients/{slug}/assets/\` for available images
+8. Generate the full Next.js project in \`clients/{slug}/build/\`
+
+## Required Input
+- Client slug (folder must have \`content/\` and \`seo/sitemap-plan.md\` populated)
+
+## Output
+- \`clients/{slug}/build/\` — complete Next.js project (App Router, TypeScript, Tailwind v4)
+  - All pages from sitemap
+  - Responsive design
+  - SEO meta tags, structured data
+  - Contact form with validation
+  - Image optimization
+`;
 F["design-system/patterns/002-roofing-owner-led-mascot-truck-residential.md"]=`# Pattern 002 — Roofing: Owner-Led, Mascot, Truck-Driven, Residential
 
 **Source iteration:** BlueBuilt Roofing &amp; Siding v1→v5 ([retrospective](../../clients/bluebuilt-roofs/qa/bluebuilt-journey-retrospective.md))
@@ -1202,56 +1269,172 @@ This recipe collapses the abstraction. **One canonical composition. Brand-variab
 │  └────────────────────────────┘ └──────────────────────┘ │
 
 ... (truncated for the viewer — full file is 664 lines in the website-factory repo)`;
-F["prompts/run-fresh-lead-lean.md"]=`# Run Fresh Lead — Lean Prompt (legacy paste-prompt)
+F["design-system/canonical-wireframe.md"]=`# Canonical Wireframe (Scroll Order)
 
-**Status as of 2026-05-08:** legacy. The CLAUDE.md orchestrator (\`.claude/CLAUDE.md\`) now handles fresh-lead runs natively — Claude reads it on every conversation start and recognizes the trigger pattern without any pasted prompt.
+**THE perfect roofing-site scroll order.** Trust first, proof second, action throughout.
 
-The single line below is now sufficient to start a run:
+This order overrides any section sequence in individual language files. All three languages (\`bold-contractor\`, \`trust-family\`, \`premium-clean\`) use this same scroll order — what changes per language is the *visual treatment* of each section, not the order.
 
-\`\`\`
-run a fresh lead for {URL}
-\`\`\`
+## The order
 
-Or, with a slug override:
+| # | Section | Blueprint | Required? | Notes |
+|---|---|---|---|---|
+| 1 | Navigation Bar | (in build SOP) | Always | Sticky, with phone + primary CTA |
+| 2 | Hero Section (Above the Fold) | [\`hero-form-right.md\`](sections/hero-form-right.md) or [\`hero-owner-truck-split.md\`](sections/hero-owner-truck-split.md) | Always | Form-first by default. Includes review badges + bullets + phone + license |
+| 3 | Reviews & Testimonials (FB + Google) | [\`google-review-cards.md\`](sections/google-review-cards.md) | Always | Real reviews from scrape. Google + FB cards minimum. BBB optional. |
+| 4 | Trust Badges & Certifications | [\`trust-badge-strip.md\`](sections/trust-badge-strip.md) | Always | Manufacturer certs + BBB + license. Often a marquee. |
+| 5 | Why Choose Us | [\`why-choose-us-grid.md\`](sections/why-choose-us-grid.md) | Always | 4–6 differentiators. Icon + title + 1 sentence. |
+| 6 | Past Work / Gallery | [\`gallery-projects-section.md\`](sections/gallery-projects-section.md) | Always (or graceful fallback) | 6 photos minimum. Real projects. |
+| 7 | Our Process (Step-by-Step) | [\`process-steps-section.md\`](sections/process-steps-section.md) | Always | 3–5 numbered steps. |
+| 8 | Special Offers / Financing | [\`offers-financing-section.md\`](sections/offers-financing-section.md) | Conditional | Skip cleanly if no offer data exists. Never show empty offer cards. |
+| 9 | Our Services | [\`services-grid-depth.md\`](sections/services-grid-depth.md) | Always | Real service names. Each links to \`/services/{slug}\`. |
+| 10 | About Us / Meet the Owner | [\`owner-story-section.md\`](sections/owner-story-section.md) | Always | Owner photo + name + bio. Stats row. |
+| 11 | Additional Unique Sections | [\`unique-sections.md\`](sections/unique-sections.md) | Conditional | Charity, community, faith, family-foundation, etc. Use only when scraped data supports it. |
+| 12 | Blog Preview | [\`blog-preview-section.md\`](sections/blog-preview-section.md) | Conditional | Skip if no posts exist. Don't fake placeholder posts. |
+| 13 | Service Area / Locations | [\`service-area-map-section.md\`](sections/service-area-map-section.md) | Always | Auto-embedded Google Map + city list (≥10 cities). |
+| 14 | Footer | (in build SOP) | Always | NAP + license + service list + KCA attribution. |
 
-\`\`\`
-run a fresh lead for {URL} as slug {slug}
-\`\`\`
+## Why this order (the psychology)
 
-CLAUDE.md handles slug derivation, agent sequencing, quarantine rules (no cross-client reads), and the stop-before-deploy guardrail. Each pipeline stage runs as a subagent in \`.claude/agents/\`.
+| Position | Visitor's question | What we show |
+|---|---|---|
+| Hero | "Am I in the right place?" | City + service in H1, form right there |
+| Reviews | "Do real people trust them?" | 3 real Google + Facebook reviews |
+| Trust Badges | "Are they legit?" | BBB + manufacturer certs + license |
+| Why Us | "Why this contractor?" | 4–6 sharp differentiators |
+| Past Work | "Can they actually do this?" | 6 real project photos |
+| Process | "What happens if I call?" | 3–5 step path |
+| Offers | "Can I afford it?" | Financing or seasonal discount |
+| Services | "Do they do *my* thing?" | Full service grid |
+| About | "Who actually shows up?" | Owner photo + story |
+| Unique | "What makes them different?" | Faith / charity / family / community |
+| Blog | "Do they know the trade?" | 3 recent posts |
+| Service Area | "Will they come to me?" | Map + city list |
+| Footer | "How do I reach them?" | Phone + form + NAP |
 
----
+Trust comes first. Action is everywhere (hero form, every CTA banner, sticky mobile bar, final CTA).
 
-## Why this file still exists
+## Sections that are conditional
 
-A few reasons to keep it around:
+Three sections are conditional — include only when data exists:
 
-1. **Cold-context paste fallback** — if you're using a Claude surface that doesn't auto-load CLAUDE.md (rare), paste the block below.
-2. **Reference for the verbose version** — \`run-fresh-lead-verbose.md\` is still the belt-and-suspenders option for unusual leads (storm-restoration, commercial-only, no-owner-photo). It hand-walks discipline reminders front-loaded.
-3. **System hygiene** — this file documents what the trigger USED to look like, so future Hardening Pass auditors understand the migration.
+- **Special Offers / Financing (#8)** — only if the brief or scrape mentions a real offer (financing partner, seasonal discount, military/first-responder discount, free upgrade). Never show "Up to 15% off" placeholders.
+- **Additional Unique Sections (#11)** — only if scraped content surfaces a real story (church/faith involvement, charity work, community sponsorship, multigenerational family). Examples: "We Tithe 10% to Local Food Bank" or "Three Generations of Roofers."
+- **Blog Preview (#12)** — only if blog posts exist on the source site OR the SEO/content stage produced posts. Never invent fake post titles.
 
----
+When skipped, the build pipeline cleanly omits the section. No placeholder, no empty wrapper.
 
-## Cold-context paste (only if CLAUDE.md is not loaded)
+## Sections that always exist
 
-\`\`\`
-Working directory: /Users/alijaafari/Desktop/website-factory
+11 of the 14 are always built:
 
-Read .claude/CLAUDE.md first — it defines the orchestrator pattern. Then:
+1. Nav, 2. Hero, 3. Reviews, 4. Trust badges, 5. Why us, 6. Past Work, 7. Process, 9. Services, 10. About, 13. Service area, 14. Footer.
 
-Run a fresh lead through the KCA Website Factory pipeline.
+## Final CTA banner
 
-- Live site URL: {LEAD: url}
-- Slug override: {LEAD: slug}  (leave blank to auto-derive)
+Note that there's no dedicated "Final CTA Banner" line in the canonical order. CTA repetition happens *inside* sections (per [\`rules/cta-rules.md\`](rules/cta-rules.md)). If the design profile decides a separate banner is warranted, it slots between #13 (Service Area) and #14 (Footer) using [\`sections/final-cta-banner.md\`](sections/final-cta-banner.md). For form-first heroes that already capture leads, the banner is often unnecessary.
 
-Quarantine: do NOT read any prior client's build/index.html, brief.md, or proposal.html as a starting file. Cross-client reads = anti-clone violation.
+## Per-language treatment
 
-Do NOT hand-walk SOPs from this prompt. Each subagent reads its own SOP at the relevant stage. The pipeline is the test subject; this prompt is just the trigger.
+Same order, different visual handling:
 
-Stop before any git/Vercel/external action. Surface the Stage 5 final report and wait.
-\`\`\`
+- **bold-contractor**: dark/light/dark/light alternation, diagonal cuts at #2→#3 and #6→#7, honeycomb on dark, marquee at #4
 
-That's it. The orchestrator (CLAUDE.md) and the per-stage subagents (.claude/agents/*.md) handle everything else.
+... (truncated for the viewer — full file is 81 lines in the website-factory repo)`;
+F["design-system/languages/_comparison.md"]=`# Language Picker
+
+How [\`skills/03b-design-intelligence/SKILL.md\`](../../skills/03b-design-intelligence/SKILL.md) chooses a language. Pick exactly one. Don't blend.
+
+## Decision tree
+
+Read these signals from \`clients/{slug}/brief.md\`, \`research/market-analysis.md\`, \`research/scraped-assets.md\`, and \`onboarding/brand-guidelines.md\`:
+
+1. **Does the brand have an aggressive color palette (orange/red/black)?**
+   - YES → strong vote for \`bold-contractor\`
+2. **Is "family owned", "third generation", "husband and wife", "two brothers" in the brief?**
+   - YES → strong vote for \`trust-family\`
+3. **Is the average job value > $15K AND is professional photography available?**
+   - YES → strong vote for \`premium-clean\`
+4. **Does the primary service include "storm damage" or "insurance restoration"?**
+   - YES → +1 for \`bold-contractor\`
+5. **Is the market suburban-residential without insurance focus?**
+   - YES → +1 for \`trust-family\`
+6. **Is the market "coastal", "architectural", "custom homes"?**
+   - YES → +1 for \`premium-clean\`
+7. **Owner is a solo owner-operator with strong personal brand?**
+   - YES → +1 for \`bold-contractor\`
+8. **Owner couple or multi-generation team?**
+   - YES → +1 for \`trust-family\`
+
+Sum the votes per language. Highest wins. Tie-break: prefer \`bold-contractor\` for storm/insurance markets, \`trust-family\` otherwise, \`premium-clean\` only when both other languages have ≤ 1 vote.
+
+## Quick comparison table
+
+| Dimension | bold-contractor | trust-family | premium-clean |
+|---|---|---|---|
+| Mood | Aggressive | Warm | Refined |
+| Default primary | Orange/red | Navy | Charcoal+gold |
+| Display font | Anton/Bebas | Lora/Source Serif | Playfair/Fraunces |
+| Card radius | 4px | rounded-xl (12px) | rounded-2xl (16px) |
+| Backgrounds | Heavy patterns + cuts | Subtle, photo-led | Quiet, generous space |
+| CTA case | UPPERCASE | Sentence case | Sentence case |
+| Hero photo | Owner cutout / truck | Family / couple | Drone / architectural |
+| Voice | Direct, brag with #s | Neighborly | Confident, slow |
+| Reviews layout | 3-card grid Google+FB+BBB | 3-card grid + family-owned tag | 2 large quoted excerpts |
+| Mobile sticky CTA | Yes (call-now) | Yes (call-now) | No (refined) |
+| Best AOV | Any | Any | $15K+ only |
+
+## When in doubt
+
+For a $297/mo MVP roofing client without strong premium signals, default to \`bold-contractor\`. It's the most lead-gen-optimized language and matches the largest swath of Dean's reference set.
+
+## Examples
+
+| Client signal | Language pick |
+|---|---|
+| "Storm damage specialist, family-owned, navy logo, owner has wrapped truck" | bold-contractor (storm > family signal) |
+| "Three generations, suburban Cobb County, blue-and-white logo, residential only" | trust-family |
+| "Custom architectural roofing, $40K avg, drone gallery, charcoal logo" | premium-clean |
+| "Owner-operator, no website, just a brick-and-mortar shop" | bold-contractor (default for unclear) |
+| "Capstone Contracting Solutions" (the existing build) | premium-clean (current) or trust-family (alternate evolution) |
+`;
+F["templates/page-brief-template.md"]=`# Page Brief — {Page Name}
+
+## URL
+\`/{slug}\`
+
+## SEO
+- **Primary keyword**: {keyword} — {monthly volume}
+- **Secondary keywords**: 
+- **Search intent**: transactional / informational
+- **Title tag**: {60 chars max}
+- **Meta description**: {150-160 chars, includes CTA}
+
+## Page Purpose
+What should the visitor DO on this page?
+
+## Sections (in order)
+
+### 1. {Section Name}
+- Content focus: 
+- Trust signals: 
+- CTA: 
+
+### 2. {Section Name}
+- Content focus: 
+- Trust signals: 
+- CTA: 
+
+(repeat as needed)
+
+## Internal Links
+- **Links TO this page from**: 
+- **Links FROM this page to**: 
+
+## Word Count Target
+{X} words
+
+## Notes
 `;
 
 // ===== TREE =====
@@ -1282,7 +1465,38 @@ const T=[
     {n:'qa.md',t:'d',p:'sops/qa.md',s:'polish'},
     {n:'proposal.md',t:'d',p:null,s:'deliver'}
   ]},
+  {n:'skills',t:'f',children:[
+    {n:'00-reference-inspiration',t:'f',s:'discovery',children:[
+      {n:'SKILL.md',t:'d',p:null,s:'discovery'}
+    ]},
+    {n:'01-intake',t:'f',s:'discovery',children:[
+      {n:'SKILL.md',t:'d',p:null,s:'discovery'}
+    ]},
+    {n:'02-research',t:'f',s:'discovery',children:[
+      {n:'SKILL.md',t:'d',p:'skills/02-research/SKILL.md',s:'discovery'}
+    ]},
+    {n:'03-seo-content',t:'f',s:'strategy',children:[
+      {n:'SKILL.md',t:'d',p:null,s:'strategy'}
+    ]},
+    {n:'03b-design-intelligence',t:'f',s:'decode',children:[
+      {n:'SKILL.md',t:'d',p:null,s:'decode'}
+    ]},
+    {n:'03c-creative-direction',t:'f',s:'decode',children:[
+      {n:'SKILL.md',t:'d',p:null,s:'decode'}
+    ]},
+    {n:'04-build',t:'f',s:'build',children:[
+      {n:'SKILL.md',t:'d',p:'skills/04-build/SKILL.md',s:'build'}
+    ]},
+    {n:'05-qa',t:'f',s:'polish',children:[
+      {n:'SKILL.md',t:'d',p:null,s:'polish'}
+    ]},
+    {n:'06-proposal',t:'f',s:'deliver',children:[
+      {n:'SKILL.md',t:'d',p:null,s:'deliver'}
+    ]}
+  ]},
   {n:'design-system',t:'f',children:[
+    {n:'README.md',t:'d',p:null,s:'decode'},
+    {n:'canonical-wireframe.md',t:'d',p:'design-system/canonical-wireframe.md',s:'decode'},
     {n:'patterns',t:'f',s:'decode',children:[
       {n:'001-trust-family-premium-local.md',t:'d',p:null,s:'decode'},
       {n:'002-owner-led-mascot-truck-residential.md',t:'d',p:'design-system/patterns/002-roofing-owner-led-mascot-truck-residential.md',s:'decode'},
@@ -1305,15 +1519,77 @@ const T=[
     ]},
     {n:'sections',t:'f',s:'build',children:[
       {n:'hero-form-right.md',t:'d',p:null,s:'build'},
+      {n:'reviews-section.md',t:'d',p:null,s:'build'},
+      {n:'owner-story-section.md',t:'d',p:null,s:'build'},
+      {n:'gallery-projects-section.md',t:'d',p:null,s:'build'},
       {n:'blog-preview-section.md',t:'d',p:null,s:'strategy'},
-      {n:'owner-story-section.md',t:'d',p:null,s:'build'}
+      {n:'final-cta-banner.md',t:'d',p:null,s:'build'}
+    ]},
+    {n:'languages',t:'f',s:'decode',children:[
+      {n:'_comparison.md',t:'d',p:'design-system/languages/_comparison.md',s:'decode'},
+      {n:'trust-family.md',t:'d',p:null,s:'decode'},
+      {n:'bold-contractor.md',t:'d',p:null,s:'decode'},
+      {n:'premium-clean.md',t:'d',p:null,s:'decode'}
+    ]},
+    {n:'references',t:'f',s:'decode',children:[
+      {n:'dean-roofing-style-library.md',t:'d',p:null,s:'decode'},
+      {n:'.thumbs',t:'f',s:'decode',children:[]},
+      {n:'.contact-sheets',t:'f',s:'decode',children:[]}
+    ]},
+    {n:'assets',t:'f',s:'capture',children:[
+      {n:'mascot-references',t:'f',s:'capture',children:[]},
+      {n:'svg-patterns',t:'f',s:'capture',children:[]},
+      {n:'icon-system.md',t:'d',p:null,s:'capture'}
     ]}
   ]},
-  {n:'prompts',t:'f',children:[
-    {n:'run-fresh-lead-lean.md',t:'d',p:'prompts/run-fresh-lead-lean.md',s:'discovery'}
+  {n:'templates',t:'f',children:[
+    {n:'proposal-template.html',t:'d',p:null,s:'deliver'},
+    {n:'page-brief-template.md',t:'d',p:'templates/page-brief-template.md',s:'strategy'},
+    {n:'proposal-template-vars.md',t:'d',p:null,s:'deliver'},
+    {n:'kca-assets',t:'f',s:'capture',children:[
+      {n:'dean-about.png',t:'d',p:null,s:'capture'},
+      {n:'KCA-Badge-3.webp',t:'d',p:null,s:'capture'},
+      {n:'king-icon.webp',t:'d',p:null,s:'capture'},
+      {n:'crown-1-1.webp',t:'d',p:null,s:'capture'}
+    ]},
+    {n:'client-scaffold',t:'f',s:'discovery',children:[
+      {n:'brief.md',t:'d',p:null,s:'discovery'},
+      {n:'research',t:'f',s:'discovery',children:[]},
+      {n:'assets',t:'f',s:'capture',children:[]},
+      {n:'design',t:'f',s:'decode',children:[]},
+      {n:'seo',t:'f',s:'strategy',children:[]},
+      {n:'content',t:'f',s:'strategy',children:[]},
+      {n:'build',t:'f',s:'build',children:[]},
+      {n:'qa',t:'f',s:'polish',children:[]},
+      {n:'onboarding',t:'f',s:'deliver',children:[]}
+    ]}
+  ]},
+  {n:'clients',t:'f',children:[
+    {n:'{slug}',t:'f',s:'discovery',children:[
+      {n:'brief.md',t:'d',p:null,s:'discovery'},
+      {n:'research',t:'f',s:'discovery',children:[]},
+      {n:'assets',t:'f',s:'capture',children:[]},
+      {n:'design',t:'f',s:'decode',children:[]},
+      {n:'seo',t:'f',s:'strategy',children:[]},
+      {n:'content',t:'f',s:'strategy',children:[]},
+      {n:'build',t:'f',s:'build',children:[]},
+      {n:'qa',t:'f',s:'polish',children:[]},
+      {n:'proposal',t:'f',s:'deliver',children:[]}
+    ]}
+  ]},
+  {n:'screenshots website dean',t:'f',children:[
+    {n:'Great website.png',t:'d',p:null,s:'decode'},
+    {n:'good hero.png',t:'d',p:null,s:'decode'},
+    {n:'good hero 2.png',t:'d',p:null,s:'decode'},
+    {n:'decent hero.png',t:'d',p:null,s:'decode'},
+    {n:'good meet the team.png',t:'d',p:null,s:'decode'},
+    {n:'about good.png',t:'d',p:null,s:'decode'},
+    {n:'section 1.png',t:'d',p:null,s:'decode'},
+    {n:'section2.png',t:'d',p:null,s:'decode'}
   ]}
 ]}
 ];
+
 
 
 
