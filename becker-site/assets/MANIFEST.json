@@ -1,0 +1,220 @@
+{
+  "version": 1,
+  "slug": "brexteriors",
+  "brand": "Becker Roofing and Exteriors",
+  "scraped_at": "2026-05-09T07:50:00Z",
+  "discipline_notes": "Real-evidence first. Logo + owner + team + 39 gallery photos all scraped from live site. Manufacturer / cert badges absent on live site (text-only on /about) — left absent in MANIFEST per asset-honesty rule; Stage 4 may use OEM-supplied SVG marks per design-system rules.",
+  "assets": {
+    "mascot_generated": {
+      "asset_type": "mascot",
+      "source": "generated",
+      "generation_provider": "gemini-nano-banana",
+      "prompt": "A friendly, illustrated character mascot for Becker Roofing and Exteriors, a family-owned residential roofing contractor in Northeast Tarrant County, Texas. Character is a roofing-themed humanoid figure (worker in branded BRE-navy uniform with hardhat and tool belt, hammer or roofing nail-gun in one hand). Style: clean illustrated vector look with thick black outline + sticker-style white border (anchor reference: design-system/assets/mascot-references/01-bluebuilt-dog-hammer.webp style register, NOT character). Color palette: navy #283890 uniform, white skin/face, deep navy #132738 shadows, no warm tones. Expression: friendly, professional, approachable, not aggressive, not childish. Pose: front-facing, neutral stance, suitable for 110-220px corner stamp + 240px service-area illustration. Background: transparent. NOT 3D-render-stock-look, NOT photorealistic. Format: PNG-RGBA 1:1 aspect, 1024x1024.",
+      "path": "assets/generated/mascot-cutout.png",
+      "served_at": "2026-05-09T16:47:00Z",
+      "is_real_evidence": false,
+      "notes": "Path B Nano-Banana 2 generation per design-profile.json#asset_inventory.mascot:'needs_generation' + asset_strategy.mascot_strategy:'tier_4_gemini'. Cutout produced via remove-bg pipeline. 5 placements in build (hero corner stamp + tagline marquee 4x tokens + owner-story corner + final-cta band + footer brand card)."
+    }
+  },
+  "assets_list": [
+    {
+      "asset_type": "logo_primary",
+      "path": "assets/logo/becker-roofing-primary.jpg",
+      "source": "https://le-cdn.hibuwebsites.com/950f856150e14ee19b78200c5378fae3/dms3rep/multi/opt/LogoBRE-1920w.jpg",
+      "claim_attached": "Becker Roofing and Exteriors primary header logo",
+      "provenance": "scraped from https://www.brexteriors.com/ header on 2026-05-09",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_header",
+      "confidence": "high",
+      "discovery_evidence": "alt='Becker Roofing and Exteriors' inside <a href='/'> at site header",
+      "bytes": 31184,
+      "format": "jpg"
+    },
+    {
+      "asset_type": "owner_photo",
+      "path": "assets/team/sean-becker-portrait.jpg",
+      "source": "https://le-cdn.hibuwebsites.com/950f856150e14ee19b78200c5378fae3/dms3rep/multi/opt/IMG-1688+%281%29-1920w.jpg",
+      "claim_attached": "Sean Becker, Owner / Founder",
+      "provenance": "scraped from https://www.brexteriors.com/our-team on 2026-05-09 — alt='Sean' immediately above ### Sean Becker / **Owner**",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_about_page",
+      "confidence": "high",
+      "discovery_evidence": "Adjacent to '### Sean Becker / **Owner** / Sean has been in the roofing industry for over 13 years' on /our-team page",
+      "bytes": 142451,
+      "format": "jpg"
+    },
+    {
+      "asset_type": "owner_cutout",
+      "path": "assets/team/sean-becker-cutout.png",
+      "source": "derived from assets/team/sean-becker-portrait.jpg via remove-bg.sh (remove.bg API)",
+      "claim_attached": "Sean Becker transparent-background cutout for hero owner overlay",
+      "provenance": "Generated 2026-05-09 via Path B remove-bg.sh; alpha-mean=0.25 (74.8% transparent pixels) — passes <0.85 threshold for real cutout",
+      "is_real_evidence": true,
+      "discovery_path": "B_remove_bg_api",
+      "confidence": "high",
+      "bytes": 159154,
+      "format": "png-rgba"
+    },
+    {
+      "asset_type": "team_photo",
+      "path": "assets/team/andre-coursey.jpg",
+      "source": "https://le-cdn.hibuwebsites.com/950f856150e14ee19b78200c5378fae3/dms3rep/multi/opt/IMG-1684-1920w.jpg",
+      "claim_attached": "Andre Coursey, Sales Manager (15+ years construction & exteriors industry)",
+      "provenance": "scraped from /our-team on 2026-05-09 — alt='Andre' adjacent to **Sales Manager** heading; reviews mention 'Mr. Andre Coursey' assisting on insurance claim",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_about_page",
+      "confidence": "high",
+      "bytes": 196581,
+      "format": "jpg"
+    },
+    {
+      "asset_type": "team_photo",
+      "path": "assets/team/maru-iabichela.jpg",
+      "source": "https://le-cdn.hibuwebsites.com/950f856150e14ee19b78200c5378fae3/dms3rep/multi/opt/Maru-Profile-Pic-1920w.jpg",
+      "claim_attached": "Maru Iabichela, team member",
+      "provenance": "scraped from /our-team on 2026-05-09 — alt='Maru Iabichela'",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_about_page",
+      "confidence": "high",
+      "bytes": 3781324,
+      "format": "jpg"
+    },
+    {
+      "asset_type": "team_group_photo",
+      "path": "assets/team/team-group-home-garden-show.jpg",
+      "source": "https://le-cdn.hibuwebsites.com/950f856150e14ee19b78200c5378fae3/dms3rep/multi/opt/Home-and-Garden-show-Sean-1920w.jpg",
+      "claim_attached": "Becker Roofing and Exteriors team at Home and Garden Show",
+      "provenance": "scraped from /our-team — alt='Staff outside the office'",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_about_page",
+      "confidence": "high",
+      "bytes": 420225,
+      "format": "jpg"
+    },
+    {
+      "asset_type": "hero_background",
+      "path": "assets/photos/hero-keller-texas.jpg",
+      "source": "https://le-cdn.hibuwebsites.com/950f856150e14ee19b78200c5378fae3/dms3rep/multi/opt/Keller-+Texas-1920w.JPG",
+      "claim_attached": "Real Keller, TX project — current site hero background",
+      "provenance": "scraped from /membership page background-image; project completed by BRE",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_homepage",
+      "confidence": "high",
+      "bytes": 662498,
+      "format": "jpg"
+    },
+    {
+      "asset_type": "service_photo",
+      "path": "assets/photos/commercial-roof-aerial.jpg",
+      "source": "https://le-cdn.hibuwebsites.com/950f856150e14ee19b78200c5378fae3/dms3rep/multi/opt/DJI_0434-8d7c94d8-366w.JPG",
+      "claim_attached": "Commercial roofing project — drone photo by BRE",
+      "provenance": "scraped from /commercial-roofing service card; alt='Commercial roof'",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_homepage",
+      "confidence": "high",
+      "bytes": 186037,
+      "format": "jpg"
+    },
+    {
+      "asset_type": "service_photo",
+      "path": "assets/photos/storm-restoration-team.jpg",
+      "source": "https://le-cdn.hibuwebsites.com/950f856150e14ee19b78200c5378fae3/dms3rep/multi/opt/DSC00268--281-29--281-29-660w.JPG",
+      "claim_attached": "BRE storm-restoration team on site",
+      "provenance": "scraped from homepage — alt='Storm Restoration Experts'",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_homepage",
+      "confidence": "high",
+      "bytes": 504906,
+      "format": "jpg"
+    },
+    {
+      "asset_type": "mascot",
+      "path": "assets/generated/mascot-cutout.png",
+      "source_path": "assets/generated/mascot-generated.png",
+      "source": "Path B Nano-Banana 2 generation per design-profile.generated_graphics_plan.mascot_prompt; cutout produced via remove-bg pipeline",
+      "claim_attached": "Brand mascot (BRE-themed character, AI-generated; not real-evidence)",
+      "provenance": "Generated 2026-05-09 via Path B Nano-Banana 2 (residential family-trust archetype, BRE blue palette, roofing-themed humanoid in branded uniform). Per design-profile.json#asset_inventory.mascot:'needs_generation' + asset_strategy.mascot_strategy:'tier_4_gemini'.",
+      "is_real_evidence": false,
+      "discovery_path": "B_nano_banana_2_generation",
+      "confidence": "high",
+      "tier": 4,
+      "bytes": 209086,
+      "format": "png-rgba"
+    },
+    {
+      "asset_type": "gallery_set",
+      "path": "assets/gallery/gallery-{01..39}.jpg",
+      "source": "https://le-cdn.hibuwebsites.com/.../Gallery-{01..39}-1920w.jpg",
+      "claim_attached": "39 real BRE project photos (residential roofing, commercial, metal, hail damage, staff, gutters, exterior)",
+      "provenance": "scraped from /gallery page on 2026-05-09; each image has BRE alt text",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_gallery_page",
+      "confidence": "high",
+      "files": [
+        "assets/gallery/gallery-01.jpg", "assets/gallery/gallery-02.jpg", "assets/gallery/gallery-03.jpg",
+        "assets/gallery/gallery-04.jpg", "assets/gallery/gallery-05.jpg", "assets/gallery/gallery-06.jpg",
+        "assets/gallery/gallery-07.jpg", "assets/gallery/gallery-08.jpg", "assets/gallery/gallery-09.jpg",
+        "assets/gallery/gallery-10.jpg", "assets/gallery/gallery-11.jpg", "assets/gallery/gallery-12.jpg",
+        "assets/gallery/gallery-13.jpg", "assets/gallery/gallery-14.jpg", "assets/gallery/gallery-15.jpg",
+        "assets/gallery/gallery-16.jpg", "assets/gallery/gallery-17.jpg", "assets/gallery/gallery-18.jpg",
+        "assets/gallery/gallery-19.jpg", "assets/gallery/gallery-20.jpg", "assets/gallery/gallery-21.jpg",
+        "assets/gallery/gallery-22.jpg", "assets/gallery/gallery-23.jpg", "assets/gallery/gallery-24.jpg",
+        "assets/gallery/gallery-25.jpg", "assets/gallery/gallery-26.jpg", "assets/gallery/gallery-27.jpg",
+        "assets/gallery/gallery-28.jpg", "assets/gallery/gallery-29.jpg", "assets/gallery/gallery-30.jpg",
+        "assets/gallery/gallery-31.jpg", "assets/gallery/gallery-32.jpg", "assets/gallery/gallery-33.jpg",
+        "assets/gallery/gallery-34.jpg", "assets/gallery/gallery-35.jpg", "assets/gallery/gallery-36.jpg",
+        "assets/gallery/gallery-37.jpg", "assets/gallery/gallery-38.jpg", "assets/gallery/gallery-39.jpg"
+      ],
+      "tag_summary": {
+        "residential_roof": 25,
+        "residential_roof_service": 9,
+        "commercial_roof": 1,
+        "metal_roof": 1,
+        "service_truck": 1,
+        "damage_roof": 1,
+        "house_interior": 1,
+        "demolition": 1,
+        "staff_on_jobsite": 2,
+        "rooftop_safety": 2,
+        "school_solar_aerial": 1
+      }
+    }
+  ],
+  "absent_assets": [
+    {
+      "asset_type": "manufacturer_badges",
+      "missing": ["CertainTeed Select Shingle Master logo SVG", "Durolast Certified Contractor", "GAF (no GAF cert; CertainTeed is the primary)", "Genflex Commercial Certified", "Xactimate X1 Level 2", "Infrared Roofing Inspection cert", "RCAT (Roofing Contractors Association of Texas)", "NTRCA (North Texas Roofing Contractors Association)"],
+      "evidence": "Listed as TEXT only on /about page — no badge images on live site",
+      "build_recommendation": "Stage 4 may render OEM-supplied SVG marks (CertainTeed, Durolast, GAF where applicable) per design-system/rules/badge-rules. Marking absent in MANIFEST per asset-honesty rule."
+    },
+    {
+      "asset_type": "bbb_shield",
+      "missing": ["BBB shield"],
+      "evidence": "fetch-review-evidence.sh confirms NO BBB profile found via search (review-evidence.json#bbb.reason_no_data='no BBB profile found via search'). universal_bbb_required=false.",
+      "build_recommendation": "Skip BBB pill / shield in trust strip. JTR-003 heritage substitution may apply for one of three review-strip slots."
+    },
+    {
+      "asset_type": "facebook_review_pill",
+      "missing": ["Facebook review count + rating"],
+      "evidence": "FB scrape returned empty content (login wall). Page exists at https://www.facebook.com/beckerroofingexteriors/ but no public widget.",
+      "build_recommendation": "Facebook icon-only link OK in footer. Trust strip uses Google as primary platform."
+    },
+    {
+      "asset_type": "truck_cutout",
+      "missing": ["Branded truck transparent-background cutout"],
+      "evidence": "gallery-35 'Service truck with roofing materials' is a candidate but is a flat photo, not a cutout. No transparent-PNG truck on live site.",
+      "build_recommendation": "Pattern 002 hero-bg-truck layer may be dropped (set hero.truck_layer=false) OR Stage 4 may run remove-bg.sh on gallery-35.jpg if hero pattern requires it. Skip rule documented per asset-scrape SOP §2b."
+    },
+    {
+      "asset_type": "owner_signature",
+      "missing": ["Owner signature SVG"],
+      "evidence": "Not present on source site",
+      "build_recommendation": "Skip signature element if pattern requires it; not a Pattern 002 default."
+    },
+    {
+      "asset_type": "mascot_real",
+      "missing": ["Real brand mascot character (Path A scrape)"],
+      "evidence": "Not present on source site. Resolved via Path B Nano-Banana 2 generation — see assets[] entry for mascot at assets/generated/mascot-cutout.png with is_real_evidence:false."
+    }
+  ]
+}
