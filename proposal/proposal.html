@@ -339,7 +339,7 @@ a{color:inherit;text-decoration:none}
 .formula-how-content{animation:formulaHowFadeIn 0.28s ease}
 .formula-how-content[hidden]{display:none}
 @keyframes formulaHowFadeIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
-.formula-how-body{margin-top:16px;background:#FAF8F1;border-radius:8px;padding:16px 18px;border:1px solid rgba(0,0,0,0.06)}
+.formula-how-content{margin-top:0}
 .formula-how-bullets{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px}
 .formula-how-bullets li{position:relative;padding-left:18px;font-size:13.5px;line-height:1.55;color:rgba(3,3,3,0.78)}
 .formula-how-bullets li::before{content:'';position:absolute;left:0;top:0.55em;width:8px;height:2px;background:#AE312D;border-radius:1px}
@@ -351,11 +351,12 @@ a{color:inherit;text-decoration:none}
 .formula-how-stat-num{font-family:'Montserrat',sans-serif;font-weight:900;color:#030303;margin-right:6px}
 
 /* Feature-card component used inside formula-how accordions (matches Dean's screenshot 2026-05-09: numbered card + title + bullets + yellow "WHY THIS WORKS" callout + red CTA) */
-.formula-how-body article.feature-card + article.feature-card{margin-top:28px}
-.formula-how-body article.feature-card + .sitemap-pyramid{margin-top:18px}
+.formula-how-content article.feature-card + article.feature-card{margin-top:32px}
+.formula-how-content article.feature-card + .sitemap-pyramid{margin-top:24px}
 .feature-card{background:#fff;border:1px solid rgba(0,0,0,0.10);border-radius:10px;padding:22px 24px 20px;box-shadow:0 8px 18px rgba(0,0,0,0.07);position:relative}
 .feature-card-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:6px}
 .feature-card-num{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:800;letter-spacing:0.18em;color:#fff;background:#AE312D;border-radius:5px;padding:4px 9px;flex-shrink:0}
+.feature-card-title .fc-emoji{display:inline-block;font-size:1.5em;line-height:1;margin-right:6px;vertical-align:-2px;font-style:normal;font-weight:400}
 .feature-card-title{font-family:'Montserrat',sans-serif;font-size:15.5px;font-weight:800;color:#030303;letter-spacing:-0.005em;line-height:1.25;margin:0;flex:1;min-width:0}
 .feature-card-tag{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;padding:4px 9px;border-radius:14px;flex-shrink:0;border:1px solid currentColor}
 .feature-card-tag-traffic{color:#AE312D;background:rgba(174,49,45,0.08)}
@@ -374,7 +375,7 @@ a{color:inherit;text-decoration:none}
 .feature-card-cta:hover{background:#7A1F1C;transform:translateY(-1px);box-shadow:0 6px 14px rgba(174,49,45,0.4)}
 
 /* Sitemap pyramid · used inside Traffic accordion (lifted from §10 - reuses existing .page-box / .pyramid-* classes already defined in DELIVERABLES block below) */
-.formula-how-body .sitemap-pyramid{margin-top:14px}
+.formula-how-content .sitemap-pyramid{margin-top:24px}
 
 /* === AI INFRASTRUCTURE · dedicated GHL-style showcase (added 2026-05-10 per Dean transcript) === */
 .section-ai-infra{background:#FAF8F1;color:#030303;padding:96px 0;border-top:1px solid rgba(0,0,0,0.06);border-bottom:1px solid rgba(0,0,0,0.06)}
@@ -1865,7 +1866,7 @@ details.proposal-collapsible[open] > .ps-summary{
         <article class="feature-card">
           <div class="feature-card-head">
             <span class="feature-card-num">01</span>
-            <h4 class="feature-card-title">&#127760; SEO + AEO architecture &middot; location, schema, AI-ready</h4>
+            <h4 class="feature-card-title"><span class="fc-emoji">&#127760;</span> SEO + AEO architecture &middot; location, schema, AI-ready</h4>
             <span class="feature-card-tag feature-card-tag-traffic">SEO</span>
           </div>
           <p class="feature-card-meta">12 city pages + 1 schema = the answer ChatGPT cites</p>
@@ -2031,7 +2032,7 @@ details.proposal-collapsible[open] > .ps-summary{
         <article class="feature-card">
           <div class="feature-card-head">
             <span class="feature-card-num">01</span>
-            <h4 class="feature-card-title">&#11088; Real Google + Facebook + BBB above the fold</h4>
+            <h4 class="feature-card-title"><span class="fc-emoji">&#11088;</span> Real Google + Facebook + BBB above the fold</h4>
             <span class="feature-card-tag feature-card-tag-trust">TRUST</span>
           </div>
           <p class="feature-card-meta">4.9&#9733; &times; 63 reviews &middot; click any pill &rarr; live source</p>
@@ -2050,7 +2051,7 @@ details.proposal-collapsible[open] > .ps-summary{
         <article class="feature-card">
           <div class="feature-card-head">
             <span class="feature-card-num">02</span>
-            <h4 class="feature-card-title">&#128100; Owner photo, name &amp; story on every key page</h4>
+            <h4 class="feature-card-title"><span class="fc-emoji">&#128100;</span> Owner photo, name &amp; story on every key page</h4>
             <span class="feature-card-tag feature-card-tag-trust">TRUST</span>
           </div>
           <p class="feature-card-meta">Sean in 6 placements &middot; faces beat logos at every step</p>
@@ -2069,7 +2070,7 @@ details.proposal-collapsible[open] > .ps-summary{
         <article class="feature-card">
           <div class="feature-card-head">
             <span class="feature-card-num">03</span>
-            <h4 class="feature-card-title">&#128214; Story &middot; Vision &middot; Mission written for Becker Roofing</h4>
+            <h4 class="feature-card-title"><span class="fc-emoji">&#128214;</span> Story &middot; Vision &middot; Mission written for Becker Roofing</h4>
             <span class="feature-card-tag feature-card-tag-trust">TRUST</span>
           </div>
           <p class="feature-card-meta">Brand-specific copy converts 4&ndash;7&times; agency boilerplate</p>
@@ -2088,7 +2089,7 @@ details.proposal-collapsible[open] > .ps-summary{
         <article class="feature-card feature-card-ai-highlight">
           <div class="feature-card-head">
             <span class="feature-card-num">04</span>
-            <h4 class="feature-card-title">&#128737;&#65039; Reputation Management &middot; protect 4.9&#9733; forever</h4>
+            <h4 class="feature-card-title"><span class="fc-emoji">&#128737;&#65039;</span> Reputation Management &middot; protect 4.9&#9733; forever</h4>
             <span class="feature-card-tag feature-card-tag-trust">TRUST</span>
           </div>
           <p class="feature-card-meta">Compounding social proof on autopilot &mdash; one less thing on your plate</p>
@@ -2111,7 +2112,7 @@ details.proposal-collapsible[open] > .ps-summary{
         <article class="feature-card">
           <div class="feature-card-head">
             <span class="feature-card-num">01</span>
-            <h4 class="feature-card-title">&#9889; Frictionless 5-field form + sub-60s AI callback</h4>
+            <h4 class="feature-card-title"><span class="fc-emoji">&#9889;</span> Frictionless 5-field form + sub-60s AI callback</h4>
             <span class="feature-card-tag feature-card-tag-conversion">CONVERT</span>
           </div>
           <p class="feature-card-meta">First-call wins 78% of jobs &middot; we never lose that race</p>
@@ -2130,7 +2131,7 @@ details.proposal-collapsible[open] > .ps-summary{
         <article class="feature-card">
           <div class="feature-card-head">
             <span class="feature-card-num">02</span>
-            <h4 class="feature-card-title">&#128241; Mobile-first conversion mechanics</h4>
+            <h4 class="feature-card-title"><span class="fc-emoji">&#128241;</span> Mobile-first conversion mechanics</h4>
             <span class="feature-card-tag feature-card-tag-conversion">MOBILE</span>
           </div>
           <p class="feature-card-meta">65% of leads are mobile &middot; sticky CTA toggles by time of day</p>
@@ -2171,7 +2172,7 @@ details.proposal-collapsible[open] > .ps-summary{
         <article class="feature-card feature-card-ai-highlight">
           <div class="feature-card-head">
             <span class="feature-card-num">03</span>
-            <h4 class="feature-card-title">&#128172; Smart Chatbot &middot; 24/7 trained on Becker Roofing</h4>
+            <h4 class="feature-card-title"><span class="fc-emoji">&#128172;</span> Smart Chatbot &middot; 24/7 trained on Becker Roofing</h4>
             <span class="feature-card-tag feature-card-tag-conversion">AI</span>
           </div>
           <p class="feature-card-meta">After-hours leads booked into Sean's calendar &mdash; while you sleep</p>
@@ -2190,7 +2191,7 @@ details.proposal-collapsible[open] > .ps-summary{
         <article class="feature-card feature-card-ai-highlight">
           <div class="feature-card-head">
             <span class="feature-card-num">04</span>
-            <h4 class="feature-card-title">&#128241;&#8205;&#9742;&#65039; Instant Callback &middot; 60-second AI</h4>
+            <h4 class="feature-card-title"><span class="fc-emoji">&#128241;&#8205;&#9742;&#65039;</span> Instant Callback &middot; 60-second AI</h4>
             <span class="feature-card-tag feature-card-tag-conversion">AI</span>
           </div>
           <p class="feature-card-meta">Lead submits the form &mdash; AI is on their phone in 60 seconds</p>
