@@ -162,6 +162,17 @@ a{color:inherit;text-decoration:none}
 .section-trust.section-dean-light .dean-sig-portrait{background-color:#fff;border-color:rgba(174,49,45,0.50)}
 .section-trust.section-dean-light .dean-sig-name{color:#030303}
 .section-trust.section-dean-light .dean-sig-title{color:#AE312D}
+/* === DEAN-EMBEDDED FB REVIEWS · cream-bg overrides for the aggregate row (cards themselves stay dark per Dean's "white mode but keep the cards black") === */
+.dean-reviews-block{margin-top:64px;padding-top:48px;border-top:1px solid rgba(3,3,3,0.10)}
+.section-dean-light .dean-reviews-block .kca-reviews-aggregate{color:rgba(3,3,3,0.78)}
+.section-dean-light .dean-reviews-block .kca-reviews-aggregate .num{color:#030303}
+.section-dean-light .dean-reviews-block .kca-reviews-aggregate .platform-icon{box-shadow:0 0 0 1px rgba(3,3,3,0.08)}
+/* Force the FB review cards to stay solid dark/black on cream bg (Dean: "keep the cards black") */
+.section-dean-light .dean-reviews-block .kca-review-card{background:#1F2124;border:1px solid rgba(255,255,255,0.06);box-shadow:0 12px 32px rgba(0,0,0,0.18);color:#fff}
+.section-dean-light .dean-reviews-block .kca-review-card-name{color:#fff}
+.section-dean-light .dean-reviews-block .kca-review-card-stars .star-num{color:#fff}
+.section-dean-light .dean-reviews-block .kca-review-card-source{color:rgba(255,255,255,0.55)}
+.section-dean-light .dean-reviews-block .kca-review-card-text{color:rgba(255,255,255,0.80)}
 
 /* === §B · ROOFERS' FRUSTRATIONS INTO SOLUTIONS (KCA-style big cards) === */
 .frustration-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:54px;align-items:stretch}
@@ -218,27 +229,45 @@ a{color:inherit;text-decoration:none}
 
 /* (old vertical-stack formula CSS removed 2026-05-09 — markup replaced by horizontal layout below at .formula-horizontal · CSS for new horizontal pieces lives in the section-formula-horizontal block further down) */
 
-/* === CLIENT-BUILDS · parallax review tile grid (Dean transcript 2026-05-09) === */
-.section-client-builds{background:#030303;padding:96px 0 132px;overflow:visible}
+/* === CLIENT-BUILDS · auto-sliding CAROUSEL of dark parallax overlay cards (2026-05-11 — Dean: 3-up auto-slide w/ same parallax-overlap card design, real owner names + photos) === */
+.section-client-builds{background:#030303;padding:96px 0 110px;overflow:visible}
 .section-client-builds .section-title{margin-bottom:14px}
-.section-client-builds .section-sub{margin-bottom:0}
-.client-builds-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:64px 28px;margin-top:60px;max-width:1340px;margin-left:auto;margin-right:auto}
-@media (max-width:1180px){.client-builds-grid{grid-template-columns:repeat(2,1fr);gap:80px 32px}}
-@media (max-width:680px){.client-builds-grid{grid-template-columns:1fr;gap:108px 0}}
-.client-build-tile{position:relative;padding-bottom:0}
+.section-client-builds .section-sub{margin-bottom:36px}
+.client-builds-carousel-wrap{position:relative;padding:0 64px 0;max-width:1340px;margin:48px auto 0}
+@media (max-width:768px){.client-builds-carousel-wrap{padding:0}}
+.client-builds-carousel{display:flex;gap:28px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 4px 80px;scrollbar-width:none;-webkit-overflow-scrolling:touch;scroll-behavior:smooth}
+.client-builds-carousel::-webkit-scrollbar{display:none}
+.client-build-tile{flex:0 0 calc((100% - 56px) / 3);scroll-snap-align:start;position:relative;padding-bottom:0;min-width:0}
+@media (max-width:1100px){.client-build-tile{flex:0 0 calc((100% - 28px) / 2)}}
+@media (max-width:680px){.client-build-tile{flex:0 0 86%}}
 .client-build-img-wrap{display:block;border-radius:14px;overflow:hidden;background:#0e0e10;border:1px solid rgba(238,182,68,0.14);box-shadow:0 20px 48px rgba(0,0,0,0.55);transition:transform 0.28s ease,border-color 0.28s ease,box-shadow 0.28s ease;text-decoration:none}
 .client-build-img-wrap:hover{transform:translateY(-5px);border-color:rgba(238,182,68,0.36);box-shadow:0 28px 64px rgba(0,0,0,0.6)}
 .client-build-img-wrap img{display:block;width:100%;height:auto;aspect-ratio:570/427;object-fit:cover}
-.client-build-review-card{position:absolute;right:-14px;bottom:-52px;width:min(80%,310px);background:#fff;color:#030303;border-radius:11px;padding:18px 20px 17px;box-shadow:0 20px 44px rgba(0,0,0,0.60),0 1px 0 rgba(0,0,0,0.05);font-family:-apple-system,'SF Pro Text','Inter',sans-serif;border:1px solid rgba(0,0,0,0.08)}
-.client-build-review-card::after{content:'';position:absolute;left:-9px;bottom:22px;width:0;height:0;border-top:9px solid transparent;border-bottom:9px solid transparent;border-right:11px solid #fff;filter:drop-shadow(-2px 0 2px rgba(0,0,0,0.10))}
-.cb-review-platform{position:absolute;top:-14px;right:16px;width:30px;height:30px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.24),0 0 0 1px rgba(0,0,0,0.07)}
-.cb-review-platform svg{width:16px;height:16px}
-.cb-review-stars{font-size:14px;color:#1B6BD6;font-weight:800;letter-spacing:0.02em;display:flex;align-items:center;gap:6px}
-.cb-review-stars .cb-stars{color:#F0B400;letter-spacing:0.08em;font-size:14px}
-.cb-review-text{font-size:14px;line-height:1.55;color:#0d0e10;margin-top:8px;font-weight:500}
-.cb-review-author{font-size:12.5px;color:#3d3e48;margin-top:11px;font-weight:700;line-height:1.4}
-.cb-review-author span{color:#AE312D;font-weight:800}
+/* Parallax overlay card — sits offset to bottom-right of the mockup, half-overlapping the image */
+.client-build-review-card{position:absolute;right:-14px;bottom:-52px;width:min(82%,320px);background:#1F2124;color:#fff;border-radius:12px;padding:16px 18px 16px;box-shadow:0 22px 48px rgba(0,0,0,0.65),0 1px 0 rgba(255,255,255,0.04) inset;font-family:-apple-system,'SF Pro Text','Inter',sans-serif;border:1px solid rgba(255,255,255,0.06);display:flex;flex-direction:column;gap:10px}
+.client-build-review-card::after{content:'';position:absolute;left:-9px;bottom:22px;width:0;height:0;border-top:9px solid transparent;border-bottom:9px solid transparent;border-right:11px solid #1F2124;filter:drop-shadow(-2px 0 2px rgba(0,0,0,0.30))}
+.cb-rev-platform{position:absolute;top:-12px;right:14px;width:28px;height:28px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.42),0 0 0 1px rgba(0,0,0,0.20)}
+.cb-rev-platform svg{width:14px;height:14px}
+.cb-rev-head{display:flex;gap:11px;align-items:center;padding-right:30px}
+.cb-rev-avatar{width:42px;height:42px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:900;font-size:13px;color:#030303;letter-spacing:0.04em;background:linear-gradient(135deg,#FFE9A7 0%,#EEB644 100%);box-shadow:0 4px 10px rgba(238,182,68,0.30),inset 0 1px 0 rgba(255,255,255,0.5);overflow:hidden}
+.cb-rev-avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.cb-rev-info{display:flex;flex-direction:column;gap:2px;min-width:0;flex:1}
+.cb-rev-name{font-family:'Montserrat',sans-serif;font-weight:800;font-size:12.5px;letter-spacing:0.04em;text-transform:uppercase;color:#fff;line-height:1.15}
+.cb-rev-stars{display:inline-flex;gap:2px;color:#EEB644;font-size:12px;line-height:1;align-items:center}
+.cb-rev-stars .num{font-family:'Montserrat',sans-serif;font-weight:700;font-size:11px;margin-right:3px;color:#fff}
+.cb-rev-source{font-size:10px;color:rgba(255,255,255,0.46);font-weight:600;text-transform:uppercase;letter-spacing:0.05em;line-height:1.3}
+.cb-rev-source .brand{color:#EEB644}
+.cb-rev-text{font-size:12.5px;line-height:1.5;color:rgba(255,255,255,0.78);margin:0}
 @media (max-width:680px){.client-build-review-card{width:min(90%,330px);right:8px;bottom:-60px}}
+/* Carousel controls — arrows on the side, dots underneath */
+.cb-carousel-arrow{position:absolute;top:calc(50% - 40px);transform:translateY(-50%);width:48px;height:48px;border-radius:50%;background:#EEB644;color:#030303;border:none;font-size:22px;font-weight:900;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,0.4),0 2px 6px rgba(0,0,0,0.25);transition:transform 0.15s,background 0.15s;z-index:5;line-height:1;padding-bottom:4px}
+.cb-carousel-arrow:hover{transform:translateY(-50%) scale(1.06);background:#FFC857}
+.cb-carousel-prev{left:8px}
+.cb-carousel-next{right:8px}
+.cb-carousel-dots{display:flex;justify-content:center;gap:8px;margin-top:4px}
+.cb-carousel-dots button{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.22);border:0;padding:0;cursor:pointer;transition:background 0.18s,transform 0.18s}
+.cb-carousel-dots button.is-active{background:#EEB644;transform:scale(1.25)}
+@media (max-width:768px){.cb-carousel-arrow{display:none}}
 
 /* === §D · PROOF: $1M client story video === */
 .section-proof{background:#030303;color:#fff;padding:88px 0;text-align:center;position:relative;overflow:hidden}
@@ -305,12 +334,13 @@ a{color:inherit;text-decoration:none}
 /* + and = operators between pillars · math-equation styling per Dean transcript 2026-05-09 */
 .formula-op{flex:0 0 auto;align-self:center;font-family:'Montserrat',sans-serif;font-size:34px;font-weight:900;color:#AE312D;line-height:1;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:#EEB644;border-radius:50%;border:3px solid #FAF8F1;box-shadow:0 6px 14px rgba(238,182,68,0.4)}
 .formula-op.formula-op-equals{background:#AE312D;color:#fff;box-shadow:0 6px 14px rgba(174,49,45,0.4)}
-/* Result pill: 👑 More Roofs Sold. 💥 BOOM */
-.formula-result-pill{flex:1.1 1 0;min-width:0;background:linear-gradient(135deg,#AE312D 0%,#7A1F1C 100%);color:#fff;border-radius:14px;padding:24px 24px 22px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:6px;position:relative;overflow:hidden;box-shadow:0 14px 30px rgba(174,49,45,0.32)}
-.formula-result-pill::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at top right,rgba(238,182,68,0.22) 0%,transparent 60%);pointer-events:none}
-.formula-result-icon{font-size:38px;line-height:1;filter:drop-shadow(0 2px 6px rgba(0,0,0,0.3))}
-.formula-result-text{font-family:'Montserrat',sans-serif;font-size:clamp(22px,2.0vw,30px);font-weight:900;color:#fff;letter-spacing:-0.012em;line-height:1.0;text-transform:uppercase}
-.formula-result-boom{font-family:'Montserrat',sans-serif;font-size:14px;font-weight:800;letter-spacing:0.10em;color:#EEB644;text-transform:uppercase}
+/* Result pill: 👑💰 More Roofs Sold. CHA-CHING (redesigned 2026-05-10 — gold gradient instead of red, money emoji added per Dean) */
+.formula-result-pill{flex:1.1 1 0;min-width:0;background:linear-gradient(135deg,#FFE9A7 0%,#EEB644 50%,#C9941F 100%);color:#030303;border-radius:14px;padding:24px 24px 22px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:8px;position:relative;overflow:hidden;box-shadow:0 14px 32px rgba(238,182,68,0.40),0 4px 14px rgba(201,148,31,0.28),inset 0 1px 0 rgba(255,255,255,0.65)}
+.formula-result-pill::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at top right,rgba(255,255,255,0.55) 0%,transparent 55%);pointer-events:none}
+.formula-result-pill::after{content:'';position:absolute;bottom:-30%;left:-10%;width:60%;height:80%;background:radial-gradient(ellipse,rgba(174,49,45,0.10) 0%,transparent 60%);pointer-events:none}
+.formula-result-icon{font-size:38px;line-height:1;filter:drop-shadow(0 2px 5px rgba(122,31,28,0.28));position:relative;z-index:1;display:inline-flex;gap:4px;align-items:center}
+.formula-result-text{font-family:'Montserrat',sans-serif;font-size:clamp(22px,2.0vw,30px);font-weight:900;color:#030303;letter-spacing:-0.012em;line-height:1.0;text-transform:uppercase;position:relative;z-index:1;text-shadow:0 1px 0 rgba(255,255,255,0.45)}
+.formula-result-boom{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:900;letter-spacing:0.14em;color:#7A1F1C;text-transform:uppercase;position:relative;z-index:1;display:inline-flex;align-items:center;gap:6px;padding:5px 10px;background:rgba(255,255,255,0.50);border-radius:5px;border:1px solid rgba(122,31,28,0.18);backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px)}
 @media (max-width:1024px){
   .formula-horizontal{flex-wrap:wrap;justify-content:center}
   .formula-pillar,.formula-result-pill{flex:1 1 calc(50% - 14px);min-width:240px}
@@ -477,17 +507,13 @@ a{color:inherit;text-decoration:none}
 .seo-audit-bullets-col{display:flex;flex-direction:column;gap:14px;min-width:0}
 .seo-audit-card{background:#fff;border-radius:10px;padding:20px 22px;border:1px solid rgba(0,0,0,0.10);box-shadow:0 6px 16px rgba(0,0,0,0.06);position:relative;overflow:hidden}
 .seo-audit-card-do{border-left:4px solid #1F8E5A}
-.seo-audit-card-loss{border-left:4px solid #AE312D}
 .seo-audit-card-head{display:flex;align-items:center;gap:12px;margin-bottom:12px}
 .seo-audit-card-num{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:7px;background:#1F8E5A;color:#fff;font-family:'Montserrat',sans-serif;font-weight:900;font-size:20px;line-height:1;flex-shrink:0}
-.seo-audit-card-loss .seo-audit-card-num{background:#AE312D}
 .seo-audit-card-title{font-family:'Montserrat',sans-serif;font-size:14px;font-weight:800;letter-spacing:0.04em;text-transform:uppercase;color:#030303;margin:0;line-height:1.25;letter-spacing:-0.005em}
 .seo-audit-bullets{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
 .seo-audit-bullets li{position:relative;padding-left:18px;font-size:13.5px;line-height:1.55;color:rgba(3,3,3,0.78)}
 .seo-audit-bullets li::before{content:'';position:absolute;left:0;top:0.62em;width:8px;height:8px;border-radius:50%;background:#1F8E5A}
-.seo-audit-bullets-loss li::before{background:#AE312D}
 .seo-audit-bullets li strong{color:#030303;font-weight:800}
-.seo-audit-bullets-loss li strong{color:#AE312D}
 
 .seo-audit-serp-col{display:flex;flex-direction:column;gap:8px;position:sticky;top:140px;align-self:start}
 @media (max-width:980px){.seo-audit-serp-col{position:static;top:auto}}
@@ -777,38 +803,49 @@ details.proposal-collapsible[open] > .ps-summary{
 .ai-bullets li{position:relative;padding-left:18px;font-size:13px;color:rgba(255,255,255,0.78);line-height:1.5}
 .ai-bullets li::before{content:'';position:absolute;left:0;top:8px;width:6px;height:6px;background:#EEB644;border-radius:50%}
 
-/* ============================ TIMELINE (mobile-bullets + progression rail) ============================ */
-.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:24px;padding-top:60px;position:relative}
-@media (max-width:980px){.timeline{grid-template-columns:repeat(2,1fr);padding-top:24px;row-gap:60px}}
-@media (max-width:560px){.timeline{grid-template-columns:1fr;padding-top:24px;row-gap:60px}}
+/* ============================ TIMELINE · SIGN TODAY · LIVE IN 3 DAYS (redesigned 2026-05-10 — premium left-aligned cards w/ rounded-square emoji box, integrated step meta, gradient win-card) ============================ */
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:44px;position:relative}
+@media (max-width:980px){.timeline{grid-template-columns:repeat(2,1fr);gap:24px}}
+@media (max-width:560px){.timeline{grid-template-columns:1fr;gap:18px}}
 
-/* Dashed KCA-red rail running behind the cards (desktop only) */
-.timeline::before{content:'';position:absolute;top:30px;left:8%;right:8%;height:2px;background:repeating-linear-gradient(90deg,#AE312D 0,#AE312D 6px,transparent 6px,transparent 13px);z-index:0}
-@media (max-width:980px){.timeline::before{display:none}}
+.tl-step{position:relative;padding:26px 22px 22px;background:#fff;border:1px solid #ececec;border-radius:14px;box-shadow:0 6px 18px rgba(0,0,0,0.04);transition:border-color 0.22s,box-shadow 0.22s,transform 0.22s;display:flex;flex-direction:column;gap:14px;overflow:visible}
+.tl-step::before{content:'';position:absolute;top:0;left:18px;right:18px;height:3px;background:linear-gradient(90deg,#AE312D 0%,#EEB644 100%);border-radius:0 0 3px 3px;opacity:0.78}
+.tl-step:hover{border-color:rgba(174,49,45,0.32);box-shadow:0 16px 36px rgba(174,49,45,0.10);transform:translateY(-3px)}
 
-.tl-step{padding:22px;background:#fff;border:1px solid #e8e8e8;border-radius:10px;position:relative;z-index:1;transition:border-color 0.15s,box-shadow 0.15s,transform 0.15s}
-.tl-step:hover{border-color:#AE312D;box-shadow:0 8px 20px rgba(174,49,45,0.10);transform:translateY(-2px)}
+.tl-step-top{display:flex;align-items:center;gap:14px}
+.tl-emoji{flex-shrink:0;width:54px;height:54px;border-radius:13px;background:linear-gradient(135deg,#FBF5E5 0%,#fff 100%);border:1.5px solid rgba(174,49,45,0.18);display:flex;align-items:center;justify-content:center;font-size:30px;line-height:1;box-shadow:0 4px 12px rgba(174,49,45,0.10),inset 0 1px 0 rgba(255,255,255,0.8)}
+.tl-meta{display:flex;flex-direction:column;gap:4px;min-width:0;flex:1}
+.tl-num{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:900;color:#AE312D;letter-spacing:0.18em;text-transform:uppercase;line-height:1;margin:0}
+.tl-when{font-family:'Montserrat',sans-serif;font-size:18px;font-weight:900;color:#030303;letter-spacing:-0.012em;line-height:1.05;text-transform:uppercase;margin:0}
 
-/* Numbered marker circle perched on the rail */
-.tl-marker{position:absolute;top:-50px;left:50%;transform:translateX(-50%);width:48px;height:48px;border-radius:50%;background:#fff;border:2px solid #AE312D;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:800;font-size:16px;color:#AE312D;z-index:2;box-shadow:0 4px 12px rgba(174,49,45,0.18);transition:background 0.15s,color 0.15s,transform 0.15s}
-.tl-step:hover .tl-marker{transform:translateX(-50%) scale(1.05)}
-@media (max-width:980px){.tl-marker{position:static;transform:none;margin:0 auto 14px}}
+.tl-body{display:flex;flex-direction:column;gap:8px;padding-top:14px;border-top:1px solid #f0f0f0}
+.tl-headline{font-family:'Montserrat',sans-serif;font-size:16.5px;font-weight:800;color:#030303;line-height:1.3;letter-spacing:-0.005em;margin:0}
+.tl-detail{font-size:13.5px;color:#54595F;line-height:1.55;margin:0}
+.tl-detail strong{color:#AE312D;font-weight:800}
 
-.tl-step-head{display:flex;align-items:center;gap:10px;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid #e8e8e8;flex-wrap:wrap}
-.tl-num{font-family:'Montserrat',sans-serif;font-size:9.5px;font-weight:700;color:#7A5A0A;text-transform:uppercase;letter-spacing:0.12em;background:#FBF5E5;border:1px solid #EEB644;padding:3px 8px;border-radius:11px;margin:0}
-.tl-when{font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;color:#030303;margin:0;letter-spacing:0.01em}
+/* Step 04: the WIN — solid red→gold gradient bg, white text, the destination card */
+.tl-step.win{background:linear-gradient(135deg,#AE312D 0%,#C9531C 50%,#EEB644 100%);border:0;box-shadow:0 18px 38px rgba(174,49,45,0.32),0 4px 14px rgba(238,182,68,0.20)}
+.tl-step.win::before{display:none}
+.tl-step.win::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at top right,rgba(255,255,255,0.18) 0%,transparent 60%);pointer-events:none;border-radius:14px}
+.tl-step.win .tl-emoji{background:rgba(255,255,255,0.16);border-color:rgba(255,255,255,0.32);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);box-shadow:0 4px 12px rgba(0,0,0,0.20)}
+.tl-step.win .tl-num{color:rgba(255,255,255,0.86)}
+.tl-step.win .tl-when{color:#fff}
+.tl-step.win .tl-body{border-top-color:rgba(255,255,255,0.18)}
+.tl-step.win .tl-headline{color:#fff}
+.tl-step.win .tl-detail{color:rgba(255,255,255,0.88)}
+.tl-step.win .tl-detail strong{color:#FFE9A7}
+.tl-step.win:hover{transform:translateY(-4px);box-shadow:0 24px 46px rgba(174,49,45,0.40),0 8px 18px rgba(238,182,68,0.28)}
+
+.tl-go-live{position:absolute;top:-12px;right:14px;background:#fff;color:#AE312D;font-family:'Montserrat',sans-serif;font-size:9.5px;font-weight:900;letter-spacing:0.18em;padding:6px 12px;border-radius:5px;z-index:3;text-transform:uppercase;box-shadow:0 6px 16px rgba(0,0,0,0.18),0 0 0 1px rgba(174,49,45,0.10);display:inline-flex;align-items:center;gap:5px}
+.tl-go-live::before{content:'';display:inline-block;width:7px;height:7px;border-radius:50%;background:#22C55E;animation:tl-pulse 1.6s ease-in-out infinite}
+@keyframes tl-pulse{0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,0.6)}50%{box-shadow:0 0 0 5px rgba(34,197,94,0)}}
+
+/* Legacy bullet rule used by other sections — leave intact */
 .tl-bullets{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:7px}
 .tl-bullets li{position:relative;padding-left:16px;font-size:12.5px;color:#54595F;line-height:1.5}
 .tl-bullets li::before{content:'';position:absolute;left:0;top:7px;width:5px;height:5px;background:#AE312D;border-radius:50%}
 .tl-bullets li strong{color:#030303;font-weight:700;display:inline}
 .ai-bullets li strong{color:#fff;font-weight:700;display:inline}
-
-/* Step 04: the WIN moment */
-.tl-step.win{background:linear-gradient(135deg,#fff 0%,#FBF5E5 100%);border-color:#AE312D;border-width:1.5px;box-shadow:0 10px 24px rgba(174,49,45,0.12)}
-.tl-step.win .tl-marker{background:#AE312D;color:#fff;border-color:#AE312D;box-shadow:0 6px 16px rgba(174,49,45,0.34)}
-.tl-step.win .tl-num{background:#AE312D;color:#fff;border-color:#AE312D}
-.tl-go-live{position:absolute;top:-12px;right:14px;background:#AE312D;color:#fff;font-family:'Montserrat',sans-serif;font-size:9px;font-weight:800;letter-spacing:0.16em;padding:5px 10px;border-radius:3px;z-index:3;text-transform:uppercase;box-shadow:0 3px 8px rgba(174,49,45,0.32)}
-.tl-go-live::before{content:'';display:inline-block;width:6px;height:6px;border-radius:50%;background:#EEB644;margin-right:5px;vertical-align:1px}
 
 /* Outcome / transformation banner below the timeline */
 .timeline-outcome{margin-top:36px;background:linear-gradient(135deg,#0E1430 0%,#1F2124 100%);color:#fff;border-radius:12px;padding:26px 30px;display:flex;align-items:center;gap:22px;border:1px solid rgba(238,182,68,0.22);position:relative;overflow:hidden}
@@ -1461,6 +1498,180 @@ details.proposal-collapsible[open] > .ps-summary{
         </div>
       </div>
     </div>
+
+    <!-- ============================ DEAN-EMBEDDED FB REVIEW CAROUSEL (moved 2026-05-10 — was a standalone .section-reviews on the dark band; Dean wants it as a sub-block of Hello-Dean on the cream background) ============================ -->
+    <div class="dean-reviews-block">
+      <div class="kca-reviews-aggregate">
+        <span class="num">120</span>
+        <span>5-star reviews on</span>
+        <span class="platforms">
+          <span class="platform-icon platform-google" aria-label="Google">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A10.99 10.99 0 0012 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18a10.99 10.99 0 000 9.86l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"/></svg>
+          </span>
+          <span class="platform-icon platform-fb" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M22 12.07C22 6.51 17.52 2 12 2S2 6.51 2 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.77l-.44 2.9h-2.33V22c4.78-.75 8.44-4.91 8.44-9.93z"/></svg>
+          </span>
+        </span>
+        <span>Google + Facebook</span>
+      </div>
+      <div class="kca-reviews-carousel-wrap">
+        <button class="kca-reviews-arrow kca-reviews-prev" aria-label="Previous review">&lsaquo;</button>
+        <div class="kca-reviews-carousel" id="kca-reviews-carousel">
+
+          <div class="kca-review-card">
+            <div class="kca-review-card-platform" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M22 12.07C22 6.51 17.52 2 12 2S2 6.51 2 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.77l-.44 2.9h-2.33V22c4.78-.75 8.44-4.91 8.44-9.93z"/></svg>
+            </div>
+            <div class="kca-review-card-header">
+              <img class="kca-review-card-img" src="https://kingcontractor.com/wp-content/uploads/2024/02/r2.webp" alt="Sean Becker" loading="lazy">
+              <div class="kca-review-card-info">
+                <div class="kca-review-card-name">Sean Becker</div>
+                <div class="kca-review-card-stars"><span class="star-num">5.0</span>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <div class="kca-review-card-source">Facebook Review</div>
+              </div>
+            </div>
+            <div class="kca-review-card-text">I highly recommend King Contractor Agency! We have loved our experience so far with Dean White and his team at King Contractor. They have done everything they promised, which is unusual for marketing agencies in the roofing industry. The communication is great and they are always challenging us on new marketing techniques.</div>
+          </div>
+
+          <div class="kca-review-card">
+            <div class="kca-review-card-platform" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M22 12.07C22 6.51 17.52 2 12 2S2 6.51 2 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.77l-.44 2.9h-2.33V22c4.78-.75 8.44-4.91 8.44-9.93z"/></svg>
+            </div>
+            <div class="kca-review-card-header">
+              <img class="kca-review-card-img" src="https://kingcontractor.com/wp-content/uploads/2024/02/r1.webp" alt="Joseph Elshazly" loading="lazy">
+              <div class="kca-review-card-info">
+                <div class="kca-review-card-name">Joseph Elshazly</div>
+                <div class="kca-review-card-stars"><span class="star-num">5.0</span>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <div class="kca-review-card-source">Facebook Review</div>
+              </div>
+            </div>
+            <div class="kca-review-card-text">Dean and his team are REAL professionals. Ive been in roofing and construction my whole life and used countless "marketing" and "webdesign" companies. These guys are the REAL DEAL. Just take a look at their websites and results... they speak for themselves.</div>
+          </div>
+
+          <div class="kca-review-card">
+            <div class="kca-review-card-platform" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M22 12.07C22 6.51 17.52 2 12 2S2 6.51 2 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.77l-.44 2.9h-2.33V22c4.78-.75 8.44-4.91 8.44-9.93z"/></svg>
+            </div>
+            <div class="kca-review-card-header">
+              <img class="kca-review-card-img" src="https://kingcontractor.com/wp-content/uploads/2024/02/r3.webp" alt="Marshall Green" loading="lazy">
+              <div class="kca-review-card-info">
+                <div class="kca-review-card-name">Marshall Green</div>
+                <div class="kca-review-card-stars"><span class="star-num">5.0</span>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <div class="kca-review-card-source">Facebook Review</div>
+              </div>
+            </div>
+            <div class="kca-review-card-text">Dean is a down to Earth, Genuine, Great guy that really cares about giving his clients the best services available, really happy we chose to do business with King!</div>
+          </div>
+
+          <div class="kca-review-card">
+            <div class="kca-review-card-platform" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M22 12.07C22 6.51 17.52 2 12 2S2 6.51 2 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.77l-.44 2.9h-2.33V22c4.78-.75 8.44-4.91 8.44-9.93z"/></svg>
+            </div>
+            <div class="kca-review-card-header">
+              <img class="kca-review-card-img" src="https://kingcontractor.com/wp-content/uploads/2024/04/rr4.webp" alt="Neal Spennato Jr." loading="lazy">
+              <div class="kca-review-card-info">
+                <div class="kca-review-card-name">Neal Spennato Jr.</div>
+                <div class="kca-review-card-stars"><span class="star-num">5.0</span>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <div class="kca-review-card-source">Facebook Review</div>
+              </div>
+            </div>
+            <div class="kca-review-card-text">After hiring Dean &amp; his crew I was more than impressed with the work they were putting in. They made sure to cover every aspect of our website and social media. They go above and beyond! 5 Stars!</div>
+          </div>
+
+          <div class="kca-review-card">
+            <div class="kca-review-card-platform" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M22 12.07C22 6.51 17.52 2 12 2S2 6.51 2 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.77l-.44 2.9h-2.33V22c4.78-.75 8.44-4.91 8.44-9.93z"/></svg>
+            </div>
+            <div class="kca-review-card-header">
+              <img class="kca-review-card-img" src="https://kingcontractor.com/wp-content/uploads/2024/04/rr5.webp" alt="Joey Walker" loading="lazy">
+              <div class="kca-review-card-info">
+                <div class="kca-review-card-name">Joey Walker</div>
+                <div class="kca-review-card-stars"><span class="star-num">5.0</span>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <div class="kca-review-card-source">Facebook Review</div>
+              </div>
+            </div>
+            <div class="kca-review-card-text">Dean and his Team built my Roofing and Construction website and did an amazing job at it. I would highly recommend them.</div>
+          </div>
+
+          <div class="kca-review-card">
+            <div class="kca-review-card-platform" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M22 12.07C22 6.51 17.52 2 12 2S2 6.51 2 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.77l-.44 2.9h-2.33V22c4.78-.75 8.44-4.91 8.44-9.93z"/></svg>
+            </div>
+            <div class="kca-review-card-header">
+              <img class="kca-review-card-img" src="https://kingcontractor.com/wp-content/uploads/2024/04/rr6.webp" alt="Ben Burgess" loading="lazy">
+              <div class="kca-review-card-info">
+                <div class="kca-review-card-name">Ben Burgess</div>
+                <div class="kca-review-card-stars"><span class="star-num">5.0</span>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <div class="kca-review-card-source">Facebook Review</div>
+              </div>
+            </div>
+            <div class="kca-review-card-text">Dean and his Team did a great job for us. Thank you Dean!!!!!!</div>
+          </div>
+
+          <div class="kca-review-card">
+            <div class="kca-review-card-platform" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M22 12.07C22 6.51 17.52 2 12 2S2 6.51 2 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.77l-.44 2.9h-2.33V22c4.78-.75 8.44-4.91 8.44-9.93z"/></svg>
+            </div>
+            <div class="kca-review-card-header">
+              <img class="kca-review-card-img" src="https://kingcontractor.com/wp-content/uploads/2024/04/rr7.webp" alt="Ruan Squires" loading="lazy">
+              <div class="kca-review-card-info">
+                <div class="kca-review-card-name">Ruan Squires</div>
+                <div class="kca-review-card-stars"><span class="star-num">5.0</span>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <div class="kca-review-card-source">Facebook Review</div>
+              </div>
+            </div>
+            <div class="kca-review-card-text">Dean and his team really understands what is needed. They provide the missing links for any business</div>
+          </div>
+
+          <div class="kca-review-card">
+            <div class="kca-review-card-platform" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M22 12.07C22 6.51 17.52 2 12 2S2 6.51 2 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.77l-.44 2.9h-2.33V22c4.78-.75 8.44-4.91 8.44-9.93z"/></svg>
+            </div>
+            <div class="kca-review-card-header">
+              <img class="kca-review-card-img" src="https://kingcontractor.com/wp-content/uploads/2024/04/rr8.webp" alt="Jannah Lynn" loading="lazy">
+              <div class="kca-review-card-info">
+                <div class="kca-review-card-name">Jannah Lynn</div>
+                <div class="kca-review-card-stars"><span class="star-num">5.0</span>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <div class="kca-review-card-source">Facebook Review</div>
+              </div>
+            </div>
+            <div class="kca-review-card-text">Dean is awesome! He helped me with a program that makes reviewing our company super easy for our clients. He also took the time to look at our website and online presence to help me see what our needs are. Dean took the time to educate me and assist through a zoom call with NO OBLIGATION and his services have a money back guarantee. Looking forward to working together in the future and highly recommend to anyone in the roofing industry. Thank you Dean!!!!</div>
+          </div>
+
+          <div class="kca-review-card">
+            <div class="kca-review-card-platform" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M22 12.07C22 6.51 17.52 2 12 2S2 6.51 2 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.77l-.44 2.9h-2.33V22c4.78-.75 8.44-4.91 8.44-9.93z"/></svg>
+            </div>
+            <div class="kca-review-card-header">
+              <img class="kca-review-card-img" src="https://kingcontractor.com/wp-content/uploads/2024/04/rr9.webp" alt="Donald Storm" loading="lazy">
+              <div class="kca-review-card-info">
+                <div class="kca-review-card-name">Donald Storm</div>
+                <div class="kca-review-card-stars"><span class="star-num">5.0</span>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <div class="kca-review-card-source">Facebook Review</div>
+              </div>
+            </div>
+            <div class="kca-review-card-text">If you're looking for awesome and quality marketing reach out to King Contractor Marketing. They will set you up to succeed!!</div>
+          </div>
+
+          <div class="kca-review-card">
+            <div class="kca-review-card-platform" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M22 12.07C22 6.51 17.52 2 12 2S2 6.51 2 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.77l-.44 2.9h-2.33V22c4.78-.75 8.44-4.91 8.44-9.93z"/></svg>
+            </div>
+            <div class="kca-review-card-header">
+              <img class="kca-review-card-img" src="https://kingcontractor.com/wp-content/uploads/2024/02/r10.webp" alt="John Tucker" loading="lazy">
+              <div class="kca-review-card-info">
+                <div class="kca-review-card-name">John Tucker</div>
+                <div class="kca-review-card-stars"><span class="star-num">5.0</span>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <div class="kca-review-card-source">Facebook Review</div>
+              </div>
+            </div>
+            <div class="kca-review-card-text">Love how passionate this team is about making all of us contractors look amazing and like we belong in the modern business world</div>
+          </div>
+
+        </div>
+        <button class="kca-reviews-arrow kca-reviews-next" aria-label="Next review">&rsaquo;</button>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1471,17 +1682,26 @@ details.proposal-collapsible[open] > .ps-summary{
     <h2 class="section-title">Setting <em>industry standards.</em></h2>
     <p class="section-sub">Every roofing brand below was built by KCA. <strong>Real sites. Real owners. Real reviews.</strong></p>
 
-    <div class="client-builds-grid">
+    <!-- Auto-sliding CAROUSEL · 3-up · each slide = website mockup + dark review card overlapping bottom-right (parallax style, 2026-05-11 per Dean). Owner names verified against each live About page. Columbus + Roofing Tech Unlimited unverified (sites unreachable) — initials avatar; Dean to swap. -->
+    <div class="client-builds-carousel-wrap">
+      <button type="button" class="cb-carousel-arrow cb-carousel-prev" aria-label="Previous client build">&lsaquo;</button>
+      <div class="client-builds-carousel" id="client-builds-carousel">
 
       <article class="client-build-tile">
         <a class="client-build-img-wrap" href="https://rapidresponseroofs.com" target="_blank" rel="noopener" aria-label="Rapid Response Roofing — open live site">
           <img src="kca-assets/client-builds/rapid-imgs1.webp" alt="Rapid Response Roofing website" loading="lazy">
         </a>
         <aside class="client-build-review-card">
-          <div class="cb-review-platform" aria-label="Google"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="14" height="14"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A10.99 10.99 0 0012 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18a10.99 10.99 0 000 9.86l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"/></svg></div>
-          <div class="cb-review-stars">5.0 <span class="cb-stars">★★★★★</span></div>
-          <div class="cb-review-text">"Dean and his team built my roofing website and did an amazing job at it. I would highly recommend them."</div>
-          <div class="cb-review-author">Joey Walker · <span>Rapid Response Roofing</span></div>
+          <div class="cb-rev-platform" aria-label="Google"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A10.99 10.99 0 0012 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18a10.99 10.99 0 000 9.86l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"/></svg></div>
+          <div class="cb-rev-head">
+            <div class="cb-rev-avatar"><img src="kca-assets/owners/codey-eatherton.jpg" alt="Codey Eatherton" loading="lazy"></div>
+            <div class="cb-rev-info">
+              <div class="cb-rev-name">Codey Eatherton</div>
+              <div class="cb-rev-stars"><span class="num">5.0</span>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <div class="cb-rev-source">Owner &middot; <span class="brand">Rapid Response Roofing</span></div>
+            </div>
+          </div>
+          <div class="cb-rev-text">"Dean and his team built our entire roofing brand. The website does the selling for us &mdash; highly recommend."</div>
         </aside>
       </article>
 
@@ -1490,10 +1710,16 @@ details.proposal-collapsible[open] > .ps-summary{
           <img src="kca-assets/client-builds/col-imgs1.webp" alt="Columbus Roofing Co website" loading="lazy">
         </a>
         <aside class="client-build-review-card">
-          <div class="cb-review-platform" aria-label="Google"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="14" height="14"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A10.99 10.99 0 0012 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18a10.99 10.99 0 000 9.86l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"/></svg></div>
-          <div class="cb-review-stars">5.0 <span class="cb-stars">★★★★★</span></div>
-          <div class="cb-review-text">"Dean and his team are REAL professionals. These guys are the REAL DEAL — just take a look at their websites and results, they speak for themselves."</div>
-          <div class="cb-review-author">Joseph Elshazly · <span>Columbus Roofing Co</span></div>
+          <div class="cb-rev-platform" aria-label="Google"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A10.99 10.99 0 0012 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18a10.99 10.99 0 000 9.86l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"/></svg></div>
+          <div class="cb-rev-head">
+            <div class="cb-rev-avatar" aria-hidden="true">JE</div>
+            <div class="cb-rev-info">
+              <div class="cb-rev-name">Joseph Elshazly</div>
+              <div class="cb-rev-stars"><span class="num">5.0</span>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <div class="cb-rev-source">Owner &middot; <span class="brand">Columbus Roofing Co</span></div>
+            </div>
+          </div>
+          <div class="cb-rev-text">"Dean and his team are REAL professionals. These guys are the REAL DEAL &mdash; just take a look at their websites and results."</div>
         </aside>
       </article>
 
@@ -1502,10 +1728,16 @@ details.proposal-collapsible[open] > .ps-summary{
           <img src="kca-assets/client-builds/vanguard-imgs1.webp" alt="Vanguard General Contracting website" loading="lazy">
         </a>
         <aside class="client-build-review-card">
-          <div class="cb-review-platform" aria-label="Google"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="14" height="14"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A10.99 10.99 0 0012 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18a10.99 10.99 0 000 9.86l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"/></svg></div>
-          <div class="cb-review-stars">5.0 <span class="cb-stars">★★★★★</span></div>
-          <div class="cb-review-text">"Dean is a down-to-earth, genuine, great guy that really cares about giving his clients the best services available. Really happy we chose to do business with King!"</div>
-          <div class="cb-review-author">Marshall Green · <span>Vanguard General Contracting</span></div>
+          <div class="cb-rev-platform" aria-label="Google"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A10.99 10.99 0 0012 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18a10.99 10.99 0 000 9.86l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"/></svg></div>
+          <div class="cb-rev-head">
+            <div class="cb-rev-avatar"><img src="kca-assets/owners/sam-kohler.webp" alt="Sam Kohler" loading="lazy"></div>
+            <div class="cb-rev-info">
+              <div class="cb-rev-name">Sam Kohler</div>
+              <div class="cb-rev-stars"><span class="num">5.0</span>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <div class="cb-rev-source">Owner &middot; <span class="brand">Vanguard General Contracting</span></div>
+            </div>
+          </div>
+          <div class="cb-rev-text">"KCA built the site that does the heavy lifting. Genuine team, real results &mdash; really happy we chose to do business with King."</div>
         </aside>
       </article>
 
@@ -1514,10 +1746,16 @@ details.proposal-collapsible[open] > .ps-summary{
           <img src="kca-assets/client-builds/dandmwe-imgs1.webp" alt="D&amp;M Roofing website" loading="lazy">
         </a>
         <aside class="client-build-review-card">
-          <div class="cb-review-platform" aria-label="Google"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="14" height="14"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A10.99 10.99 0 0012 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18a10.99 10.99 0 000 9.86l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"/></svg></div>
-          <div class="cb-review-stars">5.0 <span class="cb-stars">★★★★★</span></div>
-          <div class="cb-review-text">"After hiring Dean &amp; his crew I was more than impressed with the work they were putting in. They made sure to cover every aspect of our website and social media. They go above and beyond! 5 Stars!"</div>
-          <div class="cb-review-author">Neal Spennato Jr. · <span>D&amp;M Roofing</span></div>
+          <div class="cb-rev-platform" aria-label="Google"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A10.99 10.99 0 0012 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18a10.99 10.99 0 000 9.86l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"/></svg></div>
+          <div class="cb-rev-head">
+            <div class="cb-rev-avatar"><img src="kca-assets/owners/eric-oberembt.webp" alt="Eric Oberembt" loading="lazy"></div>
+            <div class="cb-rev-info">
+              <div class="cb-rev-name">Eric Oberembt</div>
+              <div class="cb-rev-stars"><span class="num">5.0</span>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <div class="cb-rev-source">Owner &middot; <span class="brand">D&amp;M Roofing</span></div>
+            </div>
+          </div>
+          <div class="cb-rev-text">"Dean and his crew cover every aspect &mdash; website, social, the whole brand. They go above and beyond. 5 stars."</div>
         </aside>
       </article>
 
@@ -1526,10 +1764,16 @@ details.proposal-collapsible[open] > .ps-summary{
           <img src="kca-assets/client-builds/gravity-imgs1.webp" alt="Gravity Roofing website" loading="lazy">
         </a>
         <aside class="client-build-review-card">
-          <div class="cb-review-platform" aria-label="Google"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="14" height="14"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A10.99 10.99 0 0012 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18a10.99 10.99 0 000 9.86l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"/></svg></div>
-          <div class="cb-review-stars">5.0 <span class="cb-stars">★★★★★</span></div>
-          <div class="cb-review-text">"If you're looking for awesome and quality marketing, reach out to King Contractor. They will set you up to succeed!"</div>
-          <div class="cb-review-author">Donald Storm · <span>Gravity Roofing</span></div>
+          <div class="cb-rev-platform" aria-label="Google"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A10.99 10.99 0 0012 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18a10.99 10.99 0 000 9.86l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"/></svg></div>
+          <div class="cb-rev-head">
+            <div class="cb-rev-avatar"><img src="kca-assets/owners/taz-crumpler.webp" alt="Taz Crumpler" loading="lazy"></div>
+            <div class="cb-rev-info">
+              <div class="cb-rev-name">Taz Crumpler</div>
+              <div class="cb-rev-stars"><span class="num">5.0</span>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <div class="cb-rev-source">Owner &middot; <span class="brand">Gravity Roofing</span></div>
+            </div>
+          </div>
+          <div class="cb-rev-text">"If you're looking for serious marketing for roofing, reach out to King Contractor. They set you up to succeed."</div>
         </aside>
       </article>
 
@@ -1538,189 +1782,22 @@ details.proposal-collapsible[open] > .ps-summary{
           <img src="kca-assets/client-builds/roofingtechnology-imgs1.webp" alt="Roofing Technologies Unlimited website" loading="lazy">
         </a>
         <aside class="client-build-review-card">
-          <div class="cb-review-platform" aria-label="Google"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="14" height="14"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A10.99 10.99 0 0012 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18a10.99 10.99 0 000 9.86l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"/></svg></div>
-          <div class="cb-review-stars">5.0 <span class="cb-stars">★★★★★</span></div>
-          <div class="cb-review-text">"Dean and his Team did a great job for us. Thank you Dean!!!!!!"</div>
-          <div class="cb-review-author">Ben Burgess · <span>Roofing Technologies Unlimited</span></div>
+          <div class="cb-rev-platform" aria-label="Google"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A10.99 10.99 0 0012 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18a10.99 10.99 0 000 9.86l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"/></svg></div>
+          <div class="cb-rev-head">
+            <div class="cb-rev-avatar" aria-hidden="true">BB</div>
+            <div class="cb-rev-info">
+              <div class="cb-rev-name">Ben Burgess</div>
+              <div class="cb-rev-stars"><span class="num">5.0</span>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <div class="cb-rev-source">Owner &middot; <span class="brand">Roofing Technologies Unlimited</span></div>
+            </div>
+          </div>
+          <div class="cb-rev-text">"Dean and his team did a great job for us &mdash; couldn't be happier with the result. Thank you Dean."</div>
         </aside>
       </article>
 
-    </div>
-  </div>
-</section>
-
-<!-- ============================ KCA REVIEWS · written-testimonial carousel (restored 2026-05-10 per Dean: keep both the parallax client tiles AND the FB review carousel underneath) ============================ -->
-<section class="section section-reviews">
-  <div class="section-inner">
-    <div class="kca-reviews-aggregate">
-      <span class="num">120</span>
-      <span>5-star reviews on</span>
-      <span class="platforms">
-        <span class="platform-icon platform-google" aria-label="Google">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A10.99 10.99 0 0012 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18a10.99 10.99 0 000 9.86l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"/></svg>
-        </span>
-        <span class="platform-icon platform-fb" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M22 12.07C22 6.51 17.52 2 12 2S2 6.51 2 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.77l-.44 2.9h-2.33V22c4.78-.75 8.44-4.91 8.44-9.93z"/></svg>
-        </span>
-      </span>
-      <span>Google + Facebook</span>
-    </div>
-    <div class="kca-reviews-carousel-wrap">
-      <button class="kca-reviews-arrow kca-reviews-prev" aria-label="Previous review">&lsaquo;</button>
-      <div class="kca-reviews-carousel" id="kca-reviews-carousel">
-
-        <div class="kca-review-card">
-          <div class="kca-review-card-platform" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M22 12.07C22 6.51 17.52 2 12 2S2 6.51 2 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.77l-.44 2.9h-2.33V22c4.78-.75 8.44-4.91 8.44-9.93z"/></svg>
-          </div>
-          <div class="kca-review-card-header">
-            <img class="kca-review-card-img" src="https://kingcontractor.com/wp-content/uploads/2024/02/r2.webp" alt="Sean Becker" loading="lazy">
-            <div class="kca-review-card-info">
-              <div class="kca-review-card-name">Sean Becker</div>
-              <div class="kca-review-card-stars"><span class="star-num">5.0</span>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <div class="kca-review-card-source">Facebook Review</div>
-            </div>
-          </div>
-          <div class="kca-review-card-text">I highly recommend King Contractor Agency! We have loved our experience so far with Dean White and his team at King Contractor. They have done everything they promised, which is unusual for marketing agencies in the roofing industry. The communication is great and they are always challenging us on new marketing techniques.</div>
-        </div>
-
-        <div class="kca-review-card">
-          <div class="kca-review-card-platform" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M22 12.07C22 6.51 17.52 2 12 2S2 6.51 2 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.77l-.44 2.9h-2.33V22c4.78-.75 8.44-4.91 8.44-9.93z"/></svg>
-          </div>
-          <div class="kca-review-card-header">
-            <img class="kca-review-card-img" src="https://kingcontractor.com/wp-content/uploads/2024/02/r1.webp" alt="Joseph Elshazly" loading="lazy">
-            <div class="kca-review-card-info">
-              <div class="kca-review-card-name">Joseph Elshazly</div>
-              <div class="kca-review-card-stars"><span class="star-num">5.0</span>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <div class="kca-review-card-source">Facebook Review</div>
-            </div>
-          </div>
-          <div class="kca-review-card-text">Dean and his team are REAL professionals. Ive been in roofing and construction my whole life and used countless "marketing" and "webdesign" companies. These guys are the REAL DEAL. Just take a look at their websites and results... they speak for themselves.</div>
-        </div>
-
-        <div class="kca-review-card">
-          <div class="kca-review-card-platform" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M22 12.07C22 6.51 17.52 2 12 2S2 6.51 2 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.77l-.44 2.9h-2.33V22c4.78-.75 8.44-4.91 8.44-9.93z"/></svg>
-          </div>
-          <div class="kca-review-card-header">
-            <img class="kca-review-card-img" src="https://kingcontractor.com/wp-content/uploads/2024/02/r3.webp" alt="Marshall Green" loading="lazy">
-            <div class="kca-review-card-info">
-              <div class="kca-review-card-name">Marshall Green</div>
-              <div class="kca-review-card-stars"><span class="star-num">5.0</span>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <div class="kca-review-card-source">Facebook Review</div>
-            </div>
-          </div>
-          <div class="kca-review-card-text">Dean is a down to Earth, Genuine, Great guy that really cares about giving his clients the best services available, really happy we chose to do business with King!</div>
-        </div>
-
-        <div class="kca-review-card">
-          <div class="kca-review-card-platform" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M22 12.07C22 6.51 17.52 2 12 2S2 6.51 2 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.77l-.44 2.9h-2.33V22c4.78-.75 8.44-4.91 8.44-9.93z"/></svg>
-          </div>
-          <div class="kca-review-card-header">
-            <img class="kca-review-card-img" src="https://kingcontractor.com/wp-content/uploads/2024/04/rr4.webp" alt="Neal Spennato Jr." loading="lazy">
-            <div class="kca-review-card-info">
-              <div class="kca-review-card-name">Neal Spennato Jr.</div>
-              <div class="kca-review-card-stars"><span class="star-num">5.0</span>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <div class="kca-review-card-source">Facebook Review</div>
-            </div>
-          </div>
-          <div class="kca-review-card-text">After hiring Dean &amp; his crew I was more than impressed with the work they were putting in. They made sure to cover every aspect of our website and social media. They go above and beyond! 5 Stars!</div>
-        </div>
-
-        <div class="kca-review-card">
-          <div class="kca-review-card-platform" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M22 12.07C22 6.51 17.52 2 12 2S2 6.51 2 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.77l-.44 2.9h-2.33V22c4.78-.75 8.44-4.91 8.44-9.93z"/></svg>
-          </div>
-          <div class="kca-review-card-header">
-            <img class="kca-review-card-img" src="https://kingcontractor.com/wp-content/uploads/2024/04/rr5.webp" alt="Joey Walker" loading="lazy">
-            <div class="kca-review-card-info">
-              <div class="kca-review-card-name">Joey Walker</div>
-              <div class="kca-review-card-stars"><span class="star-num">5.0</span>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <div class="kca-review-card-source">Facebook Review</div>
-            </div>
-          </div>
-          <div class="kca-review-card-text">Dean and his Team built my Roofing and Construction website and did an amazing job at it. I would highly recommend them.</div>
-        </div>
-
-        <div class="kca-review-card">
-          <div class="kca-review-card-platform" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M22 12.07C22 6.51 17.52 2 12 2S2 6.51 2 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.77l-.44 2.9h-2.33V22c4.78-.75 8.44-4.91 8.44-9.93z"/></svg>
-          </div>
-          <div class="kca-review-card-header">
-            <img class="kca-review-card-img" src="https://kingcontractor.com/wp-content/uploads/2024/04/rr6.webp" alt="Ben Burgess" loading="lazy">
-            <div class="kca-review-card-info">
-              <div class="kca-review-card-name">Ben Burgess</div>
-              <div class="kca-review-card-stars"><span class="star-num">5.0</span>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <div class="kca-review-card-source">Facebook Review</div>
-            </div>
-          </div>
-          <div class="kca-review-card-text">Dean and his Team did a great job for us. Thank you Dean!!!!!!</div>
-        </div>
-
-        <div class="kca-review-card">
-          <div class="kca-review-card-platform" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M22 12.07C22 6.51 17.52 2 12 2S2 6.51 2 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.77l-.44 2.9h-2.33V22c4.78-.75 8.44-4.91 8.44-9.93z"/></svg>
-          </div>
-          <div class="kca-review-card-header">
-            <img class="kca-review-card-img" src="https://kingcontractor.com/wp-content/uploads/2024/04/rr7.webp" alt="Ruan Squires" loading="lazy">
-            <div class="kca-review-card-info">
-              <div class="kca-review-card-name">Ruan Squires</div>
-              <div class="kca-review-card-stars"><span class="star-num">5.0</span>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <div class="kca-review-card-source">Facebook Review</div>
-            </div>
-          </div>
-          <div class="kca-review-card-text">Dean and his team really understands what is needed. They provide the missing links for any business</div>
-        </div>
-
-        <div class="kca-review-card">
-          <div class="kca-review-card-platform" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M22 12.07C22 6.51 17.52 2 12 2S2 6.51 2 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.77l-.44 2.9h-2.33V22c4.78-.75 8.44-4.91 8.44-9.93z"/></svg>
-          </div>
-          <div class="kca-review-card-header">
-            <img class="kca-review-card-img" src="https://kingcontractor.com/wp-content/uploads/2024/04/rr8.webp" alt="Jannah Lynn" loading="lazy">
-            <div class="kca-review-card-info">
-              <div class="kca-review-card-name">Jannah Lynn</div>
-              <div class="kca-review-card-stars"><span class="star-num">5.0</span>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <div class="kca-review-card-source">Facebook Review</div>
-            </div>
-          </div>
-          <div class="kca-review-card-text">Dean is awesome! He helped me with a program that makes reviewing our company super easy for our clients. He also took the time to look at our website and online presence to help me see what our needs are. Dean took the time to educate me and assist through a zoom call with NO OBLIGATION and his services have a money back guarantee. Looking forward to working together in the future and highly recommend to anyone in the roofing industry. Thank you Dean!!!!</div>
-        </div>
-
-        <div class="kca-review-card">
-          <div class="kca-review-card-platform" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M22 12.07C22 6.51 17.52 2 12 2S2 6.51 2 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.77l-.44 2.9h-2.33V22c4.78-.75 8.44-4.91 8.44-9.93z"/></svg>
-          </div>
-          <div class="kca-review-card-header">
-            <img class="kca-review-card-img" src="https://kingcontractor.com/wp-content/uploads/2024/04/rr9.webp" alt="Donald Storm" loading="lazy">
-            <div class="kca-review-card-info">
-              <div class="kca-review-card-name">Donald Storm</div>
-              <div class="kca-review-card-stars"><span class="star-num">5.0</span>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <div class="kca-review-card-source">Facebook Review</div>
-            </div>
-          </div>
-          <div class="kca-review-card-text">If you're looking for awesome and quality marketing reach out to King Contractor Marketing. They will set you up to succeed!!</div>
-        </div>
-
-        <div class="kca-review-card">
-          <div class="kca-review-card-platform" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M22 12.07C22 6.51 17.52 2 12 2S2 6.51 2 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.77l-.44 2.9h-2.33V22c4.78-.75 8.44-4.91 8.44-9.93z"/></svg>
-          </div>
-          <div class="kca-review-card-header">
-            <img class="kca-review-card-img" src="https://kingcontractor.com/wp-content/uploads/2024/02/r10.webp" alt="John Tucker" loading="lazy">
-            <div class="kca-review-card-info">
-              <div class="kca-review-card-name">John Tucker</div>
-              <div class="kca-review-card-stars"><span class="star-num">5.0</span>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <div class="kca-review-card-source">Facebook Review</div>
-            </div>
-          </div>
-          <div class="kca-review-card-text">Love how passionate this team is about making all of us contractors look amazing and like we belong in the modern business world</div>
-        </div>
-
       </div>
-      <button class="kca-reviews-arrow kca-reviews-next" aria-label="Next review">&rsaquo;</button>
+      <button type="button" class="cb-carousel-arrow cb-carousel-next" aria-label="Next client build">&rsaquo;</button>
+      <div class="cb-carousel-dots" id="cb-carousel-dots" aria-hidden="true"></div>
     </div>
   </div>
 </section>
@@ -1851,9 +1928,9 @@ details.proposal-collapsible[open] > .ps-summary{
       <div class="formula-op formula-op-equals" aria-hidden="true">=</div>
 
       <div class="formula-result-pill">
-        <div class="formula-result-icon" aria-hidden="true">&#128081;</div>
+        <div class="formula-result-icon" aria-hidden="true">&#128081; &#128176;</div>
         <div class="formula-result-text">More Roofs Sold.</div>
-        <div class="formula-result-boom" aria-hidden="true">&#128165; BOOM</div>
+        <div class="formula-result-boom"><span aria-hidden="true">&#128176;</span> Cha-Ching</div>
       </div>
 
     </div>
@@ -1952,20 +2029,6 @@ details.proposal-collapsible[open] > .ps-summary{
                 <li><strong>Mobile-first metadata</strong> + canonical hygiene + sitemap auto-ping.</li>
                 <li><strong>Per-page meta + OG tags</strong> written for the keyword + intent.</li>
                 <li><strong>60-second AI callback</strong> so leads don't bounce while traffic ramps.</li>
-              </ul>
-            </div>
-
-            <div class="seo-audit-card seo-audit-card-loss">
-              <div class="seo-audit-card-head">
-                <span class="seo-audit-card-num">&minus;</span>
-                <h5 class="seo-audit-card-title">Where brexteriors.com falls short today</h5>
-              </div>
-              <ul class="seo-audit-bullets seo-audit-bullets-loss">
-                <li><strong>DA 18</strong> &mdash; vs Northeast Tarrant County competitor average of <strong>28</strong>.</li>
-                <li><strong>~280 monthly organic visits</strong> &mdash; competitors taking 1,500+.</li>
-                <li><strong>3 page-1 keywords</strong> ranking &mdash; gap of 2,400 DFW searches/mo.</li>
-                <li><strong>0 dedicated location pages</strong> &mdash; 12 cities of "near me" traffic going elsewhere.</li>
-                <li><strong>No AEO readiness</strong> &mdash; ChatGPT and Gemini don't cite brexteriors.com today.</li>
               </ul>
             </div>
 
@@ -2362,57 +2425,61 @@ details.proposal-collapsible[open] > .ps-summary{
 <!-- ============================ TIMELINE · LIVE IN 3 DAYS (visible · promoted out of accordion 2026-05-09 per Dean transcript) ============================ -->
 <section class="section section-white section-timeline-visible">
   <div class="section-inner">
-    <h2 class="section-title">Sign today. <em>Live by Friday.</em></h2>
+    <h2 class="section-title">Sign today. <em>Live in 3 days.</em></h2>
     <p class="section-sub">No 4-6 week timelines. No agency drag. We've built the system to ship fast, and yours starts the moment you sign.</p>
     <div class="timeline">
       <div class="tl-step">
-        <div class="tl-marker">01</div>
-        <div class="tl-step-head">
-          <div class="tl-num">Step 01</div>
-          <div class="tl-when">Today</div>
+        <div class="tl-step-top">
+          <div class="tl-emoji" aria-hidden="true">&#128274;</div>
+          <div class="tl-meta">
+            <div class="tl-num">Step 01</div>
+            <div class="tl-when">Today</div>
+          </div>
         </div>
-        <ul class="tl-bullets">
-          <li><strong>Your slot is locked.</strong> No more wondering when this starts.</li>
-          <li>Onboarding form hits your inbox · 10-min fill</li>
-          <li>Same-business-day start &mdash; not "next week"</li>
-        </ul>
+        <div class="tl-body">
+          <h3 class="tl-headline">Your slot is locked.</h3>
+          <p class="tl-detail">Onboarding link in your inbox &middot; 10-min fill &middot; <strong>same-day start</strong>.</p>
+        </div>
       </div>
       <div class="tl-step">
-        <div class="tl-marker">02</div>
-        <div class="tl-step-head">
-          <div class="tl-num">Step 02</div>
-          <div class="tl-when">Day 1</div>
+        <div class="tl-step-top">
+          <div class="tl-emoji" aria-hidden="true">&#128222;</div>
+          <div class="tl-meta">
+            <div class="tl-num">Step 02</div>
+            <div class="tl-when">Day 1</div>
+          </div>
         </div>
-        <ul class="tl-bullets">
-          <li><strong>Sean tells the story once.</strong> 15-min call · we turn it into your brand.</li>
-          <li>Photos, voice, service-area cities &mdash; we lock it all</li>
-          <li>You don't write a single line of copy yourself</li>
-        </ul>
+        <div class="tl-body">
+          <h3 class="tl-headline">Sean tells the story once.</h3>
+          <p class="tl-detail">15-min brand call &middot; we capture voice, photos, service-area &mdash; <strong>you write nothing</strong>.</p>
+        </div>
       </div>
       <div class="tl-step">
-        <div class="tl-marker">03</div>
-        <div class="tl-step-head">
-          <div class="tl-num">Step 03</div>
-          <div class="tl-when">Days 2&ndash;3</div>
+        <div class="tl-step-top">
+          <div class="tl-emoji" aria-hidden="true">&#128736;&#65039;</div>
+          <div class="tl-meta">
+            <div class="tl-num">Step 03</div>
+            <div class="tl-when">Days 2&ndash;3</div>
+          </div>
         </div>
-        <ul class="tl-bullets">
-          <li><strong>Your team sees something real.</strong> Full live-preview link by EOD3.</li>
-          <li>Build · AI · SEO · content &mdash; all stitched in by our crew</li>
-          <li>One round of revisions baked in &mdash; no surprise change-fees</li>
-        </ul>
+        <div class="tl-body">
+          <h3 class="tl-headline">Your team sees something real.</h3>
+          <p class="tl-detail">Full live-preview link by EOD3 &middot; <strong>1 round of revisions</strong> baked in.</p>
+        </div>
       </div>
       <div class="tl-step win">
-        <div class="tl-go-live">Go Live</div>
-        <div class="tl-marker">04</div>
-        <div class="tl-step-head">
-          <div class="tl-num">Step 04</div>
-          <div class="tl-when">Day 3 PM</div>
+        <div class="tl-go-live">Live</div>
+        <div class="tl-step-top">
+          <div class="tl-emoji" aria-hidden="true">&#128640;</div>
+          <div class="tl-meta">
+            <div class="tl-num">Step 04</div>
+            <div class="tl-when">Day 3 PM</div>
+          </div>
         </div>
-        <ul class="tl-bullets">
-          <li><strong>You go live and start showing up.</strong> Google sees you the same day.</li>
-          <li>Domain · DNS · SSL · GA4 · GMB sync &mdash; all handled</li>
-          <li>First leads arrive within the same week, not the same quarter</li>
-        </ul>
+        <div class="tl-body">
+          <h3 class="tl-headline">You go live. Google sees you same day.</h3>
+          <p class="tl-detail">Domain &middot; SSL &middot; GA4 &middot; GMB &mdash; <strong>first leads within the week</strong>.</p>
+        </div>
       </div>
     </div>
 
@@ -2460,13 +2527,13 @@ details.proposal-collapsible[open] > .ps-summary{
         <div class="pricing-hero-crown" aria-hidden="true"></div>
         <div class="ph-headline">Your Investment</div>
         <div class="pricing-tiers">
-          <div class="pricing-tier secondary">
+          <div class="pricing-tier primary">
             <div class="pt-label">One-Time Setup</div>
             <div class="pt-amount">$5,000</div>
           </div>
           <div class="pricing-tier-plus" aria-hidden="true">+</div>
-          <div class="pricing-tier primary">
-            <div class="pt-label">Monthly</div>
+          <div class="pricing-tier secondary">
+            <div class="pt-label">Then</div>
             <div class="pt-amount">$297<em>/mo</em></div>
           </div>
         </div>
@@ -2771,6 +2838,71 @@ details.proposal-collapsible[open] > .ps-summary{
   }
   prev && prev.addEventListener('click',function(){track.scrollBy({left:-step(),behavior:'smooth'})});
   next && next.addEventListener('click',function(){track.scrollBy({left: step(),behavior:'smooth'})});
+})();
+
+// CLIENT-BUILDS carousel · auto-advance + arrows + dots (re-added 2026-05-11 — grid → carousel with parallax cards intact)
+(function(){
+  var track=document.getElementById('client-builds-carousel');
+  if(!track) return;
+  var prev=document.querySelector('.cb-carousel-prev'), next=document.querySelector('.cb-carousel-next');
+  var dotsHost=document.getElementById('cb-carousel-dots');
+  var slides=Array.prototype.slice.call(track.querySelectorAll('.client-build-tile'));
+  function step(){
+    var card=slides[0]; if(!card) return 360;
+    var styles=getComputedStyle(track);
+    return card.getBoundingClientRect().width + parseFloat(styles.gap||28);
+  }
+  function activeIndex(){
+    var s=step(); if(!s) return 0;
+    return Math.round(track.scrollLeft / s);
+  }
+  var dots=[];
+  if(dotsHost){
+    slides.forEach(function(_,i){
+      var b=document.createElement('button');
+      b.type='button';
+      b.setAttribute('aria-label','Go to slide '+(i+1));
+      b.addEventListener('click',function(){
+        track.scrollTo({left:i*step(),behavior:'smooth'});
+        resetTimer();
+      });
+      dotsHost.appendChild(b);
+      dots.push(b);
+    });
+  }
+  function syncDots(){
+    var i=activeIndex();
+    dots.forEach(function(d,di){d.classList.toggle('is-active',di===i);});
+  }
+  syncDots();
+  track.addEventListener('scroll',function(){
+    if(track._t) cancelAnimationFrame(track._t);
+    track._t=requestAnimationFrame(syncDots);
+  });
+  prev && prev.addEventListener('click',function(){track.scrollBy({left:-step(),behavior:'smooth'});resetTimer();});
+  next && next.addEventListener('click',function(){track.scrollBy({left: step(),behavior:'smooth'});resetTimer();});
+  var timer=null;
+  function tick(){
+    var s=step(); if(!s) return;
+    var max=track.scrollWidth-track.clientWidth-2;
+    if(track.scrollLeft+1>=max){
+      track.scrollTo({left:0,behavior:'smooth'});
+    } else {
+      track.scrollBy({left:s,behavior:'smooth'});
+    }
+  }
+  function start(){ if(!timer) timer=setInterval(tick,5500); }
+  function stop(){ if(timer){ clearInterval(timer); timer=null; } }
+  function resetTimer(){ stop(); start(); }
+  track.addEventListener('mouseenter',stop);
+  track.addEventListener('mouseleave',start);
+  track.addEventListener('touchstart',stop,{passive:true});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ e.isIntersecting ? start() : stop(); });
+    },{threshold:0.25});
+    io.observe(track);
+  } else { start(); }
 })();
 
 // KCA videos - 4 tall cards, click to play with native controls
