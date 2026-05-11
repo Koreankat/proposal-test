@@ -1,0 +1,402 @@
+{
+  "version": 1,
+  "slug": "bbroofingtx",
+  "brand": "B.B. Roofing & Exteriors, LLC",
+  "scraped_at": "2026-05-10T01:30:00Z",
+  "source_site": "https://bbroofingtx.com/",
+  "totals": {
+    "logo": 3,
+    "owner_photo": 1,
+    "owner_cutout": 1,
+    "team_photo": 0,
+    "gallery": 13,
+    "review_avatars": 3,
+    "badges_real": 1,
+    "decorations": 3,
+    "theme_placeholders": 5,
+    "hero_fallback": 1
+  },
+  "assets": {
+    "mascot_generated": {
+      "asset_type": "mascot",
+      "source": "generated",
+      "generation_provider": "gemini-nano-banana",
+      "path": "assets/generated/mascot-generated.png",
+      "served_at": "clients/bbroofingtx/build/assets/generated/mascot-generated.png",
+      "is_real_evidence": false,
+      "prompt": "Illustrated brand mascot for B.B. Roofing & Exteriors, a veteran-owned roofing contractor in Spring, TX. Subject: a stylized eagle perched on a small roof peak, holding a gold laurel wreath in its beak \u2014 matches the brand's existing gold laurel-wreath logo motif. Front-facing pose, slightly heroic stance, neutral expression. Style: clean illustrated vector with a subtle line-art / etched-medal feel (NOT cartoon-childish, NOT photorealistic, NOT 3D-stock). Color palette: warm gold (#C2A74B) primary, deep dark (#1E1E22) outline + accents, white (#FFFFFF) negative space. Background: TRANSPARENT. Suitable as 64-110px corner stamp on white card. NO text. NO realistic feathers (illustrated only). Tone: dignified premium, military-veteran reverence (laurel wreath = victory + service).",
+      "generated_at": "2026-05-10T02:23:00Z",
+      "notes": "Path B mascot generated per design-system/rules/mascot-generation-prompt-recipe.md. Used in 3 placements: owner-story bracket companion (line 2208), service-area SA2 feature (line 2319), footer brand stamp (line 2358). Cap 3-6 (mascot-rules.md \u00a7The cap)."
+    },
+    "_list": [
+      {
+        "asset_type": "logo_primary",
+        "path": "assets/logo/bbroofing-primary-logo.png",
+        "is_real_evidence": true,
+        "source": "https://i0.wp.com/bbroofingtx.com/wp-content/uploads/2025/03/Untitled-design-40.png",
+        "discovery_path": "live_site_header",
+        "discovery_evidence": "scraped from header img on every page; 591x591 PNG; gold laurel-wreath monogram with BB initials and roof peak",
+        "confidence": "high",
+        "claim_attached": "primary brand logo",
+        "intended_use": "header_logo, footer_logo, favicon_source"
+      },
+      {
+        "asset_type": "logo_primary_orig",
+        "path": "assets/logo/bbroofing-primary-logo-orig.png",
+        "is_real_evidence": true,
+        "source": "https://bbroofingtx.com/wp-content/uploads/2025/03/Untitled-design-40.png",
+        "discovery_path": "live_site_header",
+        "discovery_evidence": "WordPress upload origin URL; identical 591x591 PNG (same source as primary, kept as backup)",
+        "confidence": "high",
+        "claim_attached": "primary brand logo (origin file)",
+        "intended_use": "logo_backup"
+      },
+      {
+        "asset_type": "logo_wordmark",
+        "path": "assets/logo/bbroofing-wordmark-logo-fb.jpg",
+        "is_real_evidence": true,
+        "source": "Facebook business page og:image (https://www.facebook.com/B.B.RoofingandExteriorsLLC og:image)",
+        "discovery_path": "facebook_business_page_og_image",
+        "discovery_evidence": "scraped from FB business page meta og:image; 960x603 JPG with full 'Roofing & Exteriors' wordmark + monogram + wreath; useful as wordmark variant for footer or about-page",
+        "confidence": "high",
+        "claim_attached": "wordmark variant",
+        "intended_use": "footer_logo_alt, about_page_brand_lockup"
+      },
+      {
+        "asset_type": "owner_photo",
+        "path": "assets/team/brandon-yniguez-portrait.jpg",
+        "is_real_evidence": true,
+        "owner_name": "Brandon Yniguez",
+        "owner_role": "Managing Member / Owner",
+        "source": "Facebook post by Jennifer Brumley Smith (the owner's aunt) at https://www.facebook.com/JenniferBrumleySmith/posts/yall-need-a-new-roof-repairs-contact-my-nephew-brandon-yniguez-... (og:image extracted via Firecrawl)",
+        "discovery_path": "A3_firecrawl_serp_owner_brand",
+        "discovery_evidence": "Firecrawl SERP for query '\"Brandon Yniguez\" \"B.B. Roofing\"' returned this FB post; the post caption explicitly names 'my Nephew Brandon Yniguez' AND 'B.B. Roofing & Exteriors, LLC' in close proximity; identity match is confirmed by the post text. The image itself (1080x1920 JPG) is a video frame from Brandon's TikTok-style content (visible captions 'thousands of dollars' baked in, eyes-closed mid-speech expression).",
+        "confidence": "low",
+        "confidence_reason": "Identity match is high (post explicitly names Brandon + brand). Image quality for hero use is LOW: yellow caption text 'thousands of dollars' is baked into the frame and cannot be removed; the subject's eyes are closed mid-speech; pose is a video still, not a portrait. Stage 4 build should consider Path C (drop the .hero-owner-overlay layer) per sops/asset-scrape.md \u00a72 Path A\u2192B\u2192C cascade. Operator can manually upload a cleaner Brandon portrait to override.",
+        "claim_attached": "Owner Brandon Yniguez (Managing Member, BBB Accredited 12/12/2024)",
+        "intended_use": "owner_overlay_source_LOW_CONFIDENCE_review_before_ship"
+      },
+      {
+        "asset_type": "owner_cutout",
+        "path": "assets/team/brandon-yniguez-cutout.png",
+        "is_real_evidence": true,
+        "owner_name": "Brandon Yniguez",
+        "source": "remove-bg.sh transformation of assets/team/brandon-yniguez-portrait.jpg (provider: remove.bg API)",
+        "discovery_path": "B_remove_bg_api_path",
+        "discovery_evidence": "remove.bg API processed the portrait JPG to a 375x666 RGBA PNG with transparent background; identity preserved (non-generative); the yellow caption text 'thousands of dollars' was retained in the cutout because it overlaps the subject's hands and is treated as foreground.",
+        "confidence": "low",
+        "confidence_reason": "Same identity-confidence as the source portrait (low). Cutout is technically valid (transparent BG, alpha channel present) but inherits the source-image quality issues (caption overlay, eyes-closed pose).",
+        "claim_attached": "Owner cutout for hero overlay (Path C drop recommended)",
+        "intended_use": "hero_owner_overlay_DROP_RECOMMENDED"
+      },
+      {
+        "asset_type": "gallery",
+        "path": "assets/photos/project-cross-creek-ranch-fulshear-tx.jpg",
+        "is_real_evidence": true,
+        "source": "https://bbroofingtx.com/wp-content/uploads/2025/04/480244230_651391063882466_4015428794070340578_n.jpg",
+        "discovery_path": "live_site_gallery",
+        "discovery_evidence": "homepage 'Our Latest Projects' section, captioned 'Cross Creek Ranch \u2014 Fulshear, TX'",
+        "confidence": "high",
+        "claim_attached": "Cross Creek Ranch project, Fulshear TX",
+        "intended_use": "gallery_card"
+      },
+      {
+        "asset_type": "gallery",
+        "path": "assets/photos/project-the-woodlands-north-houston.jpg",
+        "is_real_evidence": true,
+        "source": "https://bbroofingtx.com/wp-content/uploads/2025/04/478031646_649654584056114_6747464154367025294_n.jpg",
+        "discovery_path": "live_site_gallery",
+        "discovery_evidence": "homepage 'Our Latest Projects' section, captioned 'The Woodlands \u2014 North of Houston'",
+        "confidence": "high",
+        "claim_attached": "The Woodlands project, North Houston",
+        "intended_use": "gallery_card"
+      },
+      {
+        "asset_type": "gallery",
+        "path": "assets/photos/project-bridgeland-cypress-tx.jpg",
+        "is_real_evidence": true,
+        "source": "https://bbroofingtx.com/wp-content/uploads/2025/04/480207624_651386277216278_416314885254883466_n.jpg",
+        "discovery_path": "live_site_gallery",
+        "discovery_evidence": "homepage 'Our Latest Projects' section, captioned 'Bridgeland \u2014 Cypress, TX'",
+        "confidence": "high",
+        "claim_attached": "Bridgeland project, Cypress TX",
+        "intended_use": "gallery_card"
+      },
+      {
+        "asset_type": "gallery",
+        "path": "assets/photos/project-towne-lake-northwest-houston.jpg",
+        "is_real_evidence": true,
+        "source": "https://bbroofingtx.com/wp-content/uploads/2025/04/480781789_652564397098466_6481432222461362992_n.jpg",
+        "discovery_path": "live_site_gallery",
+        "discovery_evidence": "homepage 'Our Latest Projects' section, captioned 'Towne Lake \u2014 Northwest Houston, TX'",
+        "confidence": "high",
+        "claim_attached": "Towne Lake project, Northwest Houston",
+        "intended_use": "gallery_card"
+      },
+      {
+        "asset_type": "gallery",
+        "path": "assets/photos/roof-replacement-01.jpg",
+        "is_real_evidence": true,
+        "source": "https://bbroofingtx.com/wp-content/uploads/2025/04/478389726_649531177401788_5134100694243444569_n.jpg",
+        "discovery_path": "live_site_gallery",
+        "discovery_evidence": "/gallery page, top featured project image at full 2048x1152 resolution",
+        "confidence": "high",
+        "claim_attached": "B.B. Roofing & Exteriors completed roof project (location not labeled)",
+        "intended_use": "gallery_card, hero_bg_fallback_candidate"
+      },
+      {
+        "asset_type": "gallery",
+        "path": "assets/photos/roof-replacement-02.jpg",
+        "is_real_evidence": true,
+        "source": "https://bbroofingtx.com/wp-content/uploads/2025/04/478688354_649518590736380_1410940636719804359_n.jpg",
+        "discovery_path": "live_site_gallery",
+        "discovery_evidence": "/gallery page",
+        "confidence": "high",
+        "claim_attached": "B.B. Roofing & Exteriors completed roof project",
+        "intended_use": "gallery_card"
+      },
+      {
+        "asset_type": "gallery",
+        "path": "assets/photos/roof-replacement-03.jpg",
+        "is_real_evidence": true,
+        "source": "https://bbroofingtx.com/wp-content/uploads/2025/04/478150253_649535730734666_8535395389222103037_n.jpg",
+        "discovery_path": "live_site_gallery",
+        "discovery_evidence": "/gallery page",
+        "confidence": "high",
+        "claim_attached": "B.B. Roofing & Exteriors completed roof project",
+        "intended_use": "gallery_card"
+      },
+      {
+        "asset_type": "gallery",
+        "path": "assets/photos/roof-replacement-04.jpg",
+        "is_real_evidence": true,
+        "source": "https://bbroofingtx.com/wp-content/uploads/2025/04/480228314_651394743882098_7138879376676338191_n.jpg",
+        "discovery_path": "live_site_gallery",
+        "discovery_evidence": "/gallery page",
+        "confidence": "high",
+        "claim_attached": "B.B. Roofing & Exteriors completed roof project",
+        "intended_use": "gallery_card"
+      },
+      {
+        "asset_type": "gallery",
+        "path": "assets/photos/roof-replacement-05.jpg",
+        "is_real_evidence": true,
+        "source": "https://bbroofingtx.com/wp-content/uploads/2025/04/480242981_651392960548943_5822239237092165834_n.jpg",
+        "discovery_path": "live_site_gallery",
+        "discovery_evidence": "/gallery page",
+        "confidence": "high",
+        "claim_attached": "B.B. Roofing & Exteriors completed roof project",
+        "intended_use": "gallery_card"
+      },
+      {
+        "asset_type": "gallery",
+        "path": "assets/photos/new-construction-blue-siding.jpg",
+        "is_real_evidence": true,
+        "source": "https://bbroofingtx.com/wp-content/uploads/2025/04/479888641_652013143820258_7199029553017564230_n.jpg",
+        "discovery_path": "live_site_about_page",
+        "discovery_evidence": "/about page, captioned 'Front view of a brand new construction house with blue siding, a ranch style home with a yard'",
+        "confidence": "high",
+        "claim_attached": "B.B. Roofing & Exteriors siding/exteriors project (blue ranch home)",
+        "intended_use": "gallery_card, about_page_image"
+      },
+      {
+        "asset_type": "gallery",
+        "path": "assets/photos/roofing-job-04.jpg",
+        "is_real_evidence": true,
+        "source": "https://bbroofingtx.com/wp-content/uploads/2025/04/480346139_652014530486786_7883064585918526014_n.jpg",
+        "discovery_path": "live_site_gallery",
+        "discovery_evidence": "/gallery + /roofing pages",
+        "confidence": "high",
+        "claim_attached": "B.B. Roofing & Exteriors completed project",
+        "intended_use": "gallery_card"
+      },
+      {
+        "asset_type": "gallery",
+        "path": "assets/photos/roofing-job-05.jpg",
+        "is_real_evidence": true,
+        "source": "https://bbroofingtx.com/wp-content/uploads/2025/04/480035040_652017400486499_274563553977297210_n.jpg",
+        "discovery_path": "live_site_gallery",
+        "discovery_evidence": "/gallery page",
+        "confidence": "high",
+        "claim_attached": "B.B. Roofing & Exteriors completed project",
+        "intended_use": "gallery_card"
+      },
+      {
+        "asset_type": "gallery",
+        "path": "assets/photos/roofing-job-06.jpg",
+        "is_real_evidence": true,
+        "source": "https://bbroofingtx.com/wp-content/uploads/2025/04/480805959_652019470486292_2025826564200828725_n.jpg",
+        "discovery_path": "live_site_about_page",
+        "discovery_evidence": "/about page hero-row image",
+        "confidence": "high",
+        "claim_attached": "B.B. Roofing & Exteriors completed project",
+        "intended_use": "gallery_card, about_page_image"
+      },
+      {
+        "asset_type": "review_avatar",
+        "path": "assets/photos/reviews/molly-radford-avatar.jpg",
+        "is_real_evidence": true,
+        "source": "https://bbroofingtx.com/wp-content/uploads/2025/04/424550446_10228701262509395_4834723721256916348_n.jpg",
+        "discovery_path": "live_site_reviews_page",
+        "discovery_evidence": "/reviews page, customer testimonial avatar \u2014 labeled 'Molly Radford'",
+        "confidence": "high",
+        "claim_attached": "Customer testimonial Molly Radford (real customer, real quote on /reviews page)",
+        "intended_use": "testimonial_card_avatar"
+      },
+      {
+        "asset_type": "review_avatar",
+        "path": "assets/photos/reviews/justin-pomeroy-avatar.jpg",
+        "is_real_evidence": true,
+        "source": "https://bbroofingtx.com/wp-content/uploads/2025/04/453254720_10233857890650246_8334996932343317948_n.jpg",
+        "discovery_path": "live_site_reviews_page",
+        "discovery_evidence": "/reviews page, customer testimonial avatar \u2014 labeled 'Justin Pomeroy, Nutrition Expert'",
+        "confidence": "high",
+        "claim_attached": "Customer testimonial Justin Pomeroy",
+        "intended_use": "testimonial_card_avatar"
+      },
+      {
+        "asset_type": "review_avatar",
+        "path": "assets/photos/reviews/tammy-smith-avatar.jpg",
+        "is_real_evidence": true,
+        "source": "https://bbroofingtx.com/wp-content/uploads/2025/04/470848779_1310815480251933_3647638105471232214_n.jpg",
+        "discovery_path": "live_site_reviews_page",
+        "discovery_evidence": "/reviews page, customer testimonial avatar \u2014 labeled 'Tammy Smith'",
+        "confidence": "high",
+        "claim_attached": "Customer testimonial Tammy Smith (real customer, real quote on /reviews page)",
+        "intended_use": "testimonial_card_avatar"
+      },
+      {
+        "asset_type": "badge",
+        "path": "assets/photos/badges/bbb-accredited-seal.svg",
+        "is_real_evidence": true,
+        "source": "https://m.bbb.org/brand/seals/Accredited_Business_Seal_NoRating_RGB.svg",
+        "discovery_path": "bbb_profile_scrape",
+        "discovery_evidence": "BBB profile at https://www.bbb.org/us/tx/spring/profile/roofing-contractors/bb-roofing-exteriors-llc-0915-90073631 confirms BBB Accredited since 2024-12-12, A+ rating",
+        "confidence": "high",
+        "claim_attached": "BBB Accredited Business since 12/12/2024 \u2014 A+ rating, BBB of Greater Houston and South Texas",
+        "intended_use": "trust_pill_row, footer_badge"
+      },
+      {
+        "asset_type": "decoration",
+        "path": "assets/photos/decoration-who-we-are-text.png",
+        "is_real_evidence": false,
+        "source": "https://bbroofingtx.com/wp-content/uploads/2025/04/03-whoweare.png",
+        "discovery_path": "live_site_about_page_decoration",
+        "discovery_evidence": "Outline-text decoration overlaid behind the 'About / Who We Are' section heading on the live /about page (876x590 PNG with transparent BG)",
+        "confidence": "high",
+        "claim_attached": "decorative section eyebrow (theme-supplied, in active use)",
+        "intended_use": "section_decoration_about"
+      },
+      {
+        "asset_type": "decoration",
+        "path": "assets/photos/decoration-what-we-have-done-text.png",
+        "is_real_evidence": false,
+        "source": "https://bbroofingtx.com/wp-content/uploads/2025/04/01-whatwehavedone-1.png",
+        "discovery_path": "live_site_section_decoration",
+        "discovery_evidence": "Outline-text decoration overlaid behind 'What We Have Done' / Latest Projects section heading (994x890 PNG transparent)",
+        "confidence": "high",
+        "claim_attached": "decorative section eyebrow (theme-supplied, in active use)",
+        "intended_use": "section_decoration_gallery"
+      },
+      {
+        "asset_type": "decoration",
+        "path": "assets/photos/decoration-who-our-client-are-text.png",
+        "is_real_evidence": false,
+        "source": "https://bbroofingtx.com/wp-content/uploads/2025/04/01-ourclient-1.png",
+        "discovery_path": "live_site_section_decoration",
+        "discovery_evidence": "Outline-text decoration overlaid behind 'Our Clients' section heading (1237x890 PNG transparent)",
+        "confidence": "high",
+        "claim_attached": "decorative section eyebrow (theme-supplied, in active use)",
+        "intended_use": "section_decoration_clients_or_reviews"
+      },
+      {
+        "asset_type": "hero_bg_fallback",
+        "path": "assets/photos/hero-banner-stock-cgi-fallback.jpg",
+        "is_real_evidence": false,
+        "source": "https://bbroofingtx.com/wp-content/uploads/2025/04/home-video.jpg",
+        "discovery_path": "live_site_homepage_hero",
+        "discovery_evidence": "homepage hero background image (2244x1287 JPEG). EXIF metadata reveals it is a stock CGI render produced 2018-11-01 in Adobe Photoshop CS6 (predates the company's 2021 founding by 3 years). NOT a real B.B. Roofing project \u2014 used as theme placeholder by the WordPress designer.",
+        "confidence": "high",
+        "claim_attached": "stock CGI roof render \u2014 NOT a B.B. Roofing project",
+        "intended_use": "hero_bg_fallback_only_when_NB2_generation_fails (per sops/asset-scrape.md \u00a73b \u2014 NB2-generated hero is primary at Stage 4)"
+      },
+      {
+        "asset_type": "theme_placeholder",
+        "path": "assets/photos/theme-placeholder-logos/clients-logo-1.png",
+        "is_real_evidence": false,
+        "source": "https://bbroofingtx.com/wp-content/uploads/2025/04/logo1.png",
+        "discovery_path": "live_site_clients_strip",
+        "discovery_evidence": "'Our Clients' strip on the live site shows 5 small logos. logo1.png (135x20) renders as 'Firehouse.co' \u2014 a generic WordPress theme demo logo, NOT a real client/partner logo. The site designer never replaced the theme's placeholder client strip.",
+        "confidence": "high",
+        "claim_attached": "WordPress theme demo placeholder (NOT a real B.B. Roofing client/partner)",
+        "intended_use": "DO_NOT_REUSE_in_new_build"
+      },
+      {
+        "asset_type": "theme_placeholder",
+        "path": "assets/photos/theme-placeholder-logos/clients-logo-2.png",
+        "is_real_evidence": false,
+        "source": "https://bbroofingtx.com/wp-content/uploads/2025/04/logo2.png",
+        "discovery_path": "live_site_clients_strip",
+        "discovery_evidence": "logo2.png (141x30) renders as 'Elgrande' \u2014 generic WP theme demo logo",
+        "confidence": "high",
+        "claim_attached": "WP theme demo placeholder",
+        "intended_use": "DO_NOT_REUSE"
+      },
+      {
+        "asset_type": "theme_placeholder",
+        "path": "assets/photos/theme-placeholder-logos/clients-logo-4.png",
+        "is_real_evidence": false,
+        "source": "https://bbroofingtx.com/wp-content/uploads/2025/04/logo4.png",
+        "discovery_path": "live_site_clients_strip",
+        "discovery_evidence": "logo4.png (99x90) renders as 'At Aurora House' \u2014 generic WP theme demo logo",
+        "confidence": "high",
+        "claim_attached": "WP theme demo placeholder",
+        "intended_use": "DO_NOT_REUSE"
+      },
+      {
+        "asset_type": "theme_placeholder",
+        "path": "assets/photos/theme-placeholder-logos/clients-logo-5.png",
+        "is_real_evidence": false,
+        "source": "https://bbroofingtx.com/wp-content/uploads/2025/04/logo5.png",
+        "discovery_path": "live_site_clients_strip",
+        "discovery_evidence": "logo5.png (121x19) renders as 'NovaroStudio' \u2014 generic WP theme demo logo",
+        "confidence": "high",
+        "claim_attached": "WP theme demo placeholder",
+        "intended_use": "DO_NOT_REUSE"
+      },
+      {
+        "asset_type": "theme_placeholder",
+        "path": "assets/photos/theme-placeholder-logos/clients-logo-6.png",
+        "is_real_evidence": false,
+        "source": "https://bbroofingtx.com/wp-content/uploads/2025/04/logo6.png",
+        "discovery_path": "live_site_clients_strip",
+        "discovery_evidence": "logo6.png (115x36) renders as 'OSWALD' \u2014 generic WP theme demo logo",
+        "confidence": "high",
+        "claim_attached": "WP theme demo placeholder",
+        "intended_use": "DO_NOT_REUSE"
+      }
+    ]
+  },
+  "absent_assets": [
+    {
+      "asset_type": "owner_photo_clean",
+      "reason_absent": "No clean owner portrait found via Path A1 (source site has zero owner/team photos), Path A2 (Facebook business page is gated), Path A3 (Firecrawl SERP returned only one identifiable Brandon photo and it's a video frame with caption overlay + closed-eyes pose). Path A4 manual upload recommended for hero overlay use. Stage 4 Path C drop is currently the safest option."
+    },
+    {
+      "asset_type": "team_photos",
+      "reason_absent": "Source site has no /team page and no team-grid section. The brand mentions partner Jordan Hilliard via Facebook posts (SERP-discovered), but no photos are attached to the live site. Skip the team-grid section in the build."
+    },
+    {
+      "asset_type": "truck_or_vehicle_photo",
+      "reason_absent": "Source site has zero branded-truck or work-vehicle photos. Pattern 002 hero truck-cutout layer should be DROPPED (set design-profile.json#hero.truck_layer = false)."
+    },
+    {
+      "asset_type": "manufacturer_certs",
+      "reason_absent": "Source site does not display GAF / Owens Corning / CertainTeed / IKO badges. One SERP-discovered Facebook customer post mentions a 'Complete GAF Roofing System install' (suggests GAF-certified installation), but B.B. Roofing has not posted a manufacturer certification badge on its own site. Cannot claim GAF Master Elite / Owens Corning Platinum without proof \u2014 DO NOT add these badges to the build."
+    },
+    {
+      "asset_type": "license_number",
+      "reason_absent": "Texas does not require a state-level roofing contractor license; the site does not display a city license number. BBB profile lists no license. Footer should attribute to BBB Accredited + Veteran Owned only."
+    }
+  ]
+}
