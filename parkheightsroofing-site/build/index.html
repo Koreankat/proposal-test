@@ -1,0 +1,3198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baltimore's Best Roofer | Pikesville Roofing Since 1999 | Park Heights Roofing</title>
+<meta name="description" content="Pikesville-based roofing contractor serving Baltimore, Owings Mills, Reisterstown and Mt. Washington since 1999. 4.9 stars from 552 Google reviews. Voted Best of Baltimore. MHIC# 107668.">
+<link rel="canonical" href="https://parkheightsroofing.com/">
+
+<!-- Auto-favicon: green square with white P -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23339966'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Arial Black,sans-serif' font-size='16' font-weight='900' fill='%23ffffff'>P</text></svg>">
+
+<!-- Open Graph / Twitter -->
+<meta property="og:title" content="Voted Baltimore's Best Roofer · Park Heights Roofing">
+<meta property="og:description" content="Pikesville's locally trusted roofing company since 1999. 4.9 stars from 552 Google reviews. MHIC# 107668.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../assets/logo/park-heights-roofing-primary.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Work+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Font Awesome 6.4.0 (icons) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RoofingContractor",
+  "name": "Park Heights Roofing",
+  "image": "https://parkheightsroofing.com/wp-content/uploads/2025/05/Park-Heights-Roofing-Logo_update-2025.png",
+  "@id": "https://parkheightsroofing.com/",
+  "url": "https://parkheightsroofing.com/",
+  "telephone": "+1-410-358-1257",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "15 Sudbrook Lane",
+    "addressLocality": "Pikesville",
+    "addressRegion": "MD",
+    "postalCode": "21208",
+    "addressCountry": "US"
+  },
+  "geo": {"@type": "GeoCoordinates", "latitude": "39.382", "longitude": "-76.728"},
+  "openingHours": "Mo-Fr 09:00-17:00",
+  "priceRange": "$$",
+  "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "552", "bestRating": "5"},
+  "areaServed": [
+    {"@type": "City", "name": "Pikesville"},
+    {"@type": "City", "name": "Baltimore"},
+    {"@type": "City", "name": "Owings Mills"},
+    {"@type": "City", "name": "Reisterstown"},
+    {"@type": "City", "name": "Lutherville"},
+    {"@type": "City", "name": "Mt. Washington"},
+    {"@type": "City", "name": "Greenspring"},
+    {"@type": "City", "name": "Tuscany-Canterbury"},
+    {"@type": "City", "name": "Stevenson"}
+  ],
+  "founder": {"@type": "Person", "name": "Israel Elgamil"},
+  "foundingDate": "1999"
+}
+</script>
+
+<style>
+/* ============================================================
+   ROOT TOKENS — Park Heights Roofing
+   Colors from brand-color-audit.md. Shape polygons from
+   creative-direction.md §5 motif vocabulary.
+   ============================================================ */
+:root {
+  /* COLORS — green-led, with blue counter-color, leaf-mark variant */
+  --brand-primary: #339966;
+  --brand-deep:    #2A7A52;
+  --brand-accent:  #1372D3;
+  --accent-deep:   #0E5BA8;
+  --brand-light:   #00A040;
+  --ink:           #000000;
+  --ink-soft:      #0C1115;
+  --text:          #3B3B3B;
+  --text-soft:     #6A6B6C;
+  --surface:       #FFFFFF;
+  --surface-tint:  #F8F8F8;
+  --surface-deep:  #191F28;
+  --star-gold:     #FFC107;
+  --border-soft:   #E5E5E5;
+
+  /* DECORATION SHAPES — angled-stripe + chevron family */
+  --deco-shape-1: polygon(0 0, 100% 0, 75% 100%, 0 100%);                /* left-leaning diagonal slab */
+  --deco-shape-2: polygon(25% 0, 100% 0, 100% 100%, 0 100%);             /* right-leaning diagonal slab */
+  --deco-shape-3: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);       /* chevron-down (transition seams) */
+  --deco-shape-4: polygon(0 0, 100% 0, 100% 100%, 30% 100%, 0 70%);      /* corner-cut (signature) */
+
+  /* SHADOWS — sharp-edge 3D-offset default per sharp-edge-default-rule.md */
+  --shadow-3d-green:   6px 6px 0 0 var(--brand-primary), 0 14px 28px -8px rgba(12,17,21,0.18);
+  --shadow-3d-deep:    6px 6px 0 0 var(--brand-deep), 0 14px 28px -8px rgba(12,17,21,0.22);
+  --shadow-3d-blue:    6px 6px 0 0 var(--brand-accent), 0 14px 28px -8px rgba(12,17,21,0.18);
+  --shadow-3d-dark:    6px 6px 0 0 var(--ink-soft), 0 14px 28px -8px rgba(12,17,21,0.22);
+  --shadow-3d-white:   6px 6px 0 0 #ffffff, 0 14px 28px -8px rgba(0,0,0,0.35);
+  --shadow-soft:       0 6px 18px rgba(12,17,21,0.10);
+}
+
+/* ============================================================
+   RESET + BASE TYPOGRAPHY
+   ============================================================ */
+*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: Roboto, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--surface);
+  overflow-x: hidden;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Work Sans", system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--ink);
+}
+h1 { font-weight: 800; }
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+button, input, textarea, select { font-family: inherit; font-size: inherit; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+section { position: relative; }
+
+/* ============================================================
+   ANNOUNCEMENT BAR — utility strip on dark ground
+   ============================================================ */
+.announcement-bar {
+  background: var(--ink-soft);
+  color: #C9CDD2;
+  font-size: 13px;
+  font-weight: 400;
+  height: 36px;
+  display: flex;
+  align-items: center;
+}
+.announcement-bar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+}
+.ann-left { display: none; }
+.ann-center {
+  display: flex; align-items: center; gap: 14px;
+  font-weight: 500;
+}
+.ann-center a { color: #C9CDD2; transition: color 0.2s; }
+.ann-center a:hover { color: var(--brand-primary); }
+.ann-divider { color: #4a5057; }
+.ann-right { display: flex; align-items: center; gap: 12px; }
+.ann-right a {
+  width: 24px; height: 24px;
+  display: inline-flex; align-items: center; justify-content: center;
+  color: #C9CDD2;
+  transition: color 0.2s;
+}
+.ann-right a:hover { color: var(--brand-primary); }
+@media (min-width: 768px) {
+  .ann-left { display: flex; align-items: center; gap: 8px; }
+}
+
+/* ============================================================
+   NAV — sticky white nav
+   ============================================================ */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-soft);
+  height: 68px;
+}
+.site-nav .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.nav-logo img {
+  max-height: 48px;
+  width: auto;
+}
+.nav-menu {
+  display: none;
+  list-style: none;
+  align-items: center;
+  gap: 28px;
+}
+.nav-menu a {
+  font-family: "Work Sans", system-ui, -apple-system, sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  transition: color 0.2s;
+}
+.nav-menu a:hover { color: var(--brand-primary); }
+.nav-cta {
+  display: none;
+  align-items: center;
+  gap: 10px;
+  background: var(--ink);
+  color: #fff;
+  padding: 10px 18px;
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: none;
+  box-shadow: 4px 4px 0 0 var(--brand-primary);
+  transition: transform 0.18s, box-shadow 0.18s;
+  cursor: pointer;
+}
+.nav-cta:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 0 var(--brand-primary); }
+.nav-cta .pulse-dot {
+  width: 8px; height: 8px;
+  background: var(--brand-primary);
+  border-radius: 50%;
+  position: relative;
+  animation: pulse-dot 1.8s infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(51,153,102,0.7); }
+  50%      { box-shadow: 0 0 0 8px rgba(51,153,102,0); }
+}
+.nav-hamburger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px; height: 44px;
+  background: transparent;
+  border: 1.5px solid var(--ink);
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 18px;
+}
+.nav-mobile-cta {
+  background: var(--brand-primary);
+  color: #fff;
+  padding: 10px 16px;
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border: none;
+  box-shadow: 3px 3px 0 0 var(--ink-soft);
+  cursor: pointer;
+}
+@media (min-width: 1024px) {
+  .nav-menu { display: flex; }
+  .nav-cta  { display: inline-flex; }
+  .nav-hamburger { display: none; }
+  .nav-mobile-cta { display: none; }
+}
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 104px; left: 0; right: 0; bottom: 0;
+  background: #fff;
+  z-index: 90;
+  padding: 32px 24px;
+  flex-direction: column;
+  gap: 18px;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  font-family: "Work Sans", system-ui, -apple-system, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink);
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+/* ============================================================
+   HERO — Pattern 001 Mode B form-right
+   ============================================================ */
+#hero.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 720px;
+  padding: 64px 0 96px;
+  color: #fff;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("../assets/generated/hero-truck-crew-branded.png"),
+                    url("../assets/generated/hero-truck-crew.png"),
+                    url("../assets/generated/hero-pikesville.png"),
+                    url("../assets/gallery/roof-repair.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg,
+      rgba(12,17,21,0.78) 0%,
+      rgba(12,17,21,0.62) 35%,
+      rgba(12,17,21,0.38) 65%,
+      rgba(51,153,102,0.20) 100%);
+  z-index: 1;
+}
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+}
+@media (min-width: 1024px) {
+  .hero-inner {
+    grid-template-columns: 1.4fr 1fr;
+    gap: 56px;
+    align-items: center;
+  }
+}
+.hero-copy { max-width: 640px; }
+.hero-license-line {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: #B4D8C5;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.hero-license-line i { color: var(--brand-primary); }
+.hero-eyebrow {
+  display: inline-block;
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--brand-primary);
+  padding: 6px 14px;
+  background: rgba(51,153,102,0.18);
+  border-left: 3px solid var(--brand-primary);
+  margin-bottom: 18px;
+}
+#hero h1 {
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: clamp(38px, 6.2vw, 72px);
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 18px;
+}
+.hero-sub {
+  font-family: Roboto, sans-serif;
+  font-size: clamp(16px, 1.6vw, 19px);
+  line-height: 1.55;
+  color: #E5E9EC;
+  margin-bottom: 22px;
+  max-width: 540px;
+}
+.hero-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+.hero-bullets li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #ECEEF0;
+}
+.hero-bullets i {
+  color: var(--brand-primary);
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.hero-trust-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+.trust-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.92);
+  color: var(--ink);
+  padding: 8px 12px;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 12.5px;
+  border-left: 3px solid var(--brand-primary);
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+a.trust-pill:hover { background: #fff; transform: translateY(-1px); }
+.trust-pill img { height: 18px; width: auto; }
+.trust-pill svg { width: 18px; height: 18px; }
+.trust-pill .stars { color: var(--star-gold); font-size: 13px; }
+.trust-pill .pill-count { color: var(--text-soft); font-weight: 400; }
+.trust-pill .fb-mark {
+  width: 18px; height: 18px;
+  background: #1877F2;
+  color: #fff;
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.hero-cta-row {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+@media (min-width: 540px) {
+  .hero-cta-row { flex-direction: row; align-items: center; flex-wrap: wrap; }
+}
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: transparent;
+  color: #fff;
+  padding: 12px 0;
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+}
+.btn-secondary .pulse-dot {
+  width: 10px; height: 10px;
+  background: var(--brand-primary);
+  border-radius: 50%;
+  animation: pulse-dot 1.8s infinite;
+}
+.btn-secondary .pulse-dot::after {
+  content: "";
+  position: absolute;
+}
+.btn-secondary strong {
+  font-size: 22px;
+  letter-spacing: -0.01em;
+}
+.btn-secondary .small {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #B4D8C5;
+}
+.btn-link-past-work {
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #6FB3FF;
+  border-bottom: 2px solid var(--brand-accent);
+  padding-bottom: 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn-link-past-work:hover { color: #fff; border-bottom-color: #fff; }
+
+/* Hero form card */
+.hero-form-card {
+  position: relative;
+  background: #fff;
+  color: var(--ink);
+  padding: 28px 24px 26px;
+  border-radius: 0;
+  border-top: 4px solid var(--brand-primary);
+  box-shadow: var(--shadow-3d-deep);
+}
+.hero-form-card::before {
+  content: "";
+  position: absolute;
+  top: -1px; right: -1px;
+  width: 88px;
+  height: 64px;
+  background: var(--brand-light);
+  clip-path: var(--deco-shape-4);
+  z-index: 0;
+}
+.hero-form-card::after {
+  content: "";
+  position: absolute;
+  top: 12px; right: 12px;
+  width: 44px;
+  height: 44px;
+  background: url("../assets/logo/green-leaf-mark.png") no-repeat center / contain;
+  z-index: 1;
+}
+.hero-form-card > * { position: relative; z-index: 2; }
+.form-heading {
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--ink);
+  margin-bottom: 6px;
+  padding-right: 60px;
+}
+.form-sub {
+  font-family: Roboto, sans-serif;
+  font-size: 13px;
+  color: var(--text-soft);
+  margin-bottom: 18px;
+}
+.form-group { margin-bottom: 12px; }
+.form-group label {
+  display: block;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="email"] {
+  width: 100%;
+  padding: 11px 12px;
+  border: 2px solid var(--border-soft);
+  border-radius: 0;
+  font-size: 14px;
+  color: var(--ink);
+  background: #fff;
+  transition: border-color 0.18s, box-shadow 0.18s;
+}
+.form-group input:focus {
+  outline: none;
+  border-color: var(--brand-primary);
+  box-shadow: 0 0 0 3px rgba(51,153,102,0.15);
+}
+.radio-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 10px;
+  border: 2px solid var(--border-soft);
+  cursor: pointer;
+  font-size: 13px;
+  transition: border-color 0.18s, background 0.18s;
+}
+.radio-option input { accent-color: var(--brand-primary); }
+.radio-option:has(input:checked) {
+  border-color: var(--brand-primary);
+  background: rgba(51,153,102,0.07);
+}
+.btn-cta {
+  width: 100%;
+  background: var(--brand-primary);
+  color: #fff;
+  padding: 18px 20px;
+  min-height: 56px;
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0;
+  box-shadow: 4px 4px 0 0 var(--brand-deep);
+  cursor: pointer;
+  margin-top: 6px;
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+.btn-cta:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 0 var(--brand-deep);
+}
+.btn-cta:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 0 var(--brand-deep);
+}
+.form-trustline {
+  font-family: Roboto, sans-serif;
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-soft);
+  margin-top: 10px;
+}
+.hero-form-owner-card {
+  margin-top: 22px;
+  padding: 18px 16px 16px;
+  background: linear-gradient(180deg, rgba(51,153,102,0.06) 0%, rgba(51,153,102,0.02) 100%);
+  border-left: 4px solid var(--brand-primary);
+  box-shadow: 4px 4px 0 0 var(--ink);
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.owner-mini-chip {
+  width: 72px; height: 72px;
+  background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-deep) 100%);
+  color: #fff;
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+  box-shadow: 4px 4px 0 0 var(--ink);
+  flex-shrink: 0;
+  position: relative;
+}
+.owner-mini-chip::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border: 1.5px solid rgba(255,255,255,0.25);
+  pointer-events: none;
+}
+.owner-mini-body { line-height: 1.4; flex: 1; min-width: 0; }
+.owner-mini-name {
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+}
+.owner-mini-role {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  color: var(--text-soft);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 6px;
+}
+.owner-mini-credentials {
+  font-family: Roboto, sans-serif;
+  font-size: 11.5px;
+  color: var(--brand-deep);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.owner-mini-credentials i {
+  color: var(--brand-primary);
+  font-size: 11px;
+}
+.owner-mini-credentials .credential-sep {
+  width: 3px;
+  height: 3px;
+  background: var(--brand-primary);
+  border-radius: 50%;
+  display: inline-block;
+}
+.owner-mini-quote {
+  font-family: Roboto, sans-serif;
+  font-style: italic;
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.45;
+  border-top: 1px solid var(--border-soft);
+  padding-top: 8px;
+  margin-top: 2px;
+}
+.form-success {
+  display: none;
+  text-align: center;
+  padding: 28px 12px;
+  background: rgba(51,153,102,0.08);
+  border-left: 4px solid var(--brand-primary);
+  margin-top: 8px;
+}
+.form-success.show { display: block; }
+.form-success h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: var(--brand-deep);
+}
+.form-success p {
+  font-family: Roboto, sans-serif;
+  font-size: 13px;
+  color: var(--text);
+}
+
+/* Hero photo bleed seam */
+.hero-bleed {
+  position: absolute;
+  left: 0; right: 0; bottom: -1px;
+  height: 64px;
+  background: var(--surface-tint);
+  clip-path: var(--deco-shape-3);
+  z-index: 3;
+}
+
+/* ============================================================
+   TRUST MARQUEE — 5 badges grayscale → color
+   ============================================================ */
+.trust-marquee {
+  background: var(--surface-tint);
+  padding: 26px 0;
+  border-bottom: 1px solid var(--border-soft);
+  overflow: hidden;
+}
+.marquee-eyebrow {
+  text-align: center;
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  margin-bottom: 18px;
+}
+.marquee-track {
+  display: flex;
+  align-items: center;
+  animation: marquee-scroll 60s linear infinite;
+  width: max-content;
+}
+.trust-marquee:hover .marquee-track { animation-play-state: paused; }
+.marquee-track img {
+  height: 84px;
+  width: auto;
+  margin-right: 56px;
+  filter: none;
+  opacity: 1;
+  flex-shrink: 0;
+  transition: transform 0.4s;
+}
+.marquee-track img:hover {
+  transform: scale(1.04);
+}
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ============================================================
+   REVIEWS — dark bg 3-up carousel, hero-grade
+   ============================================================ */
+#reviews.reviews-section {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 88px 0 96px;
+  position: relative;
+  overflow: hidden;
+}
+.deco-stripe-right {
+  position: absolute;
+  top: 0; right: 0; bottom: 0;
+  width: 150px;
+  background: var(--brand-primary);
+  clip-path: var(--deco-shape-2);
+  opacity: 0.45;
+  z-index: 0;
+  pointer-events: none;
+}
+.deco-stripe-left {
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  width: 150px;
+  background: var(--brand-primary);
+  clip-path: var(--deco-shape-1);
+  opacity: 0.45;
+  z-index: 0;
+  pointer-events: none;
+}
+.deco-stripe-left.blue { background: var(--brand-accent); }
+.deco-stripe-right.blue { background: var(--brand-accent); }
+
+@media (max-width: 768px) {
+  .deco-stripe-left, .deco-stripe-right { width: 50px; opacity: 0.35; }
+}
+
+.reviews-section .container { position: relative; z-index: 2; }
+.reviews-header {
+  text-align: center;
+  margin-bottom: 44px;
+}
+.section-eyebrow {
+  display: inline-block;
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--brand-primary);
+  margin-bottom: 14px;
+  padding: 4px 12px;
+  border-left: 3px solid var(--brand-primary);
+}
+#reviews .section-eyebrow {
+  color: #6FE5A5;
+  background: rgba(51,153,102,0.15);
+}
+#reviews h2 {
+  color: #fff;
+  font-size: clamp(28px, 3.6vw, 42px);
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+.reviews-summary {
+  font-family: Roboto, sans-serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.05);
+  border-left: 3px solid var(--star-gold);
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #E5E9EC;
+  margin-top: 6px;
+}
+.reviews-summary .stars { color: var(--star-gold); }
+
+.reviews-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-bottom: 36px;
+}
+@media (min-width: 768px) {
+  .reviews-cards { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .reviews-cards { grid-template-columns: repeat(3, 1fr); }
+}
+.review-card {
+  background: #fff;
+  color: var(--ink);
+  padding: 24px 22px;
+  border-radius: 0;
+  border-top: 4px solid var(--brand-primary);
+  box-shadow: 6px 6px 0 0 rgba(51,153,102,0.85), 0 14px 28px -8px rgba(0,0,0,0.4);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.review-card.is-lead {
+  border-top-color: var(--brand-light);
+}
+.review-card.is-lead::before {
+  content: "FEATURED";
+  position: absolute;
+  top: -12px; left: 16px;
+  background: var(--brand-light);
+  color: #fff;
+  padding: 4px 10px;
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  box-shadow: 2px 2px 0 0 var(--ink-soft);
+}
+.review-stars {
+  font-family: Roboto, sans-serif;
+  color: var(--star-gold);
+  font-size: 16px;
+  letter-spacing: 0.06em;
+}
+.review-quote {
+  font-family: Roboto, sans-serif;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  flex: 1;
+}
+.review-quote .owner-name-highlight {
+  background-image: linear-gradient(transparent 70%, rgba(51,153,102,0.35) 70%);
+  font-weight: 700;
+  color: var(--brand-deep);
+  text-decoration: underline;
+  text-decoration-color: var(--brand-primary);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+.review-attribution {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-soft);
+}
+.review-chip {
+  width: 44px; height: 44px;
+  background: var(--brand-primary);
+  color: #fff;
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 0;
+  box-shadow: 2px 2px 0 0 var(--ink-soft);
+}
+.review-meta {
+  flex: 1;
+  line-height: 1.3;
+}
+.review-name {
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--ink);
+}
+.review-loc {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  color: var(--text-soft);
+}
+.review-platform {
+  flex-shrink: 0;
+}
+.review-platform svg { width: 22px; height: 22px; }
+
+.reviews-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+.review-page-btn {
+  width: 12px; height: 12px;
+  background: rgba(255,255,255,0.3);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.review-page-btn.active {
+  background: var(--brand-primary);
+  width: 36px;
+}
+.reviews-cta-row {
+  text-align: center;
+  margin-top: 36px;
+}
+.btn-ghost-light {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--brand-primary);
+  color: #fff;
+  padding: 14px 28px;
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0;
+  box-shadow: 4px 4px 0 0 #fff;
+  cursor: pointer;
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+.btn-ghost-light:hover { transform: translate(-2px,-2px); box-shadow: 6px 6px 0 0 #fff; }
+
+/* ============================================================
+   WHY US — 4-col on light grey
+   ============================================================ */
+#why-us.why-us-section {
+  background: var(--surface-tint);
+  padding: 88px 0;
+  position: relative;
+  overflow: hidden;
+}
+.section-head {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 48px;
+}
+.section-head h2 {
+  font-size: clamp(28px, 3.6vw, 42px);
+  font-weight: 700;
+  margin-bottom: 14px;
+  letter-spacing: -0.01em;
+}
+.section-head p {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  color: var(--text-soft);
+  line-height: 1.55;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  position: relative;
+  z-index: 2;
+}
+@media (min-width: 640px) { .why-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .why-grid { grid-template-columns: repeat(4, 1fr); } }
+
+.why-card {
+  background: #fff;
+  padding: 28px 22px;
+  border-radius: 0;
+  border-top: 4px solid var(--brand-primary);
+  box-shadow: var(--shadow-3d-green);
+  transition: transform 0.22s, box-shadow 0.22s;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.why-card:hover { transform: translate(-3px,-3px); box-shadow: 9px 9px 0 0 var(--brand-primary), 0 18px 32px -8px rgba(12,17,21,0.22); }
+.why-icon-tile {
+  width: 56px; height: 56px;
+  background: var(--brand-primary);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  border-radius: 0;
+  box-shadow: 3px 3px 0 0 var(--ink-soft);
+}
+.why-card h3 {
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+}
+.why-card p {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.55;
+}
+
+/* ============================================================
+   PAST WORK — 3x2 grid with tag breakouts
+   ============================================================ */
+#past-work.past-work-section {
+  background: #fff;
+  padding: 88px 0;
+  position: relative;
+  overflow: hidden;
+}
+.past-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+  position: relative;
+  z-index: 2;
+}
+@media (min-width: 640px) { .past-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .past-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.past-card {
+  position: relative;
+  background: #fff;
+  border-radius: 0;
+  box-shadow: var(--shadow-3d-dark);
+  overflow: visible;
+  transition: transform 0.22s, box-shadow 0.22s;
+}
+.past-card:hover { transform: translate(-3px,-3px); box-shadow: 9px 9px 0 0 var(--ink-soft), 0 18px 32px -8px rgba(12,17,21,0.28); }
+.past-photo {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 4px solid var(--ink-soft);
+  border-bottom: none;
+}
+.past-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+.past-card:hover .past-photo img { transform: scale(1.06); }
+.past-tag-breakout {
+  position: absolute;
+  top: 14px; left: -8px;
+  background: #fff;
+  padding: 8px 14px;
+  box-shadow: 3px 3px 0 0 var(--brand-primary);
+  z-index: 3;
+  transform: rotate(-1deg);
+  border-radius: 0;
+}
+.past-tag-job {
+  display: block;
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink);
+}
+.past-tag-city {
+  display: block;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--brand-deep);
+}
+.past-corner-bracket {
+  position: absolute;
+  bottom: 6px; right: 6px;
+  width: 24px; height: 24px;
+  border-right: 1.5px solid var(--brand-primary);
+  border-bottom: 1.5px solid var(--brand-primary);
+  z-index: 3;
+}
+.past-caption {
+  padding: 14px 16px;
+  border-top: 4px solid var(--brand-primary);
+  background: #fff;
+}
+.past-caption h3 {
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.past-caption .meta {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  color: var(--text-soft);
+}
+.past-cta-row {
+  text-align: center;
+  margin-top: 40px;
+}
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  color: var(--brand-deep);
+  padding: 14px 28px;
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 2px solid var(--brand-primary);
+  border-radius: 0;
+  box-shadow: 4px 4px 0 0 var(--brand-primary);
+  cursor: pointer;
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+.btn-outline:hover { transform: translate(-2px,-2px); box-shadow: 6px 6px 0 0 var(--brand-primary); background: var(--brand-primary); color: #fff; }
+
+/* ============================================================
+   PROCESS — 4 numbered steps on platform tiles
+   ============================================================ */
+.process-section {
+  background: var(--surface-tint);
+  padding: 88px 0 96px;
+  position: relative;
+  overflow: hidden;
+}
+.process-steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  position: relative;
+  z-index: 2;
+}
+@media (min-width: 640px) { .process-steps { grid-template-columns: repeat(2, 1fr); gap: 24px; } }
+@media (min-width: 1024px) {
+  .process-steps { grid-template-columns: repeat(4, 1fr); gap: 22px; }
+}
+.process-step {
+  position: relative;
+  background: #fff;
+  padding: 28px 20px 22px;
+  border-radius: 0;
+  border-top: 4px solid var(--brand-primary);
+  box-shadow: var(--shadow-3d-green);
+  text-align: center;
+}
+.process-num {
+  width: 56px; height: 56px;
+  margin: -52px auto 14px;
+  background: var(--brand-primary);
+  color: #fff;
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+  box-shadow: 3px 3px 0 0 var(--ink-soft);
+}
+.process-step h3 {
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.process-step p {
+  font-family: Roboto, sans-serif;
+  font-size: 13.5px;
+  color: var(--text);
+  line-height: 1.5;
+}
+.process-cta-row {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* ============================================================
+   SERVICES — 4x2 grid + commercial dark strip
+   ============================================================ */
+.services-section {
+  background: #fff;
+  padding: 88px 0;
+  position: relative;
+  overflow: hidden;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+  position: relative;
+  z-index: 2;
+}
+@media (min-width: 640px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .services-grid { grid-template-columns: repeat(4, 1fr); } }
+.service-card {
+  background: #fff;
+  padding: 26px 22px;
+  border-radius: 0;
+  border-top: 4px solid var(--brand-primary);
+  box-shadow: var(--shadow-3d-green);
+  transition: transform 0.22s, box-shadow 0.22s;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.service-card:hover { transform: translate(-3px,-3px); box-shadow: 9px 9px 0 0 var(--brand-primary), 0 18px 32px -8px rgba(12,17,21,0.22); }
+.service-icon-tile {
+  width: 52px; height: 52px;
+  background: var(--brand-primary);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  border-radius: 0;
+  box-shadow: 3px 3px 0 0 var(--ink-soft);
+}
+.service-card h3 {
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--ink);
+  line-height: 1.25;
+}
+.service-card p {
+  font-family: Roboto, sans-serif;
+  font-size: 13.5px;
+  color: var(--text);
+  line-height: 1.5;
+  flex: 1;
+}
+.service-card a.service-link {
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand-deep);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+}
+.service-card a.service-link:hover { color: var(--brand-primary); }
+
+.commercial-strip {
+  background: var(--surface-deep);
+  color: #fff;
+  padding: 36px 32px;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: flex-start;
+  border-radius: 0;
+  border-top: 4px solid var(--brand-accent);
+  box-shadow: var(--shadow-3d-blue);
+  position: relative;
+  z-index: 2;
+}
+@media (min-width: 768px) {
+  .commercial-strip { flex-direction: row; align-items: center; justify-content: space-between; gap: 28px; }
+}
+.commercial-strip h3 {
+  color: #fff;
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+}
+.commercial-strip p {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  color: #C9CDD2;
+  line-height: 1.55;
+  max-width: 540px;
+}
+.commercial-cta-wrap { flex-shrink: 0; }
+.btn-on-dark {
+  background: var(--brand-accent);
+  color: #fff;
+  padding: 14px 24px;
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0;
+  box-shadow: 4px 4px 0 0 #fff;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: transform 0.18s;
+}
+.btn-on-dark:hover { transform: translate(-2px,-2px); box-shadow: 6px 6px 0 0 #fff; }
+
+/* ============================================================
+   OWNER STORY — HER-007 Path C
+   ============================================================ */
+#about.about-section {
+  background: var(--surface-tint);
+  padding: 88px 0 96px;
+  position: relative;
+  overflow: hidden;
+}
+.owner-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+  align-items: start;
+  position: relative;
+  z-index: 2;
+}
+@media (min-width: 1024px) {
+  .owner-layout { grid-template-columns: 0.85fr 1.15fr; gap: 56px; align-items: center; }
+}
+
+.owner-monogram-block {
+  background: #fff;
+  padding: 36px 28px;
+  border-radius: 0;
+  border-top: 4px solid var(--brand-primary);
+  box-shadow: var(--shadow-3d-green);
+  text-align: center;
+  position: relative;
+}
+.owner-big-chip {
+  width: 96px; height: 96px;
+  background: var(--brand-primary);
+  color: #fff;
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 38px;
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 22px;
+  border-radius: 0;
+  box-shadow: 4px 4px 0 0 var(--ink-soft);
+}
+.owner-fact-rows {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.owner-fact-rows li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  padding: 8px 12px;
+  background: var(--surface-tint);
+  border-left: 3px solid var(--brand-primary);
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  color: var(--ink);
+  text-align: left;
+}
+.owner-fact-rows i { color: var(--brand-primary); font-size: 13px; }
+.owner-credentials-line {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-soft);
+  padding-top: 16px;
+  border-top: 1px solid var(--border-soft);
+}
+
+.owner-content h2 {
+  font-size: clamp(28px, 3.6vw, 44px);
+  margin-bottom: 8px;
+}
+.owner-content > .section-eyebrow { margin-bottom: 12px; }
+.owner-sub {
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--brand-deep);
+  margin-bottom: 18px;
+}
+.owner-content p {
+  font-family: Roboto, sans-serif;
+  font-size: 15px;
+  color: var(--text);
+  line-height: 1.65;
+  margin-bottom: 14px;
+}
+.owner-quote {
+  margin-top: 22px;
+  padding: 18px 22px;
+  background: #fff;
+  border-left: 4px solid var(--brand-primary);
+  box-shadow: var(--shadow-soft);
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1.4;
+  position: relative;
+}
+.owner-quote::before {
+  content: "\201C";
+  font-family: Georgia, serif;
+  font-size: 56px;
+  color: var(--brand-primary);
+  position: absolute;
+  top: -6px; left: 8px;
+  line-height: 1;
+  opacity: 0.35;
+}
+.owner-quote-attrib {
+  display: block;
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--text-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.owner-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 48px;
+  position: relative;
+  z-index: 2;
+}
+.owner-stat-box {
+  background: var(--surface-deep);
+  color: #fff;
+  padding: 28px 18px;
+  text-align: center;
+  border-radius: 0;
+  border-top: 4px solid var(--brand-primary);
+  box-shadow: var(--shadow-3d-green);
+}
+.owner-stat-num {
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: clamp(34px, 4.8vw, 56px);
+  line-height: 1;
+  color: var(--brand-primary);
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+}
+.owner-stat-label {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12.5px;
+  color: #C9CDD2;
+  line-height: 1.35;
+}
+.popup-card {
+  font-family: Roboto, sans-serif;
+}
+.owner-cta-row {
+  margin-top: 36px;
+  text-align: center;
+}
+.owner-leaf-stamp {
+  position: absolute;
+  bottom: 18px;
+  right: 18px;
+  width: 110px;
+  height: 110px;
+  background: #fff;
+  border: 3px solid var(--brand-primary);
+  border-radius: 50%;
+  box-shadow: var(--shadow-soft);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+.owner-leaf-stamp img {
+  width: 70%; height: 70%;
+  object-fit: contain;
+}
+@media (max-width: 768px) {
+  .owner-leaf-stamp { display: none; }
+}
+
+/* ============================================================
+   FINANCING — dark band
+   ============================================================ */
+#financing.financing-section {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 72px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+#financing .section-eyebrow {
+  color: #6FE5A5;
+  background: rgba(51,153,102,0.15);
+}
+#financing h2 {
+  color: #fff;
+  font-size: clamp(28px, 3.6vw, 44px);
+  margin-bottom: 14px;
+}
+#financing p {
+  color: #C9CDD2;
+  font-size: 16px;
+  max-width: 620px;
+  margin: 0 auto 22px;
+  line-height: 1.55;
+}
+.financing-disclaimer {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  color: var(--text-soft);
+  margin-top: 16px;
+}
+.financing-section .container { position: relative; z-index: 2; }
+#financing p { font-family: Roboto, sans-serif; }
+#reviews .reviews-cta-row { font-family: Roboto, sans-serif; }
+.popup-overlay { font-family: Roboto, sans-serif; }
+.announcement-bar { font-family: Roboto, sans-serif; }
+.sticky-mobile-cta { font-family: Roboto, sans-serif; }
+.scroll-top-btn { font-family: Roboto, sans-serif; }
+.hero-license-line { font-family: Roboto, sans-serif; }
+.hero-cta-row { font-family: Roboto, sans-serif; }
+.review-attribution { font-family: Roboto, sans-serif; }
+.review-meta { font-family: Roboto, sans-serif; }
+.tag-cloud-priority { font-family: Roboto, sans-serif; }
+.tag-cloud-umbrella { font-family: Roboto, sans-serif; }
+.owner-credentials-line { font-family: Roboto, sans-serif; }
+.owner-fact-rows li { font-family: Roboto, sans-serif; }
+.financing-section p { font-family: Roboto, sans-serif; }
+
+/* ============================================================
+   FINAL CTA — green ground + counter-color white button
+   ============================================================ */
+.final-cta-section {
+  background: var(--brand-primary);
+  color: #fff;
+  padding: 80px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.deco-stripe-right.leaf-tint {
+  background: var(--brand-light);
+  opacity: 0.55;
+}
+.final-cta-section h2 {
+  color: #fff;
+  font-size: clamp(28px, 3.6vw, 44px);
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+.final-cta-section p {
+  font-size: 17px;
+  margin-bottom: 22px;
+  color: #E6F4EC;
+}
+.final-cta-section .container { position: relative; z-index: 2; }
+.btn-inverse {
+  background: #fff;
+  color: var(--brand-deep);
+  padding: 18px 32px;
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0;
+  box-shadow: 5px 5px 0 0 var(--brand-deep);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.18s;
+}
+.btn-inverse:hover { transform: translate(-2px,-2px); box-shadow: 7px 7px 0 0 var(--brand-deep); }
+.final-cta-bleed {
+  position: absolute;
+  left: 0; right: 0; bottom: -1px;
+  height: 64px;
+  background: var(--ink-soft);
+  clip-path: var(--deco-shape-3);
+  z-index: 3;
+  transform: scaleY(-1);
+}
+
+/* ============================================================
+   SERVICE AREA — 2-col map + tag cloud
+   ============================================================ */
+#service-area.service-area-section {
+  background: var(--surface-tint);
+  padding: 88px 0;
+  position: relative;
+  overflow: hidden;
+}
+.service-area-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  position: relative;
+  z-index: 2;
+}
+@media (min-width: 1024px) {
+  .service-area-grid { grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+}
+.service-area-map {
+  background: #fff;
+  padding: 8px;
+  border-radius: 0;
+  box-shadow: var(--shadow-3d-deep);
+  border-top: 4px solid var(--brand-primary);
+}
+.service-area-map iframe {
+  display: block;
+  width: 100%;
+  height: 380px;
+  border: none;
+}
+.service-area-list {
+  position: relative;
+}
+.service-area-list h3 {
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--ink);
+  margin-bottom: 12px;
+  letter-spacing: -0.005em;
+}
+.tag-cloud-priority {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.tag-priority {
+  background: #fff;
+  color: var(--brand-deep);
+  padding: 9px 14px;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-left: 3px solid var(--brand-primary);
+  box-shadow: 3px 3px 0 0 var(--brand-primary);
+  transition: transform 0.18s;
+}
+.tag-priority:hover { transform: translate(-1px,-1px); box-shadow: 4px 4px 0 0 var(--brand-primary); }
+.tag-cloud-umbrella {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.tag-umbrella {
+  background: transparent;
+  color: var(--text-soft);
+  padding: 6px 12px;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  border: 1.5px solid var(--border-soft);
+}
+.commercial-line {
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--ink-soft);
+  letter-spacing: 0.04em;
+  padding: 12px 14px;
+  background: var(--surface-deep);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 3px 3px 0 0 var(--brand-primary);
+  margin-bottom: 18px;
+}
+.service-area-skyline {
+  margin-top: 18px;
+  height: 90px;
+  background: url("../assets/photos/baltimore-skyline.jpg") no-repeat center / cover;
+  border-radius: 0;
+  box-shadow: 4px 4px 0 0 var(--brand-primary);
+  border-top: 3px solid var(--brand-primary);
+  position: relative;
+  overflow: hidden;
+}
+.service-area-skyline::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(12,17,21,0.15) 0%, rgba(12,17,21,0.55) 100%);
+}
+.service-area-leaf-stamp {
+  position: absolute;
+  top: -28px; right: 0;
+  width: 88px; height: 88px;
+  background: #fff;
+  border: 3px solid var(--brand-primary);
+  border-radius: 50%;
+  box-shadow: var(--shadow-soft);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+.service-area-leaf-stamp img { width: 70%; height: 70%; object-fit: contain; }
+.service-area-cta-row {
+  margin-top: 24px;
+}
+
+/* ============================================================
+   FOOTER — Pattern F1 4-col dark
+   ============================================================ */
+.site-footer {
+  background: #111111;
+  color: #C9CDD2;
+  padding: 72px 0 0;
+  font-size: 14px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+}
+@media (min-width: 640px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1024px) { .footer-grid { grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 48px; } }
+.footer-col h4 {
+  color: #fff;
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--brand-primary);
+  display: inline-block;
+}
+.footer-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.footer-col ul a, .footer-col ul li {
+  font-family: Roboto, sans-serif;
+  color: #C9CDD2;
+  font-size: 13.5px;
+  transition: color 0.2s;
+}
+.footer-col ul a:hover { color: var(--brand-primary); }
+.footer-brand-block img {
+  max-width: 220px;
+  filter: brightness(0) invert(1);
+  margin-bottom: 16px;
+  background: transparent;
+  padding: 6px 10px;
+  border-left: 3px solid var(--brand-primary);
+}
+.footer-tagline {
+  font-family: Roboto, sans-serif;
+  font-size: 13.5px;
+  color: #C9CDD2;
+  margin-bottom: 16px;
+  line-height: 1.55;
+}
+.footer-social {
+  display: flex;
+  gap: 10px;
+}
+.footer-social a {
+  width: 38px; height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.06);
+  color: #C9CDD2;
+  border-left: 2px solid var(--brand-primary);
+  transition: background 0.2s, color 0.2s;
+}
+.footer-social a:hover { background: var(--brand-primary); color: #fff; }
+.footer-leaf-stamp {
+  margin-top: 18px;
+  width: 56px; height: 56px;
+  background: rgba(255,255,255,0.95);
+  border: 2px solid var(--brand-primary);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-soft);
+}
+.footer-leaf-stamp img { width: 70%; height: 70%; object-fit: contain; }
+
+.footer-contact-row {
+  font-family: Roboto, sans-serif;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.footer-contact-row i {
+  color: var(--brand-primary);
+  font-size: 14px;
+  margin-top: 4px;
+  width: 16px;
+  flex-shrink: 0;
+}
+.footer-contact-row a { color: #C9CDD2; transition: color 0.2s; }
+.footer-contact-row a:hover { color: var(--brand-primary); }
+
+.footer-trust-stack {
+  margin-top: 56px;
+  padding: 18px 0;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.footer-trust-stack p {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 12.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ECEEF0;
+}
+.footer-bottom {
+  font-family: Roboto, sans-serif;
+  text-align: center;
+  padding: 22px 0 28px;
+  font-size: 12.5px;
+  color: #6A6B6C;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+@media (min-width: 768px) {
+  .footer-bottom { flex-direction: row; justify-content: space-between; gap: 16px; }
+}
+.footer-bottom a { color: #C9CDD2; }
+.footer-bottom a:hover { color: var(--brand-primary); }
+
+/* ============================================================
+   STICKY MOBILE CTA + SCROLL TOP + POPUP
+   ============================================================ */
+.sticky-mobile-cta {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: rgba(12,17,21,0.96);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 12px 16px;
+  z-index: 80;
+  box-shadow: 0 -4px 16px rgba(0,0,0,0.25);
+}
+.sticky-mobile-cta .btn-mobile {
+  width: 100%;
+  background: var(--brand-primary);
+  color: #fff;
+  padding: 16px 18px;
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0;
+  box-shadow: 3px 3px 0 0 var(--brand-deep);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .sticky-mobile-cta { display: block; }
+  body { padding-bottom: 72px; }
+}
+
+.scroll-top-btn {
+  position: fixed;
+  bottom: 88px;
+  right: 18px;
+  width: 44px; height: 44px;
+  background: var(--brand-primary);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 80;
+  font-size: 18px;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.2s;
+}
+.scroll-top-btn.show { display: inline-flex; }
+.scroll-top-btn:hover { transform: translateY(-3px); }
+@media (min-width: 769px) {
+  .scroll-top-btn { bottom: 24px; }
+}
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(12,17,21,0.85);
+  z-index: 120;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+.popup-overlay.open { display: flex; }
+.popup-card {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  background: #fff;
+  padding: 32px 28px 24px;
+  border-radius: 0;
+  border-top: 4px solid var(--brand-primary);
+  box-shadow: var(--shadow-3d-deep);
+}
+.popup-close {
+  position: absolute;
+  top: 12px; right: 12px;
+  width: 36px; height: 36px;
+  background: var(--ink-soft);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+}
+.popup-card h3 {
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--ink);
+  margin-bottom: 6px;
+  padding-right: 36px;
+  line-height: 1.25;
+}
+.popup-card .popup-sub {
+  font-family: Roboto, sans-serif;
+  font-size: 13px;
+  color: var(--text-soft);
+  margin-bottom: 18px;
+}
+
+/* ============================================================
+   SECTION DECO (left + right stripes for high-impact sections)
+   ============================================================ */
+@media (max-width: 768px) {
+  .deco-stripe-left, .deco-stripe-right { display: none; }
+}
+
+/* ============================================================
+   CORNER STAMPS — full-opacity edge decorations on every named section
+   per decoration-coherence-rule.md §3 per-section density floor.
+   Sharp-edge tile (no border-radius), brand-color fill, 100% opacity.
+   ============================================================ */
+.deco-corner-stamp {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  background: var(--brand-primary);
+  clip-path: var(--deco-shape-4);
+  opacity: 1;
+  z-index: 1;
+  pointer-events: none;
+}
+.deco-corner-stamp.top-left   { top: 0; left: 0; transform: scaleX(-1); }
+.deco-corner-stamp.top-right  { top: 0; right: 0; }
+.deco-corner-stamp.bottom-left  { bottom: 0; left: 0; transform: scale(-1, -1); }
+.deco-corner-stamp.bottom-right { bottom: 0; right: 0; transform: scaleY(-1); }
+.deco-corner-stamp.accent { background: var(--brand-accent); }
+.deco-corner-stamp.deep   { background: var(--brand-deep); }
+.deco-corner-stamp.light  { background: var(--brand-light); }
+
+.deco-edge-band {
+  position: absolute;
+  left: 0; right: 0;
+  height: 8px;
+  background: var(--brand-primary);
+  opacity: 1;
+  z-index: 1;
+  pointer-events: none;
+}
+.deco-edge-band.top { top: 0; }
+.deco-edge-band.bottom { bottom: 0; }
+.deco-edge-band.accent { background: var(--brand-accent); }
+
+@media (max-width: 768px) {
+  .deco-corner-stamp { width: 44px; height: 44px; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     SECTION 1 - ANNOUNCEMENT BAR
+     ============================================================ -->
+<div class="announcement-bar" role="banner">
+  <div class="container">
+    <div class="ann-left"><i class="fa-solid fa-phone-volume"></i> Need roofing help? Call us now.</div>
+    <div class="ann-center">
+      <a href="tel:+14103581257"><i class="fa-solid fa-phone"></i> (410) 358-1257</a>
+      <span class="ann-divider">·</span>
+      <a href="mailto:info@parkheightsroofing.com"><i class="fa-solid fa-envelope"></i> info@parkheightsroofing.com</a>
+    </div>
+    <div class="ann-right">
+      <a href="https://www.facebook.com/parkheightsroofing" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://maps.google.com/?cid=11304683772727883636" target="_blank" rel="noopener" aria-label="Google Business"><i class="fa-brands fa-google"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     SECTION 2 - NAVIGATION
+     ============================================================ -->
+<header class="site-nav">
+  <div class="container">
+    <a href="#hero" class="nav-logo" aria-label="Park Heights Roofing">
+      <img src="../assets/logo/park-heights-roofing-primary.png" alt="Park Heights Roofing logo">
+    </a>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#past-work">Past Work</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#service-area">Service Areas</a></li>
+        <li><a href="#financing">Financing</a></li>
+      </ul>
+    </nav>
+    <a class="nav-cta" href="tel:+14103581257">
+      <span class="pulse-dot"></span>
+      <span>Available Now · (410) 358-1257</span>
+    </a>
+    <button class="nav-mobile-cta" data-popup-trigger aria-label="Get a free quote">Free Quote</button>
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" id="hamburgerBtn">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu">
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#past-work">Past Work</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#service-area">Service Areas</a>
+    <a href="#financing">Financing</a>
+    <a href="tel:+14103581257"><i class="fa-solid fa-phone"></i> (410) 358-1257</a>
+  </nav>
+</header>
+
+<!-- ============================================================
+     SECTION 3 - HERO
+     ============================================================ -->
+<section id="hero" class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="deco-corner-stamp top-left" aria-hidden="true"></div>
+  <div class="deco-corner-stamp bottom-right accent" aria-hidden="true"></div>
+
+  <div class="container hero-inner">
+
+    <!-- Copy column (60%) -->
+    <div class="hero-copy">
+      <div class="hero-license-line">
+        <i class="fa-solid fa-shield-halved"></i>
+        Licensed and Insured · MHIC# 107668
+      </div>
+      <span class="hero-eyebrow">Pikesville, MD · 5-Star Rated Roofing Contractor</span>
+      <h1>Voted Baltimore's<br>Best Roofer</h1>
+      <p class="hero-sub">Pikesville's locally trusted roofing company since 1999. Honest inspections, clean installs, and a supervisor on site for every job.</p>
+
+      <ul class="hero-bullets">
+        <li><i class="fa-solid fa-circle-check"></i> 4.9 stars from 552 Google reviews</li>
+        <li><i class="fa-solid fa-circle-check"></i> 9 award badges. Best of Baltimore winner 2013 and 2024.</li>
+        <li><i class="fa-solid fa-circle-check"></i> MHIC# 107668. Licensed, insured, and bonded.</li>
+      </ul>
+
+      <div class="hero-trust-pills">
+        <div class="trust-pill">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" aria-hidden="true">
+            <path fill="#4285F4" d="M44.5 20H24v8.5h11.8C34.7 33 30 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3 0 5.7 1.1 7.8 3l5.7-5.7C33.7 5.6 29.1 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20c11 0 20-8 20-20 0-1.3-.2-2.7-.5-4z"/>
+            <path fill="#34A853" d="M6.3 14.1l6.6 4.8C14.6 15 18.9 12 24 12c3 0 5.7 1.1 7.8 3l5.7-5.7C33.7 5.6 29.1 4 24 4 16.3 4 9.6 8.3 6.3 14.1z"/>
+            <path fill="#FBBC05" d="M24 44c5.2 0 9.7-1.7 13.1-4.7l-6.1-5c-1.9 1.3-4.3 2.1-7 2.1-6 0-10.7-3-12-7.5l-6.6 5.1C8.6 39.6 15.7 44 24 44z"/>
+            <path fill="#EA4335" d="M44.5 20H24v8.5h11.8c-.6 2.6-2 4.7-4 6.1l6.1 5C40.7 36.6 44 31.7 44 24c0-1.4-.2-2.7-.5-4z"/>
+          </svg>
+          <span class="stars">★ 4.9</span>
+          <span class="pill-count">(552)</span>
+        </div>
+        <a class="trust-pill" href="https://www.facebook.com/parkheightsroofing" target="_blank" rel="noopener noreferrer" aria-label="5.0 stars on Facebook">
+          <span class="fb-mark" aria-hidden="true">f</span>
+          <span class="stars">★ 5.0</span>
+          <span>Facebook</span>
+        </a>
+        <div class="trust-pill">
+          <img src="../assets/photos/badges/select-shingle-master.png" alt="CertainTeed Select Shingle Master">
+          <span>Select Shingle Master</span>
+        </div>
+        <div class="trust-pill">
+          <img src="../assets/photos/badges/best-of-baltimore-2024.png" alt="Best of Baltimore 2024">
+          <span>Best of Baltimore · 2024</span>
+        </div>
+      </div>
+
+      <div class="hero-cta-row">
+        <a class="btn-secondary" href="tel:+14103581257" aria-label="Call us now at (410) 358-1257">
+          <span style="position: relative; display: inline-block; width:12px; height:12px;">
+            <span class="pulse-dot" style="position: absolute; inset:0;"></span>
+          </span>
+          <span>
+            <span class="small">We're Available Now</span>
+            <strong>(410) 358-1257</strong>
+          </span>
+        </a>
+        <a class="btn-link-past-work" href="#past-work" aria-label="See past work">
+          See Past Work <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Form card (40%) -->
+    <div class="hero-form-card" aria-label="Free quote form">
+      <h2 class="form-heading">Get Your Free Quote</h2>
+      <p class="form-sub">We will call you back in under 2 hours.</p>
+
+      <form id="heroForm" novalidate>
+        <div class="form-group">
+          <label for="hf-name">Your Name</label>
+          <input id="hf-name" name="name" type="text" required>
+        </div>
+        <div class="form-group">
+          <label for="hf-phone">Phone</label>
+          <input id="hf-phone" name="phone" type="tel" required>
+        </div>
+        <div class="form-group">
+          <label for="hf-email">Email</label>
+          <input id="hf-email" name="email" type="email" required>
+        </div>
+        <div class="form-group">
+          <label for="hf-addr">Property Address (optional)</label>
+          <input id="hf-addr" name="address" type="text">
+        </div>
+        <div class="form-group">
+          <label>How Can We Help?</label>
+          <div class="radio-group">
+            <label class="radio-option"><input type="radio" name="help" value="inspection"> Roof Inspection</label>
+            <label class="radio-option"><input type="radio" name="help" value="repair"> Roof Repair</label>
+            <label class="radio-option"><input type="radio" name="help" value="replacement"> Roof Replacement</label>
+            <label class="radio-option"><input type="radio" name="help" value="other"> Something Else</label>
+          </div>
+        </div>
+        <button type="submit" class="btn-cta">
+          <i class="fa-solid fa-bolt"></i> Get My Free Estimate
+        </button>
+        <p class="form-trustline">Free. No obligation. We respond within 2 hours.</p>
+      </form>
+
+      <div class="form-success" id="heroFormSuccess">
+        <h3>Thank you.</h3>
+        <p>We will call you back within 2 hours.</p>
+      </div>
+
+      <div class="hero-form-owner-card">
+        <div class="owner-mini-chip" aria-hidden="true">IE</div>
+        <div class="owner-mini-body">
+          <div class="owner-mini-name">Israel Elgamil</div>
+          <div class="owner-mini-role">Owner, Park Heights Roofing</div>
+          <div class="owner-mini-credentials">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>MHIC# 107668</span>
+            <span class="credential-sep" aria-hidden="true"></span>
+            <span>27 Years in Business</span>
+          </div>
+          <div class="owner-mini-quote">"Honest roofs and clean work since 1999."</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="hero-bleed" aria-hidden="true"></div>
+</section>
+
+<!-- ============================================================
+     SECTION 4 - TRUST BADGE MARQUEE
+     ============================================================ -->
+<section class="trust-marquee" aria-label="Our awards and certifications">
+  <div class="deco-edge-band top" aria-hidden="true"></div>
+  <div class="container">
+    <div class="marquee-eyebrow">Recognized by</div>
+  </div>
+  <div class="marquee-track">
+    <!-- Set 1 of 4 (first half — visible at translateX(0)) -->
+    <img src="../assets/photos/badges/select-shingle-master.png" alt="CertainTeed Select Shingle Master">
+    <img src="../assets/photos/badges/best-of-baltimore-2024.png" alt="Best of Baltimore 2024">
+    <img src="../assets/photos/badges/best-of-baltimore-2013.png" alt="Best of Baltimore 2013">
+    <img src="../assets/photos/badges/expertise-best-roofers-2018.png" alt="Expertise Best Roofers in Baltimore 2018">
+    <img src="../assets/photos/badges/angies-list-2019-ssa.png" alt="Angie's List Super Service Award 2019">
+    <img src="../assets/photos/badges/angies-list-2017-ssa.png" alt="Angie's List Super Service Award 2017">
+    <img src="../assets/photos/badges/angies-list-2014-ssa.png" alt="Angie's List Super Service Award 2014">
+    <img src="../assets/photos/badges/angies-list-2013.png" alt="Angie's List 2013">
+    <img src="../assets/photos/badges/angies-list-2011.png" alt="Angie's List 2011">
+    <!-- Set 2 of 4 -->
+    <img src="../assets/photos/badges/select-shingle-master.png" alt="" aria-hidden="true">
+    <img src="../assets/photos/badges/best-of-baltimore-2024.png" alt="" aria-hidden="true">
+    <img src="../assets/photos/badges/best-of-baltimore-2013.png" alt="" aria-hidden="true">
+    <img src="../assets/photos/badges/expertise-best-roofers-2018.png" alt="" aria-hidden="true">
+    <img src="../assets/photos/badges/angies-list-2019-ssa.png" alt="" aria-hidden="true">
+    <img src="../assets/photos/badges/angies-list-2017-ssa.png" alt="" aria-hidden="true">
+    <img src="../assets/photos/badges/angies-list-2014-ssa.png" alt="" aria-hidden="true">
+    <img src="../assets/photos/badges/angies-list-2013.png" alt="" aria-hidden="true">
+    <img src="../assets/photos/badges/angies-list-2011.png" alt="" aria-hidden="true">
+    <!-- Set 3 of 4 (second half — at translateX(-50%) this becomes the visible identical frame) -->
+    <img src="../assets/photos/badges/select-shingle-master.png" alt="" aria-hidden="true">
+    <img src="../assets/photos/badges/best-of-baltimore-2024.png" alt="" aria-hidden="true">
+    <img src="../assets/photos/badges/best-of-baltimore-2013.png" alt="" aria-hidden="true">
+    <img src="../assets/photos/badges/expertise-best-roofers-2018.png" alt="" aria-hidden="true">
+    <img src="../assets/photos/badges/angies-list-2019-ssa.png" alt="" aria-hidden="true">
+    <img src="../assets/photos/badges/angies-list-2017-ssa.png" alt="" aria-hidden="true">
+    <img src="../assets/photos/badges/angies-list-2014-ssa.png" alt="" aria-hidden="true">
+    <img src="../assets/photos/badges/angies-list-2013.png" alt="" aria-hidden="true">
+    <img src="../assets/photos/badges/angies-list-2011.png" alt="" aria-hidden="true">
+    <!-- Set 4 of 4 -->
+    <img src="../assets/photos/badges/select-shingle-master.png" alt="" aria-hidden="true">
+    <img src="../assets/photos/badges/best-of-baltimore-2024.png" alt="" aria-hidden="true">
+    <img src="../assets/photos/badges/best-of-baltimore-2013.png" alt="" aria-hidden="true">
+    <img src="../assets/photos/badges/expertise-best-roofers-2018.png" alt="" aria-hidden="true">
+    <img src="../assets/photos/badges/angies-list-2019-ssa.png" alt="" aria-hidden="true">
+    <img src="../assets/photos/badges/angies-list-2017-ssa.png" alt="" aria-hidden="true">
+    <img src="../assets/photos/badges/angies-list-2014-ssa.png" alt="" aria-hidden="true">
+    <img src="../assets/photos/badges/angies-list-2013.png" alt="" aria-hidden="true">
+    <img src="../assets/photos/badges/angies-list-2011.png" alt="" aria-hidden="true">
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 5 - REVIEWS / TESTIMONIALS
+     ============================================================ -->
+<section id="reviews" class="reviews-section">
+  <div class="deco-stripe-right" aria-hidden="true"></div>
+  <div class="container">
+    <div class="reviews-header">
+      <span class="section-eyebrow">552 Google Reviews · 4.9 stars</span>
+      <h2>What our Pikesville neighbors say</h2>
+      <div class="reviews-summary">
+        <span class="stars">★★★★★</span>
+        <span>Rated 4.9 Stars Across 552 Google Reviews</span>
+      </div>
+    </div>
+
+    <div class="reviews-cards" id="reviewsCards">
+
+      <!-- Page 1 -->
+      <article class="review-card is-lead" data-review-page="1">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-quote">"Absolute best roofing company I've ever worked with. Extremely quick, affordable, and professional. The owner <span class="owner-name-highlight">Israel Elgamil</span> is an honest and fair gentleman. I highly recommend park heights roofing."</p>
+        <div class="review-attribution">
+          <div class="review-chip">MD</div>
+          <div class="review-meta">
+            <div class="review-name">Mendel Davis</div>
+            <div class="review-loc">Verified Google review</div>
+          </div>
+          <div class="review-platform" aria-label="via Google">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#4285F4" d="M44.5 20H24v8.5h11.8C34.7 33 30 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3 0 5.7 1.1 7.8 3l5.7-5.7C33.7 5.6 29.1 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20c11 0 20-8 20-20 0-1.3-.2-2.7-.5-4z"/><path fill="#34A853" d="M6.3 14.1l6.6 4.8C14.6 15 18.9 12 24 12c3 0 5.7 1.1 7.8 3l5.7-5.7C33.7 5.6 29.1 4 24 4 16.3 4 9.6 8.3 6.3 14.1z"/><path fill="#FBBC05" d="M24 44c5.2 0 9.7-1.7 13.1-4.7l-6.1-5c-1.9 1.3-4.3 2.1-7 2.1-6 0-10.7-3-12-7.5l-6.6 5.1C8.6 39.6 15.7 44 24 44z"/><path fill="#EA4335" d="M44.5 20H24v8.5h11.8c-.6 2.6-2 4.7-4 6.1l6.1 5C40.7 36.6 44 31.7 44 24c0-1.4-.2-2.7-.5-4z"/></svg>
+          </div>
+        </div>
+      </article>
+
+      <article class="review-card" data-review-page="1">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-quote">". . . there are two types of home owners; those who used Park Heights Roofing and those that wish they had."</p>
+        <div class="review-attribution">
+          <div class="review-chip">AS</div>
+          <div class="review-meta">
+            <div class="review-name">Alex S.</div>
+            <div class="review-loc">Pikesville · Google review</div>
+          </div>
+          <div class="review-platform" aria-label="via Google">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#4285F4" d="M44.5 20H24v8.5h11.8C34.7 33 30 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3 0 5.7 1.1 7.8 3l5.7-5.7C33.7 5.6 29.1 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20c11 0 20-8 20-20 0-1.3-.2-2.7-.5-4z"/><path fill="#34A853" d="M6.3 14.1l6.6 4.8C14.6 15 18.9 12 24 12c3 0 5.7 1.1 7.8 3l5.7-5.7C33.7 5.6 29.1 4 24 4 16.3 4 9.6 8.3 6.3 14.1z"/><path fill="#FBBC05" d="M24 44c5.2 0 9.7-1.7 13.1-4.7l-6.1-5c-1.9 1.3-4.3 2.1-7 2.1-6 0-10.7-3-12-7.5l-6.6 5.1C8.6 39.6 15.7 44 24 44z"/><path fill="#EA4335" d="M44.5 20H24v8.5h11.8c-.6 2.6-2 4.7-4 6.1l6.1 5C40.7 36.6 44 31.7 44 24c0-1.4-.2-2.7-.5-4z"/></svg>
+          </div>
+        </div>
+      </article>
+
+      <article class="review-card" data-review-page="1">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-quote">"PHR was very accommodating and helpful. They combine masterful craftsmanship, business ethos, and solid work both on the roof and in the office. We can't praise and thank them enough!"</p>
+        <div class="review-attribution">
+          <div class="review-chip">UE</div>
+          <div class="review-meta">
+            <div class="review-name">Uta and Ed</div>
+            <div class="review-loc">Mt. Washington · Google review</div>
+          </div>
+          <div class="review-platform" aria-label="via Google">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#4285F4" d="M44.5 20H24v8.5h11.8C34.7 33 30 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3 0 5.7 1.1 7.8 3l5.7-5.7C33.7 5.6 29.1 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20c11 0 20-8 20-20 0-1.3-.2-2.7-.5-4z"/><path fill="#34A853" d="M6.3 14.1l6.6 4.8C14.6 15 18.9 12 24 12c3 0 5.7 1.1 7.8 3l5.7-5.7C33.7 5.6 29.1 4 24 4 16.3 4 9.6 8.3 6.3 14.1z"/><path fill="#FBBC05" d="M24 44c5.2 0 9.7-1.7 13.1-4.7l-6.1-5c-1.9 1.3-4.3 2.1-7 2.1-6 0-10.7-3-12-7.5l-6.6 5.1C8.6 39.6 15.7 44 24 44z"/><path fill="#EA4335" d="M44.5 20H24v8.5h11.8c-.6 2.6-2 4.7-4 6.1l6.1 5C40.7 36.6 44 31.7 44 24c0-1.4-.2-2.7-.5-4z"/></svg>
+          </div>
+        </div>
+      </article>
+
+      <!-- Page 2 -->
+      <article class="review-card" data-review-page="2">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-quote">"Highly recommended. They are professional, quick and clean up after themselves. They have a supervisor on sight all the time and I received constant updates from their office manager."</p>
+        <div class="review-attribution">
+          <div class="review-chip">LF</div>
+          <div class="review-meta">
+            <div class="review-name">Larry Franks</div>
+            <div class="review-loc">Verified Google review</div>
+          </div>
+          <div class="review-platform" aria-label="via Google">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#4285F4" d="M44.5 20H24v8.5h11.8C34.7 33 30 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3 0 5.7 1.1 7.8 3l5.7-5.7C33.7 5.6 29.1 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20c11 0 20-8 20-20 0-1.3-.2-2.7-.5-4z"/><path fill="#34A853" d="M6.3 14.1l6.6 4.8C14.6 15 18.9 12 24 12c3 0 5.7 1.1 7.8 3l5.7-5.7C33.7 5.6 29.1 4 24 4 16.3 4 9.6 8.3 6.3 14.1z"/><path fill="#FBBC05" d="M24 44c5.2 0 9.7-1.7 13.1-4.7l-6.1-5c-1.9 1.3-4.3 2.1-7 2.1-6 0-10.7-3-12-7.5l-6.6 5.1C8.6 39.6 15.7 44 24 44z"/><path fill="#EA4335" d="M44.5 20H24v8.5h11.8c-.6 2.6-2 4.7-4 6.1l6.1 5C40.7 36.6 44 31.7 44 24c0-1.4-.2-2.7-.5-4z"/></svg>
+          </div>
+        </div>
+      </article>
+
+      <article class="review-card" data-review-page="2">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-quote">"They were professional from the day they came to give an estimate to the day of installation. They were very responsive to any questions and concerns. I would recommend to others!"</p>
+        <div class="review-attribution">
+          <div class="review-chip">SA</div>
+          <div class="review-meta">
+            <div class="review-name">Steve Adams</div>
+            <div class="review-loc">Verified Google review</div>
+          </div>
+          <div class="review-platform" aria-label="via Google">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#4285F4" d="M44.5 20H24v8.5h11.8C34.7 33 30 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3 0 5.7 1.1 7.8 3l5.7-5.7C33.7 5.6 29.1 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20c11 0 20-8 20-20 0-1.3-.2-2.7-.5-4z"/><path fill="#34A853" d="M6.3 14.1l6.6 4.8C14.6 15 18.9 12 24 12c3 0 5.7 1.1 7.8 3l5.7-5.7C33.7 5.6 29.1 4 24 4 16.3 4 9.6 8.3 6.3 14.1z"/><path fill="#FBBC05" d="M24 44c5.2 0 9.7-1.7 13.1-4.7l-6.1-5c-1.9 1.3-4.3 2.1-7 2.1-6 0-10.7-3-12-7.5l-6.6 5.1C8.6 39.6 15.7 44 24 44z"/><path fill="#EA4335" d="M44.5 20H24v8.5h11.8c-.6 2.6-2 4.7-4 6.1l6.1 5C40.7 36.6 44 31.7 44 24c0-1.4-.2-2.7-.5-4z"/></svg>
+          </div>
+        </div>
+      </article>
+
+      <article class="review-card" data-review-page="2">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-quote">"I was very happy with the service I got from Park Heights roofing. They did a wonderful job with the roof, chimney repair and gutters. Andrew's follow up when I had some questions was very helpful."</p>
+        <div class="review-attribution">
+          <div class="review-chip">DB</div>
+          <div class="review-meta">
+            <div class="review-name">Deborah Burke</div>
+            <div class="review-loc">Verified Google review</div>
+          </div>
+          <div class="review-platform" aria-label="via Google">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#4285F4" d="M44.5 20H24v8.5h11.8C34.7 33 30 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3 0 5.7 1.1 7.8 3l5.7-5.7C33.7 5.6 29.1 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20c11 0 20-8 20-20 0-1.3-.2-2.7-.5-4z"/><path fill="#34A853" d="M6.3 14.1l6.6 4.8C14.6 15 18.9 12 24 12c3 0 5.7 1.1 7.8 3l5.7-5.7C33.7 5.6 29.1 4 24 4 16.3 4 9.6 8.3 6.3 14.1z"/><path fill="#FBBC05" d="M24 44c5.2 0 9.7-1.7 13.1-4.7l-6.1-5c-1.9 1.3-4.3 2.1-7 2.1-6 0-10.7-3-12-7.5l-6.6 5.1C8.6 39.6 15.7 44 24 44z"/><path fill="#EA4335" d="M44.5 20H24v8.5h11.8c-.6 2.6-2 4.7-4 6.1l6.1 5C40.7 36.6 44 31.7 44 24c0-1.4-.2-2.7-.5-4z"/></svg>
+          </div>
+        </div>
+      </article>
+
+      <!-- Page 3 -->
+      <article class="review-card" data-review-page="3" style="display:none">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-quote">"Showed up day after payment, executed the job effectively and efficiently. Returned to further improve some items. They were very friendly, helpful and also advised me on additional items that needed repair. Their work is excellent."</p>
+        <div class="review-attribution">
+          <div class="review-chip">AG</div>
+          <div class="review-meta">
+            <div class="review-name">Avi Gnatt</div>
+            <div class="review-loc">Verified Google review</div>
+          </div>
+          <div class="review-platform" aria-label="via Google">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#4285F4" d="M44.5 20H24v8.5h11.8C34.7 33 30 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3 0 5.7 1.1 7.8 3l5.7-5.7C33.7 5.6 29.1 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20c11 0 20-8 20-20 0-1.3-.2-2.7-.5-4z"/><path fill="#34A853" d="M6.3 14.1l6.6 4.8C14.6 15 18.9 12 24 12c3 0 5.7 1.1 7.8 3l5.7-5.7C33.7 5.6 29.1 4 24 4 16.3 4 9.6 8.3 6.3 14.1z"/><path fill="#FBBC05" d="M24 44c5.2 0 9.7-1.7 13.1-4.7l-6.1-5c-1.9 1.3-4.3 2.1-7 2.1-6 0-10.7-3-12-7.5l-6.6 5.1C8.6 39.6 15.7 44 24 44z"/><path fill="#EA4335" d="M44.5 20H24v8.5h11.8c-.6 2.6-2 4.7-4 6.1l6.1 5C40.7 36.6 44 31.7 44 24c0-1.4-.2-2.7-.5-4z"/></svg>
+          </div>
+        </div>
+      </article>
+
+      <article class="review-card" data-review-page="3" style="display:none">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-quote">"Great crew. They began on time and finished the project in one day, as promised. Clean up was very thorough. Would highly recommend."</p>
+        <div class="review-attribution">
+          <div class="review-chip">MP</div>
+          <div class="review-meta">
+            <div class="review-name">Marrion Phipps</div>
+            <div class="review-loc">Verified Google review</div>
+          </div>
+          <div class="review-platform" aria-label="via Google">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#4285F4" d="M44.5 20H24v8.5h11.8C34.7 33 30 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3 0 5.7 1.1 7.8 3l5.7-5.7C33.7 5.6 29.1 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20c11 0 20-8 20-20 0-1.3-.2-2.7-.5-4z"/><path fill="#34A853" d="M6.3 14.1l6.6 4.8C14.6 15 18.9 12 24 12c3 0 5.7 1.1 7.8 3l5.7-5.7C33.7 5.6 29.1 4 24 4 16.3 4 9.6 8.3 6.3 14.1z"/><path fill="#FBBC05" d="M24 44c5.2 0 9.7-1.7 13.1-4.7l-6.1-5c-1.9 1.3-4.3 2.1-7 2.1-6 0-10.7-3-12-7.5l-6.6 5.1C8.6 39.6 15.7 44 24 44z"/><path fill="#EA4335" d="M44.5 20H24v8.5h11.8c-.6 2.6-2 4.7-4 6.1l6.1 5C40.7 36.6 44 31.7 44 24c0-1.4-.2-2.7-.5-4z"/></svg>
+          </div>
+        </div>
+      </article>
+
+      <article class="review-card" data-review-page="3" style="display:none">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-quote">"These guys were great. Came out, took a look, quickly identified the problem, was able to give me a quote for the repair, and was very easy to schedule to come in and get it done. Would definitely recommend and use again if I ever have another roof issue."</p>
+        <div class="review-attribution">
+          <div class="review-chip">ET</div>
+          <div class="review-meta">
+            <div class="review-name">Etan</div>
+            <div class="review-loc">Roof Repair · Google review</div>
+          </div>
+          <div class="review-platform" aria-label="via Google">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#4285F4" d="M44.5 20H24v8.5h11.8C34.7 33 30 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3 0 5.7 1.1 7.8 3l5.7-5.7C33.7 5.6 29.1 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20c11 0 20-8 20-20 0-1.3-.2-2.7-.5-4z"/><path fill="#34A853" d="M6.3 14.1l6.6 4.8C14.6 15 18.9 12 24 12c3 0 5.7 1.1 7.8 3l5.7-5.7C33.7 5.6 29.1 4 24 4 16.3 4 9.6 8.3 6.3 14.1z"/><path fill="#FBBC05" d="M24 44c5.2 0 9.7-1.7 13.1-4.7l-6.1-5c-1.9 1.3-4.3 2.1-7 2.1-6 0-10.7-3-12-7.5l-6.6 5.1C8.6 39.6 15.7 44 24 44z"/><path fill="#EA4335" d="M44.5 20H24v8.5h11.8c-.6 2.6-2 4.7-4 6.1l6.1 5C40.7 36.6 44 31.7 44 24c0-1.4-.2-2.7-.5-4z"/></svg>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="reviews-pagination" id="reviewsPagination">
+      <button class="review-page-btn active" data-page="1" aria-label="Page 1"></button>
+      <button class="review-page-btn" data-page="2" aria-label="Page 2"></button>
+      <button class="review-page-btn" data-page="3" aria-label="Page 3"></button>
+    </div>
+
+    <div class="reviews-cta-row">
+      <button class="btn-ghost-light" data-popup-trigger><i class="fa-solid fa-clipboard-check"></i> Get a Free Quote</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 6 - WHY US
+     ============================================================ -->
+<section id="why-us" class="why-us-section">
+  <div class="deco-stripe-left" aria-hidden="true"></div>
+  <div class="deco-stripe-right blue" aria-hidden="true"></div>
+  <div class="deco-corner-stamp top-right" aria-hidden="true"></div>
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">Why Pikesville Calls Us First</span>
+      <h2>What you get when you work with Park Heights</h2>
+      <p>Four reasons 552 Google reviewers chose us. Anchored to real evidence, not generic claims.</p>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon-tile"><i class="fa-solid fa-trophy"></i></div>
+        <h3>9 award badges and counting</h3>
+        <p>Best of Baltimore in 2013 and 2024, four Angie's List Super Service Awards, plus Expertise's Best Roofers in Baltimore.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon-tile"><i class="fa-solid fa-user-shield"></i></div>
+        <h3>An owner who answers</h3>
+        <p>Israel Elgamil leads the team. Customers name him in their reviews because he picks up the phone and stands behind the work.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon-tile"><i class="fa-solid fa-map-pin"></i></div>
+        <h3>Pikesville-local since 1999</h3>
+        <p>27 years roofing the same neighborhoods: Park Heights, Owings Mills, Reisterstown, Lutherville, Mt. Washington, and beyond.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon-tile"><i class="fa-solid fa-clipboard-check"></i></div>
+        <h3>Supervisor on site, every job</h3>
+        <p>Reviewers call out our on-site supervisor and office-manager updates by name. You hear from us before, during, and after the install.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 7 - PAST WORK
+     ============================================================ -->
+<section id="past-work" class="past-work-section">
+  <div class="deco-stripe-left" aria-hidden="true"></div>
+  <div class="deco-corner-stamp top-right accent" aria-hidden="true"></div>
+  <div class="deco-corner-stamp bottom-left deep" aria-hidden="true"></div>
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">Recent Projects · Baltimore Metro</span>
+      <h2>Real roofs we've installed across Pikesville and Baltimore</h2>
+      <p>Six recent jobs across the neighborhoods we know best. Every job ran with a supervisor on site.</p>
+    </div>
+
+    <div class="past-grid">
+
+      <article class="past-card">
+        <div class="past-photo">
+          <img src="../assets/gallery/roof-repair.jpg" alt="Shingle roof installation in Pikesville, Maryland">
+          <div class="past-tag-breakout">
+            <span class="past-tag-job">Shingle Roof Install</span>
+            <span class="past-tag-city">Pikesville, MD</span>
+          </div>
+          <span class="past-corner-bracket" aria-hidden="true"></span>
+        </div>
+        <div class="past-caption">
+          <h3>Shingle Roof Installation</h3>
+          <div class="meta">Pikesville, MD · 2024</div>
+        </div>
+      </article>
+
+      <article class="past-card">
+        <div class="past-photo">
+          <img src="../assets/gallery/slate-roofing.jpg" alt="Slate roof repair in Mt. Washington, Maryland">
+          <div class="past-tag-breakout">
+            <span class="past-tag-job">Slate Roof Repair</span>
+            <span class="past-tag-city">Mt. Washington, MD</span>
+          </div>
+          <span class="past-corner-bracket" aria-hidden="true"></span>
+        </div>
+        <div class="past-caption">
+          <h3>Slate Roof Repair</h3>
+          <div class="meta">Mt. Washington, MD · 2024</div>
+        </div>
+      </article>
+
+      <article class="past-card">
+        <div class="past-photo">
+          <img src="../assets/gallery/siding-installation.jpg" alt="Siding installation in Baltimore, Maryland">
+          <div class="past-tag-breakout">
+            <span class="past-tag-job">Siding Installation</span>
+            <span class="past-tag-city">Baltimore, MD</span>
+          </div>
+          <span class="past-corner-bracket" aria-hidden="true"></span>
+        </div>
+        <div class="past-caption">
+          <h3>Siding Installation</h3>
+          <div class="meta">Baltimore, MD · 2023</div>
+        </div>
+      </article>
+
+      <article class="past-card">
+        <div class="past-photo">
+          <img src="../assets/gallery/james-hardie.jpg" alt="James Hardie fiber cement install in Pikesville, Maryland">
+          <div class="past-tag-breakout">
+            <span class="past-tag-job">James Hardie Install</span>
+            <span class="past-tag-city">Pikesville, MD</span>
+          </div>
+          <span class="past-corner-bracket" aria-hidden="true"></span>
+        </div>
+        <div class="past-caption">
+          <h3>James Hardie Installation</h3>
+          <div class="meta">Pikesville, MD · 2024</div>
+        </div>
+      </article>
+
+      <article class="past-card">
+        <div class="past-photo">
+          <img src="../assets/gallery/k-style-gutter.jpg" alt="Seamless gutter install in Owings Mills, Maryland">
+          <div class="past-tag-breakout">
+            <span class="past-tag-job">Seamless Gutter Install</span>
+            <span class="past-tag-city">Owings Mills, MD</span>
+          </div>
+          <span class="past-corner-bracket" aria-hidden="true"></span>
+        </div>
+        <div class="past-caption">
+          <h3>Seamless Gutter Install</h3>
+          <div class="meta">Owings Mills, MD · 2024</div>
+        </div>
+      </article>
+
+      <article class="past-card">
+        <div class="past-photo">
+          <img src="../assets/gallery/chimney-repointing.jpg" alt="Chimney repointing in Baltimore, Maryland">
+          <div class="past-tag-breakout">
+            <span class="past-tag-job">Chimney Repointing</span>
+            <span class="past-tag-city">Baltimore, MD</span>
+          </div>
+          <span class="past-corner-bracket" aria-hidden="true"></span>
+        </div>
+        <div class="past-caption">
+          <h3>Chimney Repointing</h3>
+          <div class="meta">Baltimore, MD · 2023</div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="past-cta-row">
+      <a class="btn-outline" href="https://parkheightsroofing.com/project-map-it/" target="_blank" rel="noopener">View All Past Work <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 8 - PROCESS
+     ============================================================ -->
+<section id="process" class="process-section">
+  <div class="deco-stripe-left" aria-hidden="true"></div>
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">How a Park Heights project runs</span>
+      <h2>Four steps. No surprises.</h2>
+      <p>You are in control at every step. We will not start work until you have a written quote you understand.</p>
+    </div>
+
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="process-num">1</div>
+        <h3>Free Inspection</h3>
+        <p>We come out, climb up, and give you an honest, written report on what your roof actually needs.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">2</div>
+        <h3>Detailed Quote</h3>
+        <p>Line-by-line pricing, no high-pressure pitch. If a repair is the right call, we will say so.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">3</div>
+        <h3>Clean Install</h3>
+        <p>A supervisor is on site every day. Office manager updates you by phone. Driveway and yard cleaned before we leave.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">4</div>
+        <h3>Final Walkthrough</h3>
+        <p>We walk the property with you, run the warranty paperwork, and leave you with a roof that looks the way it was supposed to.</p>
+      </div>
+    </div>
+
+    <div class="process-cta-row">
+      <button class="btn-outline" data-popup-trigger><i class="fa-solid fa-bolt"></i> Get My Free Estimate</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 9 - SERVICES
+     ============================================================ -->
+<section id="services" class="services-section">
+  <div class="deco-stripe-left" aria-hidden="true"></div>
+  <div class="deco-stripe-right blue" aria-hidden="true"></div>
+  <div class="deco-corner-stamp top-right" aria-hidden="true"></div>
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">Full-service exterior contractor</span>
+      <h2>More than just Baltimore's best roofer</h2>
+      <p>Roofing is the headline. Siding, gutters, insulation, chimneys, and windows are the long-haul work we have done for 27 years.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon-tile"><i class="fa-solid fa-home"></i></div>
+        <h3>Roof Replacement</h3>
+        <p>Full tear-off and install. Shingle, slate, metal, tile. Lifetime roofing systems available.</p>
+        <a class="service-link" href="https://parkheightsroofing.com/roofing/roof-replacement/" target="_blank" rel="noopener">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon-tile"><i class="fa-solid fa-wrench"></i></div>
+        <h3>Roof Repair</h3>
+        <p>Leak detection, flat-roof patch, shingle repair, slate repair. We diagnose before we sell you a new roof.</p>
+        <a class="service-link" href="https://parkheightsroofing.com/roofing/roof-repair/" target="_blank" rel="noopener">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon-tile"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <h3>Roof Inspection</h3>
+        <p>Honest written report on the condition of your roof. Free for Pikesville and Baltimore metro homeowners.</p>
+        <a class="service-link" href="https://parkheightsroofing.com/roofing/roof-inspection/" target="_blank" rel="noopener">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon-tile"><i class="fa-solid fa-mountain"></i></div>
+        <h3>Slate Roofing</h3>
+        <p>Specialty slate maintenance, repair, and installation. The historic-home work most general roofers will not touch.</p>
+        <a class="service-link" href="https://parkheightsroofing.com/roofing/slate-roofing/" target="_blank" rel="noopener">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon-tile"><i class="fa-solid fa-grip-lines"></i></div>
+        <h3>Siding · Vinyl and Hardie</h3>
+        <p>Vinyl install, repair, replacement, and full James Hardie fiber cement projects.</p>
+        <a class="service-link" href="https://parkheightsroofing.com/siding/" target="_blank" rel="noopener">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon-tile"><i class="fa-solid fa-bars"></i></div>
+        <h3>Seamless Gutters and Guards</h3>
+        <p>Commercial-grade aluminum, custom-cut on site. Gutter guards that keep the leaves out.</p>
+        <a class="service-link" href="https://parkheightsroofing.com/gutters/" target="_blank" rel="noopener">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon-tile"><i class="fa-solid fa-temperature-low"></i></div>
+        <h3>Attic Insulation</h3>
+        <p>Blown and fiberglass attic insulation. Lower your utility bill, raise your comfort.</p>
+        <a class="service-link" href="https://parkheightsroofing.com/insulation/" target="_blank" rel="noopener">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon-tile"><i class="fa-solid fa-fire"></i></div>
+        <h3>Chimney Repair and Repointing</h3>
+        <p>Repointing, repair, and flashing tied into your roof system.</p>
+        <a class="service-link" href="https://parkheightsroofing.com/chimneys/" target="_blank" rel="noopener">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="commercial-strip">
+      <div>
+        <h3>Commercial roofing, nationwide</h3>
+        <p>Flat, metal, and shingle roof replacement for property management companies and multi-unit portfolios. Investor-friendly pricing that does not compromise on quality.</p>
+      </div>
+      <div class="commercial-cta-wrap">
+        <a class="btn-on-dark" href="https://parkheightsroofing.com/commercial-roofing/" target="_blank" rel="noopener">Commercial Roofing <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 10 - OWNER STORY (HER-007 Path C)
+     ============================================================ -->
+<section id="about" class="about-section owner">
+  <div class="deco-stripe-left" aria-hidden="true"></div>
+  <div class="deco-stripe-right blue" aria-hidden="true"></div>
+  <div class="deco-corner-stamp top-right" aria-hidden="true"></div>
+  <div class="container">
+
+    <div class="owner-layout">
+
+      <div class="owner-monogram-block">
+        <div class="owner-big-chip" aria-hidden="true">IE</div>
+        <ul class="owner-fact-rows">
+          <li><i class="fa-solid fa-user"></i> Israel Elgamil</li>
+          <li><i class="fa-solid fa-briefcase"></i> Owner, Park Heights Roofing</li>
+          <li><i class="fa-solid fa-location-dot"></i> Pikesville, MD · MHIC# 107668</li>
+          <li><i class="fa-solid fa-calendar-check"></i> Founded 1999 · 27 years operating</li>
+        </ul>
+        <p class="owner-credentials-line">Licensed · Insured · Bonded · CertainTeed Select Shingle Master</p>
+      </div>
+
+      <div class="owner-content">
+        <span class="section-eyebrow">Owner-led, since 1999</span>
+        <h2>Local Honest Roofers</h2>
+        <p class="owner-sub">Serving the Baltimore Metro Area</p>
+
+        <p>Israel Elgamil opened Park Heights Roofing in 1999 with a simple bet: that homeowners in Pikesville and Baltimore would pay a fair price for an honest roof, done right the first time. 27 years later, 552 Google reviews and 9 award badges say it worked.</p>
+
+        <p>Park Heights Roofing specializes in slate roof maintenance, new shingle roofs (including Lifetime systems), and commercial-grade seamless aluminum gutters and gutter guards. The team is a full-service home exterior contractor: siding, insulation, chimney repointing, and gutter install and replacement across the Baltimore metro area.</p>
+
+        <p>Customers name our team in their reviews because we put a supervisor on every site and an office manager on every phone call. You hear from us before, during, and after the install. If a repair is the right call, we will tell you. We have been the same Pikesville-local company for 27 years, and we plan on being here for the next 27.</p>
+
+        <blockquote class="owner-quote">
+          Honest roofs and clean work. That is what we have done since 1999, and that is what we will do tomorrow.
+          <span class="owner-quote-attrib">· Israel Elgamil, Owner</span>
+        </blockquote>
+      </div>
+
+    </div>
+
+    <div class="owner-stats">
+      <div class="owner-stat-box">
+        <div class="owner-stat-num">27</div>
+        <div class="owner-stat-label">Years roofing Pikesville and Baltimore</div>
+      </div>
+      <div class="owner-stat-box">
+        <div class="owner-stat-num">552</div>
+        <div class="owner-stat-label">Five-star Google reviews</div>
+      </div>
+      <div class="owner-stat-box">
+        <div class="owner-stat-num">4.9 ★</div>
+        <div class="owner-stat-label">Average rating across all reviews</div>
+      </div>
+    </div>
+
+    <div class="owner-cta-row">
+      <button class="btn-outline" data-popup-trigger><i class="fa-solid fa-comments"></i> Get Your Free Estimate</button>
+    </div>
+
+    <div class="owner-leaf-stamp" aria-hidden="true">
+      <img src="../assets/generated/mascot-generated.png" alt="">
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 11 - FINANCING
+     ============================================================ -->
+<section id="financing" class="financing-section">
+  <div class="deco-stripe-left" aria-hidden="true"></div>
+  <div class="deco-stripe-right blue" aria-hidden="true"></div>
+  <div class="container">
+    <span class="section-eyebrow">Financing for Pikesville and Baltimore homeowners</span>
+    <h2>Realize your dreams today.</h2>
+    <p>Convenient financing options through trusted lenders. Apply in minutes, get a roof you can afford this season.</p>
+    <a class="btn-ghost-light" href="https://parkheightsroofing.com/financing" target="_blank" rel="noopener">Learn About Financing <i class="fa-solid fa-arrow-right"></i></a>
+    <p class="financing-disclaimer">*Subject to credit approval. Contact us for details.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 13 - FINAL CTA BANNER
+     ============================================================ -->
+<section class="final-cta-section">
+  <div class="deco-stripe-right leaf-tint" aria-hidden="true"></div>
+  <div class="deco-corner-stamp top-left light" aria-hidden="true"></div>
+  <div class="deco-corner-stamp bottom-right deep" aria-hidden="true"></div>
+  <div class="container">
+    <h2>Ready to protect your Pikesville home?</h2>
+    <p>Get your free, no-obligation roof inspection today. We respond within 2 hours.</p>
+    <button class="btn-inverse" data-popup-trigger><i class="fa-solid fa-bolt"></i> Get My Free Estimate</button>
+  </div>
+  <div class="final-cta-bleed" aria-hidden="true"></div>
+</section>
+
+<!-- ============================================================
+     SECTION 14 - SERVICE AREA
+     ============================================================ -->
+<section id="service-area" class="service-area-section">
+  <div class="deco-stripe-left" aria-hidden="true"></div>
+  <div class="deco-stripe-right blue" aria-hidden="true"></div>
+  <div class="deco-corner-stamp top-right accent" aria-hidden="true"></div>
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">Pikesville-local roofer</span>
+      <h2>Roofing in your neighborhood since 1999</h2>
+      <p>Park Heights Roofing serves homeowners across the Baltimore metro area, with deep roots in these specific neighborhoods.</p>
+    </div>
+
+    <div class="service-area-grid">
+
+      <div class="service-area-map">
+        <iframe
+          src="https://maps.google.com/maps?q=15+Sudbrook+Lane,+Pikesville,+MD+21208&output=embed"
+          width="100%" height="380" loading="lazy"
+          title="Park Heights Roofing service area map"></iframe>
+      </div>
+
+      <div class="service-area-list">
+        <div class="service-area-leaf-stamp" aria-hidden="true">
+          <img src="../assets/generated/mascot-generated.png" alt="">
+        </div>
+
+        <h3>Our Pikesville-rooted neighborhoods</h3>
+        <div class="tag-cloud-priority">
+          <span class="tag-priority">Park Heights</span>
+          <span class="tag-priority">Pikesville</span>
+          <span class="tag-priority">Owings Mills</span>
+          <span class="tag-priority">Reisterstown</span>
+          <span class="tag-priority">Lutherville</span>
+          <span class="tag-priority">Mt. Washington</span>
+          <span class="tag-priority">Greenspring</span>
+          <span class="tag-priority">Tuscany-Canterbury</span>
+          <span class="tag-priority">Stevenson</span>
+        </div>
+
+        <h3>Baltimore metro umbrella</h3>
+        <div class="tag-cloud-umbrella">
+          <span class="tag-umbrella">Towson</span>
+          <span class="tag-umbrella">Cockeysville</span>
+          <span class="tag-umbrella">Timonium</span>
+          <span class="tag-umbrella">Ruxton</span>
+          <span class="tag-umbrella">Roland Park</span>
+          <span class="tag-umbrella">Baltimore City</span>
+        </div>
+
+        <p class="commercial-line"><i class="fa-solid fa-building"></i> Commercial roofing: nationwide.</p>
+
+        <div class="service-area-cta-row">
+          <button class="btn-outline" data-popup-trigger><i class="fa-solid fa-clipboard-check"></i> Get A Free Quote</button>
+        </div>
+
+        <div class="service-area-skyline" aria-hidden="true"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 15 - FOOTER
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div class="footer-col footer-brand-block">
+        <img src="../assets/logo/park-heights-roofing-primary.png" alt="Park Heights Roofing">
+        <p class="footer-tagline">Pikesville's locally trusted roofer since 1999.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/parkheightsroofing" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://maps.google.com/?cid=11304683772727883636" target="_blank" rel="noopener" aria-label="Google Business"><i class="fa-brands fa-google"></i></a>
+        </div>
+        <div class="footer-leaf-stamp" aria-hidden="true">
+          <img src="../assets/generated/mascot-generated.png" alt="">
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="https://parkheightsroofing.com/project-map-it/" target="_blank" rel="noopener">Past Work</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#financing">Financing</a></li>
+          <li><a href="#" data-popup-trigger>Contact</a></li>
+          <li style="margin-top:10px"><a href="https://parkheightsroofing.com/privacy-policy/" target="_blank" rel="noopener" style="font-size:12px; color:#6A6B6C">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="https://parkheightsroofing.com/roofing/roof-replacement/" target="_blank" rel="noopener">Roof Replacement</a></li>
+          <li><a href="https://parkheightsroofing.com/roofing/roof-repair/" target="_blank" rel="noopener">Roof Repair</a></li>
+          <li><a href="https://parkheightsroofing.com/roofing/roof-inspection/" target="_blank" rel="noopener">Roof Inspection</a></li>
+          <li><a href="https://parkheightsroofing.com/roofing/slate-roofing/" target="_blank" rel="noopener">Slate Roofing</a></li>
+          <li><a href="https://parkheightsroofing.com/siding/" target="_blank" rel="noopener">Siding</a></li>
+          <li><a href="https://parkheightsroofing.com/gutters/" target="_blank" rel="noopener">Gutters</a></li>
+          <li><a href="https://parkheightsroofing.com/insulation/" target="_blank" rel="noopener">Insulation</a></li>
+          <li><a href="https://parkheightsroofing.com/chimneys/" target="_blank" rel="noopener">Chimneys</a></li>
+          <li><a href="https://parkheightsroofing.com/commercial-roofing/" target="_blank" rel="noopener">Commercial Roofing</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-row"><i class="fa-solid fa-phone"></i><a href="tel:+14103581257">(410) 358-1257</a></div>
+        <div class="footer-contact-row"><i class="fa-solid fa-envelope"></i><a href="mailto:info@parkheightsroofing.com">info@parkheightsroofing.com</a></div>
+        <div class="footer-contact-row"><i class="fa-solid fa-location-dot"></i><a href="https://maps.google.com/?cid=11304683772727883636" target="_blank" rel="noopener">15 Sudbrook Lane,<br>Pikesville, MD 21208</a></div>
+        <div class="footer-contact-row"><i class="fa-regular fa-clock"></i>Mon-Fri 9:00am-5:00pm</div>
+      </div>
+
+    </div>
+
+    <div class="footer-trust-stack">
+      <p>Licensed, insured, and bonded · MHIC# 107668 · CertainTeed Select Shingle Master · Best of Baltimore 2024</p>
+    </div>
+
+    <div class="footer-bottom">
+      <div>&copy; <span id="footer-year"></span> Park Heights Roofing. All rights reserved.</div>
+      <div>Website Designed With Love by <a href="https://kingcontractor.com/" target="_blank" rel="noopener">King Contractor Agency</a>. Building America's Most Trusted Roofing Brands.</div>
+    </div>
+
+  </div>
+</footer>
+
+<!-- ============================================================
+     STICKY MOBILE CTA + SCROLL TOP + POPUP FORM
+     ============================================================ -->
+<div class="sticky-mobile-cta" id="stickyMobileCTA">
+  <button class="btn-mobile" id="stickyMobileBtn"><i class="fa-solid fa-phone"></i> Call Now (410) 358-1257</button>
+</div>
+
+<button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<div class="popup-overlay" id="popupOverlay" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+  <div class="popup-card">
+    <button class="popup-close" id="popupClose" aria-label="Close form"><i class="fa-solid fa-xmark"></i></button>
+    <h3 id="popupTitle">Get your free estimate from Pikesville's award-winning roofer.</h3>
+    <p class="popup-sub">We will call you back within 2 hours.</p>
+
+    <form id="popupForm" novalidate>
+      <div class="form-group">
+        <label for="pf-name">Your Name</label>
+        <input id="pf-name" name="name" type="text" required>
+      </div>
+      <div class="form-group">
+        <label for="pf-phone">Phone</label>
+        <input id="pf-phone" name="phone" type="tel" required>
+      </div>
+      <div class="form-group">
+        <label for="pf-email">Email</label>
+        <input id="pf-email" name="email" type="email" required>
+      </div>
+      <div class="form-group">
+        <label for="pf-addr">Property Address (optional)</label>
+        <input id="pf-addr" name="address" type="text">
+      </div>
+      <div class="form-group">
+        <label>How Can We Help?</label>
+        <div class="radio-group">
+          <label class="radio-option"><input type="radio" name="help" value="inspection"> Roof Inspection</label>
+          <label class="radio-option"><input type="radio" name="help" value="repair"> Roof Repair</label>
+          <label class="radio-option"><input type="radio" name="help" value="replacement"> Roof Replacement</label>
+          <label class="radio-option"><input type="radio" name="help" value="other"> Something Else</label>
+        </div>
+      </div>
+      <button type="submit" class="btn-cta"><i class="fa-solid fa-bolt"></i> Get My Free Estimate</button>
+      <p class="form-trustline">Free. No obligation. We respond within 2 hours.</p>
+    </form>
+
+    <div class="form-success" id="popupFormSuccess">
+      <h3>Thank you.</h3>
+      <p>We will call you back within 2 hours.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     JS — form submit, sticky mobile, scroll top, accordion-free nav
+     ============================================================ -->
+<script>
+(function() {
+  'use strict';
+
+  // ----- Footer year -----
+  var yearEl = document.getElementById('footer-year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // ----- Hamburger menu -----
+  var hamburger = document.getElementById('hamburgerBtn');
+  var mobileMenu = document.getElementById('mobileMenu');
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', function() {
+      var open = mobileMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    mobileMenu.addEventListener('click', function(e) {
+      if (e.target.tagName === 'A') {
+        mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  // ----- Sticky mobile CTA: 9am-5pm = call, otherwise = quote -----
+  var stickyBtn = document.getElementById('stickyMobileBtn');
+  if (stickyBtn) {
+    var nowH = new Date().getHours();
+    var businessHours = nowH >= 9 && nowH < 17;
+    if (businessHours) {
+      stickyBtn.innerHTML = '<i class="fa-solid fa-phone"></i> Call Now (410) 358-1257';
+      stickyBtn.addEventListener('click', function() {
+        window.location.href = 'tel:+14103581257';
+      });
+    } else {
+      stickyBtn.innerHTML = '<i class="fa-solid fa-clipboard-check"></i> Get A Free Quote';
+      stickyBtn.addEventListener('click', function() { openPopup(); });
+    }
+  }
+
+  // ----- Scroll-to-top -----
+  var scrollBtn = document.getElementById('scrollTopBtn');
+  if (scrollBtn) {
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 400) scrollBtn.classList.add('show');
+      else scrollBtn.classList.remove('show');
+    });
+    scrollBtn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // ----- Reviews carousel pagination (JS class-toggle) -----
+  var pagBtns = document.querySelectorAll('.review-page-btn');
+  var reviewCards = document.querySelectorAll('.review-card');
+  pagBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var targetPage = btn.getAttribute('data-page');
+      pagBtns.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      reviewCards.forEach(function(card) {
+        if (card.getAttribute('data-review-page') === targetPage) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // ----- Hero form + popup form submit (no real backend; in-place thank you) -----
+  function attachFormHandler(formId, successId) {
+    var form = document.getElementById(formId);
+    var success = document.getElementById(successId);
+    if (!form || !success) return;
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var name = form.querySelector('input[name="name"]');
+      var phone = form.querySelector('input[name="phone"]');
+      var email = form.querySelector('input[name="email"]');
+      if (!name || !name.value.trim() || !phone || !phone.value.trim() || !email || !email.value.trim()) {
+        // visual hint
+        [name, phone, email].forEach(function(f) {
+          if (f && !f.value.trim()) f.style.borderColor = '#cc2222';
+        });
+        return;
+      }
+      form.style.display = 'none';
+      success.classList.add('show');
+    });
+  }
+  attachFormHandler('heroForm', 'heroFormSuccess');
+  attachFormHandler('popupForm', 'popupFormSuccess');
+
+  // ----- Popup form -----
+  var popup = document.getElementById('popupOverlay');
+  var popupClose = document.getElementById('popupClose');
+  function openPopup() { if (popup) popup.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closePopup() { if (popup) popup.classList.remove('open'); document.body.style.overflow = ''; }
+  document.querySelectorAll('[data-popup-trigger]').forEach(function(el) {
+    el.addEventListener('click', function(e) { e.preventDefault(); openPopup(); });
+  });
+  if (popupClose) popupClose.addEventListener('click', closePopup);
+  if (popup) popup.addEventListener('click', function(e) {
+    if (e.target === popup) closePopup();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closePopup();
+  });
+
+  // ----- Smooth scroll for anchor links + active-section highlight -----
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      var href = a.getAttribute('href');
+      if (href === '#' || href.length < 2) return;
+      var target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        var off = target.getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top: off, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // ----- Hero bg fallback: if generated image fails, fall through to roof-repair.jpg -----
+  // (Already handled in CSS background-image stack — browser uses the second URL automatically
+  //  when the first fails. No JS needed.)
+
+})();
+</script>
+
+</body>
+</html>

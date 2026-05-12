@@ -1,0 +1,83 @@
+{
+  "_note": "Asset MANIFEST for parkheightsroofing build. Path C mascot per design-system/rules/mascot-rules.md §Path C — no real character mascot exists in the brand DNA and the live site's iconographic identity IS the green leaf mark. Build mode is hybrid; visual-identity precedence belongs to the source site per sops/design-intelligence.md. Path C uses the existing green-leaf-mark.png deterministically wrapped in the KCA sticker treatment (white circular bg + 3px brand-primary ring + soft drop shadow) at three corner-stamp placements (owner-story bottom-right, service-area right column, footer center accent).",
+  "slug": "parkheightsroofing",
+  "generated_at": "2026-05-12T05:35:00Z",
+  "assets": {
+    "logo_primary": {
+      "path": "assets/logo/park-heights-roofing-primary.png",
+      "source": "scraped",
+      "is_real_evidence": true,
+      "served_at": "header nav + footer brand block"
+    },
+    "logo_favicon_residential": {
+      "path": "assets/logo/favicon-residential.png",
+      "source": "scraped",
+      "is_real_evidence": true
+    },
+    "logo_favicon_commercial": {
+      "path": "assets/logo/favicon-commercial.png",
+      "source": "scraped",
+      "is_real_evidence": true
+    },
+    "green_leaf_mark": {
+      "path": "assets/logo/green-leaf-mark.png",
+      "source": "scraped",
+      "is_real_evidence": true,
+      "served_at": "hero form-card corner-cut decoration (CSS background-image)"
+    },
+    "mascot_generated": {
+      "path": "assets/generated/mascot-generated.png",
+      "source": "logo-emblem-stamp",
+      "asset_type": "mascot",
+      "is_real_evidence": false,
+      "generation_provider": "deterministic-emblem-stamp",
+      "mark_origin": "assets/logo/green-leaf-mark.png",
+      "cleanup_steps": [
+        "1. Source: scraped green-leaf-mark.png from live site (512x512 PNG, RGBA, 98.9% green pixel coverage = the brand's iconographic identity per brand-color-audit.md).",
+        "2. Verify alpha channel intact (file output confirms '8-bit/color RGBA, non-interlaced' — transparent background preserved, no checkerboard, no JPEG conversion).",
+        "3. Copy unmodified to assets/generated/mascot-generated.png (Path C emblem stamp — no rasterization, no color shift, no upscale).",
+        "4. Build wraps each placement in KCA sticker treatment (CSS: 100% white circular bg + 3px var(--brand-primary) border + soft drop shadow) per mascot-rules.md §Path C — see .owner-leaf-stamp, .service-area-leaf-stamp, .footer-leaf-stamp."
+      ],
+      "served_at": "owner-story bottom-right corner stamp + service-area right column corner stamp + footer brand-block center accent (3 placements, within the 3-6 cap)",
+      "notes": "Path C invoked per design-profile.json#rule_overrides[0] (Pattern 001 Mode B mascot mandate overridden in hybrid build mode — visual-identity precedence belongs to the source site). Path B Nano-Banana suppressed by rule_override + brief §discipline 'no invented heroes'. The green leaf mark IS the brand's real iconographic identity."
+    },
+    "hero_bg_generated": {
+      "path": "assets/generated/hero-pikesville.png",
+      "source": "generated",
+      "is_real_evidence": false,
+      "generation_provider": "gemini-nano-banana",
+      "prompt": "Photo-real high-angle aerial-perspective view of a recently-installed dark gray architectural-shingle roof on an upper-middle-class Pikesville Maryland residential home, late-afternoon warm light raking across the shingles, mature Maryland oak and maple trees framing the edges, suburban Baltimore neighborhood context visible at the lower edge (no logos, no people, no vehicles, no truck, no characters, no overlay text, no captions, no watermarks); composition leaves the upper-left third dark and uncluttered for an H1 + form layout overlay; color grade leans cool with subtle green vegetation tones to harmonize with brand green #339966; photographic, not illustrated; 16:9 widescreen, 1920x1080.",
+      "exclusions": "no people, no owners, no faces, no Israel Elgamil portrait, no vehicles, no branded truck, no logos, no text overlays, no watermarks, no AI-generated humans, no stock-photo families",
+      "served_at": "hero background (Layer 1), CSS background-image first URL with gallery/roof-repair.jpg fallback",
+      "notes": "Falls back to assets/gallery/roof-repair.jpg (real scraped Pikesville Maryland project photo) if NB2 fails."
+    },
+    "baltimore_skyline": {
+      "path": "assets/photos/baltimore-skyline.jpg",
+      "source": "scraped",
+      "is_real_evidence": true,
+      "served_at": "service-area section atmosphere strip"
+    },
+    "award_badges": [
+      {"path": "assets/photos/badges/angies-list-2011.png", "source": "scraped", "is_real_evidence": true},
+      {"path": "assets/photos/badges/angies-list-2013.png", "source": "scraped", "is_real_evidence": true},
+      {"path": "assets/photos/badges/angies-list-2014-ssa.png", "source": "scraped", "is_real_evidence": true},
+      {"path": "assets/photos/badges/angies-list-2017-ssa.png", "source": "scraped", "is_real_evidence": true},
+      {"path": "assets/photos/badges/angies-list-2019-ssa.png", "source": "scraped", "is_real_evidence": true},
+      {"path": "assets/photos/badges/best-of-baltimore-2013.png", "source": "scraped", "is_real_evidence": true},
+      {"path": "assets/photos/badges/best-of-baltimore-2024.png", "source": "scraped", "is_real_evidence": true},
+      {"path": "assets/photos/badges/expertise-best-roofers-2018.png", "source": "scraped", "is_real_evidence": true},
+      {"path": "assets/photos/badges/select-shingle-master.png", "source": "scraped", "is_real_evidence": true}
+    ],
+    "gallery_photos": [
+      {"path": "assets/gallery/blown-insulation.jpg", "source": "scraped", "is_real_evidence": true},
+      {"path": "assets/gallery/chimney-repointing.jpg", "source": "scraped", "is_real_evidence": true},
+      {"path": "assets/gallery/flat-commercial-roof.jpg", "source": "scraped", "is_real_evidence": true},
+      {"path": "assets/gallery/james-hardie.jpg", "source": "scraped", "is_real_evidence": true},
+      {"path": "assets/gallery/k-style-gutter.jpg", "source": "scraped", "is_real_evidence": true},
+      {"path": "assets/gallery/roof-repair.jpg", "source": "scraped", "is_real_evidence": true},
+      {"path": "assets/gallery/siding-installation.jpg", "source": "scraped", "is_real_evidence": true},
+      {"path": "assets/gallery/slate-roofing.jpg", "source": "scraped", "is_real_evidence": true},
+      {"path": "assets/gallery/vinyl-siding.jpg", "source": "scraped", "is_real_evidence": true}
+    ]
+  }
+}
