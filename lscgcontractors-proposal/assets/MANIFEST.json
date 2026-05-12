@@ -1,0 +1,437 @@
+{
+  "version": 1,
+  "slug": "lscgcontractors",
+  "source_site": "https://www.lscgcontractors.com/",
+  "generated_at": "2026-05-12",
+  "generated_by": "research subagent (Stage 2 + 2b)",
+  "_assets_structure_note": "Top-level `assets` was converted from a list to a dict in Stage 5 QA iteration 2 to satisfy Gate 4.5.33 (Mascot MANIFEST Audit Trail), which hardcodes `assets.mascot_generated` dict-key access. The original list of scraped/derived asset rows is preserved under `asset_rows` for downstream consumers (Stage 13 proposal does not read this list per a 2026-05-12 grep of the proposal SOP + agent contract).",
+  "assets": {
+    "mascot_generated": {
+      "asset_type": "mascot",
+      "path": "assets/generated/mascot-generated.png",
+      "source": "generated",
+      "generation_provider": "gemini-nano-banana",
+      "prompt": "A friendly, illustrated suburban-roofer character mascot for LSCG Roofing & Contractors (Arlington TX, owner-led family-named multi-vertical residential contractor since 2015, BBB A+ since 2018, insurance-claim-savvy). Style: clean illustrated vector-feel with thick consistent outline and sticker-style white bezel border, NOT photorealistic, NOT 3D-render-stock-look. Pose: 3/4 front-facing, neutral confident smile, suitable as 64-110px corner stamp AND 240px service-area feature figure. Wardrobe: hard-hat with the LSCG electric-blue #1413CE accent band, navy work shirt #0A1C59, jeans, work boots. Holding: small clipboard or a folded insurance-claim folder (the brand's insurance-claims wedge). Background: transparent (PNG with alpha; will re-process via remove-bg.sh per mascot-generation-prompt-recipe.md). Color palette: brand electric blue #1413CE + brand navy deep #0A1C59 + amber CTA accent #F59E0B used only on the hard-hat band and the clipboard tag (NOT on the body or other large areas). Aspect: 1:1 square. 1024x1024.",
+      "served_at": "../assets/generated/mascot-generated.png",
+      "is_real_evidence": false,
+      "format": "PNG RGBA (true RGBA / transparent alpha)",
+      "claim_attached": "Pattern 002 mandatory mascot character; brand-color-keyed (electric-blue hard-hat band + navy work shirt + amber clipboard tag) per the mascot-generation prompt; placed in marquee + owner-story + service-area + footer per mascot-rules §'Allowed mascot uses' placement matrix (3-6 strategic placements). Carries NO public claim of being a real LSCG employee or character.",
+      "provenance": "Stage 4 Build NB2 (Nano-Banana 2) generation via agentic/tools/generate-image.sh, alpha-isolated via agentic/tools/remove-bg.sh; raw file preserved at clients/lscgcontractors/assets/generated/mascot-raw.png for audit",
+      "notes": "Path B per mascot-rules.md (real Path A returned absent — no brand mascot on source site)"
+    }
+  },
+  "asset_rows": [
+    {
+      "asset_type": "logo",
+      "path": "assets/logo/lscg-primary-logo.png",
+      "source_url": "https://static.mywebsites360.com/ee06c2225a6e42c2a6e20e3d9e62897f/i/ac76082ce3bc423894e0e2c286137140/1/5feFb8zhrk/Logo.png",
+      "scraped_from": "https://www.lscgcontractors.com/ (header, alt='LSCG Roofing and Contractors')",
+      "size_bytes": 47214,
+      "format": "PNG",
+      "is_real_evidence": true,
+      "claim_attached": "primary brand logo as displayed sitewide in the source site header",
+      "provenance": "live-site header scrape"
+    },
+    {
+      "asset_type": "favicon",
+      "path": "assets/logo/favicon.ico",
+      "source_url": "https://www.lscgcontractors.com/favicon.ico",
+      "scraped_from": "https://www.lscgcontractors.com/favicon.ico",
+      "size_bytes": 398022,
+      "format": "Windows ICO (8 sizes: 16x16/24x24 + 32-bit)",
+      "is_real_evidence": true,
+      "claim_attached": "site favicon — multi-resolution ICO",
+      "provenance": "live-site root favicon fetch"
+    },
+    {
+      "asset_type": "owner_photo",
+      "path": "assets/team/cayleb-contreras-fb.jpg",
+      "source_url": "https://scontent-sin11-2.xx.fbcdn.net/v/t51.82787-15/650237735_18071967020638324_7791341072445582541_n.jpg",
+      "scraped_from": "https://www.facebook.com/lscgcontractors/photos/-cayleb-was-out-today-performing-a-full-property-inspection-after-recent-storm-a/1612962074170607/ (og:image)",
+      "size_bytes": 21790,
+      "format": "JPEG 851x315 (social-share crop)",
+      "is_real_evidence": true,
+      "claim_attached": "Cayleb Contreras — Owner/Operator + sales lead — captured on a storm-inspection jobsite",
+      "discovery_path": "A3_firecrawl_serp_owner_brand",
+      "discovery_evidence": "Firecrawl SERP \"Cayleb Contreras\" \"LSCG Contractors\" returned an LSCG-business-page Facebook photo URL whose URL slug embeds the caption 'cayleb-was-out-today-performing-a-full-property-inspection-after-recent-storm'; FB serves og:image to scrapers even when full DOM is login-walled. The post's metadata description starts with 'Cayleb was out today performing a full property inspection after recent storm activity.' — name + brand association + context all match.",
+      "confidence": "high",
+      "notes": "Source is the LSCG Contractors BUSINESS Facebook page, not a personal profile. Named caption + business-page provenance. og:image is a 851x315 social-share crop, not the full hi-res original — Stage 4 should use the cutout (315x315) for the hero overlay where the crop is acceptable.",
+      "provenance": "Facebook business-page public photo og:image"
+    },
+    {
+      "asset_type": "owner_photo_cutout",
+      "path": "assets/team/cayleb-contreras-cutout.png",
+      "source_url": "derived from assets/team/cayleb-contreras-fb.jpg",
+      "scraped_from": "remove-bg.sh Path B (remove.bg API) — non-generative isolation of the scraped portrait",
+      "size_bytes": 124860,
+      "format": "PNG 315x315 RGBA (transparent background)",
+      "is_real_evidence": true,
+      "claim_attached": "hero-overlay-ready transparent cutout of Cayleb Contreras (owner) for Pattern 002 hero-owner-overlay layer",
+      "discovery_path": "A3_firecrawl_serp_owner_brand_then_remove_bg",
+      "confidence": "high",
+      "notes": "remove.bg API cutout. Identity preserved (non-generative). Hero recipe §3b compliance: transparent-background cutout, ≥30% alpha pixels, silhouette reads against colored bg.",
+      "provenance": "derivative of Cayleb FB photo"
+    },
+    {
+      "asset_type": "team_photo",
+      "path": "assets/team/bill-torres-ig.jpg",
+      "source_url": "https://scontent-sin6-2.cdninstagram.com/v/t51.82787-15/525435611_18046121693638324_8688831134791813600_n.jpg",
+      "scraped_from": "https://www.instagram.com/p/DMtgrgpxn7A/ (og:image, post caption: 'Bill Torres, one of our Project Managers at LSCG Roofing')",
+      "size_bytes": 76330,
+      "format": "JPEG 640x640 (Instagram square crop)",
+      "is_real_evidence": true,
+      "claim_attached": "Bill Torres — Project Manager at LSCG Roofing & Contractors",
+      "discovery_path": "A3_firecrawl_serp_owner_brand",
+      "discovery_evidence": "SERP search '\"life_with_lilbill\" \"LSCG\"' returned an Instagram post by @lscgcontractors whose caption literally reads 'Bill Torres, one of our Project Managers at LSCG Roofing & Contractors'. Named match + business-page provenance.",
+      "confidence": "high",
+      "provenance": "LSCG Instagram business-page public post og:image"
+    },
+    {
+      "asset_type": "team_photo_cutout",
+      "path": "assets/team/bill-torres-cutout.png",
+      "source_url": "derived from assets/team/bill-torres-ig.jpg",
+      "scraped_from": "remove-bg.sh Path B (remove.bg API)",
+      "size_bytes": 41197,
+      "format": "PNG 500x500 RGBA (transparent background)",
+      "is_real_evidence": true,
+      "claim_attached": "Bill Torres (Project Manager) transparent cutout — usable as hero-form mini-card fallback OR Meet-the-Team section asset",
+      "discovery_path": "A3_firecrawl_serp_owner_brand_then_remove_bg",
+      "confidence": "high",
+      "provenance": "derivative of Bill Torres IG photo"
+    },
+    {
+      "asset_type": "photo_hero_bg_fallback",
+      "path": "assets/photos/hero-banner-lightning.jpg",
+      "source_url": "https://static.mywebsites360.com/ee06c2225a6e42c2a6e20e3d9e62897f/i/e07dbec3cdd9493eaa2ca739b29f1211/1/5feFb8zhrk/LSCG%20-%20lightning%20image.jpg",
+      "scraped_from": "https://www.lscgcontractors.com/ (homepage hero background-image CSS)",
+      "size_bytes": 150357,
+      "format": "JPEG",
+      "is_real_evidence": true,
+      "intended_use": "hero_bg_fallback",
+      "claim_attached": "homepage hero photo from source site — dramatic storm/lightning over rooftops; per sops/asset-scrape.md §3b this is demoted to fallback (Stage 4 attempts NB2 generation first)",
+      "provenance": "live-site homepage CSS background-image"
+    },
+    {
+      "asset_type": "photo_process",
+      "path": "assets/photos/process-home-img-1.jpg",
+      "source_url": "https://static.mywebsites360.com/ee06c2225a6e42c2a6e20e3d9e62897f/i/c2b2f58a7271491b9c00a8358663d14d/1/GCuCv727RiYFXYTGfhakB6/Home%20Img%201.jpg",
+      "scraped_from": "https://www.lscgcontractors.com/ ('Our Hassle-Free Process' section)",
+      "size_bytes": 129875,
+      "format": "JPEG",
+      "is_real_evidence": true,
+      "claim_attached": "process-section photo on source homepage",
+      "provenance": "live-site homepage scrape"
+    },
+    {
+      "asset_type": "photo_about",
+      "path": "assets/photos/about-us-photo.jpg",
+      "source_url": "https://static.mywebsites360.com/ee06c2225a6e42c2a6e20e3d9e62897f/i/ff196179137b404388dd3a92149d0881/1/4SoifmQp45JMgBnHm9g4L/aboutus.jpg",
+      "scraped_from": "https://www.lscgcontractors.com/about-us ('Who We Are')",
+      "size_bytes": 75892,
+      "format": "JPEG",
+      "is_real_evidence": true,
+      "claim_attached": "about-page hero photo on source about-us",
+      "provenance": "live-site about-us scrape"
+    },
+    {
+      "asset_type": "photo_about_extra",
+      "path": "assets/photos/about-us-extra.jpg",
+      "source_url": "https://static.mywebsites360.com/ee06c2225a6e42c2a6e20e3d9e62897f/i/cdfe628eeeef47d58fd2446f580c0d15/1/4SoifmQpDrHbZJ6W2ZLJ8/extra%20img.jpg",
+      "scraped_from": "https://www.lscgcontractors.com/about-us ('What We Do')",
+      "size_bytes": 80420,
+      "format": "JPEG",
+      "is_real_evidence": true,
+      "claim_attached": "supporting about-page photo",
+      "provenance": "live-site about-us scrape"
+    },
+    {
+      "asset_type": "photo_service_banner",
+      "path": "assets/photos/service-roof-banner.jpg",
+      "source_url": "https://static.mywebsites360.com/ee06c2225a6e42c2a6e20e3d9e62897f/i/d041af0210774f84a248d843e859f27d/1/GCuCv727RiYFXYTGfhakB6/service%20Img%203%20Roof.jpg",
+      "scraped_from": "https://www.lscgcontractors.com/areas-we-serve + roofing service pages",
+      "size_bytes": 211387,
+      "format": "JPEG",
+      "is_real_evidence": true,
+      "claim_attached": "service-page roof banner photo used across multiple inner pages",
+      "provenance": "live-site service-page scrape"
+    },
+    {
+      "asset_type": "category_icon",
+      "path": "assets/photos/category-services.png",
+      "source_url": "https://static.mywebsites360.com/ee06c2225a6e42c2a6e20e3d9e62897f/i/dc659ce86e834aa8a34da846dbb19030/1/4SoifmQpDrHbZJ6Vu9PtQ/SERVICES.png",
+      "scraped_from": "homepage services tile",
+      "size_bytes": 11018,
+      "format": "PNG",
+      "is_real_evidence": true,
+      "claim_attached": "branded service-category badge",
+      "provenance": "live-site homepage scrape"
+    },
+    {
+      "asset_type": "category_icon",
+      "path": "assets/photos/category-roofing.png",
+      "source_url": "https://static.mywebsites360.com/ee06c2225a6e42c2a6e20e3d9e62897f/i/ab759a085fab45d39c440266b10c909e/1/4SoifmQpDrHbZJ6Vu9PtQ/ROOFING.png",
+      "scraped_from": "homepage roofing tile",
+      "size_bytes": 10973,
+      "format": "PNG",
+      "is_real_evidence": true,
+      "claim_attached": "branded roofing-category badge",
+      "provenance": "live-site homepage scrape"
+    },
+    {
+      "asset_type": "category_icon",
+      "path": "assets/photos/category-gutters.png",
+      "source_url": "https://static.mywebsites360.com/ee06c2225a6e42c2a6e20e3d9e62897f/i/cb4b858d70604053842be86e13d9e26a/1/4SoifmQpDrHbZJ6Vu9PtQ/GUTTERS.png",
+      "scraped_from": "homepage gutters tile",
+      "size_bytes": 9735,
+      "format": "PNG",
+      "is_real_evidence": true,
+      "claim_attached": "branded gutters-category badge",
+      "provenance": "live-site homepage scrape"
+    },
+    {
+      "asset_type": "category_icon",
+      "path": "assets/photos/category-solar.png",
+      "source_url": "https://static.mywebsites360.com/ee06c2225a6e42c2a6e20e3d9e62897f/i/ed0838807a8f4365b35994cdb1ed4344/1/4SoifmQpDrHbZJ6Vu9PtQ/SOLAR.png",
+      "scraped_from": "homepage solar tile",
+      "size_bytes": 10732,
+      "format": "PNG",
+      "is_real_evidence": true,
+      "claim_attached": "branded solar-category badge",
+      "provenance": "live-site homepage scrape"
+    },
+    {
+      "asset_type": "category_icon",
+      "path": "assets/photos/category-windows.png",
+      "source_url": "https://static.mywebsites360.com/ee06c2225a6e42c2a6e20e3d9e62897f/i/da9f958614854037bc61a8c9367fb12a/1/4SoifmQpDrHbZJ6Vu9PtQ/WINDOWS.png",
+      "scraped_from": "homepage windows tile",
+      "size_bytes": 11007,
+      "format": "PNG",
+      "is_real_evidence": true,
+      "claim_attached": "branded windows-category badge",
+      "provenance": "live-site homepage scrape"
+    },
+    {
+      "asset_type": "category_icon",
+      "path": "assets/photos/category-areas.png",
+      "source_url": "https://static.mywebsites360.com/ee06c2225a6e42c2a6e20e3d9e62897f/i/a97eb0c7d0e845828f80f3d2490c1df0/1/4SoifmQpDrHbZJ6Vu9PtQ/AREAS%20WE%20SERVE.png",
+      "scraped_from": "homepage areas tile",
+      "size_bytes": 10622,
+      "format": "PNG",
+      "is_real_evidence": true,
+      "claim_attached": "branded areas-we-serve-category badge",
+      "provenance": "live-site homepage scrape"
+    },
+    {
+      "asset_type": "problem_icon",
+      "path": "assets/photos/problem-icon-leaks.png",
+      "source_url": "https://static.mywebsites360.com/ee06c2225a6e42c2a6e20e3d9e62897f/i/edafe68bfdee4c168fd9ba996466ea85/1/4SoifmQp45JMgBnHiBhVe/Roofing%20Services%20Overview%201.png",
+      "scraped_from": "https://www.lscgcontractors.com/roofing ('Leaks' problem-indicator)",
+      "size_bytes": 8136,
+      "format": "PNG",
+      "is_real_evidence": true,
+      "claim_attached": "'Leaks' problem-indicator icon",
+      "provenance": "live-site roofing-page scrape"
+    },
+    {
+      "asset_type": "problem_icon",
+      "path": "assets/photos/problem-icon-missing-shingles.png",
+      "source_url": "https://static.mywebsites360.com/ee06c2225a6e42c2a6e20e3d9e62897f/i/dfdc0cced0b04218ac171d1bb63f9675/1/4SoifmQp45JMgBnHiBhVe/Roofing%20Services%20Overview%202.png",
+      "scraped_from": "https://www.lscgcontractors.com/roofing ('Missing Shingles')",
+      "size_bytes": 13082,
+      "format": "PNG",
+      "is_real_evidence": true,
+      "claim_attached": "'Missing Shingles' problem-indicator icon",
+      "provenance": "live-site roofing-page scrape"
+    },
+    {
+      "asset_type": "problem_icon",
+      "path": "assets/photos/problem-icon-sagging-roof.png",
+      "source_url": "https://static.mywebsites360.com/ee06c2225a6e42c2a6e20e3d9e62897f/i/a7968f311fe347c8a0b9d1274bfdad3e/1/4SoifmQp45JMgBnHiBhVe/Roofing%20Services%20Overview%204.png",
+      "scraped_from": "https://www.lscgcontractors.com/roofing ('Sagging Roof')",
+      "size_bytes": 14472,
+      "format": "PNG",
+      "is_real_evidence": true,
+      "claim_attached": "'Sagging Roof' problem-indicator icon",
+      "provenance": "live-site roofing-page scrape"
+    },
+    {
+      "asset_type": "problem_icon",
+      "path": "assets/photos/problem-icon-granule-buildup.png",
+      "source_url": "https://static.mywebsites360.com/ee06c2225a6e42c2a6e20e3d9e62897f/i/b49b7d17d1814feca3f3e049a613949b/1/4SoifmQp45JMgBnHiBhVe/Roofing%20Services%20Overview%205.png",
+      "scraped_from": "https://www.lscgcontractors.com/roofing ('Granule Buildup')",
+      "size_bytes": 7884,
+      "format": "PNG",
+      "is_real_evidence": true,
+      "claim_attached": "'Granule Buildup' problem-indicator icon",
+      "provenance": "live-site roofing-page scrape"
+    },
+    {
+      "asset_type": "problem_icon",
+      "path": "assets/photos/problem-icon-water-damage.png",
+      "source_url": "https://static.mywebsites360.com/ee06c2225a6e42c2a6e20e3d9e62897f/i/f648c5caca2e4d5c8bcc7c4fc2b78b9a/1/4SoifmQp45JMgBnHiBhVe/Roofing%20Services%20Overview%206.png",
+      "scraped_from": "https://www.lscgcontractors.com/roofing ('Interior Water Damage')",
+      "size_bytes": 6218,
+      "format": "PNG",
+      "is_real_evidence": true,
+      "claim_attached": "'Water Damage' problem-indicator icon",
+      "provenance": "live-site roofing-page scrape"
+    },
+    {
+      "asset_type": "problem_icon",
+      "path": "assets/photos/problem-icon-energy-bills.png",
+      "source_url": "https://static.mywebsites360.com/ee06c2225a6e42c2a6e20e3d9e62897f/i/fcb4b44ce8ae43d6a9f92cff02228d9b/1/4SoifmQp45JMgBnHiBhVe/Roofing%20Services%20Overview3.png",
+      "scraped_from": "https://www.lscgcontractors.com/roofing ('Higher Energy Bills')",
+      "size_bytes": 12336,
+      "format": "PNG",
+      "is_real_evidence": true,
+      "claim_attached": "'Higher Energy Bills' problem-indicator icon",
+      "provenance": "live-site roofing-page scrape"
+    },
+    {
+      "asset_type": "badge_trust_composite",
+      "path": "assets/photos/badges/hero-trust-badges-composite.png",
+      "source_url": "https://static.mywebsites360.com/ee06c2225a6e42c2a6e20e3d9e62897f/i/e01b8fbc4d0644af9c8e3c55c1e03a70/1/4SoifmQp45JMgBnHmBMTz/Hero%20Trust%20Badges%20-%20LSCG%20Contractors%20LLC.png",
+      "scraped_from": "https://www.lscgcontractors.com/ + sitewide hero band",
+      "size_bytes": 135900,
+      "format": "PNG",
+      "is_real_evidence": true,
+      "claim_attached": "LSCG sitewide hero trust-badge composite (cert/credentials strip used in every page hero)",
+      "notes": "This is the brand's curated trust-strip image — Stage 3.5 should inspect it for the actual cert logos used (likely BBB + manufacturer marks)",
+      "provenance": "live-site sitewide hero band"
+    },
+    {
+      "asset_type": "badge_bbb_seal",
+      "path": "assets/photos/badges/bbb-accredited-seal.png",
+      "source_url": "https://seal-austin.bbb.org/seals/blue-seal-280-80-bbb-1000185593.png",
+      "scraped_from": "https://www.lscgcontractors.com/ (footer linked to BBB profile)",
+      "size_bytes": 5959,
+      "format": "PNG",
+      "is_real_evidence": true,
+      "claim_attached": "BBB Accredited Business 'Blue Seal' issued to LSCG by BBB Heart of Texas (Austin chapter) — accredited since 2018-06-11, A+ rating",
+      "provenance": "BBB-hosted accreditation seal"
+    },
+    {
+      "asset_type": "badge_topratedlocal_google",
+      "path": "assets/photos/badges/topratedlocal-google-icon.png",
+      "source_url": "https://s3.amazonaws.com/topratedlocal/rating_src/boxlogo-google.png",
+      "scraped_from": "homepage testimonials widget",
+      "size_bytes": 7380,
+      "format": "PNG",
+      "is_real_evidence": true,
+      "claim_attached": "Google icon used in TopRatedLocal review widget",
+      "provenance": "third-party review-aggregator badge"
+    },
+    {
+      "asset_type": "badge_topratedlocal",
+      "path": "assets/photos/badges/topratedlocal-icon.png",
+      "source_url": "https://s3.amazonaws.com/topratedlocal/rating_src/boxlogo-trl.png",
+      "scraped_from": "homepage testimonials widget",
+      "size_bytes": 20073,
+      "format": "PNG",
+      "is_real_evidence": true,
+      "claim_attached": "TopRatedLocal aggregator badge",
+      "provenance": "third-party review-aggregator badge"
+    },
+    {
+      "asset_type": "review_5star_badge",
+      "path": "assets/photos/reviews/light-theme-5star-badge.png",
+      "source_url": "https://static.mywebsites360.com/ee06c2225a6e42c2a6e20e3d9e62897f/i/b0e63c395f8b4b87835cc3dc413103b0/1/4SoifmQp45JMgBnHfFQLc/Light%20Theme%205%20Star.png",
+      "scraped_from": "homepage '5 Star Experience' decoration",
+      "size_bytes": 11197,
+      "format": "PNG",
+      "is_real_evidence": true,
+      "claim_attached": "5-star light-theme decoration badge used near the 'Hassle-Free Process' section",
+      "provenance": "live-site homepage decoration"
+    },
+    {
+      "asset_type": "gallery_roofing",
+      "path": "assets/gallery/roofing-overview-1.png",
+      "source_url": "https://static.mywebsites360.com/ee06c2225a6e42c2a6e20e3d9e62897f/i/a6d584c9b1814d158de52a6e614b00cc/1/4SoifmQp45JMgBnHm9g4L/Roofing%20Services%20Overview%201.png",
+      "scraped_from": "https://www.lscgcontractors.com/roofing (Roof Inspections section large card)",
+      "size_bytes": 516418,
+      "format": "PNG",
+      "is_real_evidence": true,
+      "claim_attached": "real LSCG roofing project photo (roof inspection context)",
+      "provenance": "live-site roofing-page scrape"
+    },
+    {
+      "asset_type": "gallery_roofing",
+      "path": "assets/gallery/roofing-overview-2.png",
+      "source_url": "https://static.mywebsites360.com/ee06c2225a6e42c2a6e20e3d9e62897f/i/c1f2bc521e2c4feb9ad1a6d5f5887dc2/1/4SoifmQp45JMgBnHm9g4L/Roofing%20Services%20Overview%202.png",
+      "scraped_from": "https://www.lscgcontractors.com/roofing (Roof Repairs section large card)",
+      "size_bytes": 516993,
+      "format": "PNG",
+      "is_real_evidence": true,
+      "claim_attached": "real LSCG roofing project photo (roof repair context)",
+      "provenance": "live-site roofing-page scrape"
+    },
+    {
+      "asset_type": "gallery_roofing",
+      "path": "assets/gallery/roofing-overview-3.png",
+      "source_url": "https://static.mywebsites360.com/ee06c2225a6e42c2a6e20e3d9e62897f/i/a454496b9238417b8d7b428815b6df1a/1/4SoifmQp45JMgBnHm9g4L/Roofing%20Services%20Overview%203.png",
+      "scraped_from": "https://www.lscgcontractors.com/roofing (Roof Replacement section)",
+      "size_bytes": 575334,
+      "format": "PNG",
+      "is_real_evidence": true,
+      "claim_attached": "real LSCG roofing project photo (roof replacement context)",
+      "provenance": "live-site roofing-page scrape"
+    },
+    {
+      "asset_type": "gallery_roofing",
+      "path": "assets/gallery/roofing-overview-4.png",
+      "source_url": "https://static.mywebsites360.com/ee06c2225a6e42c2a6e20e3d9e62897f/i/c0b4ccaf37064138bc2f887dc8ab827c/1/4SoifmQp45JMgBnHm9g4L/Roofing%20Services%20Overview%204.png",
+      "scraped_from": "https://www.lscgcontractors.com/roofing ('We Will Handle The Entire Roofing Process')",
+      "size_bytes": 513813,
+      "format": "PNG",
+      "is_real_evidence": true,
+      "claim_attached": "real LSCG roofing project photo (full-process context)",
+      "provenance": "live-site roofing-page scrape"
+    },
+    {
+      "asset_type": "gallery_roofing",
+      "path": "assets/gallery/roofing-overview-5.png",
+      "source_url": "https://static.mywebsites360.com/ee06c2225a6e42c2a6e20e3d9e62897f/i/e4b3a33df6cf419f8d06b5324f9b9615/1/4SoifmQp45JMgBnHm9g4L/Roofing%20Services%20Overview%205.png",
+      "scraped_from": "https://www.lscgcontractors.com/roofing ('Why Partner With Us?')",
+      "size_bytes": 544800,
+      "format": "PNG",
+      "is_real_evidence": true,
+      "claim_attached": "real LSCG roofing project photo (why-partner context)",
+      "provenance": "live-site roofing-page scrape"
+    }
+  ],
+  "fetch_errors": [
+    {
+      "url": "https://scontent-sin11-2.xx.fbcdn.net/.../684697459_.../n.jpg",
+      "intended_path": "assets/team/cayleb-contreras-fb-2.jpg",
+      "reason": "FB CDN signed-URL expired between probe and second fetch — common on FB/IG og:image URLs"
+    },
+    {
+      "url": "https://scontent-sin2-3.cdninstagram.com/.../482291392_.../n.jpg",
+      "intended_path": "assets/team/team-lscg-win-ig.jpg",
+      "reason": "IG CDN signed-URL expired"
+    },
+    {
+      "url": "https://scontent-sin11-1.cdninstagram.com/.../499205136_.../n.jpg",
+      "intended_path": "assets/team/team-lscg-completed-ig.jpg",
+      "reason": "IG CDN signed-URL expired"
+    }
+  ],
+  "owner_photo_summary": {
+    "status": "found",
+    "primary": "assets/team/cayleb-contreras-cutout.png",
+    "discovery_path": "A3_firecrawl_serp_owner_brand",
+    "confidence": "high",
+    "owner_full_name": "Cayleb Contreras",
+    "owner_role": "Operating principal / lead sales (registered LLC owner per BBB is 'Mr. Anthony P Contreras' — possible relative; Cayleb is the public-facing figure across FB + IG + testimonials)",
+    "team_member_2": "assets/team/bill-torres-cutout.png (Bill Torres, Project Manager)"
+  },
+  "gap_analysis": {
+    "missing": [],
+    "notes": [
+      "Source site has no /team or /our-team page — all team identification done via Path A3 (Firecrawl SERP on social platforms).",
+      "Hero photo on source ('LSCG - lightning image.jpg') is dramatic but not roof-job-content — Stage 4 should attempt NB2 generation per sops/asset-scrape.md §3b (this is now demoted to fallback).",
+      "No vehicle/truck photos found on source — Stage 4 should drop the truck-cutout layer (hero.truck_layer = false) unless gallery generation produces one. Pattern 002 truck layer is optional, not required.",
+      "The 'Hero Trust Badges - LSCG Contractors LLC.png' composite likely embeds the BBB + manufacturer marks — Stage 3.5 should crop individual badges if cert detail is needed in the build."
+    ]
+  }
+}
