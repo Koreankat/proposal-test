@@ -193,7 +193,7 @@ blockquote{ font-family: var(--font-body); }
 .deco-sunray.tl{ left:-9%; top:-11% }
 .deco-sunray.tr{ right:-9%; top:-11% }
 @media (max-width: 768px){
-  .deco-sunray, .deco-edge-left, .deco-edge-right, .corner-stamp{ display: none }
+  .deco-sunray, .corner-stamp{ display: none }
 }
 
 /* Thin gold strike  -  once per page, hero→reviews seam */
@@ -203,45 +203,9 @@ blockquote{ font-family: var(--font-body); }
   z-index: 4; opacity:.95;
 }
 
-/* Edge-anchored side decorations (Pattern A) — gold M-shape clipped to the gutter so they
-   read as deliberate frame elements, not background noise. Sized to satisfy 4.5.28.1.b
-   ≥ 200×200 floor on desktop, hidden on mobile via the .deco-sunray media query. */
-.deco-edge-left, .deco-edge-right{
-  position:absolute; top: 50%; transform: translateY(-50%);
-  width: 220px; height: 220px;
-  clip-path: var(--deco-shape-1);
-  background: var(--brand-primary);
-  opacity: 0.92;
-  pointer-events:none;
-  z-index: 1;
-}
-.deco-edge-left{ left: -120px }
-.deco-edge-right{ right: -120px; transform: translateY(-50%) scaleX(-1) }
-.section-reviews .deco-edge-left,
-.section-reviews .deco-edge-right,
-.section-why .deco-edge-left,
-.section-why .deco-edge-right,
-.section-owner .deco-edge-left,
-.section-owner .deco-edge-right,
-.section-final-cta .deco-edge-left,
-.section-final-cta .deco-edge-right,
-.section-process .deco-edge-left,
-.section-process .deco-edge-right{
-  background: var(--brand-primary);
-}
-.section-gallery .deco-edge-left,
-.section-gallery .deco-edge-right,
-.section-services .deco-edge-left,
-.section-services .deco-edge-right,
-.section-financing .deco-edge-left,
-.section-financing .deco-edge-right,
-.section-trust .deco-edge-left,
-.section-trust .deco-edge-right,
-.section-area .deco-edge-left,
-.section-area .deco-edge-right{
-  background: var(--brand-accent);
-  opacity: 0.88;
-}
+/* Edge-anchored side M-shapes removed per operator review 2026-05-13:
+   the seam dividers (::before / ::after) + corner stamps already carry
+   the M-shape identity; the centered side shapes were reading as noise. */
 
 /* Corner-stamp — small gold corner motif, satisfies decoration-coherence per-section floor */
 .corner-stamp{
@@ -259,7 +223,7 @@ blockquote{ font-family: var(--font-body); }
 .corner-stamp.br{ bottom: 0; right: 0 }
 
 /* Hero-specific decorations need higher z-index than the bleed seam */
-.hero .deco-edge-left, .hero .deco-edge-right{ z-index: 2 }
+/* .hero .deco-edge-* removed — side M-shapes deleted 2026-05-13 */
 
 /* --------- Announcement bar (Section 1) --------- */
 .announce{
@@ -335,7 +299,7 @@ blockquote{ font-family: var(--font-body); }
 }
 .hero-bg{
   position:absolute; inset:0;
-  background: url('../assets/photos/aerial-residential-community.webp') center 30% / cover no-repeat;
+  background: url('../assets/photos/hero-bg-tampa-bay-nb2.png') center 38% / cover no-repeat;
   z-index: 0;
 }
 .hero-overlay{
@@ -662,7 +626,7 @@ blockquote{ font-family: var(--font-body); }
 .section-trust::after{
   content:''; position:absolute; left:0; right:0; bottom:0; height:64px;
   clip-path: var(--deco-shape-1);
-  background: var(--ink);
+  background: var(--paper);
   z-index: 2;
   pointer-events:none;
 }
@@ -682,11 +646,10 @@ blockquote{ font-family: var(--font-body); }
 .trust-marquee:hover{ animation-play-state: paused }
 .trust-marquee img{
   height: 92px; width: auto;
-  filter: grayscale(100%) opacity(0.62);
-  transition: filter .25s ease;
+  transition: transform .25s ease, filter .25s ease;
   flex-shrink: 0;
 }
-.trust-marquee img:hover{ filter: grayscale(0%) opacity(1) }
+.trust-marquee img:hover{ transform: translateY(-2px); filter: drop-shadow(0 6px 14px rgba(0,0,0,.18)) }
 @keyframes marquee{
   from{ transform: translateX(0) }
   to{ transform: translateX(-50%) }
@@ -1053,7 +1016,14 @@ blockquote{ font-family: var(--font-body); }
   border: 2px solid var(--brand-primary);
   overflow:hidden;
 }
-.owner-tile .av img{ width:100%; height:100%; object-fit: cover; object-position: center top }
+/* Per-tile face crops via object-position + zoom-in via transform.
+   housh-boys-cutout.png (735x339) = Stephen | Arry | Matthew, left → right.
+   housh-family-cutout.png (607x411) = Stephen | Becky | Arry | Matthew, left → right. */
+.owner-tile .av img{ width:100%; height:100%; object-fit: cover; will-change: transform; }
+.owner-tile.tile-arry    .av img{ object-position: 50% 32%; transform: scale(1.45); transform-origin: 50% 30%; }
+.owner-tile.tile-stephen .av img{ object-position: 0%  26%; transform: scale(1.55); transform-origin: 12% 28%; }
+.owner-tile.tile-matthew .av img{ object-position: 100% 26%; transform: scale(1.55); transform-origin: 88% 28%; }
+.owner-tile.tile-becky   .av img{ object-position: 30% 26%; transform: scale(1.55); transform-origin: 28% 28%; }
 .owner-tile .nm{ font-family: var(--font-display); font-weight:800; font-size: 13.5px; color: var(--text-on-dark) }
 .owner-tile .rl{ font-family: var(--font-body); font-size: 11px; color: rgba(255,255,255,.66); line-height:1.4 }
 .owner-photo-wrap{
@@ -1514,8 +1484,6 @@ footer.site-footer{
 <section id="hero" class="hero" aria-label="Hero with estimate form">
   <div class="hero-bg" aria-hidden="true"></div>
   <div class="hero-overlay" aria-hidden="true"></div>
-  <div class="deco-edge-left" aria-hidden="true"></div>
-  <div class="deco-edge-right" aria-hidden="true"></div>
   <div class="corner-stamp tr" aria-hidden="true"></div>
 
   <div class="hero-inner">
@@ -1626,11 +1594,75 @@ footer.site-footer{
 </section>
 
 <!-- =========================================================
-     SECTION 4 | Reviews
+     SECTION 4 | Trust marquee + Awards (moved under hero per source-order preserve-elevate 2026-05-13)
+     ========================================================= -->
+<section class="section-trust" aria-label="Certifications, affiliations, and awards">
+  <div class="container">
+    <div class="section-heading">
+      <span class="section-eyebrow">Certifications & Affiliations</span>
+      <h2 class="h2-2line" style="color: var(--ink-soft)">
+        <span class="l1" style="color: var(--ink-soft)">Backed By The Industry's Most Demanding</span>
+        <span class="l2">Manufacturer And Trade Certifications</span>
+      </h2>
+    </div>
+  </div>
+
+  <div class="trust-marquee-wrap" aria-hidden="false" aria-label="Manufacturer and trade certifications">
+    <div class="trust-marquee" id="trustMarquee">
+      <img src="../assets/photos/badges/gaf-master-elite-2025.png" alt="GAF Master Elite 2025">
+      <img src="../assets/photos/badges/authorized-contractor-logo.png" alt="GAF Authorized Contractor">
+      <img src="../assets/photos/badges/gaf-certified-metal-2025.png" alt="GAF Certified Metal 2025">
+      <img src="../assets/photos/badges/gaf-certified-solar.png" alt="GAF Certified Solar">
+      <img src="../assets/photos/badges/gaf-cmp-logo.png" alt="GAF Certified Maintenance Professional">
+      <img src="../assets/photos/badges/gaf-cmp-maintenance-logo.png" alt="GAF Certified Maintenance">
+      <img src="../assets/photos/badges/owens-platinum-elite-logo.png" alt="Owens Corning Platinum Elite">
+      <img src="../assets/photos/badges/fortified-roof-logo.png" alt="IBHS Fortified Roof">
+      <img src="../assets/photos/badges/bbb-accredited-logo.png" alt="BBB Accredited Business">
+      <img src="../assets/photos/badges/habitat-for-humanity-logo.png" alt="Habitat for Humanity Partner">
+      <img src="../assets/photos/badges/good-housekeeping-logo.png" alt="Good Housekeeping">
+      <img src="../assets/photos/badges/expertise-com-logo.png" alt="Expertise.com Best of">
+      <img src="../assets/photos/badges/classic-metal-roofing-logo.png" alt="Classic Metal Roofing Systems Partner">
+      <img src="../assets/photos/badges/ha-elite-service-logo.png" alt="HomeAdvisor Elite Service">
+      <img src="../assets/photos/badges/presidents-club-logo.png" alt="GAF President's Club">
+      <img src="../assets/photos/badges/atticbreeze-logo.png" alt="AtticBreeze">
+      <!-- duplicate for seamless loop -->
+      <img src="../assets/photos/badges/gaf-master-elite-2025.png" alt="">
+      <img src="../assets/photos/badges/authorized-contractor-logo.png" alt="">
+      <img src="../assets/photos/badges/gaf-certified-metal-2025.png" alt="">
+      <img src="../assets/photos/badges/gaf-certified-solar.png" alt="">
+      <img src="../assets/photos/badges/gaf-cmp-logo.png" alt="">
+      <img src="../assets/photos/badges/owens-platinum-elite-logo.png" alt="">
+      <img src="../assets/photos/badges/fortified-roof-logo.png" alt="">
+      <img src="../assets/photos/badges/bbb-accredited-logo.png" alt="">
+      <img src="../assets/photos/badges/habitat-for-humanity-logo.png" alt="">
+      <img src="../assets/photos/badges/good-housekeeping-logo.png" alt="">
+      <img src="../assets/photos/badges/expertise-com-logo.png" alt="">
+      <img src="../assets/photos/badges/classic-metal-roofing-logo.png" alt="">
+      <img src="../assets/photos/badges/ha-elite-service-logo.png" alt="">
+      <img src="../assets/photos/badges/presidents-club-logo.png" alt="">
+      <img src="../assets/photos/badges/atticbreeze-logo.png" alt="">
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="awards-row">
+      <span class="ar-eyebrow">Awards & Recognition</span>
+      <h3 class="ar-h3"><span class="underline">Five-Time Consumer Protection Excellence Award Winner</span></h3>
+      <div class="endorse">
+        <p class="quote">
+          "Only the top 2% of all roofing contractors even qualify to become a Master Elite Contractor,
+          and Arry's Roofing Services even stands out in this elite group."
+        </p>
+        <p class="attr"><b>Robert Fischer</b> · GAF National Sales Manager</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     SECTION 5 | Reviews
      ========================================================= -->
 <section id="reviews" class="section-reviews" aria-label="Customer reviews">
-  <div class="deco-edge-left" aria-hidden="true"></div>
-  <div class="deco-edge-right" aria-hidden="true"></div>
   <div class="container">
     <div class="section-heading">
       <span class="section-eyebrow">Happy Customers</span>
@@ -1733,78 +1765,9 @@ footer.site-footer{
 </section>
 
 <!-- =========================================================
-     SECTION 5 | Trust marquee + Awards
-     ========================================================= -->
-<section class="section-trust" aria-label="Certifications, affiliations, and awards">
-  <div class="deco-edge-left" aria-hidden="true"></div>
-  <div class="deco-edge-right" aria-hidden="true"></div>
-  <div class="container">
-    <div class="section-heading">
-      <span class="section-eyebrow">Certifications & Affiliations</span>
-      <h2 class="h2-2line" style="color: var(--ink-soft)">
-        <span class="l1" style="color: var(--ink-soft)">Backed By The Industry's Most Demanding</span>
-        <span class="l2">Manufacturer And Trade Certifications</span>
-      </h2>
-    </div>
-  </div>
-
-  <div class="trust-marquee-wrap" aria-hidden="false" aria-label="Manufacturer and trade certifications">
-    <div class="trust-marquee" id="trustMarquee">
-      <img src="../assets/photos/badges/gaf-master-elite-2025.png" alt="GAF Master Elite 2025">
-      <img src="../assets/photos/badges/authorized-contractor-logo.png" alt="GAF Authorized Contractor">
-      <img src="../assets/photos/badges/gaf-certified-metal-2025.png" alt="GAF Certified Metal 2025">
-      <img src="../assets/photos/badges/gaf-certified-solar.png" alt="GAF Certified Solar">
-      <img src="../assets/photos/badges/gaf-cmp-logo.png" alt="GAF Certified Maintenance Professional">
-      <img src="../assets/photos/badges/gaf-cmp-maintenance-logo.png" alt="GAF Certified Maintenance">
-      <img src="../assets/photos/badges/owens-platinum-elite-logo.png" alt="Owens Corning Platinum Elite">
-      <img src="../assets/photos/badges/fortified-roof-logo.png" alt="IBHS Fortified Roof">
-      <img src="../assets/photos/badges/bbb-accredited-logo.png" alt="BBB Accredited Business">
-      <img src="../assets/photos/badges/habitat-for-humanity-logo.png" alt="Habitat for Humanity Partner">
-      <img src="../assets/photos/badges/good-housekeeping-logo.png" alt="Good Housekeeping">
-      <img src="../assets/photos/badges/expertise-com-logo.png" alt="Expertise.com Best of">
-      <img src="../assets/photos/badges/classic-metal-roofing-logo.png" alt="Classic Metal Roofing Systems Partner">
-      <img src="../assets/photos/badges/ha-elite-service-logo.png" alt="HomeAdvisor Elite Service">
-      <img src="../assets/photos/badges/presidents-club-logo.png" alt="GAF President's Club">
-      <img src="../assets/photos/badges/atticbreeze-logo.png" alt="AtticBreeze">
-      <!-- duplicate for seamless loop -->
-      <img src="../assets/photos/badges/gaf-master-elite-2025.png" alt="">
-      <img src="../assets/photos/badges/authorized-contractor-logo.png" alt="">
-      <img src="../assets/photos/badges/gaf-certified-metal-2025.png" alt="">
-      <img src="../assets/photos/badges/gaf-certified-solar.png" alt="">
-      <img src="../assets/photos/badges/gaf-cmp-logo.png" alt="">
-      <img src="../assets/photos/badges/owens-platinum-elite-logo.png" alt="">
-      <img src="../assets/photos/badges/fortified-roof-logo.png" alt="">
-      <img src="../assets/photos/badges/bbb-accredited-logo.png" alt="">
-      <img src="../assets/photos/badges/habitat-for-humanity-logo.png" alt="">
-      <img src="../assets/photos/badges/good-housekeeping-logo.png" alt="">
-      <img src="../assets/photos/badges/expertise-com-logo.png" alt="">
-      <img src="../assets/photos/badges/classic-metal-roofing-logo.png" alt="">
-      <img src="../assets/photos/badges/ha-elite-service-logo.png" alt="">
-      <img src="../assets/photos/badges/presidents-club-logo.png" alt="">
-      <img src="../assets/photos/badges/atticbreeze-logo.png" alt="">
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="awards-row">
-      <span class="ar-eyebrow">Awards & Recognition</span>
-      <h3 class="ar-h3"><span class="underline">Five-Time Consumer Protection Excellence Award Winner</span></h3>
-      <div class="endorse">
-        <p class="quote">
-          "Only the top 2% of all roofing contractors even qualify to become a Master Elite Contractor,
-          and Arry's Roofing Services even stands out in this elite group."
-        </p>
-        <p class="attr"><b>Robert Fischer</b> · GAF National Sales Manager</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- =========================================================
      SECTION 6 | Why Us
      ========================================================= -->
 <section id="about" class="section-why about-section" aria-label="Why Tampa Bay homeowners choose Arry's Roofing">
-  <div class="deco-edge-left" aria-hidden="true"></div>
   <div class="container">
     <div class="section-heading">
       <span class="section-eyebrow">Why Arry's</span>
@@ -1851,8 +1814,6 @@ footer.site-footer{
      SECTION 7 | Past Work / Gallery
      ========================================================= -->
 <section id="gallery" class="section-gallery" aria-label="Recent Tampa Bay roofing projects">
-  <div class="deco-edge-left" aria-hidden="true"></div>
-  <div class="deco-edge-right" aria-hidden="true"></div>
   <div class="container">
     <div class="section-heading">
       <span class="section-eyebrow">Recent Work Photos</span>
@@ -1926,7 +1887,6 @@ footer.site-footer{
      SECTION 8 | Process
      ========================================================= -->
 <section class="section-process" aria-label="Our 4-step roofing process">
-  <div class="deco-edge-left" aria-hidden="true"></div>
   <div class="container">
     <div class="section-heading">
       <span class="section-eyebrow">Our Process</span>
@@ -1964,8 +1924,6 @@ footer.site-footer{
      SECTION 9 | Services
      ========================================================= -->
 <section id="services" class="section-services" aria-label="Roofing services we provide">
-  <div class="deco-edge-left" aria-hidden="true"></div>
-  <div class="deco-edge-right" aria-hidden="true"></div>
   <div class="container">
     <div class="section-heading">
       <span class="section-eyebrow">Our Services</span>
@@ -2055,7 +2013,6 @@ footer.site-footer{
      SECTION 10 | Owner story (Executive Team, The Family)
      ========================================================= -->
 <section class="section-owner owner" aria-label="The Housh family">
-  <div class="deco-edge-right" aria-hidden="true"></div>
   <div class="container">
     <div class="owner-grid">
       <div class="owner-copy">
@@ -2076,22 +2033,22 @@ footer.site-footer{
         </div>
 
         <div class="owner-tiles">
-          <div class="owner-tile">
+          <div class="owner-tile tile-arry">
             <div class="av"><img src="../assets/team/housh-boys-cutout.png" alt="James 'Arry' Housh, Founder"></div>
             <span class="nm">James "Arry" Housh</span>
             <span class="rl">Founder & CEO</span>
           </div>
-          <div class="owner-tile">
+          <div class="owner-tile tile-becky">
             <div class="av"><img src="../assets/team/housh-family-cutout.png" alt="Becky Housh, Co-Founder"></div>
             <span class="nm">Becky Housh</span>
             <span class="rl">Co-Founder</span>
           </div>
-          <div class="owner-tile">
+          <div class="owner-tile tile-stephen">
             <div class="av"><img src="../assets/team/housh-boys-cutout.png" alt="Stephen Housh, Next-Generation Management"></div>
             <span class="nm">Stephen Housh</span>
             <span class="rl">Next-Generation Mgmt</span>
           </div>
-          <div class="owner-tile">
+          <div class="owner-tile tile-matthew">
             <div class="av"><img src="../assets/team/housh-boys-cutout.png" alt="Matthew Housh, Next-Generation Management"></div>
             <span class="nm">Matthew Housh</span>
             <span class="rl">Next-Generation Mgmt</span>
@@ -2115,7 +2072,6 @@ footer.site-footer{
      SECTION 11 | Financing
      ========================================================= -->
 <section id="financing" class="section-financing" aria-label="Financing your roof">
-  <div class="deco-edge-right" aria-hidden="true"></div>
   <div class="container">
     <div class="financing-grid">
       <div class="financing-copy">
@@ -2154,7 +2110,6 @@ footer.site-footer{
      SECTION 12 | Community (No Roof Left Behind)
      ========================================================= -->
 <section class="section-community" aria-label="No Roof Left Behind program">
-  <div class="deco-edge-left" aria-hidden="true"></div>
   <div class="container">
     <div class="community-grid">
       <div>
@@ -2209,8 +2164,6 @@ footer.site-footer{
      SECTION 14 | Service area
      ========================================================= -->
 <section id="service-area" class="section-area service-area" aria-label="Tampa Bay service area">
-  <div class="deco-edge-left" aria-hidden="true"></div>
-  <div class="deco-edge-right" aria-hidden="true"></div>
   <div class="container">
     <div class="area-grid">
       <div class="area-copy">
