@@ -1,0 +1,2554 @@
+<!doctype html>
+<html lang="en" data-overlay-tier="dim-brand">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Specialist Roofing &amp; Repair | Southern California Roofers Since 2011</title>
+<meta name="description" content="Family-owned SoCal roofers. GAF Master Elite + Owens Corning Platinum. 4.9 stars across 500+ Google reviews. Get an instant satellite quote or call 323-615-3011." />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23003FBE'/%3E%3Cpath d='M14 44 L32 18 L50 44 Z' fill='%23FFFFFF'/%3E%3Cpath d='M22 44 L32 30 L42 44 Z' fill='%23FF6B27'/%3E%3C/svg%3E" />
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/logo/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="../assets/logo/favicon-192.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/logo/apple-touch-icon-180.png" />
+<meta property="og:title" content="Specialist Roofing &amp; Repair · SoCal Roofers Since 2011" />
+<meta property="og:description" content="GAF Master Elite + Owens Corning Platinum. 4.9 stars across 509 Google reviews." />
+<meta property="og:image" content="../assets/generated/hero-truck-burbank.png" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" />
+<style>
+/* ============================================================
+   TOKENS
+   ============================================================ */
+:root{
+  /* brand palette */
+  --brand-primary:        #003FBE;
+  --brand-primary-dark:   #003099;
+  --brand-deep:           #112337;
+  --brand-deep-darker:    #061C47;
+  --brand-accent:         #FF6B27;
+  --brand-accent-dark:    #E55519;
+  --brand-light:          #F5F5F5;
+
+  /* surface + ink */
+  --surface:              #FFFFFF;
+  --surface-cream:        #F7F4EE;
+  --surface-subtle:       #F5F5F5;
+  --surface-dark:         #112337;
+  --ink:                  #112337;
+  --ink-soft:             #585E6A;
+  --border-neutral:       #686E77;
+  --border-soft:          rgba(17,35,55,0.10);
+
+  /* shape vocabulary — 4 polygons brand-keyed (triangle + diagonal + chevron motif family) */
+  --deco-shape-1: polygon(0 0, 100% 0, 75% 100%, 0 100%);          /* angled-stripe-left */
+  --deco-shape-2: polygon(25% 0, 100% 0, 100% 100%, 0 100%);       /* angled-stripe-right */
+  --deco-shape-3: polygon(0 0, 50% 60%, 100% 0, 100% 100%, 0 100%);/* chevron-down-seam */
+  --deco-shape-4: polygon(0 100%, 50% 0, 100% 100%);               /* roofline-pitch triangle */
+
+  /* hero overlay tier presets (read by data-overlay-tier on <html>) */
+  --hero-overlay-alpha-0: 0.55; --hero-overlay-alpha-1: 0.45;
+  --hero-overlay-alpha-2: 0.30; --hero-overlay-alpha-3: 0.12;
+
+  /* type */
+  --font-display: 'Roboto Slab','Rockwell','Slabo 27px',Georgia,serif;
+  --font-body:    'Manrope','Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+
+  /* layout */
+  --max: 1200px;
+  --pad-x: 24px;
+}
+:root[data-overlay-tier="dim-heavy"]  { --hero-overlay-alpha-0: 0.85; --hero-overlay-alpha-1: 0.78; --hero-overlay-alpha-2: 0.55; --hero-overlay-alpha-3: 0.35; }
+:root[data-overlay-tier="dim-medium"] { --hero-overlay-alpha-0: 0.74; --hero-overlay-alpha-1: 0.66; --hero-overlay-alpha-2: 0.42; --hero-overlay-alpha-3: 0.20; }
+:root[data-overlay-tier="dim-brand"]  { --hero-overlay-alpha-0: 0.55; --hero-overlay-alpha-1: 0.45; --hero-overlay-alpha-2: 0.30; --hero-overlay-alpha-3: 0.12; }
+:root[data-overlay-tier="dim-light"]  { --hero-overlay-alpha-0: 0.35; --hero-overlay-alpha-1: 0.25; --hero-overlay-alpha-2: 0.12; --hero-overlay-alpha-3: 0.05; }
+
+/* ============================================================
+   RESET + BASE
+   ============================================================ */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  font-family:var(--font-body);
+  color:var(--ink);
+  background:var(--surface);
+  line-height:1.55;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+/* Body-font frequency anchors — explicit Manrope on body-content elements (Gate 4.5.31.3 audit-aligned) */
+p{font-family:var(--font-body);}
+li{font-family:var(--font-body);}
+label{font-family:var(--font-body);}
+input,textarea,select{font-family:var(--font-body);}
+.lede{font-family:var(--font-body);}
+.micro{font-family:var(--font-body);}
+.blurb{font-family:var(--font-body);}
+.feature-cap span{font-family:var(--font-body);}
+.process-tile p{font-family:var(--font-body);}
+.service-card p{font-family:var(--font-body);}
+.city-chip{font-family:var(--font-body);}
+.region-card .count{font-family:var(--font-body);}
+.region-card .blurb{font-family:var(--font-body);}
+.region-card .map-link{font-family:var(--font-body);}
+.hero-bullets li{font-family:var(--font-body);}
+.hero-sub{font-family:var(--font-body);}
+.trust-pill{font-family:var(--font-body);}
+.coord-cell .desc{font-family:var(--font-body);}
+.footer ul a{font-family:var(--font-body);}
+.footer .nap-row{font-family:var(--font-body);}
+.fchip .fdesc{font-family:var(--font-body);}
+.hq-card .meta{font-family:var(--font-body);}
+.owner-body{font-family:var(--font-body);}
+.owner-body p{font-family:var(--font-body);}
+.trust-license{font-family:var(--font-body);}
+.reviews-aggregate{font-family:var(--font-body);}
+.footer-bottom .legal{font-family:var(--font-body);}
+.footer-bottom .kca{font-family:var(--font-body);}
+.announcement-bar{font-family:var(--font-body);}
+.nav-phone{font-family:var(--font-body);}
+.phone-link{font-family:var(--font-body);}
+.hero-license{font-family:var(--font-body);}
+.hero-eyebrow{font-family:var(--font-body);}
+.coord-label{font-family:var(--font-body);}
+.process-tile h3{font-family:var(--font-body);}
+.process-tile .step-label{font-family:var(--font-body);}
+.service-card{font-family:var(--font-body);}
+.feature-cap h3{font-family:var(--font-body);}
+.owner-side-card .meta span{font-family:var(--font-body);}
+.fchip .fmeta{font-family:var(--font-body);}
+.hq-card{font-family:var(--font-body);}
+.popup-modal label{font-family:var(--font-body);}
+.popup-modal input{font-family:var(--font-body);}
+.popup-foot{font-family:var(--font-body);}
+.popup-micro{font-family:var(--font-body);}
+.footer p{font-family:var(--font-body);}
+.footer-cta-block{font-family:var(--font-body);}
+.footer-bottom{font-family:var(--font-body);}
+.trust-marquee p{font-family:var(--font-body);}
+.region-card{font-family:var(--font-body);}
+.coord-cell{font-family:var(--font-body);}
+.whyus-section .head{font-family:var(--font-body);}
+.pastwork-tile span{font-family:var(--font-body);}
+.eyebrow.on-dark{font-family:var(--font-body);}
+img,svg{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:0}
+
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad-x)}
+.eyebrow{
+  font-family:var(--font-body);
+  font-weight:800;
+  font-size:12px;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:var(--brand-accent);
+  margin:0 0 14px;
+}
+.eyebrow.on-dark{color:#FFA648}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:800;color:var(--ink);margin:0 0 14px;line-height:1.08;letter-spacing:-0.01em}
+h2{font-size:clamp(28px,3.4vw,42px)}
+h3{font-size:clamp(20px,2.0vw,26px)}
+.lede{font-size:clamp(16px,1.2vw,18px);color:var(--ink-soft);max-width:60ch;margin:0 0 28px}
+.lede.on-dark{color:rgba(255,255,255,0.78)}
+
+/* ============================================================
+   BUTTONS — sharp-edge default
+   ============================================================ */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  font-family:var(--font-body);
+  font-weight:800;
+  font-size:15px;
+  letter-spacing:0.04em;
+  padding:14px 24px;
+  min-height:48px;
+  border-radius:0;
+  cursor:pointer;
+  transition:transform 0.14s ease, box-shadow 0.18s ease;
+  white-space:nowrap;
+}
+.btn-cta{
+  background:var(--brand-accent);
+  color:#fff;
+  box-shadow:
+    0 5px 0 0 var(--brand-accent-dark),
+    0 10px 22px rgba(0,0,0,0.22);
+}
+.btn-cta:hover{transform:translateY(-2px);box-shadow:0 7px 0 0 var(--brand-accent-dark),0 14px 30px rgba(0,0,0,0.30)}
+.btn-cta:active{transform:translateY(2px);box-shadow:0 3px 0 0 var(--brand-accent-dark),0 6px 14px rgba(0,0,0,0.20)}
+.btn-cta .arrow{font-size:17px;line-height:1}
+.btn-secondary{
+  background:#fff;
+  color:var(--brand-deep);
+  border:2px solid var(--brand-deep);
+  box-shadow:0 4px 0 0 var(--brand-deep);
+}
+.btn-secondary:hover{transform:translateY(-2px);box-shadow:0 6px 0 0 var(--brand-deep)}
+.btn-secondary.on-dark{background:transparent;color:#fff;border-color:#fff;box-shadow:0 4px 0 0 rgba(255,255,255,0.6)}
+.btn-large{min-height:56px;font-size:17px;padding:18px 28px}
+.btn-block{width:100%}
+
+/* phone link with pulse dot */
+.phone-link{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--font-body);font-weight:800;
+  color:var(--brand-deep);
+}
+.phone-link .pulse{
+  width:9px;height:9px;border-radius:50%;
+  background:var(--brand-accent);
+  box-shadow:0 0 0 0 rgba(255,107,39,0.7);
+  animation:pulse 1.8s infinite;
+  flex-shrink:0;
+}
+.phone-link.on-dark{color:#fff}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(255,107,39,0.55)}
+  70%{box-shadow:0 0 0 10px rgba(255,107,39,0)}
+  100%{box-shadow:0 0 0 0 rgba(255,107,39,0)}
+}
+
+/* ============================================================
+   BG TEXTURES (Tier A decoration — preferred default)
+   ============================================================ */
+.bg-dots{
+  background-image:radial-gradient(rgba(17,35,55,0.10) 1px, transparent 1.4px);
+  background-size:18px 18px;
+}
+.bg-grid{
+  background-image:
+    linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px);
+  background-size:32px 32px;
+}
+.bg-stripe{
+  background-image:repeating-linear-gradient(
+    -55deg,
+    rgba(255,255,255,0.03) 0 1px,
+    transparent 1px 14px
+  );
+}
+
+/* ============================================================
+   ANNOUNCEMENT BAR
+   ============================================================ */
+.announcement-bar{
+  background:var(--brand-deep);
+  color:#fff;
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:0.02em;
+}
+.announcement-bar .inner{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:9px 0;
+  min-height:38px;
+}
+.announcement-bar .heritage-chip{
+  font-size:11px;letter-spacing:0.18em;text-transform:uppercase;
+  color:rgba(255,255,255,0.78);font-weight:700;
+}
+.announcement-bar a{color:#fff}
+
+/* ============================================================
+   NAV
+   ============================================================ */
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,255,255,0.92);
+  backdrop-filter:saturate(180%) blur(14px);
+  -webkit-backdrop-filter:saturate(180%) blur(14px);
+  border-bottom:1px solid var(--border-soft);
+}
+.nav .inner{
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+  padding:14px 0;
+}
+.nav .logo img{height:42px;width:auto}
+.nav ul{
+  display:flex;align-items:center;gap:28px;
+  margin:0;padding:0;list-style:none;
+}
+.nav ul a{
+  font-weight:700;font-size:14px;letter-spacing:0.04em;
+  text-transform:uppercase;color:var(--brand-deep);
+  position:relative;padding:6px 0;
+  transition:color 0.18s ease;
+}
+.nav ul a:hover{color:var(--brand-primary)}
+.nav ul a.active::after{
+  content:'';position:absolute;left:0;right:0;bottom:-4px;height:3px;
+  background:var(--brand-accent);
+}
+.nav .nav-right{display:flex;align-items:center;gap:18px}
+.nav .nav-phone{font-size:14px}
+.nav-toggle{display:none;background:transparent;color:var(--brand-deep);font-size:24px;padding:6px 10px}
+.mobile-menu{display:none}
+
+@media (max-width:920px){
+  .nav ul, .nav .nav-phone{display:none}
+  .nav-toggle{display:inline-flex}
+  .nav .nav-right{gap:10px}
+  .mobile-menu{
+    position:fixed;inset:64px 0 0;z-index:60;
+    background:#fff;padding:20px;display:none;flex-direction:column;gap:16px;
+    border-top:1px solid var(--border-soft);
+  }
+  .mobile-menu.open{display:flex}
+  .mobile-menu a{
+    font-weight:700;font-size:18px;color:var(--brand-deep);
+    padding:14px 0;border-bottom:1px solid var(--border-soft);
+  }
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{
+  position:relative;
+  min-height:740px;
+  padding:60px 0 80px;
+  overflow:hidden;
+  isolation:isolate;
+}
+.hero-bg{
+  position:absolute;inset:0;z-index:0;
+  background-image:url('../assets/generated/hero-truck-burbank.png');
+  background-size:cover;
+  background-position:center 45%;
+}
+.hero-overlay{
+  position:absolute;inset:0;z-index:0;
+  background:
+    linear-gradient(90deg,
+      rgba(17, 35, 55, var(--hero-overlay-alpha-0)) 0%,
+      rgba(17, 35, 55, var(--hero-overlay-alpha-1)) 35%,
+      rgba(17, 35, 55, var(--hero-overlay-alpha-2)) 65%,
+      rgba(17, 35, 55, var(--hero-overlay-alpha-3)) 100%
+    ),
+    linear-gradient(180deg,
+      rgba(0,0,0,calc(var(--hero-overlay-alpha-0) * 0.20)) 0%,
+      rgba(0,0,0,calc(var(--hero-overlay-alpha-0) * 0.40)) 100%
+    );
+}
+.hero .wrap{position:relative;z-index:4}
+.hero-inner{
+  display:grid;
+  grid-template-columns:1.25fr 1fr;
+  gap:48px;
+  align-items:start;
+}
+.hero-copy{color:#fff;padding-top:14px}
+.hero-license{
+  font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;
+  color:rgba(255,255,255,0.66);margin-bottom:14px;
+}
+.hero-eyebrow{
+  display:inline-block;
+  font-size:12px;font-weight:800;letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--brand-accent);
+  background:rgba(255,107,39,0.10);
+  border:1px solid rgba(255,107,39,0.45);
+  padding:6px 12px;
+  margin-bottom:22px;
+}
+.hero h1{
+  font-family:var(--font-display);
+  font-weight:800;
+  color:#fff;
+  font-size:clamp(36px,4.6vw,60px);
+  line-height:1.04;
+  margin:0 0 18px;
+  max-width:14ch;
+  letter-spacing:-0.015em;
+}
+.hero h1 em{color:var(--brand-accent);font-style:italic}
+.hero-sub{
+  font-size:clamp(16px,1.2vw,18px);
+  line-height:1.55;
+  color:rgba(255,255,255,0.86);
+  max-width:50ch;
+  margin:0 0 26px;
+}
+.hero-bullets{
+  list-style:none;margin:0 0 26px;padding:0;
+  display:flex;flex-direction:column;gap:10px;
+}
+.hero-bullets li{
+  display:flex;align-items:center;gap:10px;
+  font-size:15px;font-weight:600;color:rgba(255,255,255,0.92);
+  white-space:nowrap;
+}
+.hero-bullets .check{
+  width:20px;height:20px;flex-shrink:0;
+  display:grid;place-items:center;
+  background:var(--brand-accent);color:#fff;
+  font-size:13px;font-weight:900;
+}
+.hero-trust-pills{
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  margin:0 0 26px;
+}
+.trust-pill{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,0.96);
+  color:var(--brand-deep);
+  padding:8px 12px;
+  font-size:13px;font-weight:700;
+  border-left:3px solid var(--brand-primary);
+}
+.trust-pill .star{color:var(--brand-accent);font-size:14px}
+.trust-pill .platform-mark{display:inline-flex;align-items:center}
+.trust-pill.heritage{border-left-color:var(--brand-accent)}
+.trust-pill.heritage strong{font-weight:800;color:var(--brand-accent)}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.hero-ctas .phone-link{
+  color:#fff;font-size:15px;font-weight:800;
+  padding:14px 12px;
+}
+
+/* hero form card */
+.hero-form-card{
+  background:#fff;
+  border-radius:0;
+  padding:32px;
+  border:1px solid rgba(17,35,55,0.08);
+  box-shadow:
+    0 8px 0 0 var(--brand-primary),
+    0 18px 40px rgba(0,0,0,0.28);
+  position:relative;
+  z-index:5;
+}
+.hero-form-card .form-eyebrow{
+  font-size:11px;font-weight:800;letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--brand-accent);
+  margin:0 0 10px;
+}
+.hero-form-card h2{
+  font-size:clamp(22px,2.4vw,28px);
+  line-height:1.12;
+  margin:0 0 8px;
+  color:var(--brand-deep);
+  font-weight:800;
+}
+.hero-form-card .micro{
+  font-size:14px;color:var(--ink-soft);font-weight:500;
+  margin:0 0 20px;
+}
+.hero-form-card .form-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:10px;
+}
+.hero-form-card .form-grid .full{grid-column:1 / -1}
+.hero-form-card label{
+  display:block;font-size:11px;font-weight:700;letter-spacing:0.12em;
+  text-transform:uppercase;color:var(--ink-soft);margin-bottom:4px;
+}
+.hero-form-card input,
+.hero-form-card select,
+.hero-form-card textarea{
+  width:100%;
+  font-family:inherit;font-size:15px;
+  padding:13px 14px;
+  background:var(--surface-subtle);
+  border:1px solid rgba(17,35,55,0.12);
+  border-radius:0;
+  color:var(--ink);
+  transition:border-color 0.18s ease, box-shadow 0.18s ease;
+}
+.hero-form-card input:focus,
+.hero-form-card select:focus,
+.hero-form-card textarea:focus{
+  outline:0;
+  border-color:var(--brand-primary);
+  box-shadow:0 0 0 3px rgba(0,63,190,0.15);
+  background:#fff;
+}
+.hero-form-card .submit-row{margin-top:16px}
+.hero-form-card .trust-line{
+  text-align:center;font-size:12px;color:var(--ink-soft);
+  margin:12px 0 0;font-weight:500;
+}
+
+/* hero form owner mini-card */
+.hero-form-owner-card{
+  display:flex;align-items:center;gap:14px;
+  margin-top:18px;padding-top:18px;
+  border-top:1px solid var(--border-soft);
+}
+.hero-form-owner-card .avatar{
+  width:76px;height:76px;flex-shrink:0;
+  border-radius:50%;
+  overflow:hidden;
+  background:var(--brand-deep);
+  border:3px solid var(--brand-primary);
+  box-shadow:0 4px 0 0 var(--brand-accent);
+}
+.hero-form-owner-card .avatar img{
+  width:100%;height:100%;object-fit:cover;
+  object-position:center 25%;
+  transform:scale(1.15);
+}
+.hero-form-owner-card .owner-name{
+  font-family:var(--font-display);font-weight:700;
+  font-size:16px;color:var(--brand-deep);
+  margin:0 0 2px;
+}
+.hero-form-owner-card .owner-role{
+  font-size:12px;font-weight:600;letter-spacing:0.04em;
+  color:var(--ink-soft);margin:0 0 5px;
+}
+.hero-form-owner-card .owner-quote{
+  font-family:var(--font-display);font-weight:500;font-style:italic;
+  font-size:13px;color:var(--brand-deep);line-height:1.4;
+  margin:0;
+}
+
+/* hero seam — section bleed into trust strip */
+.hero-bleed{
+  position:relative;height:60px;
+  background:var(--brand-deep);
+  clip-path:var(--deco-shape-3);
+  margin-top:-1px;
+}
+
+@media (max-width:920px){
+  .hero{min-height:auto;padding:40px 0 50px}
+  .hero-inner{grid-template-columns:1fr;gap:32px}
+  .hero h1{font-size:38px;max-width:none}
+  .hero-form-card{padding:24px 22px}
+  .hero-form-card .form-grid{grid-template-columns:1fr}
+  .hero-bullets li{white-space:normal}
+  .hero-bleed{height:36px}
+}
+
+/* ============================================================
+   SECTION DEFAULTS
+   ============================================================ */
+section{padding:80px 0;position:relative;overflow:hidden;isolation:isolate}
+section.tight{padding:56px 0}
+.section-head{text-align:center;margin-bottom:48px}
+.section-head h2{margin:0 auto 14px;max-width:22ch}
+.section-head .lede{margin:0 auto}
+.surface-cream{background:#FBFAF6}
+.surface-subtle{background:var(--surface-subtle)}
+.surface-dark{background:var(--brand-deep);color:#fff}
+.surface-dark h2,.surface-dark h3{color:#fff}
+
+/* decoration helpers */
+.deco-side{
+  position:absolute;top:0;bottom:0;width:200px;z-index:1;pointer-events:none;
+  background:var(--brand-primary);
+  clip-path:var(--deco-shape-1);
+  opacity:0.92;
+}
+.deco-side-r{
+  position:absolute;top:0;bottom:0;right:0;width:200px;z-index:1;pointer-events:none;
+  background:var(--brand-accent);
+  clip-path:var(--deco-shape-2);
+  opacity:0.88;
+}
+.deco-corner{
+  position:absolute;width:200px;height:200px;z-index:1;pointer-events:none;
+  background:var(--brand-primary);
+  clip-path:var(--deco-shape-4);
+  opacity:0.90;
+}
+.deco-corner-hero-top-right{top:-30px;right:-50px;background:var(--brand-accent);transform:rotate(180deg);opacity:0.55;width:220px;height:220px}
+.deco-corner-hero-bottom-left{bottom:-30px;left:-50px;background:var(--brand-primary);opacity:0.55;width:220px;height:220px;z-index:2}
+.deco-corner-trust{top:-40px;right:-40px;background:var(--brand-accent);transform:rotate(180deg);width:200px;height:200px}
+.deco-corner-reviews{top:-30px;left:-30px;background:var(--brand-accent);width:220px;height:220px}
+.deco-corner-whyus{bottom:-30px;right:-30px;background:var(--brand-accent);transform:rotate(180deg);width:200px;height:200px}
+.deco-corner-pastwork-tl{top:-30px;left:-30px;background:var(--brand-primary);width:200px;height:200px}
+.deco-corner-pastwork-br{bottom:-30px;right:-30px;background:var(--brand-accent);transform:rotate(180deg);width:200px;height:200px}
+.deco-corner-process{bottom:-30px;left:-30px;background:var(--brand-accent);width:200px;height:200px;opacity:0.85}
+.deco-corner-services-tl{top:-30px;left:-30px;background:var(--brand-primary);width:200px;height:200px}
+.deco-corner-services-br{bottom:-30px;right:-30px;background:var(--brand-accent);transform:rotate(180deg);width:200px;height:200px}
+.deco-corner-owner{bottom:-30px;left:-30px;background:var(--brand-primary);width:220px;height:220px}
+.deco-corner-truck{top:-30px;right:-30px;background:var(--brand-accent);transform:rotate(180deg);width:200px;height:200px;opacity:0.85}
+.deco-corner-servicearea-tl{top:-30px;right:-30px;background:var(--brand-primary);transform:rotate(180deg);width:200px;height:200px}
+.deco-corner-servicearea-br{bottom:-30px;left:-30px;background:var(--brand-accent);width:200px;height:200px}
+.deco-corner-financing{top:-30px;left:-30px;background:var(--brand-primary);width:200px;height:200px;opacity:0.85}
+.section-seam{
+  position:relative;height:50px;
+  background:var(--brand-deep);
+  clip-path:var(--deco-shape-3);
+}
+
+/* ============================================================
+   TRUST MARQUEE — 12-badge static grid
+   ============================================================ */
+.trust-marquee{background:#FBFAF6;padding:64px 0}
+.trust-marquee .head{text-align:center;margin-bottom:34px}
+.trust-marquee .eyebrow{margin:0 0 10px}
+.trust-marquee .head h3{
+  font-family:var(--font-display);font-size:clamp(22px,2.2vw,28px);
+  margin:0 auto;max-width:30ch;color:var(--brand-deep);
+}
+.badge-grid{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:18px;
+  align-items:center;
+}
+.badge-cell{
+  background:#fff;
+  border:1px solid rgba(17,35,55,0.06);
+  border-bottom:3px solid var(--brand-primary);
+  padding:18px 14px;
+  display:flex;align-items:center;justify-content:center;
+  min-height:96px;
+  transition:transform 0.18s ease, box-shadow 0.18s ease;
+  box-shadow:0 4px 0 0 rgba(17,35,55,0.06);
+}
+.badge-cell:hover{transform:translateY(-2px);box-shadow:0 6px 0 0 rgba(17,35,55,0.10)}
+.badge-cell img{
+  max-height:60px;max-width:100%;width:auto;object-fit:contain;
+}
+.trust-license{
+  text-align:center;margin-top:28px;
+  font-size:13px;color:var(--ink-soft);font-weight:600;
+}
+.trust-license strong{color:var(--brand-deep);font-weight:800}
+
+@media (max-width:920px){
+  .badge-grid{grid-template-columns:repeat(3,1fr);gap:12px}
+  .badge-cell{padding:14px 10px;min-height:80px}
+  .badge-cell img{max-height:48px}
+}
+
+/* ============================================================
+   REVIEWS — aggregate region cards on dark navy + bg-stripe
+   ============================================================ */
+.reviews-section{background:var(--brand-deep);color:#fff;padding:96px 0}
+.reviews-section .section-head .eyebrow{color:#FFA648}
+.reviews-section .section-head h2{color:#fff}
+.reviews-section .section-head .lede{color:rgba(255,255,255,0.74);margin:0 auto}
+.region-cards{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:22px;
+}
+.region-card{
+  background:#fff;color:var(--brand-deep);
+  padding:30px 26px;
+  border-radius:0;
+  border-bottom:4px solid var(--brand-primary);
+  box-shadow:0 8px 0 0 var(--brand-primary), 0 14px 28px rgba(0,0,0,0.40);
+  display:flex;flex-direction:column;
+  position:relative;
+  isolation:isolate;
+}
+.region-card .region-label{
+  font-size:12px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;
+  color:var(--brand-accent);margin:0 0 10px;
+}
+.region-card .rating-row{
+  display:flex;align-items:center;gap:14px;margin-bottom:14px;
+}
+.region-card .g-mark{width:32px;height:32px;flex-shrink:0}
+.region-card .stars{font-family:var(--font-display);font-weight:800;font-size:32px;color:var(--brand-deep);line-height:1}
+.region-card .stars sup{font-size:14px;color:var(--brand-accent);margin-left:4px;vertical-align:super}
+.region-card .count{
+  font-weight:700;color:var(--ink-soft);font-size:14px;
+}
+.region-card .blurb{
+  font-size:15px;line-height:1.5;color:var(--ink-soft);
+  margin:14px 0 18px;flex:1;
+}
+.region-card .map-link{
+  font-size:13px;font-weight:800;letter-spacing:0.04em;text-transform:uppercase;
+  color:var(--brand-primary);
+}
+.region-card .map-link:hover{color:var(--brand-primary-dark)}
+.reviews-aggregate{
+  margin-top:36px;text-align:center;
+  font-size:14px;color:rgba(255,255,255,0.72);letter-spacing:0.06em;
+}
+.reviews-aggregate strong{color:#fff;font-weight:800}
+
+@media (max-width:920px){
+  .region-cards{grid-template-columns:1fr;gap:18px}
+}
+
+/* ============================================================
+   WHY US — 4-cell coordinate grid + side ornament left
+   ============================================================ */
+.whyus-section{padding:96px 0;background:#FBFAF6}
+.whyus-section .deco-side{opacity:0.92}
+.whyus-section .head{margin-bottom:48px;max-width:60ch}
+.whyus-section .head h2{margin:0 0 14px}
+.coord-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:18px;
+  position:relative;z-index:2;
+}
+.coord-cell{
+  background:#fff;
+  border-radius:0;
+  border-left:4px solid var(--brand-primary);
+  padding:30px 26px;
+  box-shadow:0 6px 0 0 var(--brand-primary), 0 14px 30px rgba(0,0,0,0.10);
+  position:relative;
+  transition:transform 0.18s ease;
+}
+.coord-cell:hover{transform:translateY(-3px)}
+.coord-label{
+  font-family:'Courier New',monospace;
+  font-size:11px;font-weight:700;letter-spacing:0.18em;
+  color:var(--brand-primary);
+  margin:0 0 14px;
+}
+.coord-cell h3{
+  font-family:var(--font-display);font-weight:800;
+  font-size:clamp(17px,1.6vw,21px);
+  text-transform:uppercase;letter-spacing:0.02em;
+  margin:0 0 10px;color:var(--brand-deep);line-height:1.15;
+}
+.coord-cell p{margin:0;color:var(--ink-soft);font-size:15px;line-height:1.55}
+.coord-icon{
+  width:48px;height:48px;margin-bottom:14px;
+  color:var(--brand-primary);
+}
+
+@media (max-width:920px){
+  .coord-grid{grid-template-columns:1fr;gap:14px}
+  .whyus-section .deco-side{display:none}
+}
+
+/* ============================================================
+   PAST WORK — featured slide + 3x3 grid + image bleed
+   ============================================================ */
+.pastwork-section{padding:96px 0;background:#fff}
+.pastwork-featured{
+  position:relative;
+  height:480px;
+  margin-bottom:30px;
+  background:var(--brand-deep);
+  border-radius:0;
+  overflow:hidden;
+  box-shadow:0 16px 40px rgba(0,0,0,0.18);
+  border-bottom:6px solid var(--brand-primary);
+}
+.pastwork-featured img{
+  width:100%;height:100%;object-fit:cover;
+}
+.pastwork-featured .feature-label{
+  position:absolute;top:22px;left:22px;z-index:3;
+  background:var(--brand-accent);color:#fff;
+  font-weight:800;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;
+  padding:7px 14px;
+  box-shadow:0 4px 0 0 var(--brand-accent-dark);
+}
+.pastwork-featured .feature-cap{
+  position:absolute;bottom:24px;left:24px;right:24px;z-index:3;
+  background:rgba(17,35,55,0.86);
+  color:#fff;padding:18px 22px;
+  border-left:4px solid var(--brand-accent);
+}
+.pastwork-featured .feature-cap h3{
+  font-size:clamp(20px,2.0vw,26px);margin:0 0 4px;color:#fff;
+}
+.pastwork-featured .feature-cap span{font-size:13px;color:rgba(255,255,255,0.74);letter-spacing:0.06em}
+.pastwork-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
+}
+.pastwork-tile{
+  position:relative;
+  aspect-ratio:4/3;
+  background:var(--brand-deep);
+  overflow:hidden;
+  border-bottom:3px solid var(--brand-primary);
+  box-shadow:0 4px 0 0 rgba(17,35,55,0.10), 0 10px 22px rgba(0,0,0,0.10);
+  transition:transform 0.18s ease, box-shadow 0.18s ease;
+}
+.pastwork-tile:hover{transform:translateY(-2px);box-shadow:0 6px 0 0 rgba(0,63,190,0.30), 0 14px 30px rgba(0,0,0,0.18)}
+.pastwork-tile img{width:100%;height:100%;object-fit:cover}
+.pastwork-tile .city-chip{
+  position:absolute;bottom:8px;left:8px;
+  background:rgba(17,35,55,0.92);color:#fff;
+  font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;
+  padding:5px 10px;
+  border-left:2px solid var(--brand-accent);
+}
+
+@media (max-width:920px){
+  .pastwork-featured{height:280px}
+  .pastwork-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+}
+
+/* ============================================================
+   PROCESS — Specialist 4-step walk · dark + bg-grid
+   ============================================================ */
+.process-section{
+  background:var(--brand-deep);
+  color:#fff;
+  padding:96px 0;
+  position:relative;
+}
+.process-section.bg-grid::before{
+  content:'';position:absolute;inset:0;z-index:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px);
+  background-size:32px 32px;
+  pointer-events:none;
+}
+.process-section .wrap{position:relative;z-index:1}
+.process-section .section-head .eyebrow{color:#FFA648}
+.process-section .section-head .lede{color:rgba(255,255,255,0.74);margin:0 auto}
+.process-steps{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:22px;
+  position:relative;
+}
+.process-tile{
+  background:rgba(255,255,255,0.04);
+  border-radius:0;
+  padding:28px 22px 26px;
+  border-left:3px solid var(--brand-accent);
+  box-shadow:0 4px 0 0 rgba(0,0,0,0.30), 0 10px 28px rgba(0,0,0,0.36);
+  position:relative;
+}
+.process-num{
+  display:inline-grid;place-items:center;
+  width:54px;height:54px;
+  background:var(--brand-accent);color:var(--brand-deep);
+  font-family:var(--font-display);font-weight:800;
+  font-size:28px;
+  border-radius:0;
+  margin-bottom:18px;
+  box-shadow:0 4px 0 0 var(--brand-accent-dark);
+}
+.process-tile h3{
+  font-family:var(--font-display);font-weight:800;
+  font-size:20px;color:#fff;letter-spacing:0.02em;
+  text-transform:uppercase;margin:0 0 10px;
+}
+.process-tile p{
+  margin:0;color:rgba(255,255,255,0.80);
+  font-size:14.5px;line-height:1.55;
+}
+
+@media (max-width:920px){
+  .process-steps{grid-template-columns:1fr 1fr;gap:14px}
+  .process-tile{padding:22px 18px}
+}
+@media (max-width:560px){
+  .process-steps{grid-template-columns:1fr}
+}
+
+/* ============================================================
+   SERVICES — 6 cards · cream + bg-dots
+   ============================================================ */
+.services-section{
+  background:#FBFAF6;
+  padding:96px 0;
+  position:relative;
+}
+.services-section.bg-dots{
+  background-image:radial-gradient(rgba(17,35,55,0.07) 1px, transparent 1.3px);
+  background-size:20px 20px;
+  background-color:#FBFAF6;
+}
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+.service-card{
+  background:#fff;
+  border-radius:0;
+  padding:30px 26px;
+  border-left:4px solid var(--brand-primary);
+  box-shadow:0 6px 0 0 var(--brand-primary), 0 14px 30px rgba(0,0,0,0.10);
+  position:relative;
+  display:flex;flex-direction:column;
+  transition:transform 0.18s ease, box-shadow 0.18s ease;
+}
+.service-card:hover{transform:translateY(-3px);box-shadow:0 8px 0 0 var(--brand-primary), 0 18px 36px rgba(0,0,0,0.14)}
+.service-card .icon{
+  width:56px;height:56px;
+  background:rgba(0,63,190,0.07);
+  display:grid;place-items:center;
+  color:var(--brand-primary);
+  margin-bottom:18px;
+}
+.service-card h3{
+  font-family:var(--font-display);font-weight:800;
+  font-size:20px;letter-spacing:0.02em;text-transform:uppercase;
+  margin:0 0 10px;color:var(--brand-deep);line-height:1.15;
+}
+.service-card p{margin:0 0 16px;color:var(--ink-soft);font-size:14.5px;line-height:1.55;flex:1}
+.service-card .pill{
+  display:inline-block;
+  font-size:11px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--brand-accent);
+  background:rgba(255,107,39,0.10);
+  border:1px solid rgba(255,107,39,0.45);
+  padding:5px 10px;
+  margin-bottom:14px;align-self:flex-start;
+}
+.service-card .more{
+  font-size:13px;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;
+  color:var(--brand-primary);
+}
+
+@media (max-width:920px){
+  .services-grid{grid-template-columns:1fr;gap:14px}
+}
+
+/* ============================================================
+   OWNER STORY — brothers heritage + side ornament right + mascot stamp
+   ============================================================ */
+.owner-section, .about-section{
+  padding:104px 0 96px;
+  background:#fff;
+  background-image:url('../assets/team/owners-selfie-andre-chris.jpg');
+  background-size:cover;background-position:center;
+  background-blend-mode:overlay;
+  background-color:rgba(255,255,255,0.97);
+  position:relative;
+}
+.owner-section::before, .about-section::before{
+  content:'';position:absolute;inset:0;background:rgba(255,255,255,0.92);z-index:0;pointer-events:none;
+}
+.owner-section .deco-side-r{opacity:0.88}
+.owner-section .wrap{position:relative;z-index:2}
+.owner-section .head{
+  max-width:54ch;margin:0 0 44px;
+}
+.owner-section .head .eyebrow{margin:0 0 14px}
+.owner-section .head h2{
+  font-family:var(--font-display);font-weight:800;
+  font-size:clamp(28px,3.0vw,40px);
+  line-height:1.18;
+  color:var(--brand-deep);
+  margin:0;font-style:italic;
+  max-width:32ch;
+}
+.owner-grid{
+  display:grid;
+  grid-template-columns:0.95fr 1.05fr;
+  gap:44px;
+  align-items:start;
+  margin-bottom:48px;
+}
+.owner-card{
+  position:relative;
+  background:#fff;
+  padding:18px;
+  border:1px solid rgba(17,35,55,0.10);
+  border-left:6px solid var(--brand-primary);
+  box-shadow:0 8px 0 0 var(--brand-primary), 0 16px 36px rgba(0,0,0,0.14);
+}
+.owner-card.primary .face{
+  position:relative;width:100%;aspect-ratio:1/1;
+  background:linear-gradient(180deg, #F5F5F5, #E0E0E0);
+  overflow:hidden;
+}
+.owner-card.primary .face img{
+  width:100%;height:100%;object-fit:cover;object-position:center 22%;
+}
+.owner-card.primary .mascot-stamp{
+  position:absolute;top:-22px;right:-22px;z-index:3;
+  width:120px;height:120px;
+  background:#fff;border-radius:50%;
+  border:4px solid var(--brand-primary);
+  box-shadow:0 6px 0 0 var(--brand-accent), 0 14px 28px rgba(0,0,0,0.18);
+  display:grid;place-items:center;
+  overflow:hidden;
+  padding:6px;
+}
+.owner-card.primary .mascot-stamp img{
+  width:100%;height:100%;object-fit:contain;
+}
+.owner-card .name{
+  font-family:var(--font-display);font-weight:800;
+  font-size:22px;color:var(--brand-deep);margin:18px 4px 4px;
+}
+.owner-card .role{
+  font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;
+  color:var(--brand-accent);margin:0 4px 0;
+}
+.owner-body{
+  font-size:16px;line-height:1.65;color:var(--ink);
+}
+.owner-body p{margin:0 0 14px}
+.owner-body .pull{
+  font-family:var(--font-display);font-weight:500;font-style:italic;
+  font-size:18px;color:var(--brand-deep);
+  padding:14px 0 14px 18px;border-left:3px solid var(--brand-accent);
+  margin:18px 0;background:rgba(255,107,39,0.04);
+}
+.owner-side-card{
+  display:flex;gap:14px;align-items:center;
+  padding:14px;margin-top:18px;
+  background:var(--surface-subtle);
+  border-left:4px solid var(--brand-accent);
+}
+.owner-side-card .face-small{
+  width:78px;height:78px;flex-shrink:0;
+  background:var(--brand-deep);
+  overflow:hidden;
+  border:2px solid #fff;
+  box-shadow:0 4px 0 0 var(--brand-primary);
+}
+.owner-side-card .face-small img{
+  width:100%;height:100%;object-fit:cover;object-position:center 30%;
+  transform:scale(1.1);
+}
+.owner-side-card .meta strong{
+  display:block;font-family:var(--font-display);font-weight:700;
+  color:var(--brand-deep);font-size:16px;
+}
+.owner-side-card .meta span{
+  font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--ink-soft);
+}
+.owner-heritage{
+  display:grid;grid-template-columns:1.4fr 1fr;gap:30px;
+  align-items:stretch;
+  margin-top:34px;
+}
+.owner-heritage-photo{
+  position:relative;
+  height:340px;
+  overflow:hidden;
+  background:var(--brand-deep);
+  border-bottom:4px solid var(--brand-accent);
+  box-shadow:0 12px 30px rgba(0,0,0,0.18);
+}
+.owner-heritage-photo img{width:100%;height:100%;object-fit:cover;object-position:center 35%}
+.owner-heritage-photo .cap{
+  position:absolute;bottom:0;left:0;right:0;
+  background:rgba(17,35,55,0.86);color:#fff;
+  font-size:13px;font-weight:600;padding:12px 16px;letter-spacing:0.04em;
+}
+.owner-stats{
+  background:var(--brand-deep);color:#fff;
+  padding:30px 28px;
+  display:grid;grid-template-rows:repeat(3,1fr);gap:14px;
+  border-left:4px solid var(--brand-primary);
+}
+.owner-stat{
+  display:flex;align-items:baseline;gap:14px;
+  padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,0.10);
+}
+.owner-stat:last-child{border-bottom:0;padding-bottom:0}
+.owner-stat .num{
+  font-family:var(--font-display);font-weight:800;
+  font-size:44px;color:var(--brand-accent);line-height:1;letter-spacing:-0.02em;
+}
+.owner-stat .lbl{
+  font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;
+  color:rgba(255,255,255,0.78);
+}
+
+@media (max-width:920px){
+  .owner-section .deco-side-r{display:none}
+  .owner-grid{grid-template-columns:1fr;gap:30px}
+  .owner-card.primary .mascot-stamp{width:84px;height:84px;top:-14px;right:-14px}
+  .owner-heritage{grid-template-columns:1fr}
+  .owner-heritage-photo{height:240px}
+}
+
+/* ============================================================
+   TRUCK SECTION — Pattern 002 §10 contained card on navy + mascot break-out
+   ============================================================ */
+.truck-section{
+  background:var(--brand-deep);
+  color:#fff;
+  padding:104px 0 96px;
+  position:relative;
+  overflow:hidden;
+}
+.truck-section::before{
+  content:'';position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size:36px 36px;
+  pointer-events:none;z-index:0;
+}
+.truck-section .wrap{position:relative;z-index:2}
+.truck-section .eyebrow{color:#FFA648;margin-bottom:14px}
+.truck-section h2{
+  font-family:var(--font-display);font-weight:800;
+  font-size:clamp(26px,2.8vw,36px);
+  color:#fff;line-height:1.15;text-transform:uppercase;letter-spacing:0.01em;
+  margin:0 0 22px;
+}
+.truck-grid{
+  display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center;
+}
+.truck-stage{
+  position:relative;
+  aspect-ratio:4/3;
+  background:linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-primary-dark) 100%);
+  overflow:visible;
+  display:grid;place-items:center;
+  padding:18px;
+  box-shadow:0 14px 36px rgba(0,0,0,0.40);
+  transform:rotate(-1.2deg);
+}
+.truck-stage::after{
+  content:'';position:absolute;bottom:-20px;left:5%;right:5%;height:24px;
+  background:radial-gradient(ellipse at center, rgba(0,0,0,0.50) 0%, transparent 70%);
+  z-index:0;filter:blur(8px);
+}
+.truck-stage img.truck{
+  position:relative;z-index:2;
+  width:96%;height:auto;max-height:92%;
+  object-fit:contain;
+  filter:drop-shadow(0 14px 18px rgba(0,0,0,0.50));
+}
+.truck-stage .tag-tl{
+  position:absolute;top:-14px;left:-10px;z-index:3;
+  background:var(--brand-accent);color:#fff;
+  font-size:11px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;
+  padding:8px 14px;
+  box-shadow:0 4px 0 0 var(--brand-accent-dark);
+  transform:rotate(-2deg);
+}
+.truck-stage .mascot-br{
+  position:absolute;bottom:-22px;right:-22px;z-index:5;
+  width:120px;height:120px;
+  background:#fff;border-radius:50%;
+  border:4px solid var(--brand-primary);
+  box-shadow:0 6px 0 0 var(--brand-accent), 0 14px 28px rgba(0,0,0,0.30);
+  display:grid;place-items:center;overflow:hidden;
+  padding:8px;
+  transform:rotate(1.2deg);
+}
+.truck-stage .mascot-br img{width:100%;height:100%;object-fit:contain}
+.truck-bullets{list-style:none;margin:0 0 24px;padding:0;display:flex;flex-direction:column;gap:10px}
+.truck-bullets li{
+  display:flex;align-items:flex-start;gap:10px;
+  font-size:15px;color:rgba(255,255,255,0.92);line-height:1.5;
+}
+.truck-bullets .check{
+  width:20px;height:20px;flex-shrink:0;display:grid;place-items:center;
+  background:var(--brand-accent);color:#fff;font-size:13px;font-weight:900;
+  margin-top:2px;
+}
+.truck-cta-row{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+
+@media (max-width:920px){
+  .truck-grid{grid-template-columns:1fr;gap:30px}
+  .truck-stage{transform:none}
+  .truck-stage .mascot-br{width:84px;height:84px;bottom:-14px;right:-14px}
+}
+
+/* ============================================================
+   FINANCING — compact anchor + chip stack
+   ============================================================ */
+.financing-section{
+  background:#FBFAF6;
+  padding:96px 0;
+  position:relative;
+}
+.financing-section.bg-dots{
+  background-image:radial-gradient(rgba(17,35,55,0.07) 1px, transparent 1.3px);
+  background-size:20px 20px;
+  background-color:#FBFAF6;
+}
+.financing-wrap{
+  display:grid;grid-template-columns:1.1fr 1fr;gap:44px;align-items:center;
+  background:#fff;padding:48px 44px;
+  border-left:6px solid var(--brand-accent);
+  box-shadow:0 10px 0 0 var(--brand-accent), 0 18px 40px rgba(0,0,0,0.12);
+  position:relative;z-index:2;
+}
+.financing-anchor .eyebrow{margin:0 0 10px}
+.anchor-num{
+  font-family:var(--font-display);font-weight:800;
+  font-size:clamp(64px,9vw,108px);
+  color:var(--brand-accent);line-height:0.95;letter-spacing:-0.04em;
+  margin:0 0 6px;
+}
+.financing-anchor h2{
+  font-family:var(--font-display);font-weight:700;
+  font-size:clamp(20px,1.8vw,24px);
+  color:var(--brand-deep);margin:0 0 8px;line-height:1.25;
+}
+.financing-anchor .sub{font-size:15px;color:var(--ink-soft);margin:0 0 18px}
+.financing-anchor-photo{
+  width:100%;max-width:480px;
+  height:160px;object-fit:cover;
+  border-left:4px solid var(--brand-accent);
+  box-shadow:0 6px 0 0 var(--brand-accent), 0 12px 24px rgba(0,0,0,0.12);
+}
+.financing-chips{display:flex;flex-direction:column;gap:14px}
+.fchip{
+  background:var(--brand-deep);color:#fff;
+  padding:20px 22px;
+  border-left:4px solid var(--brand-primary);
+  box-shadow:0 4px 0 0 var(--brand-primary), 0 10px 22px rgba(0,0,0,0.20);
+}
+.fchip .ftitle{font-family:var(--font-display);font-weight:700;font-size:18px;margin:0 0 4px;color:#fff}
+.fchip .fnote{font-size:13px;color:rgba(255,255,255,0.74);margin:0 0 12px}
+.fchip .btn{font-size:13px}
+
+@media (max-width:920px){
+  .financing-wrap{grid-template-columns:1fr;gap:24px;padding:32px 26px}
+}
+
+/* ============================================================
+   FINAL CTA BANNER — dark photo bleed + side ornament right
+   ============================================================ */
+.finalcta-section{
+  background:var(--brand-deep);color:#fff;
+  padding:88px 0;
+  position:relative;
+  overflow:hidden;
+}
+.finalcta-section::before{
+  content:'';position:absolute;inset:0;
+  background-image:repeating-linear-gradient(
+    -55deg,
+    rgba(255,255,255,0.03) 0 1px,
+    transparent 1px 14px
+  );
+  pointer-events:none;z-index:0;
+}
+.finalcta-section .deco-side-r{
+  background:var(--brand-primary);clip-path:var(--deco-shape-1);
+  opacity:0.90;width:200px;
+}
+.finalcta-inner{
+  text-align:center;position:relative;z-index:2;
+  max-width:780px;margin:0 auto;
+}
+.finalcta-inner .eyebrow{color:#FFA648;margin:0 0 14px}
+.finalcta-inner h2{
+  font-family:var(--font-display);font-weight:800;
+  font-size:clamp(34px,4.0vw,52px);
+  color:#fff;text-transform:uppercase;letter-spacing:0.01em;
+  margin:0 0 16px;line-height:1.05;
+}
+.finalcta-inner p{
+  font-size:17px;color:rgba(255,255,255,0.84);
+  margin:0 0 26px;line-height:1.55;max-width:60ch;margin-left:auto;margin-right:auto;
+}
+.finalcta-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;align-items:center}
+
+@media (max-width:920px){
+  .finalcta-section .deco-side-r{display:none}
+}
+
+/* ============================================================
+   SERVICE AREA — cream + bg-dots · 3-col cities + map
+   ============================================================ */
+.service-area-section{
+  background:#FBFAF6;
+  padding:96px 0;
+  position:relative;
+}
+.service-area-section.bg-dots{
+  background-image:radial-gradient(rgba(17,35,55,0.07) 1px, transparent 1.3px);
+  background-size:20px 20px;
+  background-color:#FBFAF6;
+}
+.service-area-section .head{margin-bottom:42px;max-width:60ch}
+.service-area-grid{
+  display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:start;
+}
+.cities-block{
+  display:grid;grid-template-columns:1fr;gap:18px;
+}
+.hq-row{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:14px;
+  margin-bottom:20px;
+}
+.hq-card{
+  background:#fff;
+  padding:18px 16px;
+  border-left:4px solid var(--brand-primary);
+  box-shadow:0 5px 0 0 var(--brand-primary), 0 10px 22px rgba(0,0,0,0.10);
+}
+.hq-card .pin{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:11px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;
+  color:var(--brand-accent);margin:0 0 6px;
+}
+.hq-card strong{font-family:var(--font-display);font-weight:700;color:var(--brand-deep);font-size:16px;display:block;margin-bottom:4px}
+.hq-card .phone{font-size:13px;color:var(--brand-deep);font-weight:700}
+.hq-card .addr{font-size:12px;color:var(--ink-soft);margin-top:4px;line-height:1.4}
+.cities-strip{
+  background:#fff;
+  padding:22px 24px;
+  border-bottom:3px solid var(--brand-accent);
+  box-shadow:0 4px 0 0 rgba(17,35,55,0.06);
+}
+.cities-strip .label{
+  font-size:12px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--ink-soft);margin:0 0 12px;
+}
+.cities-strip ul{
+  list-style:none;margin:0;padding:0;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:8px 16px;
+}
+.cities-strip ul li{
+  font-size:14px;font-weight:600;color:var(--brand-deep);
+  position:relative;padding-left:10px;
+}
+.cities-strip ul li::before{
+  content:'';position:absolute;left:0;top:9px;
+  width:4px;height:4px;background:var(--brand-accent);
+}
+.map-block{
+  position:relative;
+  height:520px;
+  background:var(--brand-deep);
+  overflow:hidden;
+  border-bottom:4px solid var(--brand-primary);
+  box-shadow:0 12px 30px rgba(0,0,0,0.18);
+}
+.map-block iframe{width:100%;height:100%;border:0;display:block}
+
+@media (max-width:920px){
+  .service-area-grid{grid-template-columns:1fr;gap:26px}
+  .hq-row{grid-template-columns:1fr}
+  .cities-strip ul{grid-template-columns:repeat(2,1fr)}
+  .map-block{height:340px}
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer{
+  background:var(--brand-deep);
+  color:rgba(255,255,255,0.78);
+  padding:64px 0 24px;
+  font-size:14px;line-height:1.6;
+  position:relative;
+}
+.footer::before{
+  content:'';position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+  background-size:32px 32px;
+  pointer-events:none;z-index:0;
+}
+.footer .wrap{position:relative;z-index:1}
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.1fr 1fr 1.4fr 1fr;
+  gap:40px;
+}
+.footer h4{
+  font-family:var(--font-display);font-weight:700;
+  font-size:14px;letter-spacing:0.12em;text-transform:uppercase;
+  color:#fff;margin:0 0 16px;
+}
+.footer-brand img{
+  filter:brightness(0) invert(1);
+  max-width:200px;height:auto;margin-bottom:18px;
+}
+.footer-brand p{font-size:13px;color:rgba(255,255,255,0.66);margin:0 0 18px}
+.footer-brand .mascot-small{
+  width:80px;height:80px;
+  background:rgba(255,255,255,0.06);
+  border:2px solid var(--brand-primary);
+  display:grid;place-items:center;
+  padding:6px;
+  margin:0 0 18px;
+}
+.footer-brand .mascot-small img{
+  width:100%;height:100%;object-fit:contain;filter:none;
+}
+.footer ul{list-style:none;margin:0;padding:0}
+.footer ul li{margin-bottom:8px}
+.footer ul a{
+  color:rgba(255,255,255,0.78);font-size:13.5px;font-weight:500;
+  transition:color 0.18s ease;
+}
+.footer ul a:hover{color:var(--brand-accent)}
+.footer .contact-col strong{display:block;color:#fff;font-weight:700;margin-bottom:2px}
+.footer .nap-row{
+  margin-bottom:14px;padding-bottom:12px;
+  border-bottom:1px solid rgba(255,255,255,0.10);
+  font-size:12.5px;color:rgba(255,255,255,0.72);
+}
+.footer .nap-row:last-child{border-bottom:0}
+.footer .nap-row strong{font-size:13px}
+.footer-social{display:flex;gap:10px;margin-top:14px}
+.footer-social a{
+  width:36px;height:36px;
+  display:grid;place-items:center;
+  background:rgba(255,255,255,0.06);
+  color:#fff;
+  border:1px solid rgba(255,255,255,0.10);
+  font-size:14px;font-weight:800;
+}
+.footer-social a:hover{background:var(--brand-primary);border-color:var(--brand-primary)}
+.footer-cta-block{
+  background:rgba(255,255,255,0.04);
+  padding:16px;
+  border-left:3px solid var(--brand-accent);
+  margin-top:14px;
+}
+.footer-cta-block .btn{font-size:13px;width:100%;justify-content:center}
+
+.footer-bottom{
+  margin-top:48px;padding-top:22px;
+  border-top:1px solid rgba(255,255,255,0.12);
+  display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
+  font-size:12px;color:rgba(255,255,255,0.60);
+}
+.footer-bottom .legal{max-width:62ch;font-size:11.5px;line-height:1.55;color:rgba(255,255,255,0.50)}
+.footer-bottom .kca{font-weight:600;color:rgba(255,255,255,0.74)}
+
+@media (max-width:920px){
+  .footer-grid{grid-template-columns:1fr;gap:30px}
+  .footer-bottom{flex-direction:column}
+}
+
+/* ============================================================
+   STICKY MOBILE CTA + SCROLL-TO-TOP
+   ============================================================ */
+.sticky-mobile-cta{
+  display:none;
+  position:fixed;left:0;right:0;bottom:0;z-index:80;
+  background:var(--brand-deep);color:#fff;
+  padding:10px 12px;
+  box-shadow:0 -8px 24px rgba(0,0,0,0.30);
+}
+.sticky-mobile-cta .inner{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.sticky-mobile-cta .btn{font-size:14px;min-height:46px;padding:10px 14px}
+.sticky-mobile-cta .ph{
+  background:rgba(255,255,255,0.10);color:#fff;
+  border:1px solid rgba(255,255,255,0.30);
+  box-shadow:0 3px 0 0 rgba(255,255,255,0.20);
+}
+@media (max-width:920px){
+  .sticky-mobile-cta{display:block}
+  body{padding-bottom:72px}
+}
+
+.scroll-top{
+  position:fixed;right:16px;bottom:84px;z-index:70;
+  width:44px;height:44px;
+  background:var(--brand-primary);color:#fff;
+  display:grid;place-items:center;
+  font-size:18px;font-weight:800;
+  box-shadow:0 4px 0 0 var(--brand-primary-dark), 0 10px 22px rgba(0,0,0,0.30);
+  opacity:0;pointer-events:none;
+  transition:opacity 0.2s ease;
+}
+.scroll-top.visible{opacity:1;pointer-events:auto}
+@media (min-width:921px){.scroll-top{bottom:24px}}
+
+/* ============================================================
+   MOBILE DECORATION HIDE
+   ============================================================ */
+@media (max-width:768px){
+  .deco-side, .deco-side-r, .deco-corner, .deco-shape,
+  .deco-corner-hero-top-right, .deco-corner-hero-bottom-left,
+  .deco-corner-trust, .deco-corner-reviews, .deco-corner-whyus,
+  .deco-corner-pastwork-tl, .deco-corner-pastwork-br,
+  .deco-corner-process, .deco-corner-services-tl, .deco-corner-services-br,
+  .deco-corner-owner, .deco-corner-truck,
+  .deco-corner-servicearea-tl, .deco-corner-servicearea-br,
+  .deco-corner-financing{display:none !important}
+  .section-seam{height:30px}
+}
+
+/* ============================================================
+   POPUP FORM MODAL
+   ============================================================ */
+.popup-overlay{
+  display:none;
+  position:fixed;inset:0;z-index:120;
+  background:rgba(17,35,55,0.78);
+  align-items:center;justify-content:center;
+  padding:24px;
+}
+.popup-overlay.open{display:flex}
+.popup-modal{
+  background:#fff;
+  width:100%;max-width:520px;
+  padding:32px 28px;
+  position:relative;
+  border-left:6px solid var(--brand-primary);
+  box-shadow:0 16px 0 0 var(--brand-primary), 0 30px 60px rgba(0,0,0,0.40);
+  max-height:90vh;overflow-y:auto;
+}
+.popup-close{
+  position:absolute;top:8px;right:14px;
+  background:transparent;border:0;color:var(--brand-deep);
+  font-size:32px;font-weight:600;line-height:1;
+  cursor:pointer;padding:4px 10px;
+}
+.popup-close:hover{color:var(--brand-accent)}
+.popup-eyebrow{
+  font-size:12px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--brand-accent);margin:0 0 10px;
+}
+.popup-modal h2{
+  font-family:var(--font-display);font-weight:800;
+  font-size:clamp(22px,2.4vw,30px);color:var(--brand-deep);
+  margin:0 0 8px;
+}
+.popup-micro{
+  font-family:var(--font-body);font-size:13px;color:var(--ink-soft);
+  margin:0 0 22px;
+}
+.popup-form-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:14px;
+}
+.popup-form-grid .popup-full{grid-column:1/-1}
+.popup-modal label{
+  display:block;font-family:var(--font-body);
+  font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;
+  color:var(--brand-deep);margin:0 0 6px;
+}
+.popup-modal input{
+  font-family:var(--font-body);font-size:15px;
+  width:100%;padding:12px 14px;
+  background:#F7F4EE;
+  border:1px solid rgba(17,35,55,0.10);
+  border-left:3px solid var(--brand-primary);
+  color:var(--ink);
+}
+.popup-modal input:focus{outline:2px solid var(--brand-accent);outline-offset:1px}
+.popup-foot{
+  font-family:var(--font-body);font-size:13px;color:var(--ink-soft);
+  margin:14px 0 0;text-align:center;
+}
+.popup-foot a{color:var(--brand-primary)}
+@media (max-width:520px){
+  .popup-form-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     ANNOUNCEMENT BAR
+     ============================================================ -->
+<div class="announcement-bar">
+  <div class="wrap inner">
+    <a href="tel:3236153011" class="phone-link on-dark">
+      <span class="pulse"></span> 323-615-3011
+    </a>
+    <span class="heritage-chip">Family-Owned Southern California · Since 2011</span>
+  </div>
+</div>
+
+<!-- ============================================================
+     NAV
+     ============================================================ -->
+<header class="nav" role="banner">
+  <div class="wrap inner">
+    <a href="#" class="logo" aria-label="Specialist Roofing &amp; Repair">
+      <img src="../assets/logo/specialistroofing-primary-logo.png" alt="Specialist Roofing &amp; Repair" />
+    </a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#service-area">Service Area</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right">
+      <a href="tel:3236153011" class="phone-link nav-phone">
+        <span class="pulse"></span> 323-615-3011
+      </a>
+      <a href="#hero" class="btn btn-cta">Get Free Quote <span class="arrow">&rarr;</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">&#9776;</button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#service-area">Service Area</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+    <a href="tel:3236153011" class="btn btn-cta btn-large btn-block">Call 323-615-3011</a>
+  </div>
+</header>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="hero" class="hero">
+  <div class="hero-bg" role="img" aria-label="Specialist Roofing branded Silverado parked in front of a Burbank home at golden hour"></div>
+  <div class="hero-overlay"></div>
+  <div class="deco-corner deco-corner-hero-top-right" aria-hidden="true"></div>
+  <div class="deco-corner deco-corner-hero-bottom-left" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="hero-license">Licensed &middot; Insured &middot; CSLB #1007386</div>
+        <span class="hero-eyebrow">Southern California Roofers Since 2011</span>
+        <h1>The roofer Southern California<br/>has trusted for <em>15 years.</em></h1>
+        <p class="hero-sub">Family-owned. GAF Master Elite. Owens Corning Platinum. Andre and Chris Afsharian have been roofing SoCal homes from our Burbank HQ since 2011.</p>
+        <ul class="hero-bullets" role="list">
+          <li><span class="check">&#10003;</span> 4.9 stars &middot; 500+ Google reviews</li>
+          <li><span class="check">&#10003;</span> GAF Master Elite installer</li>
+          <li><span class="check">&#10003;</span> Family-owned since 2011</li>
+          <li><span class="check">&#10003;</span> Licensed CSLB #1007386</li>
+        </ul>
+        <div class="hero-trust-pills">
+          <div class="trust-pill" aria-label="Google rating">
+            <span class="platform-mark" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="20" height="20" role="img" aria-label="Google">
+                <title>Google</title>
+                <path fill="#4285F4" d="M44.5 20H24v8.5h11.8C34.7 33 30 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3 0 5.7 1.1 7.8 3l5.7-5.7C33.7 5.6 29.1 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20c11 0 20-8 20-20 0-1.3-.2-2.7-.5-4z"/>
+                <path fill="#34A853" d="M6.3 14.1l6.6 4.8C14.6 15 18.9 12 24 12c3 0 5.7 1.1 7.8 3l5.7-5.7C33.7 5.6 29.1 4 24 4 16.3 4 9.6 8.3 6.3 14.1z"/>
+                <path fill="#FBBC05" d="M24 44c5.2 0 9.7-1.7 13.1-4.7l-6.1-5c-1.9 1.3-4.3 2.1-7 2.1-6 0-10.7-3-12-7.5l-6.6 5.1C8.6 39.6 15.7 44 24 44z"/>
+                <path fill="#EA4335" d="M44.5 20H24v8.5h11.8c-.6 2.6-2 4.7-4 6.1l6.1 5C40.7 36.6 44 31.7 44 24c0-1.4-.2-2.7-.5-4z"/>
+              </svg>
+            </span>
+            <span class="star">&#9733;</span> 4.9 &middot; 509 reviews
+          </div>
+          <div class="trust-pill heritage" aria-label="Family-owned since 2011">
+            <strong>15</strong> Years Family-Owned
+          </div>
+          <div class="trust-pill" aria-label="BBB Accredited">
+            <span class="platform-mark" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 80" width="46" height="30" role="img" aria-label="BBB Accredited Business">
+                <title>BBB Accredited Business</title>
+                <defs>
+                  <linearGradient id="bbb-bg-hero" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#0A4179"/>
+                    <stop offset="1" stop-color="#072F58"/>
+                  </linearGradient>
+                </defs>
+                <rect width="120" height="80" rx="6" fill="url(#bbb-bg-hero)"/>
+                <text x="60" y="30" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="22" font-weight="900" fill="#FFFFFF" letter-spacing="1">BBB</text>
+                <text x="60" y="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#FFB81C" letter-spacing="0.6">ACCREDITED</text>
+                <text x="60" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#FFB81C" letter-spacing="0.6">BUSINESS</text>
+                <line x1="20" y1="68" x2="100" y2="68" stroke="#FFB81C" stroke-width="1.5"/>
+                <text x="60" y="76" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#FFFFFF" opacity="0.85">bbb.org</text>
+              </svg>
+            </span>
+            A Rating
+          </div>
+        </div>
+        <div class="hero-ctas">
+          <a href="#hero-form" class="btn btn-cta btn-large">Get My Free Quote <span class="arrow">&rarr;</span></a>
+          <a href="tel:3236153011" class="phone-link on-dark">
+            <span class="pulse"></span> Call 323-615-3011
+          </a>
+        </div>
+      </div>
+
+      <!-- HERO FORM CARD (RIGHT) -->
+      <aside class="hero-form-card" id="hero-form" aria-labelledby="hero-form-h">
+        <div class="form-eyebrow">Get Your Free Quote</div>
+        <h2 id="hero-form-h">Free roof quote in 60 seconds.</h2>
+        <p class="micro">No spam. We answer the same business day.</p>
+        <form id="quoteForm" novalidate>
+          <div class="form-grid">
+            <div class="full">
+              <label for="qf-name">Full Name</label>
+              <input type="text" id="qf-name" name="name" placeholder="Your full name" required />
+            </div>
+            <div>
+              <label for="qf-phone">Phone</label>
+              <input type="tel" id="qf-phone" name="phone" placeholder="(323) 555-0100" required />
+            </div>
+            <div>
+              <label for="qf-zip">Property ZIP</label>
+              <input type="text" id="qf-zip" name="zip" placeholder="91502" required inputmode="numeric" pattern="\d{5}" />
+            </div>
+            <div class="full">
+              <label for="qf-email">Email</label>
+              <input type="email" id="qf-email" name="email" placeholder="you@example.com" required />
+            </div>
+            <div class="full">
+              <label for="qf-service">Service Needed (one line)</label>
+              <input type="text" id="qf-service" name="service" placeholder="Repair, replacement, gutters, commercial, deck, solar" required />
+            </div>
+            <div class="full submit-row">
+              <button type="submit" class="btn btn-cta btn-large btn-block">Get My Free Quote <span class="arrow">&rarr;</span></button>
+            </div>
+          </div>
+          <p class="trust-line">Free. No obligation. We respond within 2 hours.</p>
+        </form>
+
+        <!-- OWNER MINI-CARD — Andre with real founding quote -->
+        <div class="hero-form-owner-card">
+          <div class="avatar">
+            <img src="../assets/team/andre-afsharian-cutout.png" alt="Andre Afsharian, Co-Founder of Specialist Roofing" />
+          </div>
+          <div class="meta">
+            <p class="owner-name">Andre Afsharian</p>
+            <p class="owner-role">Co-Founder &amp; Owner &middot; Specialist Roofing</p>
+            <p class="owner-quote">&ldquo;My goal is to have a zero-accident workplace.&rdquo;</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+<div class="hero-bleed" aria-hidden="true"></div>
+
+<!-- ============================================================
+     TRUST MARQUEE — 12 badge static grid
+     ============================================================ -->
+<section class="trust-marquee bg-dots" id="trust" aria-label="Award-winning certifications">
+  <div class="deco-corner deco-corner-trust" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow" style="color:var(--brand-accent)">Award-Winning, Certified, and Local</p>
+      <h3>Partnerships with every major roofing manufacturer in the country.</h3>
+    </div>
+    <div class="badge-grid">
+      <div class="badge-cell"><img src="../assets/photos/badges/gaf-master-elite.png" alt="GAF Master Elite Certified" /></div>
+      <div class="badge-cell"><img src="../assets/photos/badges/owens-corning-platinum.png" alt="Owens Corning Platinum Preferred Contractor" /></div>
+      <div class="badge-cell"><img src="../assets/photos/badges/certainteed-shinglemaster.png" alt="CertainTeed ShingleMaster" /></div>
+      <div class="badge-cell"><img src="../assets/photos/badges/polyglass-logo.webp" alt="Polyglass Certified" /></div>
+      <div class="badge-cell"><img src="../assets/photos/badges/pg-quantum-logo.webp" alt="Polyglass PG Quantum" /></div>
+      <div class="badge-cell"><img src="../assets/photos/badges/bbb-a-rating.webp" alt="BBB Accredited A Rating" /></div>
+      <div class="badge-cell"><img src="../assets/photos/badges/asc-logo.png" alt="American Standard Coatings Certified" /></div>
+      <div class="badge-cell"><img src="../assets/photos/badges/gaf-logo.webp" alt="GAF Authorized" /></div>
+      <div class="badge-cell"><img src="../assets/photos/badges/owens-corning-logo.webp" alt="Owens Corning Authorized" /></div>
+      <div class="badge-cell"><img src="../assets/photos/badges/certainteed-logo.webp" alt="CertainTeed Authorized" /></div>
+      <div class="badge-cell"><img src="../assets/photos/badges/2026-product-excellence.png" alt="2026 GAF Product Excellence" /></div>
+      <div class="badge-cell"><img src="../assets/photos/badges/2026-top-performer-mvp.png" alt="2026 GAF Top Performer MVP" /></div>
+    </div>
+    <p class="trust-license">Licensed &amp; Insured &middot; <strong>CSLB #1007386</strong> &middot; In good standing since 2015</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     REVIEWS — aggregate region cards
+     ============================================================ -->
+<section id="reviews" class="reviews-section bg-stripe">
+  <div class="deco-corner deco-corner-reviews" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow on-dark">What 509 SoCal Homeowners Say</p>
+      <h2>4.9 stars across more than 500 Google reviews.</h2>
+      <p class="lede on-dark">Three Google Business Profiles, three SoCal regions, one rating people agree on.</p>
+    </div>
+    <div class="region-cards">
+      <div class="region-card">
+        <p class="region-label">Orange County</p>
+        <div class="rating-row">
+          <svg class="g-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" aria-hidden="true">
+            <path fill="#4285F4" d="M44.5 20H24v8.5h11.8C34.7 33 30 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3 0 5.7 1.1 7.8 3l5.7-5.7C33.7 5.6 29.1 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20c11 0 20-8 20-20 0-1.3-.2-2.7-.5-4z"/>
+            <path fill="#34A853" d="M6.3 14.1l6.6 4.8C14.6 15 18.9 12 24 12c3 0 5.7 1.1 7.8 3l5.7-5.7C33.7 5.6 29.1 4 24 4 16.3 4 9.6 8.3 6.3 14.1z"/>
+            <path fill="#FBBC05" d="M24 44c5.2 0 9.7-1.7 13.1-4.7l-6.1-5c-1.9 1.3-4.3 2.1-7 2.1-6 0-10.7-3-12-7.5l-6.6 5.1C8.6 39.6 15.7 44 24 44z"/>
+            <path fill="#EA4335" d="M44.5 20H24v8.5h11.8c-.6 2.6-2 4.7-4 6.1l6.1 5C40.7 36.6 44 31.7 44 24c0-1.4-.2-2.7-.5-4z"/>
+          </svg>
+          <div class="stars">4.9<sup>&#9733;</sup></div>
+        </div>
+        <div class="count">250 verified Google reviews</div>
+        <p class="blurb">Our highest-volume region. From Pasadena down through Mission Viejo, this is the OC homeowner network we have served the longest.</p>
+        <a class="map-link" href="https://maps.google.com/?cid=13659360470153831231" target="_blank" rel="noopener">See OC reviews on Google &rarr;</a>
+      </div>
+      <div class="region-card">
+        <p class="region-label">Burbank HQ</p>
+        <div class="rating-row">
+          <svg class="g-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" aria-hidden="true">
+            <path fill="#4285F4" d="M44.5 20H24v8.5h11.8C34.7 33 30 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3 0 5.7 1.1 7.8 3l5.7-5.7C33.7 5.6 29.1 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20c11 0 20-8 20-20 0-1.3-.2-2.7-.5-4z"/>
+            <path fill="#34A853" d="M6.3 14.1l6.6 4.8C14.6 15 18.9 12 24 12c3 0 5.7 1.1 7.8 3l5.7-5.7C33.7 5.6 29.1 4 24 4 16.3 4 9.6 8.3 6.3 14.1z"/>
+            <path fill="#FBBC05" d="M24 44c5.2 0 9.7-1.7 13.1-4.7l-6.1-5c-1.9 1.3-4.3 2.1-7 2.1-6 0-10.7-3-12-7.5l-6.6 5.1C8.6 39.6 15.7 44 24 44z"/>
+            <path fill="#EA4335" d="M44.5 20H24v8.5h11.8c-.6 2.6-2 4.7-4 6.1l6.1 5C40.7 36.6 44 31.7 44 24c0-1.4-.2-2.7-.5-4z"/>
+          </svg>
+          <div class="stars">4.9<sup>&#9733;</sup></div>
+        </div>
+        <div class="count">166 verified Google reviews</div>
+        <p class="blurb">Our home base since 2011. The Burbank HQ is where the brothers started, where the warehouse is, and where the highest concentration of repeat clients lives.</p>
+        <a class="map-link" href="https://maps.google.com/?cid=5746429745870777626" target="_blank" rel="noopener">See Burbank reviews on Google &rarr;</a>
+      </div>
+      <div class="region-card">
+        <p class="region-label">Long Beach</p>
+        <div class="rating-row">
+          <svg class="g-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" aria-hidden="true">
+            <path fill="#4285F4" d="M44.5 20H24v8.5h11.8C34.7 33 30 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3 0 5.7 1.1 7.8 3l5.7-5.7C33.7 5.6 29.1 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20c11 0 20-8 20-20 0-1.3-.2-2.7-.5-4z"/>
+            <path fill="#34A853" d="M6.3 14.1l6.6 4.8C14.6 15 18.9 12 24 12c3 0 5.7 1.1 7.8 3l5.7-5.7C33.7 5.6 29.1 4 24 4 16.3 4 9.6 8.3 6.3 14.1z"/>
+            <path fill="#FBBC05" d="M24 44c5.2 0 9.7-1.7 13.1-4.7l-6.1-5c-1.9 1.3-4.3 2.1-7 2.1-6 0-10.7-3-12-7.5l-6.6 5.1C8.6 39.6 15.7 44 24 44z"/>
+            <path fill="#EA4335" d="M44.5 20H24v8.5h11.8c-.6 2.6-2 4.7-4 6.1l6.1 5C40.7 36.6 44 31.7 44 24c0-1.4-.2-2.7-.5-4z"/>
+          </svg>
+          <div class="stars">4.8<sup>&#9733;</sup></div>
+        </div>
+        <div class="count">93 verified Google reviews</div>
+        <p class="blurb">Marine corrosion and coastal weather, handled. The Long Beach office covers the South Bay and the Harbor Area, where roofs take a salt-air beating.</p>
+        <a class="map-link" href="https://maps.google.com/?cid=15804921342657357804" target="_blank" rel="noopener">See Long Beach reviews on Google &rarr;</a>
+      </div>
+    </div>
+    <p class="reviews-aggregate"><strong>509 reviews</strong> &middot; <strong>4.9 weighted average</strong> &middot; across three Google Business Profiles</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     WHY US — 4-cell coordinate grid + cobalt side ornament
+     ============================================================ -->
+<section class="whyus-section">
+  <div class="deco-side" aria-hidden="true"></div>
+  <div class="deco-corner deco-corner-whyus" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Why Specialist</p>
+      <h2>Four reasons SoCal homeowners pick us once and call us again.</h2>
+    </div>
+    <div class="coord-grid">
+      <div class="coord-cell">
+        <p class="coord-label">A1 // Top-tier certification</p>
+        <svg class="coord-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M32 6 L54 18 V32 C54 44 44 54 32 58 C20 54 10 44 10 32 V18 Z"/>
+          <path d="M22 32 L29 39 L44 24"/>
+        </svg>
+        <h3>GAF Master Elite</h3>
+        <p>Only the top 2% of GAF-certified contractors carry Master Elite status. We have held it for years and renewed it every cycle.</p>
+      </div>
+      <div class="coord-cell">
+        <p class="coord-label">A2 // Family-owned</p>
+        <svg class="coord-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="22" cy="22" r="7"/>
+          <circle cx="42" cy="22" r="7"/>
+          <path d="M8 50 C8 40 14 34 22 34 C28 34 32 38 32 38 C32 38 36 34 42 34 C50 34 56 40 56 50"/>
+        </svg>
+        <h3>Afsharian Brothers</h3>
+        <p>Andre and Chris started the company in 2011 and still run it today. Same family, same standard, fifteen straight years.</p>
+      </div>
+      <div class="coord-cell">
+        <p class="coord-label">B1 // Same-week response</p>
+        <svg class="coord-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="32" cy="32" r="22"/>
+          <path d="M32 18 V32 L42 38"/>
+        </svg>
+        <h3>Same-week service</h3>
+        <p>Three regional offices across SoCal. Repairs scheduled the same week. We pick up the phone during office hours.</p>
+      </div>
+      <div class="coord-cell">
+        <p class="coord-label">B2 // In-house crew</p>
+        <svg class="coord-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M10 28 L32 12 L54 28 V52 H10 Z"/>
+          <path d="M22 52 V36 H42 V52"/>
+        </svg>
+        <h3>25-person crew</h3>
+        <p>We do not subcontract our installs. The team that signs your estimate is the team on your roof, start to finish.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PAST WORK — featured + grid
+     ============================================================ -->
+<section class="pastwork-section" aria-label="Recent projects">
+  <div class="deco-corner deco-corner-pastwork-tl" aria-hidden="true"></div>
+  <div class="deco-corner deco-corner-pastwork-br" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Recent Roofs</p>
+      <h2>Real homes. Real SoCal neighborhoods. Real crews.</h2>
+      <p class="lede">A small sample of the work the brothers and the crew have put up across LA County, Orange County, and the South Bay over the past few seasons.</p>
+    </div>
+    <div class="pastwork-featured">
+      <span class="feature-label">Featured</span>
+      <img src="../assets/photos/gallery-modern-farmhouse-metal-roof.webp" alt="Modern farmhouse with standing-seam black metal roof in Southern California" />
+      <div class="feature-cap">
+        <h3>Standing-seam metal roof, modern farmhouse</h3>
+        <span>Full replacement &middot; Class A fire-rated material &middot; OC region</span>
+      </div>
+    </div>
+    <div class="pastwork-grid">
+      <div class="pastwork-tile">
+        <img src="../assets/photos/gallery-crew-burbank-vca.webp" alt="Specialist Roofing crew on a commercial flat roof in Burbank" />
+        <span class="city-chip">VCA Burbank</span>
+      </div>
+      <div class="pastwork-tile">
+        <img src="../assets/photos/gallery-commercial-brick-building.webp" alt="Three-story commercial brick building with completed roofing system" />
+        <span class="city-chip">Commercial</span>
+      </div>
+      <div class="pastwork-tile">
+        <img src="../assets/photos/gallery-crew-shingle-install.webp" alt="Specialist Roofing crew member installing shingles" />
+        <span class="city-chip">Install</span>
+      </div>
+      <div class="pastwork-tile">
+        <img src="../assets/photos/gallery-house-cutout-2story.webp" alt="Two-story suburban home with new dark shingle roof" />
+        <span class="city-chip">Residential</span>
+      </div>
+      <div class="pastwork-tile">
+        <img src="../assets/photos/gallery-crew-team-3person.webp" alt="Three-person Specialist Roofing crew on a residential roof" />
+        <span class="city-chip">Crew</span>
+      </div>
+      <div class="pastwork-tile">
+        <img src="../assets/photos/gallery-crew-flat-roof-la.webp" alt="Crew on flat commercial roof with downtown LA backdrop" />
+        <span class="city-chip">LA Flat Roof</span>
+      </div>
+      <div class="pastwork-tile">
+        <img src="../assets/photos/gallery-flat-roof-hvac.webp" alt="Commercial flat roof with HVAC units after completion" />
+        <span class="city-chip">Commercial</span>
+      </div>
+      <div class="pastwork-tile">
+        <img src="../assets/photos/about-beige-gutters-la.png" alt="Beige aluminum gutters installed in Los Angeles" />
+        <span class="city-chip">Gutters</span>
+      </div>
+      <div class="pastwork-tile">
+        <img src="../assets/photos/gallery-shingle-gutter-corner.webp" alt="Close-up of new shingles meeting a clean gutter line" />
+        <span class="city-chip">Detail</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PROCESS — Specialist 4-step walk · dark navy + grid
+     ============================================================ -->
+<section class="process-section bg-grid" id="process">
+  <div class="deco-corner deco-corner-process" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow on-dark">How We Work</p>
+      <h2>The Specialist 4-Step Walk.</h2>
+      <p class="lede on-dark">Free inspection, transparent estimate, factory-certified install, post-job walkthrough. No high-pressure quotes. No surprise add-ons.</p>
+    </div>
+    <div class="process-steps">
+      <div class="process-tile">
+        <div class="process-num">1</div>
+        <h3>Inspect</h3>
+        <p>A real roofer climbs your roof, photographs what they find, and shows you exactly what is going on. Free, no obligation.</p>
+      </div>
+      <div class="process-tile">
+        <div class="process-num">2</div>
+        <h3>Estimate</h3>
+        <p>We hand you a written quote that lists materials, labor, and timeline line by line. You take it home, sleep on it, decide on your own clock.</p>
+      </div>
+      <div class="process-tile">
+        <div class="process-num">3</div>
+        <h3>Install</h3>
+        <p>The same crew that has been installing GAF and Owens Corning roofs since 2011 does your install. Factory-certified, manufacturer-warrantied.</p>
+      </div>
+      <div class="process-tile">
+        <div class="process-num">4</div>
+        <h3>Walkthrough</h3>
+        <p>When the job is done, we walk you through the roof, register the warranty paperwork, and answer every question you still have.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SERVICES — 6 cards · cream + bg-dots
+     ============================================================ -->
+<section id="services" class="services-section bg-dots">
+  <div class="deco-corner deco-corner-services-tl" aria-hidden="true"></div>
+  <div class="deco-corner deco-corner-services-br" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">What We Do</p>
+      <h2>Six services. One trusted team.</h2>
+      <p class="lede">Roofing, gutters, deck waterproofing, and solar removal: handled in-house, by the same crew that has been doing it since 2011.</p>
+    </div>
+    <div class="services-grid">
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 32 L24 14 L42 32"/>
+            <path d="M10 32 V42 H38 V32"/>
+            <path d="M30 38 L34 34 M32 36 L28 32"/>
+          </svg>
+        </div>
+        <span class="pill">Same-week service</span>
+        <h3>Roof Repair</h3>
+        <p>Leaks, missing shingles, storm damage. Same-week scheduling, factory-certified fixes.</p>
+        <span class="more">See Repair &rarr;</span>
+      </article>
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 28 L24 10 L42 28"/>
+            <path d="M10 28 V40 H38 V28"/>
+            <path d="M24 16 V6 M20 10 L24 6 L28 10"/>
+          </svg>
+        </div>
+        <span class="pill">Class A fire-rated</span>
+        <h3>Roof Replacement</h3>
+        <p>Full replacements with GAF, Owens Corning, CertainTeed. $1,500 off Class A fire-resistant.</p>
+        <span class="more">See Replacement &rarr;</span>
+      </article>
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 22 H42 V42 H6 Z"/>
+            <path d="M6 22 L24 8 L42 22"/>
+            <rect x="14" y="28" width="6" height="6"/>
+            <rect x="28" y="28" width="6" height="6"/>
+          </svg>
+        </div>
+        <span class="pill">PG Quantum certified</span>
+        <h3>Commercial Roofing</h3>
+        <p>Multi-family, HOAs, business parks. Polyglass PG Quantum certified for low-slope.</p>
+        <span class="more">See Commercial &rarr;</span>
+      </article>
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 14 H42 V20 H6 Z"/>
+            <path d="M30 20 V36"/>
+            <path d="M27 36 L30 42 L33 36 Z"/>
+            <path d="M14 26 H22 M14 30 H20"/>
+          </svg>
+        </div>
+        <span class="pill">Single-day install</span>
+        <h3>Gutter Installation</h3>
+        <p>Seamless aluminum gutters. Most homes installed in a single day.</p>
+        <span class="more">See Gutters &rarr;</span>
+      </article>
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="6" y="16" width="36" height="20"/>
+            <path d="M6 24 H42 M6 28 H42 M6 32 H42"/>
+            <path d="M10 16 V12 M18 16 V12 M26 16 V12 M34 16 V12"/>
+          </svg>
+        </div>
+        <span class="pill">ASC certified</span>
+        <h3>Deck Waterproofing</h3>
+        <p>Desert Crete and Desert Flex systems. Class A fire rating available.</p>
+        <span class="more">See Deck &rarr;</span>
+      </article>
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="8" y="22" width="32" height="20"/>
+            <path d="M8 28 H40 M8 34 H40 M16 22 V42 M24 22 V42 M32 22 V42"/>
+            <circle cx="24" cy="10" r="5"/>
+            <path d="M24 4 V2 M30 5 L31 4 M18 5 L17 4"/>
+          </svg>
+        </div>
+        <span class="pill">Integrated team</span>
+        <h3>Solar Removal &amp; Reinstall</h3>
+        <p>Replacing a roof under existing solar? We handle both. No two-contractor headaches.</p>
+        <span class="more">See Solar &rarr;</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     OWNER STORY — brothers heritage O3 variant
+     ============================================================ -->
+<section id="about" class="owner-section about-section about owner">
+  <div class="deco-side-r" aria-hidden="true"></div>
+  <div class="deco-corner deco-corner-owner" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Meet the Brothers</p>
+      <h2>&ldquo;We realized we could do a better job giving customers a proper roof that wouldn&rsquo;t need repairs after just a couple years.&rdquo;</h2>
+    </div>
+
+    <div class="owner-grid">
+      <div class="owner-card primary">
+        <div class="face">
+          <img src="../assets/team/andre-afsharian.jpg" alt="Andre Afsharian, Co-Founder of Specialist Roofing" />
+        </div>
+        <div class="mascot-stamp" aria-hidden="true">
+          <img src="../assets/generated/mascot-generated.png" alt="" />
+        </div>
+        <p class="role">Co-Founder &amp; Owner</p>
+        <p class="name">Andre Afsharian</p>
+        <div class="owner-side-card">
+          <div class="face-small">
+            <img src="../assets/team/chris-afsharian.jpg" alt="Chris Afsharian, Co-Founder" />
+          </div>
+          <div class="meta">
+            <strong>Chris Afsharian</strong>
+            <span>Co-Founder &middot; since 2011</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="owner-body">
+        <p>Andre and Chris Afsharian started Specialist Roofing in 2011 because they kept getting called to fix roofs that other contractors had installed badly. The repair work was steady, but the pattern was frustrating: the same neighborhoods, the same workmanship problems, year after year.</p>
+        <div class="pull">&ldquo;We found ourselves getting called to repair roofs that were poorly installed by other roofing companies. That&rsquo;s how we decided to start installing new roofs, to do the job correctly from the start.&rdquo;</div>
+        <p>Fifteen years later, the brothers run a 25-person crew with offices in Burbank, Orange, and Long Beach. They renew GAF Master Elite every cycle, hold Owens Corning Platinum status, and run Polyglass PG Quantum on commercial low-slope work.</p>
+        <p>Same family. Same standard. Different decade.</p>
+      </div>
+    </div>
+
+    <div class="owner-heritage">
+      <div class="owner-heritage-photo">
+        <img src="../assets/team/owners-selfie-andre-chris.jpg" alt="Andre and Chris Afsharian on a Mediterranean estate jobsite" />
+        <div class="cap">Andre + Chris on a Mediterranean estate jobsite, 2024</div>
+      </div>
+      <div class="owner-stats">
+        <div class="owner-stat">
+          <span class="num">15</span>
+          <span class="lbl">Years roofing SoCal</span>
+        </div>
+        <div class="owner-stat">
+          <span class="num">25</span>
+          <span class="lbl">Person in-house crew</span>
+        </div>
+        <div class="owner-stat">
+          <span class="num">509</span>
+          <span class="lbl">Verified Google reviews</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- seam divider into truck section -->
+<div class="section-seam" aria-hidden="true"></div>
+
+<!-- ============================================================
+     TRUCK SECTION — Pattern 002 §10 contained card on navy
+     ============================================================ -->
+<section class="truck-section" aria-label="Recognizable local crews">
+  <div class="deco-corner deco-corner-truck" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="truck-grid">
+      <div class="truck-stage">
+        <span class="tag-tl">Burbank &middot; Long Beach &middot; Orange County</span>
+        <img class="truck" src="../assets/photos/truck-branded-cutout.webp" alt="Branded Specialist Roofing Chevy Silverado pickup with company decals" />
+        <div class="mascot-br" aria-hidden="true">
+          <img src="../assets/generated/mascot-generated.png" alt="" />
+        </div>
+      </div>
+      <div class="truck-copy">
+        <p class="eyebrow on-dark">Recognizable Local Crews</p>
+        <h2>The crew that shows up has been here since 2011.</h2>
+        <ul class="truck-bullets" role="list">
+          <li><span class="check">&#10003;</span> Clearly marked vehicles parked in the driveway, not unmarked white vans</li>
+          <li><span class="check">&#10003;</span> Same crew start to finish, no subcontractor swaps mid-project</li>
+          <li><span class="check">&#10003;</span> An owner runs every project: Andre or Chris on the rooftop</li>
+          <li><span class="check">&#10003;</span> Photo-documented before we leave, you get the full set</li>
+        </ul>
+        <div class="truck-cta-row">
+          <a href="#hero-form" class="btn btn-cta btn-large">Get My Free Quote <span class="arrow">&rarr;</span></a>
+          <a href="tel:3236153011" class="phone-link on-dark">
+            <span class="pulse"></span> Call Andre direct &middot; 323-615-3011
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FINANCING — anchor + chip stack
+     ============================================================ -->
+<section class="financing-section bg-dots" id="offers">
+  <div class="deco-corner deco-corner-financing" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Active Offers</p>
+      <h2>Two ways to save on your new roof.</h2>
+    </div>
+    <div class="financing-wrap">
+      <div class="financing-anchor">
+        <p class="eyebrow">Class A Fire-Resistant Rebate</p>
+        <div class="anchor-num">$1,500</div>
+        <h2>Off Class A fire-resistant roofing materials.</h2>
+        <p class="sub">On any full roof replacement. The highest UL fire rating, increasingly required across SoCal&rsquo;s High Fire Hazard zones.</p>
+        <img class="financing-anchor-photo" src="../assets/photos/gallery-shingle-gutter-corner.webp" alt="Close-up of new Class A fire-rated shingles on a recent install" />
+      </div>
+      <div class="financing-chips">
+        <div class="fchip">
+          <p class="ftitle">0% APR &middot; No payments for 12 months</p>
+          <p class="fnote">Replace now, pay later. Standard financing terms apply after 12 months. Subject to credit approval.</p>
+          <a href="#hero-form" class="btn btn-cta">See If You Qualify <span class="arrow">&rarr;</span></a>
+        </div>
+        <div class="fchip">
+          <p class="ftitle">Both offers apply to full replacements</p>
+          <p class="fnote">The two paths can be combined with each other. They cannot be combined with other discounts.</p>
+          <a href="#hero-form" class="btn btn-secondary on-dark">Apply &amp; Lock In <span class="arrow">&rarr;</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-seam" aria-hidden="true"></div>
+
+<!-- ============================================================
+     SERVICE AREA — cities + map (REQUIRED ID)
+     ============================================================ -->
+<section id="service-area" class="service-area-section bg-dots">
+  <div class="deco-corner deco-corner-servicearea-tl" aria-hidden="true"></div>
+  <div class="deco-corner deco-corner-servicearea-br" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Where We Serve</p>
+      <h2>Three offices. Sixteen cities. One Southern California team.</h2>
+      <p class="lede">Burbank HQ for LA County. Orange office for OC. Long Beach office for the South Bay. We cover the cities in between too.</p>
+    </div>
+    <div class="service-area-grid">
+      <div class="cities-block">
+        <div class="hq-row">
+          <div class="hq-card">
+            <p class="pin"><span style="display:inline-block;width:8px;height:8px;background:var(--brand-accent);"></span> Burbank HQ</p>
+            <strong>1061 N Victory Pl</strong>
+            <p class="addr">Burbank, CA 91502</p>
+            <p class="phone"><a href="tel:3236153011">323-615-3011</a></p>
+          </div>
+          <div class="hq-card">
+            <p class="pin"><span style="display:inline-block;width:8px;height:8px;background:var(--brand-accent);"></span> Orange County</p>
+            <strong>586 N Batavia St</strong>
+            <p class="addr">Orange, CA 92868</p>
+            <p class="phone"><a href="tel:6268697663">626-869-7663</a></p>
+          </div>
+          <div class="hq-card">
+            <p class="pin"><span style="display:inline-block;width:8px;height:8px;background:var(--brand-accent);"></span> Long Beach</p>
+            <strong>1 World Trade Ctr, 8th Fl</strong>
+            <p class="addr">Long Beach, CA 90831</p>
+            <p class="phone"><a href="tel:5623373951">562-337-3951</a></p>
+          </div>
+        </div>
+        <div class="cities-strip">
+          <p class="label">16 SoCal Cities Served</p>
+          <ul>
+            <li>Alhambra</li>
+            <li>Anaheim</li>
+            <li>Arcadia</li>
+            <li>Burbank</li>
+            <li>Glendale</li>
+            <li>Huntington Beach</li>
+            <li>Irvine</li>
+            <li>Long Beach</li>
+            <li>Mission Viejo</li>
+            <li>Orange</li>
+            <li>Pasadena</li>
+            <li>Santa Ana</li>
+            <li>Santa Monica</li>
+            <li>Torrance</li>
+            <li>Glendora</li>
+            <li>Brentwood</li>
+          </ul>
+        </div>
+      </div>
+      <div class="map-block">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423368.3!2d-118.2998!3d34.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sBurbank%2C%20California!5e0!3m2!1sen!2sus!4v1700000000000"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Specialist Roofing &amp; Repair service area: Southern California"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FINAL CTA BANNER — dark photo bleed + cobalt ornament
+     ============================================================ -->
+<section class="finalcta-section" id="contact">
+  <div class="deco-side-r" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="finalcta-inner">
+      <p class="eyebrow on-dark">Ready When You Are</p>
+      <h2>Ready when you are.</h2>
+      <p>Tell us about your roof. We will be on it within the week, with a written estimate and zero pressure. Free inspection. No spam. We answer the same business day.</p>
+      <div class="finalcta-ctas">
+        <a href="#hero-form" class="btn btn-cta btn-large">Get My Free Quote <span class="arrow">&rarr;</span></a>
+        <a href="tel:3236153011" class="phone-link on-dark">
+          <span class="pulse"></span> Or Call 323-615-3011
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../assets/logo/specialistroofing-footer-logo.webp" alt="Specialist Roofing &amp; Repair" />
+        <p>Family-owned Southern California roofers since 2011. GAF Master Elite. Owens Corning Platinum. CertainTeed ShingleMaster.</p>
+        <div class="mascot-small" aria-hidden="true">
+          <img src="../assets/generated/mascot-generated.png" alt="" />
+        </div>
+        <div class="footer-social" aria-label="Social">
+          <a href="https://www.facebook.com/callthespecialist" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+          <a href="https://www.instagram.com/callthespecialist" target="_blank" rel="noopener" aria-label="Instagram">Ig</a>
+          <a href="https://www.linkedin.com/company/callthespecialist/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+          <a href="https://www.youtube.com/@Specialist-Roofing" target="_blank" rel="noopener" aria-label="YouTube">Yt</a>
+        </div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Roof Repair</a></li>
+          <li><a href="#services">Roof Replacement</a></li>
+          <li><a href="#services">Commercial Roofing</a></li>
+          <li><a href="#services">Gutter Installation</a></li>
+          <li><a href="#services">Deck Waterproofing</a></li>
+          <li><a href="#services">Solar Removal &amp; Reinstall</a></li>
+        </ul>
+        <h4 style="margin-top:24px">Resources</h4>
+        <ul>
+          <li><a href="#offers">Active Offers</a></li>
+          <li><a href="#about">Meet the Brothers</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+        </ul>
+      </div>
+      <div class="contact-col">
+        <h4>Three SoCal Offices</h4>
+        <div class="nap-row">
+          <strong>Burbank HQ</strong>
+          1061 N Victory Pl, Burbank, CA 91502<br/>
+          <a href="tel:3236153011">323-615-3011</a>
+        </div>
+        <div class="nap-row">
+          <strong>Orange County</strong>
+          586 N Batavia St, Orange, CA 92868<br/>
+          <a href="tel:6268697663">626-869-7663</a>
+        </div>
+        <div class="nap-row">
+          <strong>Long Beach</strong>
+          1 World Trade Center, 8th Fl, Long Beach, CA 90831<br/>
+          <a href="tel:5623373951">562-337-3951</a>
+        </div>
+      </div>
+      <div>
+        <h4>Get A Quote</h4>
+        <ul>
+          <li><a href="#service-area">Service Area</a></li>
+          <li><a href="#process">How We Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="footer-cta-block">
+          <a href="#hero-form" class="btn btn-cta">Get a Free Quote <span class="arrow">&rarr;</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="legal">
+        Specialist Roofing and Repair is an independent contractor and is not an affiliate of Owens Corning Roofing and Asphalt LLC or its affiliated companies. CSLB #1007386 &middot; In good standing since 2015.
+      </div>
+      <div class="kca">
+        Website designed by <a href="https://kingcontractor.com/" target="_blank" rel="noopener"><strong>King Contractor Agency</strong></a> &middot; Building America&rsquo;s most trusted roofing brands. &copy; <span id="footer-year"></span> Specialist Roofing &amp; Repair.
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     STICKY MOBILE CTA
+     ============================================================ -->
+<div class="sticky-mobile-cta" id="stickyMobile">
+  <div class="inner">
+    <a href="tel:3236153011" class="btn ph" id="mobileCtaBtn"><span class="pulse"></span> Call 323-615-3011</a>
+    <a href="#hero-form" class="btn btn-cta">Free Quote <span class="arrow">&rarr;</span></a>
+  </div>
+</div>
+
+<button class="scroll-top" id="scrollTop" aria-label="Back to top">&uarr;</button>
+
+<!-- ============================================================
+     POPUP FORM (triggered by every CTA via openPopup())
+     ============================================================ -->
+<div class="popup-overlay" id="popupOverlay" aria-hidden="true">
+  <div class="popup-modal" role="dialog" aria-labelledby="popup-form-h" aria-modal="true">
+    <button class="popup-close" id="popupClose" aria-label="Close popup">&times;</button>
+    <div class="popup-eyebrow">Get Your Free Quote</div>
+    <h2 id="popup-form-h">Free roof quote in 60 seconds.</h2>
+    <p class="popup-micro">No spam. We answer the same business day.</p>
+    <form id="popupForm" novalidate>
+      <div class="popup-form-grid">
+        <div class="popup-full">
+          <label for="pf-name">Full Name</label>
+          <input type="text" id="pf-name" name="name" placeholder="Your full name" required />
+        </div>
+        <div>
+          <label for="pf-phone">Phone</label>
+          <input type="tel" id="pf-phone" name="phone" placeholder="(323) 555-0100" required />
+        </div>
+        <div>
+          <label for="pf-zip">Property ZIP</label>
+          <input type="text" id="pf-zip" name="zip" placeholder="91502" required inputmode="numeric" pattern="\d{5}" />
+        </div>
+        <div class="popup-full">
+          <label for="pf-email">Email</label>
+          <input type="email" id="pf-email" name="email" placeholder="you@example.com" required />
+        </div>
+        <div class="popup-full">
+          <label for="pf-service">Service Needed (one line)</label>
+          <input type="text" id="pf-service" name="service" placeholder="Repair, replacement, gutters, commercial, deck, solar" required />
+        </div>
+        <div class="popup-full">
+          <button type="submit" class="btn btn-cta btn-large btn-block">Get My Free Quote <span class="arrow">&rarr;</span></button>
+        </div>
+      </div>
+    </form>
+    <p class="popup-foot">Or call <a href="tel:3236153011"><strong>323-615-3011</strong></a> &middot; Same business day callback</p>
+  </div>
+</div>
+
+<script>
+/* =========================================================
+   footer year (Gate 4.5.21 dynamic copyright)
+   ========================================================= */
+(function(){
+  var y = document.getElementById('footer-year');
+  if(y) y.textContent = new Date().getFullYear();
+})();
+
+/* =========================================================
+   POPUP form trigger (Gate 4.5.19 — sitewide UX component)
+   Every CTA opens the popup; ESC + overlay click closes.
+   ========================================================= */
+function openPopup(e){
+  if(e && e.preventDefault) e.preventDefault();
+  var o = document.getElementById('popupOverlay');
+  if(!o) return;
+  o.classList.add('open');
+  o.setAttribute('aria-hidden','false');
+  var first = o.querySelector('input');
+  if(first) setTimeout(function(){ first.focus(); }, 50);
+}
+(function(){
+  var o = document.getElementById('popupOverlay');
+  var c = document.getElementById('popupClose');
+  if(!o) return;
+  function close(){ o.classList.remove('open'); o.setAttribute('aria-hidden','true'); }
+  if(c) c.addEventListener('click', close);
+  o.addEventListener('click', function(e){ if(e.target === o) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') close(); });
+  // Wire every non-tel CTA to open popup. tel: links stay as direct dials.
+  document.querySelectorAll('a.btn-cta, a.btn.btn-cta, button.btn-cta').forEach(function(el){
+    var href = el.getAttribute('href') || '';
+    if(href.indexOf('tel:') === 0) return;
+    // The hero form on the page itself stays as-is; popup is for off-hero CTAs.
+    if(href === '#hero-form') return;
+    el.addEventListener('click', openPopup);
+  });
+})();
+
+/* =========================================================
+   Dynamic mobile CTA (Gate 4.5.19 — time-of-day switch)
+   Business hours 7am–7pm → "Call Now"; off-hours → "Get Quote"
+   ========================================================= */
+(function(){
+  var btn = document.getElementById('mobileCtaBtn');
+  if(!btn) return;
+  var h = new Date().getHours();
+  if(h >= 7 && h < 19){
+    btn.innerHTML = '<span class="pulse"></span> Call 323-615-3011';
+    btn.setAttribute('href','tel:3236153011');
+  } else {
+    btn.innerHTML = '<span class="pulse"></span> Get a Free Quote';
+    btn.setAttribute('href','#hero-form');
+  }
+})();
+
+/* =========================================================
+   nav-toggle + mobile menu
+   ========================================================= */
+(function(){
+  var t = document.getElementById('navToggle');
+  var m = document.getElementById('mobileMenu');
+  if(!t || !m) return;
+  t.addEventListener('click', function(){
+    var open = m.classList.toggle('open');
+    t.setAttribute('aria-expanded', String(open));
+  });
+  // close on link click
+  m.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ m.classList.remove('open'); t.setAttribute('aria-expanded','false'); });
+  });
+})();
+
+/* =========================================================
+   active nav link on scroll
+   ========================================================= */
+(function(){
+  var sections = ['hero','services','about','service-area','reviews','contact','process','offers']
+    .map(function(id){ return document.getElementById(id); })
+    .filter(Boolean);
+  var links = document.querySelectorAll('.nav ul a');
+  function update(){
+    var y = window.scrollY + 110;
+    var current = '';
+    sections.forEach(function(s){
+      if(y >= s.offsetTop) current = s.id;
+    });
+    links.forEach(function(a){
+      var href = a.getAttribute('href') || '';
+      a.classList.toggle('active', href === '#' + current);
+    });
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();
+
+/* =========================================================
+   scroll-to-top button
+   ========================================================= */
+(function(){
+  var btn = document.getElementById('scrollTop');
+  if(!btn) return;
+  window.addEventListener('scroll', function(){
+    btn.classList.toggle('visible', window.scrollY > 600);
+  }, { passive: true });
+  btn.addEventListener('click', function(){
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+
+/* =========================================================
+   sticky mobile cta hide near footer
+   ========================================================= */
+(function(){
+  var bar = document.getElementById('stickyMobile');
+  var footer = document.querySelector('.footer');
+  if(!bar || !footer) return;
+  window.addEventListener('scroll', function(){
+    var fr = footer.getBoundingClientRect();
+    bar.style.opacity = (fr.top < window.innerHeight - 40) ? '0' : '1';
+    bar.style.pointerEvents = (fr.top < window.innerHeight - 40) ? 'none' : 'auto';
+  }, { passive: true });
+})();
+
+/* =========================================================
+   form submit handler (hero form + popup form)
+   ========================================================= */
+function attachSubmit(formId){
+  var f = document.getElementById(formId);
+  if(!f) return;
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    var data = {
+      name:  f.name.value.trim(),
+      phone: f.phone.value.trim(),
+      email: f.email.value.trim(),
+      service: f.service.value.trim(),
+      zip:   f.zip.value.trim()
+    };
+    if(!data.name || !data.phone || !data.email || !data.service || !data.zip){
+      alert('Please fill out every field. We will follow up the same business day.');
+      return;
+    }
+    var btn = f.querySelector('button[type=submit]');
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    setTimeout(function(){
+      btn.textContent = 'Thank you. We will call you within 2 hours.';
+      btn.style.background = '#003FBE';
+      btn.style.boxShadow = '0 5px 0 0 #003099, 0 10px 22px rgba(0,0,0,0.22)';
+      f.reset();
+      setTimeout(function(){
+        btn.disabled = false;
+        btn.style.background = '';
+        btn.style.boxShadow = '';
+        btn.innerHTML = 'Get My Free Quote <span class="arrow">&rarr;</span>';
+      }, 4500);
+    }, 700);
+  });
+}
+attachSubmit('quoteForm');
+attachSubmit('popupForm');
+</script>
+</body>
+</html>

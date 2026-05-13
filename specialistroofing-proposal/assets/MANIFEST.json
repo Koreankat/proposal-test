@@ -1,0 +1,1353 @@
+{
+  "slug": "specialistroofing",
+  "live_site_url": "https://specialistroofing.com/",
+  "generated_at_iso": "2026-05-13T17:10:00-07:00",
+  "schema_version": "1.0",
+  "merged_from": [
+    "MANIFEST.assets.json",
+    "MANIFEST.owner-photo.json"
+  ],
+  "assets": {
+    "logo_primary__assets_logo_specialistroofing_primary_logo_png": {
+      "asset_type": "logo_primary",
+      "path": "assets/logo/specialistroofing-primary-logo.png",
+      "is_real_evidence": true,
+      "provenance": "Scraped from live site <header> img src — `LOGO_FC_3.png` (432x124 horizontal wordmark lockup: 'Specialist' in blue + orange-banded 'ROOFING & REPAIR' on transparent bg)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/06/LOGO_FC_3.png",
+      "discovery_path": "homepage_header_img_primary",
+      "dimensions": "432x124",
+      "format": "PNG",
+      "magic_bytes_validated": true
+    },
+    "logo_icon_mark__assets_logo_specialistroofing_alt_logo_png": {
+      "asset_type": "logo_icon_mark",
+      "path": "assets/logo/specialistroofing-alt-logo.png",
+      "is_real_evidence": true,
+      "provenance": "Scraped from live site mobile-menu/secondary header img — `LOGO_FC_4.png` (320x242 shield mark only: stylized S monogram in blue with two orange triangle wedges, transparent bg)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/06/LOGO_FC_4.png",
+      "discovery_path": "homepage_mobile_menu_logo",
+      "dimensions": "320x242",
+      "format": "PNG",
+      "magic_bytes_validated": true
+    },
+    "logo_vertical_lockup__assets_logo_specialistroofing_footer_logo_webp": {
+      "asset_type": "logo_vertical_lockup",
+      "path": "assets/logo/specialistroofing-footer-logo.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from live site <footer> img src — `logo-footer.webp` (1426x896 large vertical lockup: shield mark above 'Specialist ROOFING & REPAIR' banner, transparent bg)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/07/logo-footer.webp",
+      "discovery_path": "homepage_footer_img",
+      "dimensions": "1426x896",
+      "format": "WebP",
+      "magic_bytes_validated": true,
+      "note": "Despite alt='Specialist Roofing and Repair Arcadia CA', this is the brand's vertical-lockup logo (used in footer + about pages), NOT a storefront photo."
+    },
+    "favicon__assets_logo_favicon_32_png": {
+      "asset_type": "favicon",
+      "path": "assets/logo/favicon-32.png",
+      "is_real_evidence": true,
+      "provenance": "Scraped from <link rel='icon' sizes='32x32'> in homepage <head>",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/09/cropped-Untitled-design-15-32x32.png",
+      "discovery_path": "homepage_head_link_rel_icon",
+      "dimensions": "32x32",
+      "format": "PNG",
+      "magic_bytes_validated": true
+    },
+    "favicon_large__assets_logo_favicon_192_png": {
+      "asset_type": "favicon_large",
+      "path": "assets/logo/favicon-192.png",
+      "is_real_evidence": true,
+      "provenance": "Scraped from <link rel='icon' sizes='192x192'> in homepage <head>",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/09/cropped-Untitled-design-15-192x192.png",
+      "discovery_path": "homepage_head_link_rel_icon",
+      "dimensions": "192x192",
+      "format": "PNG",
+      "magic_bytes_validated": true
+    },
+    "apple_touch_icon__assets_logo_apple_touch_icon_180_png": {
+      "asset_type": "apple_touch_icon",
+      "path": "assets/logo/apple-touch-icon-180.png",
+      "is_real_evidence": true,
+      "provenance": "Scraped from <link rel='apple-touch-icon'> in homepage <head>",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/09/cropped-Untitled-design-15-180x180.png",
+      "discovery_path": "homepage_head_apple_touch_icon",
+      "dimensions": "180x180",
+      "format": "PNG",
+      "magic_bytes_validated": true
+    },
+    "vehicle_cutout__assets_photos_truck_branded_cutout_webp": {
+      "asset_type": "vehicle_cutout",
+      "path": "assets/photos/truck-branded-cutout.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage hero img — `specialist-roofing-05.webp` (alt='Roofers repairing suburban home roof' but content is BRANDED TRUCK CUTOUT: side view of blue+orange-wrapped Chevy Silverado with 'Specialist Roofing & Repair' logo, phone '626.869.7663', and 'SpecialistRoofing.com' URL on side panel. Transparent bg.)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/06/specialist-roofing-05.webp",
+      "discovery_path": "homepage_hero_section_img",
+      "dimensions": "1108x398",
+      "format": "WebP",
+      "magic_bytes_validated": true,
+      "intended_use": "hero_truck_overlay_layer (Pattern 002 hero recipe §2b — already a transparent cutout, no remove-bg pass needed). Also usable as fleet/about-section content."
+    },
+    "gallery_photo__assets_photos_gallery_house_cutout_2story_webp": {
+      "asset_type": "gallery_photo",
+      "path": "assets/photos/gallery-house-cutout-2story.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage 'services' card img — `specialist-roofing-07.webp` (1619x988 cutout of a 2-story white suburban home with dark shingle roof, transparent bg, photoreal)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/06/specialist-roofing-07.webp",
+      "discovery_path": "homepage_services_card_img",
+      "dimensions": "1619x988",
+      "format": "WebP",
+      "magic_bytes_validated": true,
+      "intended_use": "service-card visual; could be background-blur hero alt"
+    },
+    "gallery_photo__assets_photos_gallery_commercial_brick_building_webp": {
+      "asset_type": "gallery_photo",
+      "path": "assets/photos/gallery-commercial-brick-building.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage commercial section img — `specialist-roofing-37.webp` (large commercial 3-story brick office building cutout, transparent bg)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/07/specialist-roofing-37.webp",
+      "discovery_path": "homepage_commercial_services_img",
+      "format": "WebP",
+      "magic_bytes_validated": true
+    },
+    "gallery_photo__assets_photos_gallery_modern_farmhouse_metal_roof_webp": {
+      "asset_type": "gallery_photo",
+      "path": "assets/photos/gallery-modern-farmhouse-metal-roof.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage projects section — `specialist-roofing-47.webp` (white modern-farmhouse style home with standing-seam black metal roof, manicured lawn, blue sky)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/09/specialist-roofing-47.webp",
+      "discovery_path": "homepage_projects_carousel",
+      "format": "WebP",
+      "magic_bytes_validated": true
+    },
+    "gallery_photo__assets_photos_gallery_crew_shingle_install_webp": {
+      "asset_type": "gallery_photo",
+      "path": "assets/photos/gallery-crew-shingle-install.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage img — `specialist-roofing-18.webp` (alt='shingle roof repair norcal'; SINGLE CREW MEMBER on shingle roof installing with nailgun, wearing branded blue Specialist Roofing t-shirt + ball cap, FACE PARTIALLY VISIBLE)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/07/specialist-roofing-18.webp",
+      "discovery_path": "homepage_services_section_img",
+      "dimensions": "840x472",
+      "format": "WebP",
+      "magic_bytes_validated": true,
+      "face_present": true,
+      "note": "Single-person work shot. Owner candidate — flag for research-owner-photo Path A2 inferred."
+    },
+    "gallery_photo__assets_photos_gallery_crew_team_3person_webp": {
+      "asset_type": "gallery_photo",
+      "path": "assets/photos/gallery-crew-team-3person.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage img — `specialist-roofing-24.webp` (alt='top rated roofers san jose and san francisco'; THREE-PERSON CREW SHOT on roof, all wearing branded blue Specialist Roofing t-shirts + hats, faces visible)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/07/specialist-roofing-24.webp",
+      "discovery_path": "homepage_services_section_img",
+      "dimensions": "840x472",
+      "format": "WebP",
+      "magic_bytes_validated": true,
+      "face_present": true,
+      "note": "Strongest team photo found — 3 branded crew members on roof, all faces visible. Prime candidate for 'Meet the Team' section."
+    },
+    "gallery_photo__assets_photos_gallery_crew_flat_roof_la_webp": {
+      "asset_type": "gallery_photo",
+      "path": "assets/photos/gallery-crew-flat-roof-la.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from sitemap project img — `specialist-roofing-31.webp` (TWO CREW MEMBERS on flat commercial roof, LA palm-tree backdrop with downtown skyline; one wears orange shirt + tool belt + bandana, other wears blue shirt)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/07/specialist-roofing-31.webp",
+      "discovery_path": "sitemap_page_image",
+      "format": "WebP",
+      "magic_bytes_validated": true,
+      "face_present": true,
+      "note": "Two-person crew shot, faces partially visible (bandanas obscure lower face). Lower owner-candidate confidence."
+    },
+    "gallery_photo__assets_photos_gallery_crew_back_mountain_roof_webp": {
+      "asset_type": "gallery_photo",
+      "path": "assets/photos/gallery-crew-back-mountain-roof.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from sitemap project img — `specialist-roofing-32.webp` (single crew member shown FROM BEHIND on residential shingle roof, large straw hat, branded blue shirt with suspenders, mountain backdrop)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/07/specialist-roofing-32.webp",
+      "discovery_path": "sitemap_page_image",
+      "format": "WebP",
+      "magic_bytes_validated": true,
+      "face_present": false,
+      "note": "Back of head only — no identification possible."
+    },
+    "gallery_photo__assets_photos_gallery_crew_burbank_vca_webp": {
+      "asset_type": "gallery_photo",
+      "path": "assets/photos/gallery-crew-burbank-vca.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from sitemap project img — `specialist-roofing-38.webp` (TWO CREW MEMBERS working on commercial flat roof at VCA Animal Hospital Burbank — large blue 'VCA' sign visible behind. Both wear blue branded shirts and dark hats. Faces obscured by distance and hats.)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/07/specialist-roofing-38.webp",
+      "discovery_path": "sitemap_page_image",
+      "format": "WebP",
+      "magic_bytes_validated": true,
+      "face_present": true,
+      "note": "Crew working at named commercial location (VCA Burbank). Distant shot, low face-ID confidence."
+    },
+    "gallery_photo__assets_photos_gallery_crew_flat_roof_walking_webp": {
+      "asset_type": "gallery_photo",
+      "path": "assets/photos/gallery-crew-flat-roof-walking.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from sitemap project img — `specialist-roofing-39.webp` (TWO CREW MEMBERS walking on commercial flat roof, both wearing branded light-blue ROOF REPAIR shirts visible from back/3-quarter angle. One face partially visible in profile.)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/07/specialist-roofing-39.webp",
+      "discovery_path": "sitemap_page_image",
+      "format": "WebP",
+      "magic_bytes_validated": true,
+      "face_present": true,
+      "note": "Two-person crew shot, profile-only faces. Low owner-candidate confidence."
+    },
+    "gallery_photo__assets_photos_gallery_flat_roof_hvac_webp": {
+      "asset_type": "gallery_photo",
+      "path": "assets/photos/gallery-flat-roof-hvac.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from sitemap project img — `specialist-roofing-40.webp` (commercial flat roof with HVAC units, no people, post-completion shot)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/07/specialist-roofing-40.webp",
+      "discovery_path": "sitemap_page_image",
+      "format": "WebP",
+      "magic_bytes_validated": true
+    },
+    "gallery_photo__assets_photos_gallery_shingle_gutter_corner_webp": {
+      "asset_type": "gallery_photo",
+      "path": "assets/photos/gallery-shingle-gutter-corner.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from sitemap project img — `specialist-roofing-42.webp` (close-up of residential roof corner: dark shingles + white aluminum gutter + downspout against blue sky)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/07/specialist-roofing-42.webp",
+      "discovery_path": "sitemap_page_image",
+      "format": "WebP",
+      "magic_bytes_validated": true
+    },
+    "about_photo__assets_photos_about_bad_decking_png": {
+      "asset_type": "about_photo",
+      "path": "assets/photos/about-bad-decking.png",
+      "is_real_evidence": true,
+      "provenance": "Scraped from /deck-waterproofing/ service page — `bad-decking-that-needs-repair.png` (close-up of weathered/damaged wood deck planks with peeling finish, before-state evidence)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2026/01/bad-decking-that-needs-repair.png",
+      "discovery_path": "service_page_inline_img",
+      "format": "PNG",
+      "magic_bytes_validated": true
+    },
+    "about_photo__assets_photos_about_new_decking_stairs_png": {
+      "asset_type": "about_photo",
+      "path": "assets/photos/about-new-decking-stairs.png",
+      "is_real_evidence": true,
+      "provenance": "Scraped from /deck-waterproofing/ service page — `new-decking-on-damaged-stairs.png` (replaced/repaired deck stairs, after-state evidence)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2026/01/new-decking-on-damaged-stairs.png",
+      "discovery_path": "service_page_inline_img",
+      "format": "PNG",
+      "magic_bytes_validated": true
+    },
+    "about_photo__assets_photos_about_deck_waterproofing_png": {
+      "asset_type": "about_photo",
+      "path": "assets/photos/about-deck-waterproofing.png",
+      "is_real_evidence": true,
+      "provenance": "Scraped from /deck-waterproofing/ service page — `deck-waterproofing-and-repair.png` (deck waterproofing in progress / finished surface)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2026/01/deck-waterproofing-and-repair.png",
+      "discovery_path": "service_page_inline_img",
+      "format": "PNG",
+      "magic_bytes_validated": true
+    },
+    "about_photo__assets_photos_about_beige_gutters_la_png": {
+      "asset_type": "about_photo",
+      "path": "assets/photos/about-beige-gutters-la.png",
+      "is_real_evidence": true,
+      "provenance": "Scraped from /gutter-installation/ service page — `beige-gutters-los-angeles-ca.png` (beige aluminum gutters installed on residential home)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2026/01/beige-gutters-los-angeles-ca.png",
+      "discovery_path": "service_page_inline_img",
+      "format": "PNG",
+      "magic_bytes_validated": true
+    },
+    "about_photo__assets_photos_about_gutter_installation_png": {
+      "asset_type": "about_photo",
+      "path": "assets/photos/about-gutter-installation.png",
+      "is_real_evidence": true,
+      "provenance": "Scraped from /gutter-installation/ service page — `gutter-installation-3.png` (gutter system installed on residential home)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2026/01/gutter-installation-3.png",
+      "discovery_path": "service_page_inline_img",
+      "format": "PNG",
+      "magic_bytes_validated": true
+    },
+    "about_photo__assets_photos_about_gutter_damage_png": {
+      "asset_type": "about_photo",
+      "path": "assets/photos/about-gutter-damage.png",
+      "is_real_evidence": true,
+      "provenance": "Scraped from /gutter-installation/ service page — `G-Fedale-Gutter-Damage` elementor thumb (close-up of damaged residential gutter with broken shingle edge)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/elementor/thumbs/G-Fedale-Gutter-Damage-ri8jcvgbhjdl9w42w4z4yqqwzqptwn1t335r5usw4g.png",
+      "discovery_path": "service_page_elementor_thumb",
+      "format": "PNG",
+      "magic_bytes_validated": true
+    },
+    "about_photo__assets_photos_about_service_area_map_png": {
+      "asset_type": "about_photo",
+      "path": "assets/photos/about-service-area-map.png",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage 'service area' section — `service-area-map-banner-for-website-1500x600-SO-CAL-ONLY` elementor thumb (SoCal map showing Los Angeles County, Orange County, Riverside County, San Diego County coverage area with brand colors)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/elementor/thumbs/service-area-map-banner-for-website-1500x600-SO-CAL-ONLY-rkgj2avmp1jznc5xs6w1o18g6hkyid21nh7m8jmkxc.png",
+      "discovery_path": "homepage_service_area_section",
+      "dimensions": "1500x600",
+      "format": "PNG",
+      "magic_bytes_validated": true,
+      "intended_use": "Service-area section background or sidebar map"
+    },
+    "about_photo__assets_photos_about_phone_mockup_logo_webp": {
+      "asset_type": "about_photo",
+      "path": "assets/photos/about-phone-mockup-logo.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage 'instant quote' / app-promo section — `specialist-roofing-23.webp` (iPhone mockup showing the brand logo on a blue splash screen — marketing render, not a real product UI)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/07/specialist-roofing-23.webp",
+      "discovery_path": "homepage_promo_section_img",
+      "dimensions": "931x1702",
+      "format": "WebP",
+      "magic_bytes_validated": true,
+      "intended_use": "Decorative marketing render; not photo-real."
+    },
+    "trust_badge__assets_photos_badges_bbb_a_rating_webp": {
+      "asset_type": "trust_badge",
+      "path": "assets/photos/badges/bbb-a-rating.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage credential slider (logo-slider swiper) — `Better-Business-Bureau-A-Rating.webp` (real BBB Accredited Business A+ Rating shield, official BBB torch + 'BBB' wordmark, A+ inside teal panel)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/07/Better-Business-Bureau-A-Rating.webp",
+      "discovery_path": "homepage_credential_slider",
+      "format": "WebP",
+      "magic_bytes_validated": true,
+      "credential_name": "BBB Accredited Business A+ Rating"
+    },
+    "manufacturer_logo__assets_photos_badges_gaf_logo_webp": {
+      "asset_type": "manufacturer_logo",
+      "path": "assets/photos/badges/gaf-logo.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage credential slider — `GAF_logo.webp` (real GAF manufacturer logo)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/07/GAF_logo.webp",
+      "discovery_path": "homepage_credential_slider",
+      "format": "WebP",
+      "magic_bytes_validated": true,
+      "credential_name": "GAF (manufacturer)"
+    },
+    "manufacturer_cert__assets_photos_badges_gaf_master_elite_png": {
+      "asset_type": "manufacturer_cert",
+      "path": "assets/photos/badges/gaf-master-elite.png",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage credential slider — `gaf-masterelite.png` (real GAF Factory Certified Master Elite Weather Stopper Roofing Contractor badge — top GAF tier)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2026/03/gaf-masterelite.png",
+      "discovery_path": "homepage_credential_slider",
+      "format": "PNG",
+      "magic_bytes_validated": true,
+      "credential_name": "GAF Master Elite (Factory Certified)"
+    },
+    "manufacturer_logo__assets_photos_badges_certainteed_logo_webp": {
+      "asset_type": "manufacturer_logo",
+      "path": "assets/photos/badges/certainteed-logo.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage credential slider — `Certainteed-Logo.webp` (real CertainTeed manufacturer logo)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/07/Certainteed-Logo.webp",
+      "discovery_path": "homepage_credential_slider",
+      "format": "WebP",
+      "magic_bytes_validated": true,
+      "credential_name": "CertainTeed (manufacturer)"
+    },
+    "manufacturer_cert__assets_photos_badges_certainteed_shinglemaster_png": {
+      "asset_type": "manufacturer_cert",
+      "path": "assets/photos/badges/certainteed-shinglemaster.png",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage credential slider — `Certainteed-ShingleMaster-transparent.png` (real CertainTeed ShingleMaster Select / SELECT ShingleMaster certification badge, transparent bg)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2026/03/Certainteed-ShingleMaster-transparent.png",
+      "discovery_path": "homepage_credential_slider",
+      "format": "PNG",
+      "magic_bytes_validated": true,
+      "credential_name": "CertainTeed ShingleMaster"
+    },
+    "manufacturer_logo__assets_photos_badges_owens_corning_logo_webp": {
+      "asset_type": "manufacturer_logo",
+      "path": "assets/photos/badges/owens-corning-logo.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage credential slider — `Owens_Corning_logo.webp` (real Owens Corning manufacturer logo)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/07/Owens_Corning_logo.webp",
+      "discovery_path": "homepage_credential_slider",
+      "format": "WebP",
+      "magic_bytes_validated": true,
+      "credential_name": "Owens Corning (manufacturer)"
+    },
+    "manufacturer_cert__assets_photos_badges_owens_corning_platinum_png": {
+      "asset_type": "manufacturer_cert",
+      "path": "assets/photos/badges/owens-corning-platinum.png",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage credential slider — `Owens-Corning-Platinum-Contractor.png` (real Owens Corning Platinum Preferred Contractor badge — top OC tier)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2026/03/Owens-Corning-Platinum-Contractor.png",
+      "discovery_path": "homepage_credential_slider",
+      "format": "PNG",
+      "magic_bytes_validated": true,
+      "credential_name": "Owens Corning Platinum Preferred Contractor"
+    },
+    "manufacturer_logo__assets_photos_badges_polyglass_logo_webp": {
+      "asset_type": "manufacturer_logo",
+      "path": "assets/photos/badges/polyglass-logo.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage credential slider — `Polyglass-Logo.webp` (real Polyglass commercial roofing membrane manufacturer logo)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/07/Polyglass-Logo.webp",
+      "discovery_path": "homepage_credential_slider",
+      "format": "WebP",
+      "magic_bytes_validated": true,
+      "credential_name": "Polyglass (manufacturer)"
+    },
+    "manufacturer_logo__assets_photos_badges_pg_quantum_logo_webp": {
+      "asset_type": "manufacturer_logo",
+      "path": "assets/photos/badges/pg-quantum-logo.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage credential slider — `PG_Quantum_Logo.webp` (Polyglass PG Quantum mod-bit cap sheet product logo)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/07/PG_Quantum_Logo.webp",
+      "discovery_path": "homepage_credential_slider",
+      "format": "WebP",
+      "magic_bytes_validated": true,
+      "credential_name": "Polyglass PG Quantum"
+    },
+    "manufacturer_logo__assets_photos_badges_asc_logo_png": {
+      "asset_type": "manufacturer_logo",
+      "path": "assets/photos/badges/asc-logo.png",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage credential slider — `asc-logo.png` (American Standard Coatings logo — alt='american standard coatings logo')",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/07/asc-logo.png",
+      "discovery_path": "homepage_credential_slider",
+      "format": "PNG",
+      "magic_bytes_validated": true,
+      "credential_name": "American Standard Coatings (ASC)"
+    },
+    "award_badge__assets_photos_badges_2026_product_excellence_png": {
+      "asset_type": "award_badge",
+      "path": "assets/photos/badges/2026-product-excellence.png",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage credential slider — `Logo_2026_ProductExcellence.png` (2026 Product Excellence award shield/badge)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2026/03/Logo_2026_ProductExcellence.png",
+      "discovery_path": "homepage_credential_slider",
+      "format": "PNG",
+      "magic_bytes_validated": true,
+      "credential_name": "2026 Product Excellence"
+    },
+    "award_badge__assets_photos_badges_2026_top_performer_mvp_png": {
+      "asset_type": "award_badge",
+      "path": "assets/photos/badges/2026-top-performer-mvp.png",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage credential slider — `Logo_2026_TopPerformerMVP.png` (2026 Top Performer MVP award shield/badge)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2026/03/Logo_2026_TopPerformerMVP.png",
+      "discovery_path": "homepage_credential_slider",
+      "format": "PNG",
+      "magic_bytes_validated": true,
+      "credential_name": "2026 Top Performer MVP"
+    },
+    "owner_photo__assets_team_andre_afsharian_jpg": {
+      "asset_type": "owner_photo",
+      "path": "assets/team/andre-afsharian.jpg",
+      "cutout_path": "assets/team/andre-afsharian-cutout.png",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_smart_discovery",
+      "discovery_evidence": "Owner name discovered via Path A3 SERP search (BBB business profile + Roofing Contractor article + Directorii + Prospeo + BuildZoom + Yahoo Finance — multi-source consensus). Photo discovered via Path A1 on the LEGACY domain roofrepairspecialist.com/about-us/ (the same company's previous brand — rebrand from 'Roof Repair Specialist' to 'Specialist Roofing and Repair' was January 2026 per Roofing Contractor article, but the legacy site still hosts the team gallery). The current specialistroofing.com sitemap omits the /about page entirely. Direct image match: filename 'Andre-new-website-1024x1024.jpg' + image shows polo shirt printed with 'Andre Afsharian' name + 'Roof Repair Specialist' logo (legacy brand mark, pre-2026 rebrand). Also corroborated by Directorii listing https://directorii.com/us/ca/burbank/roof-repair-specialist-reviews-104/ which shows the same Andre Afsharian face under the alt 'Andre Afsharian photo' tagged 'Owner.'",
+      "discovered_url": "https://www.roofrepairspecialist.com/about-us/",
+      "confidence": "high",
+      "owner_full_name": "Andre Ara Afsharian",
+      "owner_first_name": "Andre",
+      "owner_last_name": "Afsharian",
+      "owner_role": "Co-Founder & Owner",
+      "owner_quote": "My goal is to have a zero-accident workplace.",
+      "owner_quote_source": "https://www.roofrepairspecialist.com/roof-repair-replacement-burbank-ca/",
+      "alpha_validation": {
+        "alpha_mean": 0.48,
+        "transparent_pct": 51.3,
+        "threshold_met": true,
+        "rule": "sops/asset-scrape.md §2 cutout discipline — alpha_mean < 0.85 AND transparent_pct >= 30%"
+      },
+      "operator_review_required": false
+    },
+    "owner_photo_secondary__assets_team_chris_afsharian_jpg": {
+      "asset_type": "owner_photo_secondary",
+      "path": "assets/team/chris-afsharian.jpg",
+      "cutout_path": "assets/team/chris-afsharian-cutout.png",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_smart_discovery",
+      "discovery_evidence": "Co-founder discovered via same path as Andre. Filename 'Chris-edit.jpg' on legacy /about-us/; polo shirt printed with 'Chris Afsharian'. Brothers — co-founders of the LLC per BBB business profile and California LLC filing (Specialist Roofing And Repair Inc, filing date 1/28/2015, with Andre Afsharian as Registered Agent). The brand markets itself as 'family-owned' with Andre + Chris as the two faces.",
+      "discovered_url": "https://www.roofrepairspecialist.com/about-us/",
+      "confidence": "high",
+      "owner_full_name": "Christopher Raffy Afsharian",
+      "owner_first_name": "Christopher",
+      "owner_nickname": "Chris",
+      "owner_last_name": "Afsharian",
+      "owner_role": "Co-Founder",
+      "owner_dob_year": 1991,
+      "alpha_validation": {
+        "alpha_mean": 0.451,
+        "transparent_pct": 54.4,
+        "threshold_met": true
+      }
+    },
+    "team_photo__assets_team_owners_selfie_andre_chris_jpg": {
+      "asset_type": "team_photo",
+      "path": "assets/team/owners-selfie-andre-chris.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_smart_discovery",
+      "discovered_url": "https://www.roofrepairspecialist.com/about-us/",
+      "discovery_evidence": "Selfie of Andre Afsharian + Chris Afsharian at a Mediterranean-style estate jobsite. From legacy /about-us/. Filename 'selfie-720x480.jpg'. Pairs perfectly with the owners-on-roof / co-founder narrative.",
+      "confidence": "high",
+      "people_in_photo": [
+        "Andre Afsharian",
+        "Chris Afsharian"
+      ],
+      "context": "co-founder selfie at jobsite",
+      "intended_use": "heritage_section_owner_anchor OR review_section_owner_anchor",
+      "size_px": "720x480"
+    },
+    "team_photo__assets_team_areg_ohanian_jpg": {
+      "asset_type": "team_photo",
+      "path": "assets/team/areg-ohanian.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_smart_discovery",
+      "discovered_url": "https://www.roofrepairspecialist.com/about-us/",
+      "discovery_evidence": "Filename 'Areg-final-1024x1024.jpg' on legacy /about-us/. Polo shirt printed with 'Areg Ohanian'. Title per Prospeo: 'General Manager And Head Of Sales' (Specialist Roofing & Repair).",
+      "confidence": "high",
+      "person_name": "Areg Ohanian",
+      "person_role": "General Manager & Head of Sales",
+      "size_px": "1024x1024"
+    },
+    "team_photo__assets_team_karen_serakides_png": {
+      "asset_type": "team_photo",
+      "path": "assets/team/karen-serakides.png",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_smart_discovery",
+      "discovered_url": "https://www.roofrepairspecialist.com/about-us/",
+      "discovery_evidence": "Filename 'karen-1024x1024.png' on legacy /about-us/. Person matches Karen Serakides per FastPeopleSearch corroboration (Title: OFFICE MANAGER at Roof Repair Specialist, Burbank CA, since Mar 2022).",
+      "confidence": "high",
+      "person_name": "Karen Serakides",
+      "person_role": "Office Manager",
+      "size_px": "1024x1024"
+    },
+    "team_photo__assets_team_team_guy_jpg": {
+      "asset_type": "team_photo",
+      "path": "assets/team/team-guy.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_smart_discovery",
+      "discovered_url": "https://www.roofrepairspecialist.com/about-us/",
+      "discovery_evidence": "Filename 'Guy-1024x1024.jpg'. Polo-shirt portrait same studio set.",
+      "confidence": "medium",
+      "person_name": "Guy",
+      "person_role": "Team member (role not confirmed via secondary source — CAM-003 caption with category label only)",
+      "size_px": "1024x1024"
+    },
+    "team_photo__assets_team_team_mike_jpg": {
+      "asset_type": "team_photo",
+      "path": "assets/team/team-mike.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_smart_discovery",
+      "discovered_url": "https://www.roofrepairspecialist.com/about-us/",
+      "discovery_evidence": "Filename 'Mike-brick-1024x1024.jpg'. Polo-shirt portrait same studio set.",
+      "confidence": "medium",
+      "person_name": "Mike",
+      "person_role": "Team member (role not confirmed via secondary source — CAM-003 caption with category label only)",
+      "size_px": "1024x1024"
+    },
+    "team_photo__assets_team_team_flavio_jpg": {
+      "asset_type": "team_photo",
+      "path": "assets/team/team-flavio.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_smart_discovery",
+      "discovered_url": "https://www.roofrepairspecialist.com/about-us/",
+      "discovery_evidence": "Filename 'Flavio-23.jpg'. Polo-shirt portrait same studio set.",
+      "confidence": "medium",
+      "person_name": "Flavio",
+      "person_role": "Team member (role not confirmed via secondary source — CAM-003 caption with category label only)",
+      "size_px": "961x962"
+    },
+    "team_photo__assets_team_team_aaron_png": {
+      "asset_type": "team_photo",
+      "path": "assets/team/team-aaron.png",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_smart_discovery",
+      "discovered_url": "https://www.roofrepairspecialist.com/about-us/",
+      "discovery_evidence": "Filename 'aaron-square-1024x1024.png'. Polo-shirt portrait same studio set.",
+      "confidence": "medium",
+      "person_name": "Aaron",
+      "person_role": "Team member (role not confirmed via secondary source — CAM-003 caption with category label only)",
+      "size_px": "1024x1024"
+    },
+    "team_photo__assets_team_team_bo_png": {
+      "asset_type": "team_photo",
+      "path": "assets/team/team-bo.png",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_smart_discovery",
+      "discovered_url": "https://www.roofrepairspecialist.com/about-us/",
+      "discovery_evidence": "Filename 'bo-square.png'. Polo-shirt portrait same studio set.",
+      "confidence": "medium",
+      "person_name": "Bo",
+      "person_role": "Team member (role not confirmed via secondary source — CAM-003 caption with category label only)",
+      "size_px": "996x996"
+    },
+    "team_photo__assets_team_team_group_2022_jpg": {
+      "asset_type": "team_photo",
+      "path": "assets/team/team-group-2022.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_smart_discovery",
+      "discovered_url": "https://www.roofrepairspecialist.com/about-us/",
+      "discovery_evidence": "Filename 'about-us-gallery-team-2022-300x200.jpg'. Approximately 50-person full-company group photo at HQ yard. Excellent 'family-owned' scale evidence. Note: low resolution (300x200) — may need higher-res replacement if used as section anchor.",
+      "confidence": "high",
+      "context": "full-company group portrait 2022",
+      "intended_use": "team_rail OR culture_section_anchor",
+      "size_px": "300x200",
+      "resolution_warning": "low-res — request higher-res from operator before using as large hero/section anchor"
+    },
+    "team_photo__assets_team_team_crew_on_roof_webp": {
+      "asset_type": "team_photo",
+      "path": "assets/team/team-crew-on-roof.webp",
+      "is_real_evidence": true,
+      "discovery_path": "A2c_source_site_gallery_mined",
+      "discovered_url": "https://specialistroofing.com/",
+      "discovery_evidence": "Source-site homepage image 'specialist-roofing-18.webp'. Alt text 'shingle roof repair norcal' — generic SEO alt. Shows 3 crew members in branded blue Specialist Roofing polos on a residential roof installing underlayment. Single-shot group ≤6 — within Path A2c heuristic.",
+      "confidence": "medium",
+      "context": "3-person crew on jobsite, branded blue Specialist Roofing polos (new brand mark visible)",
+      "intended_use": "hero_form_mini_card_tier4_crew_composite OR services_section_authenticity",
+      "size_px": "840x472"
+    },
+    "team_photo__assets_team_team_roofer_nailing_shingles_webp": {
+      "asset_type": "team_photo",
+      "path": "assets/team/team-roofer-nailing-shingles.webp",
+      "is_real_evidence": true,
+      "discovery_path": "A2c_source_site_gallery_mined",
+      "discovered_url": "https://specialistroofing.com/",
+      "discovery_evidence": "Source-site homepage image 'specialist-roofing-24.webp'. Alt text 'top rated roofers san jose and san francisco' — generic SEO alt. Single roofer in branded blue Specialist Roofing polo + white cap kneeling on roof using nail gun. Face partially obscured (head turned to work). Single-person work-context — qualifies under Path A2c medium-confidence heuristic per SOP §2.",
+      "confidence": "medium",
+      "context": "single roofer installing shingles, branded blue polo, new brand mark visible",
+      "intended_use": "hero_form_mini_card_tier3_single_person_work_context OR services_section_authenticity",
+      "size_px": "840x472"
+    },
+    "mascot_generated": {
+      "source": "generated",
+      "generation_provider": "gemini-nano-banana",
+      "prompt": "Mascot: a friendly cartoon roofer character. Male, mid-30s, wearing a cobalt blue (#003FBE) Specialist Roofing polo shirt with a small warm-orange (#FF6B27) chevron accent on the collar, plus a clean white hard hat with a small orange brim band. Pose: front-facing, neutral confident smile, arms relaxed at sides, clean illustrated/vector style (NOT photorealistic, NOT 3D-render-stock). Suitable as 64-110px corner stamp. Transparent background. Color palette LOCKED to cobalt #003FBE primary + warm orange #FF6B27 accent + deep navy #112337 outline + white. Style: clean modern illustration with bold defined edges, similar to mascots used by friendly residential service brands. Crop: full body or 3-quarter length, head to knee.",
+      "path": "assets/generated/mascot-generated.png",
+      "served_at": "assets/generated/mascot-generated.png",
+      "is_real_evidence": false,
+      "format": "PNG",
+      "alpha_channel": "RGBA transparent (remove.bg post-processed)",
+      "placements_in_build": 3,
+      "placement_locations": [
+        "owner-card stamp",
+        "truck-section break-out",
+        "footer accent"
+      ],
+      "notes": "Path B mascot per mascot-rules.md. NB2 generated then piped through remove-bg.sh. NEVER placed in hero (banned 2026-05-09). 3 placements within 3-6 cap."
+    }
+  },
+  "candidate_face_present_photos_evaluated_and_skipped": [
+    {
+      "category": "google_reviewer_profile_pictures",
+      "skipped_count": 10,
+      "names": [
+        "Amera DU",
+        "Andrew Nguyen",
+        "Bill Ware",
+        "Evan Tsutsumida",
+        "Jon Garcia",
+        "Luke Schamber",
+        "Nate Buell",
+        "Orlando Navarro",
+        "Sam Ferguson",
+        "Susana"
+      ],
+      "rationale": "Per sops/asset-scrape.md §2 banned-filters list: 'customer-testimonial photos' must not be harvested as team. These are Google review widget reviewer avatars (alt='X profile picture'), not company personnel.",
+      "evidence_url": "https://specialistroofing.com/ (homepage Trustindex Google review widget)"
+    }
+  ],
+  "rebrand_context_for_build_agent": {
+    "legacy_brand_name": "Roof Repair Specialist",
+    "current_brand_name": "Specialist Roofing & Repair",
+    "rebrand_date_approx": "January 2026",
+    "rebrand_source": "https://www.roofingcontractor.com/articles/101842-specialist-roofing-and-repair-unveils-company-rebrand",
+    "implication_for_build": "All scraped portrait polos display the LEGACY brand mark ('Roof Repair Specialist' logo embroidery). The current site shows the NEW brand mark on the truck wrap, mascot phone, and group jobsite photos. Build agent: do NOT mention the old brand name on the new site; the owner photos themselves are still valid (the people are the same), but if a logo crop is needed for hero-form mini-card framing, pick a frame that doesn't foreground the embroidered legacy logo. Alternatively: replace polos via Stage 4 cutout artwork (out of Stage 2c scope)."
+  },
+  "company_provenance_for_build_agent": {
+    "founded_year": 2011,
+    "founded_quote_source": "https://www.roofrepairspecialist.com/about-us/ — 'Since opening our doors in 2011...'",
+    "llc_filed_year": 2015,
+    "cslb_license_issued": "2015-09-16",
+    "cslb_license_number": "1007386",
+    "cslb_license_business_name": "TWM Roofing (DBA: Specialist Roofing and Repair LLC)",
+    "headquarters_address": "1061 N Victory Pl, Burbank, CA 91502",
+    "additional_personnel_named": [
+      {
+        "name": "Daniel Ramirez",
+        "source": "BuildZoom employee listing"
+      },
+      {
+        "name": "Karen Serakides",
+        "source": "FastPeopleSearch — Office Manager since Mar 2022 (corroborates karen-serakides.png)"
+      }
+    ]
+  },
+  "owner_discovery_paths_attempted": {
+    "A1_source_site_smart_discovery": {
+      "status": "hit_via_legacy_domain",
+      "source_site_attempted_urls": [
+        "https://specialistroofing.com/ (no /about page exists in sitemap)",
+        "https://specialistroofing.com/resources/ (no team content)",
+        "https://www.roofrepairspecialist.com/about-us/ (legacy domain — full team gallery + family-tree narrative)"
+      ],
+      "result": "Owner + co-founder + GM + Office Manager + 6 team portraits + group + selfie ALL discovered on the legacy domain — same company, pre-2026-rebrand site still live."
+    },
+    "A2_facebook_business_photos": {
+      "status": "blocked",
+      "rationale": "Facebook page (facebook.com/callthespecialist) is JS-rendered behind login wall. Firecrawl reports 'we do not support this site' for FB; curl fallback returns 433KB shell with 46 chars of body text. og:image URLs return 22-byte rejected payloads after CDN signature expiry. No usable photos accessible via static fetching."
+    },
+    "A2b_facebook_albums": {
+      "status": "blocked",
+      "rationale": "Same JS-render block as A2. /photos and /photos_albums tabs return the same og:image shell."
+    },
+    "A2c_source_site_gallery_mined": {
+      "status": "hit_team_only",
+      "rationale": "Specialistroofing.com homepage has 5 candidate images. 2 of 5 are face-present jobsite shots saved as team-crew-on-roof.webp + team-roofer-nailing-shingles.webp. Neither is name-tagged so neither qualifies as owner photo via this path — they're medium-confidence team-harvest for the mini-card Tier 3-4 fallback chain. Other 3 candidates are: branded truck (research-assets owns this), phone mockup (logo only), and CGI house render (no people)."
+    },
+    "A3_firecrawl_serp_owner_brand": {
+      "status": "hit_owner_name_only",
+      "rationale": "Used to discover owner identity (Andre + Chris Afsharian) since neither homepage nor sitemap reveals it. BBB business profile, Roofing Contractor magazine rebrand article, Prospeo, BuildZoom, Directorii, Yahoo Finance + the California LLC public-filing PDFs (Valley News group) ALL corroborate. Headshots themselves came from Path A1 legacy domain (higher resolution) — the SERP corroborated the identification.",
+      "corroborating_urls": [
+        "https://www.bbb.org/us/ca/burbank/profile/roofing-contractors/specialist-roofing-and-repair-1216-609891",
+        "https://www.roofingcontractor.com/articles/101842-specialist-roofing-and-repair-unveils-company-rebrand",
+        "https://prospeo.io/c/specialist-roofing-repair",
+        "https://www.buildzoom.com/contractor/specialist-roofing-repair-ca",
+        "https://directorii.com/us/ca/burbank/roof-repair-specialist-reviews-104/",
+        "https://finance.yahoo.com/news/roof-repair-specialist-takes-bold-200600265.html",
+        "https://valleynewsgroup.com/wp-content/uploads/2026/04/VV4.23.26.pdf"
+      ]
+    },
+    "A4_manual_operator_upload": {
+      "status": "not_needed",
+      "rationale": "A1 + A3 produced high-confidence owner photo. Tier 5 AI-generated likeness fallback NOT required."
+    }
+  },
+  "counts_from_assets_partial": {
+    "logo_files": 6,
+    "photos_hero": 0,
+    "photos_gallery": 11,
+    "photos_about": 8,
+    "photos_truck_cutout": 1,
+    "badges": 12,
+    "mascot": 0
+  },
+  "no_assets_found": {
+    "mascot": "No recurring character / animal / cartoon-owner found in source-site scrape — Specialist Roofing uses a geometric S-monogram shield as its only brand mark. Mascot layer should be skipped at Build stage.",
+    "hero_canonical": "No clean wide hero photograph found; homepage 'hero' visual is the branded-truck cutout (already saved as truck-branded-cutout.webp). Per SOP §3b, Stage 4 Build will auto-generate the hero background via NB2 anyway."
+  },
+  "asset_count_by_type": {
+    "about_photo": 8,
+    "apple_touch_icon": 1,
+    "award_badge": 2,
+    "favicon": 1,
+    "favicon_large": 1,
+    "gallery_photo": 11,
+    "logo_icon_mark": 1,
+    "logo_primary": 1,
+    "logo_vertical_lockup": 1,
+    "manufacturer_cert": 3,
+    "manufacturer_logo": 6,
+    "owner_photo": 1,
+    "owner_photo_secondary": 1,
+    "team_photo": 11,
+    "trust_badge": 1,
+    "vehicle_cutout": 1
+  },
+  "total_assets": 51,
+  "assets_array": [
+    {
+      "asset_type": "logo_primary",
+      "path": "assets/logo/specialistroofing-primary-logo.png",
+      "is_real_evidence": true,
+      "provenance": "Scraped from live site <header> img src — `LOGO_FC_3.png` (432x124 horizontal wordmark lockup: 'Specialist' in blue + orange-banded 'ROOFING & REPAIR' on transparent bg)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/06/LOGO_FC_3.png",
+      "discovery_path": "homepage_header_img_primary",
+      "dimensions": "432x124",
+      "format": "PNG",
+      "magic_bytes_validated": true
+    },
+    {
+      "asset_type": "logo_icon_mark",
+      "path": "assets/logo/specialistroofing-alt-logo.png",
+      "is_real_evidence": true,
+      "provenance": "Scraped from live site mobile-menu/secondary header img — `LOGO_FC_4.png` (320x242 shield mark only: stylized S monogram in blue with two orange triangle wedges, transparent bg)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/06/LOGO_FC_4.png",
+      "discovery_path": "homepage_mobile_menu_logo",
+      "dimensions": "320x242",
+      "format": "PNG",
+      "magic_bytes_validated": true
+    },
+    {
+      "asset_type": "logo_vertical_lockup",
+      "path": "assets/logo/specialistroofing-footer-logo.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from live site <footer> img src — `logo-footer.webp` (1426x896 large vertical lockup: shield mark above 'Specialist ROOFING & REPAIR' banner, transparent bg)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/07/logo-footer.webp",
+      "discovery_path": "homepage_footer_img",
+      "dimensions": "1426x896",
+      "format": "WebP",
+      "magic_bytes_validated": true,
+      "note": "Despite alt='Specialist Roofing and Repair Arcadia CA', this is the brand's vertical-lockup logo (used in footer + about pages), NOT a storefront photo."
+    },
+    {
+      "asset_type": "favicon",
+      "path": "assets/logo/favicon-32.png",
+      "is_real_evidence": true,
+      "provenance": "Scraped from <link rel='icon' sizes='32x32'> in homepage <head>",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/09/cropped-Untitled-design-15-32x32.png",
+      "discovery_path": "homepage_head_link_rel_icon",
+      "dimensions": "32x32",
+      "format": "PNG",
+      "magic_bytes_validated": true
+    },
+    {
+      "asset_type": "favicon_large",
+      "path": "assets/logo/favicon-192.png",
+      "is_real_evidence": true,
+      "provenance": "Scraped from <link rel='icon' sizes='192x192'> in homepage <head>",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/09/cropped-Untitled-design-15-192x192.png",
+      "discovery_path": "homepage_head_link_rel_icon",
+      "dimensions": "192x192",
+      "format": "PNG",
+      "magic_bytes_validated": true
+    },
+    {
+      "asset_type": "apple_touch_icon",
+      "path": "assets/logo/apple-touch-icon-180.png",
+      "is_real_evidence": true,
+      "provenance": "Scraped from <link rel='apple-touch-icon'> in homepage <head>",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/09/cropped-Untitled-design-15-180x180.png",
+      "discovery_path": "homepage_head_apple_touch_icon",
+      "dimensions": "180x180",
+      "format": "PNG",
+      "magic_bytes_validated": true
+    },
+    {
+      "asset_type": "vehicle_cutout",
+      "path": "assets/photos/truck-branded-cutout.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage hero img — `specialist-roofing-05.webp` (alt='Roofers repairing suburban home roof' but content is BRANDED TRUCK CUTOUT: side view of blue+orange-wrapped Chevy Silverado with 'Specialist Roofing & Repair' logo, phone '626.869.7663', and 'SpecialistRoofing.com' URL on side panel. Transparent bg.)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/06/specialist-roofing-05.webp",
+      "discovery_path": "homepage_hero_section_img",
+      "dimensions": "1108x398",
+      "format": "WebP",
+      "magic_bytes_validated": true,
+      "intended_use": "hero_truck_overlay_layer (Pattern 002 hero recipe §2b — already a transparent cutout, no remove-bg pass needed). Also usable as fleet/about-section content."
+    },
+    {
+      "asset_type": "gallery_photo",
+      "path": "assets/photos/gallery-house-cutout-2story.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage 'services' card img — `specialist-roofing-07.webp` (1619x988 cutout of a 2-story white suburban home with dark shingle roof, transparent bg, photoreal)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/06/specialist-roofing-07.webp",
+      "discovery_path": "homepage_services_card_img",
+      "dimensions": "1619x988",
+      "format": "WebP",
+      "magic_bytes_validated": true,
+      "intended_use": "service-card visual; could be background-blur hero alt"
+    },
+    {
+      "asset_type": "gallery_photo",
+      "path": "assets/photos/gallery-commercial-brick-building.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage commercial section img — `specialist-roofing-37.webp` (large commercial 3-story brick office building cutout, transparent bg)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/07/specialist-roofing-37.webp",
+      "discovery_path": "homepage_commercial_services_img",
+      "format": "WebP",
+      "magic_bytes_validated": true
+    },
+    {
+      "asset_type": "gallery_photo",
+      "path": "assets/photos/gallery-modern-farmhouse-metal-roof.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage projects section — `specialist-roofing-47.webp` (white modern-farmhouse style home with standing-seam black metal roof, manicured lawn, blue sky)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/09/specialist-roofing-47.webp",
+      "discovery_path": "homepage_projects_carousel",
+      "format": "WebP",
+      "magic_bytes_validated": true
+    },
+    {
+      "asset_type": "gallery_photo",
+      "path": "assets/photos/gallery-crew-shingle-install.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage img — `specialist-roofing-18.webp` (alt='shingle roof repair norcal'; SINGLE CREW MEMBER on shingle roof installing with nailgun, wearing branded blue Specialist Roofing t-shirt + ball cap, FACE PARTIALLY VISIBLE)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/07/specialist-roofing-18.webp",
+      "discovery_path": "homepage_services_section_img",
+      "dimensions": "840x472",
+      "format": "WebP",
+      "magic_bytes_validated": true,
+      "face_present": true,
+      "note": "Single-person work shot. Owner candidate — flag for research-owner-photo Path A2 inferred."
+    },
+    {
+      "asset_type": "gallery_photo",
+      "path": "assets/photos/gallery-crew-team-3person.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage img — `specialist-roofing-24.webp` (alt='top rated roofers san jose and san francisco'; THREE-PERSON CREW SHOT on roof, all wearing branded blue Specialist Roofing t-shirts + hats, faces visible)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/07/specialist-roofing-24.webp",
+      "discovery_path": "homepage_services_section_img",
+      "dimensions": "840x472",
+      "format": "WebP",
+      "magic_bytes_validated": true,
+      "face_present": true,
+      "note": "Strongest team photo found — 3 branded crew members on roof, all faces visible. Prime candidate for 'Meet the Team' section."
+    },
+    {
+      "asset_type": "gallery_photo",
+      "path": "assets/photos/gallery-crew-flat-roof-la.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from sitemap project img — `specialist-roofing-31.webp` (TWO CREW MEMBERS on flat commercial roof, LA palm-tree backdrop with downtown skyline; one wears orange shirt + tool belt + bandana, other wears blue shirt)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/07/specialist-roofing-31.webp",
+      "discovery_path": "sitemap_page_image",
+      "format": "WebP",
+      "magic_bytes_validated": true,
+      "face_present": true,
+      "note": "Two-person crew shot, faces partially visible (bandanas obscure lower face). Lower owner-candidate confidence."
+    },
+    {
+      "asset_type": "gallery_photo",
+      "path": "assets/photos/gallery-crew-back-mountain-roof.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from sitemap project img — `specialist-roofing-32.webp` (single crew member shown FROM BEHIND on residential shingle roof, large straw hat, branded blue shirt with suspenders, mountain backdrop)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/07/specialist-roofing-32.webp",
+      "discovery_path": "sitemap_page_image",
+      "format": "WebP",
+      "magic_bytes_validated": true,
+      "face_present": false,
+      "note": "Back of head only — no identification possible."
+    },
+    {
+      "asset_type": "gallery_photo",
+      "path": "assets/photos/gallery-crew-burbank-vca.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from sitemap project img — `specialist-roofing-38.webp` (TWO CREW MEMBERS working on commercial flat roof at VCA Animal Hospital Burbank — large blue 'VCA' sign visible behind. Both wear blue branded shirts and dark hats. Faces obscured by distance and hats.)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/07/specialist-roofing-38.webp",
+      "discovery_path": "sitemap_page_image",
+      "format": "WebP",
+      "magic_bytes_validated": true,
+      "face_present": true,
+      "note": "Crew working at named commercial location (VCA Burbank). Distant shot, low face-ID confidence."
+    },
+    {
+      "asset_type": "gallery_photo",
+      "path": "assets/photos/gallery-crew-flat-roof-walking.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from sitemap project img — `specialist-roofing-39.webp` (TWO CREW MEMBERS walking on commercial flat roof, both wearing branded light-blue ROOF REPAIR shirts visible from back/3-quarter angle. One face partially visible in profile.)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/07/specialist-roofing-39.webp",
+      "discovery_path": "sitemap_page_image",
+      "format": "WebP",
+      "magic_bytes_validated": true,
+      "face_present": true,
+      "note": "Two-person crew shot, profile-only faces. Low owner-candidate confidence."
+    },
+    {
+      "asset_type": "gallery_photo",
+      "path": "assets/photos/gallery-flat-roof-hvac.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from sitemap project img — `specialist-roofing-40.webp` (commercial flat roof with HVAC units, no people, post-completion shot)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/07/specialist-roofing-40.webp",
+      "discovery_path": "sitemap_page_image",
+      "format": "WebP",
+      "magic_bytes_validated": true
+    },
+    {
+      "asset_type": "gallery_photo",
+      "path": "assets/photos/gallery-shingle-gutter-corner.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from sitemap project img — `specialist-roofing-42.webp` (close-up of residential roof corner: dark shingles + white aluminum gutter + downspout against blue sky)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/07/specialist-roofing-42.webp",
+      "discovery_path": "sitemap_page_image",
+      "format": "WebP",
+      "magic_bytes_validated": true
+    },
+    {
+      "asset_type": "about_photo",
+      "path": "assets/photos/about-bad-decking.png",
+      "is_real_evidence": true,
+      "provenance": "Scraped from /deck-waterproofing/ service page — `bad-decking-that-needs-repair.png` (close-up of weathered/damaged wood deck planks with peeling finish, before-state evidence)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2026/01/bad-decking-that-needs-repair.png",
+      "discovery_path": "service_page_inline_img",
+      "format": "PNG",
+      "magic_bytes_validated": true
+    },
+    {
+      "asset_type": "about_photo",
+      "path": "assets/photos/about-new-decking-stairs.png",
+      "is_real_evidence": true,
+      "provenance": "Scraped from /deck-waterproofing/ service page — `new-decking-on-damaged-stairs.png` (replaced/repaired deck stairs, after-state evidence)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2026/01/new-decking-on-damaged-stairs.png",
+      "discovery_path": "service_page_inline_img",
+      "format": "PNG",
+      "magic_bytes_validated": true
+    },
+    {
+      "asset_type": "about_photo",
+      "path": "assets/photos/about-deck-waterproofing.png",
+      "is_real_evidence": true,
+      "provenance": "Scraped from /deck-waterproofing/ service page — `deck-waterproofing-and-repair.png` (deck waterproofing in progress / finished surface)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2026/01/deck-waterproofing-and-repair.png",
+      "discovery_path": "service_page_inline_img",
+      "format": "PNG",
+      "magic_bytes_validated": true
+    },
+    {
+      "asset_type": "about_photo",
+      "path": "assets/photos/about-beige-gutters-la.png",
+      "is_real_evidence": true,
+      "provenance": "Scraped from /gutter-installation/ service page — `beige-gutters-los-angeles-ca.png` (beige aluminum gutters installed on residential home)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2026/01/beige-gutters-los-angeles-ca.png",
+      "discovery_path": "service_page_inline_img",
+      "format": "PNG",
+      "magic_bytes_validated": true
+    },
+    {
+      "asset_type": "about_photo",
+      "path": "assets/photos/about-gutter-installation.png",
+      "is_real_evidence": true,
+      "provenance": "Scraped from /gutter-installation/ service page — `gutter-installation-3.png` (gutter system installed on residential home)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2026/01/gutter-installation-3.png",
+      "discovery_path": "service_page_inline_img",
+      "format": "PNG",
+      "magic_bytes_validated": true
+    },
+    {
+      "asset_type": "about_photo",
+      "path": "assets/photos/about-gutter-damage.png",
+      "is_real_evidence": true,
+      "provenance": "Scraped from /gutter-installation/ service page — `G-Fedale-Gutter-Damage` elementor thumb (close-up of damaged residential gutter with broken shingle edge)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/elementor/thumbs/G-Fedale-Gutter-Damage-ri8jcvgbhjdl9w42w4z4yqqwzqptwn1t335r5usw4g.png",
+      "discovery_path": "service_page_elementor_thumb",
+      "format": "PNG",
+      "magic_bytes_validated": true
+    },
+    {
+      "asset_type": "about_photo",
+      "path": "assets/photos/about-service-area-map.png",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage 'service area' section — `service-area-map-banner-for-website-1500x600-SO-CAL-ONLY` elementor thumb (SoCal map showing Los Angeles County, Orange County, Riverside County, San Diego County coverage area with brand colors)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/elementor/thumbs/service-area-map-banner-for-website-1500x600-SO-CAL-ONLY-rkgj2avmp1jznc5xs6w1o18g6hkyid21nh7m8jmkxc.png",
+      "discovery_path": "homepage_service_area_section",
+      "dimensions": "1500x600",
+      "format": "PNG",
+      "magic_bytes_validated": true,
+      "intended_use": "Service-area section background or sidebar map"
+    },
+    {
+      "asset_type": "about_photo",
+      "path": "assets/photos/about-phone-mockup-logo.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage 'instant quote' / app-promo section — `specialist-roofing-23.webp` (iPhone mockup showing the brand logo on a blue splash screen — marketing render, not a real product UI)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/07/specialist-roofing-23.webp",
+      "discovery_path": "homepage_promo_section_img",
+      "dimensions": "931x1702",
+      "format": "WebP",
+      "magic_bytes_validated": true,
+      "intended_use": "Decorative marketing render; not photo-real."
+    },
+    {
+      "asset_type": "trust_badge",
+      "path": "assets/photos/badges/bbb-a-rating.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage credential slider (logo-slider swiper) — `Better-Business-Bureau-A-Rating.webp` (real BBB Accredited Business A+ Rating shield, official BBB torch + 'BBB' wordmark, A+ inside teal panel)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/07/Better-Business-Bureau-A-Rating.webp",
+      "discovery_path": "homepage_credential_slider",
+      "format": "WebP",
+      "magic_bytes_validated": true,
+      "credential_name": "BBB Accredited Business A+ Rating"
+    },
+    {
+      "asset_type": "manufacturer_logo",
+      "path": "assets/photos/badges/gaf-logo.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage credential slider — `GAF_logo.webp` (real GAF manufacturer logo)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/07/GAF_logo.webp",
+      "discovery_path": "homepage_credential_slider",
+      "format": "WebP",
+      "magic_bytes_validated": true,
+      "credential_name": "GAF (manufacturer)"
+    },
+    {
+      "asset_type": "manufacturer_cert",
+      "path": "assets/photos/badges/gaf-master-elite.png",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage credential slider — `gaf-masterelite.png` (real GAF Factory Certified Master Elite Weather Stopper Roofing Contractor badge — top GAF tier)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2026/03/gaf-masterelite.png",
+      "discovery_path": "homepage_credential_slider",
+      "format": "PNG",
+      "magic_bytes_validated": true,
+      "credential_name": "GAF Master Elite (Factory Certified)"
+    },
+    {
+      "asset_type": "manufacturer_logo",
+      "path": "assets/photos/badges/certainteed-logo.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage credential slider — `Certainteed-Logo.webp` (real CertainTeed manufacturer logo)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/07/Certainteed-Logo.webp",
+      "discovery_path": "homepage_credential_slider",
+      "format": "WebP",
+      "magic_bytes_validated": true,
+      "credential_name": "CertainTeed (manufacturer)"
+    },
+    {
+      "asset_type": "manufacturer_cert",
+      "path": "assets/photos/badges/certainteed-shinglemaster.png",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage credential slider — `Certainteed-ShingleMaster-transparent.png` (real CertainTeed ShingleMaster Select / SELECT ShingleMaster certification badge, transparent bg)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2026/03/Certainteed-ShingleMaster-transparent.png",
+      "discovery_path": "homepage_credential_slider",
+      "format": "PNG",
+      "magic_bytes_validated": true,
+      "credential_name": "CertainTeed ShingleMaster"
+    },
+    {
+      "asset_type": "manufacturer_logo",
+      "path": "assets/photos/badges/owens-corning-logo.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage credential slider — `Owens_Corning_logo.webp` (real Owens Corning manufacturer logo)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/07/Owens_Corning_logo.webp",
+      "discovery_path": "homepage_credential_slider",
+      "format": "WebP",
+      "magic_bytes_validated": true,
+      "credential_name": "Owens Corning (manufacturer)"
+    },
+    {
+      "asset_type": "manufacturer_cert",
+      "path": "assets/photos/badges/owens-corning-platinum.png",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage credential slider — `Owens-Corning-Platinum-Contractor.png` (real Owens Corning Platinum Preferred Contractor badge — top OC tier)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2026/03/Owens-Corning-Platinum-Contractor.png",
+      "discovery_path": "homepage_credential_slider",
+      "format": "PNG",
+      "magic_bytes_validated": true,
+      "credential_name": "Owens Corning Platinum Preferred Contractor"
+    },
+    {
+      "asset_type": "manufacturer_logo",
+      "path": "assets/photos/badges/polyglass-logo.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage credential slider — `Polyglass-Logo.webp` (real Polyglass commercial roofing membrane manufacturer logo)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/07/Polyglass-Logo.webp",
+      "discovery_path": "homepage_credential_slider",
+      "format": "WebP",
+      "magic_bytes_validated": true,
+      "credential_name": "Polyglass (manufacturer)"
+    },
+    {
+      "asset_type": "manufacturer_logo",
+      "path": "assets/photos/badges/pg-quantum-logo.webp",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage credential slider — `PG_Quantum_Logo.webp` (Polyglass PG Quantum mod-bit cap sheet product logo)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/07/PG_Quantum_Logo.webp",
+      "discovery_path": "homepage_credential_slider",
+      "format": "WebP",
+      "magic_bytes_validated": true,
+      "credential_name": "Polyglass PG Quantum"
+    },
+    {
+      "asset_type": "manufacturer_logo",
+      "path": "assets/photos/badges/asc-logo.png",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage credential slider — `asc-logo.png` (American Standard Coatings logo — alt='american standard coatings logo')",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2025/07/asc-logo.png",
+      "discovery_path": "homepage_credential_slider",
+      "format": "PNG",
+      "magic_bytes_validated": true,
+      "credential_name": "American Standard Coatings (ASC)"
+    },
+    {
+      "asset_type": "award_badge",
+      "path": "assets/photos/badges/2026-product-excellence.png",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage credential slider — `Logo_2026_ProductExcellence.png` (2026 Product Excellence award shield/badge)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2026/03/Logo_2026_ProductExcellence.png",
+      "discovery_path": "homepage_credential_slider",
+      "format": "PNG",
+      "magic_bytes_validated": true,
+      "credential_name": "2026 Product Excellence"
+    },
+    {
+      "asset_type": "award_badge",
+      "path": "assets/photos/badges/2026-top-performer-mvp.png",
+      "is_real_evidence": true,
+      "provenance": "Scraped from homepage credential slider — `Logo_2026_TopPerformerMVP.png` (2026 Top Performer MVP award shield/badge)",
+      "source_url": "https://specialistroofing.com/wp-content/uploads/2026/03/Logo_2026_TopPerformerMVP.png",
+      "discovery_path": "homepage_credential_slider",
+      "format": "PNG",
+      "magic_bytes_validated": true,
+      "credential_name": "2026 Top Performer MVP"
+    },
+    {
+      "asset_type": "owner_photo",
+      "path": "assets/team/andre-afsharian.jpg",
+      "cutout_path": "assets/team/andre-afsharian-cutout.png",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_smart_discovery",
+      "discovery_evidence": "Owner name discovered via Path A3 SERP search (BBB business profile + Roofing Contractor article + Directorii + Prospeo + BuildZoom + Yahoo Finance — multi-source consensus). Photo discovered via Path A1 on the LEGACY domain roofrepairspecialist.com/about-us/ (the same company's previous brand — rebrand from 'Roof Repair Specialist' to 'Specialist Roofing and Repair' was January 2026 per Roofing Contractor article, but the legacy site still hosts the team gallery). The current specialistroofing.com sitemap omits the /about page entirely. Direct image match: filename 'Andre-new-website-1024x1024.jpg' + image shows polo shirt printed with 'Andre Afsharian' name + 'Roof Repair Specialist' logo (legacy brand mark, pre-2026 rebrand). Also corroborated by Directorii listing https://directorii.com/us/ca/burbank/roof-repair-specialist-reviews-104/ which shows the same Andre Afsharian face under the alt 'Andre Afsharian photo' tagged 'Owner.'",
+      "discovered_url": "https://www.roofrepairspecialist.com/about-us/",
+      "confidence": "high",
+      "owner_full_name": "Andre Ara Afsharian",
+      "owner_first_name": "Andre",
+      "owner_last_name": "Afsharian",
+      "owner_role": "Co-Founder & Owner",
+      "owner_quote": "My goal is to have a zero-accident workplace.",
+      "owner_quote_source": "https://www.roofrepairspecialist.com/roof-repair-replacement-burbank-ca/",
+      "alpha_validation": {
+        "alpha_mean": 0.48,
+        "transparent_pct": 51.3,
+        "threshold_met": true,
+        "rule": "sops/asset-scrape.md §2 cutout discipline — alpha_mean < 0.85 AND transparent_pct >= 30%"
+      },
+      "operator_review_required": false
+    },
+    {
+      "asset_type": "owner_photo_secondary",
+      "path": "assets/team/chris-afsharian.jpg",
+      "cutout_path": "assets/team/chris-afsharian-cutout.png",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_smart_discovery",
+      "discovery_evidence": "Co-founder discovered via same path as Andre. Filename 'Chris-edit.jpg' on legacy /about-us/; polo shirt printed with 'Chris Afsharian'. Brothers — co-founders of the LLC per BBB business profile and California LLC filing (Specialist Roofing And Repair Inc, filing date 1/28/2015, with Andre Afsharian as Registered Agent). The brand markets itself as 'family-owned' with Andre + Chris as the two faces.",
+      "discovered_url": "https://www.roofrepairspecialist.com/about-us/",
+      "confidence": "high",
+      "owner_full_name": "Christopher Raffy Afsharian",
+      "owner_first_name": "Christopher",
+      "owner_nickname": "Chris",
+      "owner_last_name": "Afsharian",
+      "owner_role": "Co-Founder",
+      "owner_dob_year": 1991,
+      "alpha_validation": {
+        "alpha_mean": 0.451,
+        "transparent_pct": 54.4,
+        "threshold_met": true
+      }
+    },
+    {
+      "asset_type": "team_photo",
+      "path": "assets/team/owners-selfie-andre-chris.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_smart_discovery",
+      "discovered_url": "https://www.roofrepairspecialist.com/about-us/",
+      "discovery_evidence": "Selfie of Andre Afsharian + Chris Afsharian at a Mediterranean-style estate jobsite. From legacy /about-us/. Filename 'selfie-720x480.jpg'. Pairs perfectly with the owners-on-roof / co-founder narrative.",
+      "confidence": "high",
+      "people_in_photo": [
+        "Andre Afsharian",
+        "Chris Afsharian"
+      ],
+      "context": "co-founder selfie at jobsite",
+      "intended_use": "heritage_section_owner_anchor OR review_section_owner_anchor",
+      "size_px": "720x480"
+    },
+    {
+      "asset_type": "team_photo",
+      "path": "assets/team/areg-ohanian.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_smart_discovery",
+      "discovered_url": "https://www.roofrepairspecialist.com/about-us/",
+      "discovery_evidence": "Filename 'Areg-final-1024x1024.jpg' on legacy /about-us/. Polo shirt printed with 'Areg Ohanian'. Title per Prospeo: 'General Manager And Head Of Sales' (Specialist Roofing & Repair).",
+      "confidence": "high",
+      "person_name": "Areg Ohanian",
+      "person_role": "General Manager & Head of Sales",
+      "size_px": "1024x1024"
+    },
+    {
+      "asset_type": "team_photo",
+      "path": "assets/team/karen-serakides.png",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_smart_discovery",
+      "discovered_url": "https://www.roofrepairspecialist.com/about-us/",
+      "discovery_evidence": "Filename 'karen-1024x1024.png' on legacy /about-us/. Person matches Karen Serakides per FastPeopleSearch corroboration (Title: OFFICE MANAGER at Roof Repair Specialist, Burbank CA, since Mar 2022).",
+      "confidence": "high",
+      "person_name": "Karen Serakides",
+      "person_role": "Office Manager",
+      "size_px": "1024x1024"
+    },
+    {
+      "asset_type": "team_photo",
+      "path": "assets/team/team-guy.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_smart_discovery",
+      "discovered_url": "https://www.roofrepairspecialist.com/about-us/",
+      "discovery_evidence": "Filename 'Guy-1024x1024.jpg'. Polo-shirt portrait same studio set.",
+      "confidence": "medium",
+      "person_name": "Guy",
+      "person_role": "Team member (role not confirmed via secondary source — CAM-003 caption with category label only)",
+      "size_px": "1024x1024"
+    },
+    {
+      "asset_type": "team_photo",
+      "path": "assets/team/team-mike.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_smart_discovery",
+      "discovered_url": "https://www.roofrepairspecialist.com/about-us/",
+      "discovery_evidence": "Filename 'Mike-brick-1024x1024.jpg'. Polo-shirt portrait same studio set.",
+      "confidence": "medium",
+      "person_name": "Mike",
+      "person_role": "Team member (role not confirmed via secondary source — CAM-003 caption with category label only)",
+      "size_px": "1024x1024"
+    },
+    {
+      "asset_type": "team_photo",
+      "path": "assets/team/team-flavio.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_smart_discovery",
+      "discovered_url": "https://www.roofrepairspecialist.com/about-us/",
+      "discovery_evidence": "Filename 'Flavio-23.jpg'. Polo-shirt portrait same studio set.",
+      "confidence": "medium",
+      "person_name": "Flavio",
+      "person_role": "Team member (role not confirmed via secondary source — CAM-003 caption with category label only)",
+      "size_px": "961x962"
+    },
+    {
+      "asset_type": "team_photo",
+      "path": "assets/team/team-aaron.png",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_smart_discovery",
+      "discovered_url": "https://www.roofrepairspecialist.com/about-us/",
+      "discovery_evidence": "Filename 'aaron-square-1024x1024.png'. Polo-shirt portrait same studio set.",
+      "confidence": "medium",
+      "person_name": "Aaron",
+      "person_role": "Team member (role not confirmed via secondary source — CAM-003 caption with category label only)",
+      "size_px": "1024x1024"
+    },
+    {
+      "asset_type": "team_photo",
+      "path": "assets/team/team-bo.png",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_smart_discovery",
+      "discovered_url": "https://www.roofrepairspecialist.com/about-us/",
+      "discovery_evidence": "Filename 'bo-square.png'. Polo-shirt portrait same studio set.",
+      "confidence": "medium",
+      "person_name": "Bo",
+      "person_role": "Team member (role not confirmed via secondary source — CAM-003 caption with category label only)",
+      "size_px": "996x996"
+    },
+    {
+      "asset_type": "team_photo",
+      "path": "assets/team/team-group-2022.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_smart_discovery",
+      "discovered_url": "https://www.roofrepairspecialist.com/about-us/",
+      "discovery_evidence": "Filename 'about-us-gallery-team-2022-300x200.jpg'. Approximately 50-person full-company group photo at HQ yard. Excellent 'family-owned' scale evidence. Note: low resolution (300x200) — may need higher-res replacement if used as section anchor.",
+      "confidence": "high",
+      "context": "full-company group portrait 2022",
+      "intended_use": "team_rail OR culture_section_anchor",
+      "size_px": "300x200",
+      "resolution_warning": "low-res — request higher-res from operator before using as large hero/section anchor"
+    },
+    {
+      "asset_type": "team_photo",
+      "path": "assets/team/team-crew-on-roof.webp",
+      "is_real_evidence": true,
+      "discovery_path": "A2c_source_site_gallery_mined",
+      "discovered_url": "https://specialistroofing.com/",
+      "discovery_evidence": "Source-site homepage image 'specialist-roofing-18.webp'. Alt text 'shingle roof repair norcal' — generic SEO alt. Shows 3 crew members in branded blue Specialist Roofing polos on a residential roof installing underlayment. Single-shot group ≤6 — within Path A2c heuristic.",
+      "confidence": "medium",
+      "context": "3-person crew on jobsite, branded blue Specialist Roofing polos (new brand mark visible)",
+      "intended_use": "hero_form_mini_card_tier4_crew_composite OR services_section_authenticity",
+      "size_px": "840x472"
+    },
+    {
+      "asset_type": "team_photo",
+      "path": "assets/team/team-roofer-nailing-shingles.webp",
+      "is_real_evidence": true,
+      "discovery_path": "A2c_source_site_gallery_mined",
+      "discovered_url": "https://specialistroofing.com/",
+      "discovery_evidence": "Source-site homepage image 'specialist-roofing-24.webp'. Alt text 'top rated roofers san jose and san francisco' — generic SEO alt. Single roofer in branded blue Specialist Roofing polo + white cap kneeling on roof using nail gun. Face partially obscured (head turned to work). Single-person work-context — qualifies under Path A2c medium-confidence heuristic per SOP §2.",
+      "confidence": "medium",
+      "context": "single roofer installing shingles, branded blue polo, new brand mark visible",
+      "intended_use": "hero_form_mini_card_tier3_single_person_work_context OR services_section_authenticity",
+      "size_px": "840x472"
+    }
+  ]
+}
