@@ -1,0 +1,1689 @@
+{
+  "version": 1,
+  "slug": "arrysroofing",
+  "verified_at": "2026-05-13T05:48:32Z",
+  "source_site": "https://arrysroofing.com/",
+  "scrape_method": "firecrawl + curl + file-magic validation per sops/asset-scrape.md \u00a70",
+  "stage": "Stage 2 Research + Stage 2b Asset Scrape",
+  "owner_photo": {
+    "asset_type": "owner_photo",
+    "path": "assets/team/housh-boys.webp",
+    "cutout_path": "assets/team/housh-boys-cutout.png",
+    "source_url": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/2024/09/housh-boys.webp",
+    "alt_text_from_source": "(rendered on /about-us \u2014 alt was empty in source)",
+    "is_real_evidence": true,
+    "discovery_path": "A1_source_site_about_page",
+    "discovered_url": "https://arrysroofing.com/about-us/",
+    "discovery_evidence": "Path A1 (smart source-site team-page discovery) ran the about-us scrape and matched the filename 'housh-boys.webp' to the brand's known owner-family surname Housh. Cross-referenced with /about-us/the-arrys-team/ which names the family as 'Arry's Roofing Services, Inc. was originally started and managed by Arry and Becky Housh. It has truly become a family business over the ensuing years as Stephen and Matthew Housh have joined the Management Team.' The photo shows 3 men in casual shirts \u2014 center figure has the gray hair + light mustache + warm face that matches the /about-us/our-mission letter signed 'James \"Arry\" Housh'. Surrounding men are Stephen Housh (left, dark blue button-up) and Matthew Housh (right, plaid). Cutout produced via agentic/tools/remove-bg.sh Path B \u2014 alpha mean = 0.557 (passes the <0.85 SOP threshold).",
+    "owner_full_name": "James \"Arry\" Housh",
+    "owner_family_names_in_photo": [
+      "Stephen Housh",
+      "James \"Arry\" Housh",
+      "Matthew Housh"
+    ],
+    "confidence": "high",
+    "cutout_alpha_mean": 0.557,
+    "cutout_provider": "remove.bg API"
+  },
+  "logo": [
+    {
+      "asset_type": "logo_primary",
+      "path": "assets/logo/arrys-primary-logo.svg",
+      "source_url": "https://arrysroofing.com/wp-content/uploads/2025/03/Arrys-logo.svg",
+      "alt_text_from_source": "Arrys logo",
+      "format": "svg",
+      "size_bytes": 68264,
+      "is_real_evidence": true,
+      "discovery_path": "source_site_header_logo",
+      "claim_attached": "Arry's Roofing primary brand mark (cursive 'Arry's' wordmark + 'ROOFING SERVICES INC.' slab + gold '35' anniversary medallion + sun-rays motif)",
+      "provenance": "scraped from <header> on https://arrysroofing.com/ \u2014 appears in header, mobile header, and footer placements",
+      "confidence": "high"
+    }
+  ],
+  "team": [
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-01.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../01.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "medium",
+      "discovery_evidence": "Team page scrape yielded this image; person identification not confidently mapped to a name (filename was generic like 'team-01.jpg'). Surface to operator for review before publishing."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-02.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../02.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "medium",
+      "discovery_evidence": "Team page scrape yielded this image; person identification not confidently mapped to a name (filename was generic like 'team-02.jpg'). Surface to operator for review before publishing."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-25-26-workers-comp-col-scaled.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../25-26-workers-comp-col-scaled.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "medium",
+      "discovery_evidence": "Team page scrape yielded this image; person identification not confidently mapped to a name (filename was generic like 'team-25-26-workers-comp-col-scaled.jpg'). Surface to operator for review before publishing."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-about-us-gaf1.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../about-us-gaf1.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "medium",
+      "discovery_evidence": "Team page scrape yielded this image; person identification not confidently mapped to a name (filename was generic like 'team-about-us-gaf1.jpg'). Surface to operator for review before publishing."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-adam.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../adam.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Adam Velett",
+      "role": "Sales Consultant",
+      "discovery_evidence": "Team page lists Adam Velett as Sales Consultant. Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-andrew.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../andrew.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Andrew Fogle",
+      "role": "Construction Supervisor (since 2022)",
+      "discovery_evidence": "Team page lists Andrew Fogle as Construction Supervisor (since 2022). Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-angel.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../angel.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Angel Panzo",
+      "role": "Supervisor \u2014 Production (since 2016)",
+      "discovery_evidence": "Team page lists Angel Panzo as Supervisor \u2014 Production (since 2016). Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-arrys-roofing-services-inc.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../arrys-roofing-services-inc.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "medium",
+      "discovery_evidence": "Team page scrape yielded this image; person identification not confidently mapped to a name (filename was generic like 'team-arrys-roofing-services-inc.jpg'). Surface to operator for review before publishing."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-audrey_mentry.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../audrey_mentry.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "medium",
+      "discovery_evidence": "Team page scrape yielded this image; person identification not confidently mapped to a name (filename was generic like 'team-audrey_mentry.jpg'). Surface to operator for review before publishing."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-augustin-240x300-1.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../augustin-240x300-1.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Agustin Panzo",
+      "role": "Supervisor \u2014 Production (since 2016)",
+      "discovery_evidence": "Team page lists Agustin Panzo as Supervisor \u2014 Production (since 2016). Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-bb-1024x648-1.png",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../bb-1024x648-1.png",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "medium",
+      "discovery_evidence": "Team page scrape yielded this image; person identification not confidently mapped to a name (filename was generic like 'team-bb-1024x648-1.png'). Surface to operator for review before publishing."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-ben.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../ben.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Ben Paterson",
+      "role": "Construction Manager",
+      "discovery_evidence": "Team page lists Ben Paterson as Construction Manager. Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-bill-manion.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../bill-manion.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Bill Manion",
+      "role": "Sales Consultant",
+      "discovery_evidence": "Team page lists Bill Manion as Sales Consultant. Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-brooke01.png",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../brooke01.png",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "medium",
+      "discovery_evidence": "Team page scrape yielded this image; person identification not confidently mapped to a name (filename was generic like 'team-brooke01.png'). Surface to operator for review before publishing."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-callie.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../callie.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "medium",
+      "discovery_evidence": "Team page scrape yielded this image; person identification not confidently mapped to a name (filename was generic like 'team-callie.jpg'). Surface to operator for review before publishing."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-cathy.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../cathy.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Cathy Koutsonikas",
+      "role": "Accounts Payable Manager",
+      "discovery_evidence": "Team page lists Cathy Koutsonikas as Accounts Payable Manager. Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-cj.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../cj.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Cathy \"CJ\" Jardio",
+      "role": "Sales Manager \u2013 Admin",
+      "discovery_evidence": "Team page lists Cathy \"CJ\" Jardio as Sales Manager \u2013 Admin. Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-coba.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../coba.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Jacob Salas",
+      "role": "Supervisor \u2014 Production (since 2018)",
+      "discovery_evidence": "Team page lists Jacob Salas as Supervisor \u2014 Production (since 2018). Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-corona.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../corona.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Demetrio Cruz",
+      "role": "Supervisor \u2014 Production (since 2018)",
+      "discovery_evidence": "Team page lists Demetrio Cruz as Supervisor \u2014 Production (since 2018). Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-craig.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../craig.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Craig Drake",
+      "role": "Field Construction Manager",
+      "discovery_evidence": "Team page lists Craig Drake as Field Construction Manager. Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-danika.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../danika.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "medium",
+      "discovery_evidence": "Team page scrape yielded this image; person identification not confidently mapped to a name (filename was generic like 'team-danika.jpg'). Surface to operator for review before publishing."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-drexel-metals.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../drexel-metals.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "medium",
+      "discovery_evidence": "Team page scrape yielded this image; person identification not confidently mapped to a name (filename was generic like 'team-drexel-metals.jpg'). Surface to operator for review before publishing."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-dsc0152.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../dsc0152.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "medium",
+      "discovery_evidence": "Team page scrape yielded this image; person identification not confidently mapped to a name (filename was generic like 'team-dsc0152.jpg'). Surface to operator for review before publishing."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-dsc0170.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../dsc0170.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "medium",
+      "discovery_evidence": "Team page scrape yielded this image; person identification not confidently mapped to a name (filename was generic like 'team-dsc0170.jpg'). Surface to operator for review before publishing."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-emily-croat.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../emily-croat.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Emily Croat",
+      "role": "Production \u2013 Permitting",
+      "discovery_evidence": "Team page lists Emily Croat as Production \u2013 Permitting. Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-exael.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../exael.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Exael Reyes",
+      "role": "Supervisor \u2014 Production (since 2006)",
+      "discovery_evidence": "Team page lists Exael Reyes as Supervisor \u2014 Production (since 2006). Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-gabrielle_renner.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../gabrielle_renner.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "medium",
+      "discovery_evidence": "Team page scrape yielded this image; person identification not confidently mapped to a name (filename was generic like 'team-gabrielle_renner.jpg'). Surface to operator for review before publishing."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-gaf_all.png",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../gaf_all.png",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "medium",
+      "discovery_evidence": "Team page scrape yielded this image; person identification not confidently mapped to a name (filename was generic like 'team-gaf_all.png'). Surface to operator for review before publishing."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-gavin-img.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../gavin-img.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Gavin",
+      "role": "Production",
+      "discovery_evidence": "Team page lists Gavin as Production. Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-gc-2025-scaled.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../gc-2025-scaled.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "medium",
+      "discovery_evidence": "Team page scrape yielded this image; person identification not confidently mapped to a name (filename was generic like 'team-gc-2025-scaled.jpg'). Surface to operator for review before publishing."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-gilberto.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../gilberto.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Gilberto Ceron",
+      "role": "Supervisor \u2014 Production (since 2018)",
+      "discovery_evidence": "Team page lists Gilberto Ceron as Supervisor \u2014 Production (since 2018). Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-greg.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../greg.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Gregorio Salas",
+      "role": "Supervisor \u2014 Production (since 2016)",
+      "discovery_evidence": "Team page lists Gregorio Salas as Supervisor \u2014 Production (since 2016). Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-guillermo.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../guillermo.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Guillermo Ruiz",
+      "role": "Supervisor \u2014 Production (since 2018)",
+      "discovery_evidence": "Team page lists Guillermo Ruiz as Supervisor \u2014 Production (since 2018). Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-harley.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../harley.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Harley Mentry",
+      "role": "Sales Manager \u2013 Inside Sales",
+      "discovery_evidence": "Team page lists Harley Mentry as Sales Manager \u2013 Inside Sales. Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-information-with-certificate.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../information-with-certificate.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "medium",
+      "discovery_evidence": "Team page scrape yielded this image; person identification not confidently mapped to a name (filename was generic like 'team-information-with-certificate.jpg'). Surface to operator for review before publishing."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-jan.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../jan.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Jan Simon",
+      "role": "Director of Insurance",
+      "discovery_evidence": "Team page lists Jan Simon as Director of Insurance. Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-jay_web.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../jay_web.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Jay Augustin",
+      "role": "Metal Supervisor \u2014 Production (since 2009)",
+      "discovery_evidence": "Team page lists Jay Augustin as Metal Supervisor \u2014 Production (since 2009). Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-jeremy.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../jeremy.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Jeremy Lincoln",
+      "role": "Senior Production Executive Supervisor (since 2008)",
+      "discovery_evidence": "Team page lists Jeremy Lincoln as Senior Production Executive Supervisor (since 2008). Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-jim.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../jim.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Jim Fischer",
+      "role": "Commercial Supervisor \u2014 Production (since 2000)",
+      "discovery_evidence": "Team page lists Jim Fischer as Commercial Supervisor \u2014 Production (since 2000). Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-jonny-o.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../jonny-o.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Jonathan Olguin",
+      "role": "Supervisor \u2014 Production (since 2016)",
+      "discovery_evidence": "Team page lists Jonathan Olguin as Supervisor \u2014 Production (since 2016). Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-jose.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../jose.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Jose Ramos",
+      "role": "Supervisor \u2014 Production (since 2018)",
+      "discovery_evidence": "Team page lists Jose Ramos as Supervisor \u2014 Production (since 2018). Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-josie.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../josie.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "medium",
+      "discovery_evidence": "Team page scrape yielded this image; person identification not confidently mapped to a name (filename was generic like 'team-josie.jpg'). Surface to operator for review before publishing."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-juan-1.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../juan-1.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Juan Garcia",
+      "role": "Supervisor \u2014 Production (since 2020)",
+      "discovery_evidence": "Team page lists Juan Garcia as Supervisor \u2014 Production (since 2020). Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-juan.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../juan.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Leonardo Tavera",
+      "role": "Supervisor \u2014 Production \u2014 Tile (since 2016)",
+      "discovery_evidence": "Team page lists Leonardo Tavera as Supervisor \u2014 Production \u2014 Tile (since 2016). Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-kaitlyn_raszkowski.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../kaitlyn_raszkowski.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "medium",
+      "discovery_evidence": "Team page scrape yielded this image; person identification not confidently mapped to a name (filename was generic like 'team-kaitlyn_raszkowski.jpg'). Surface to operator for review before publishing."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-kieran.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../kieran.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Kieran Stanislas",
+      "role": "Supervisor \u2014 Production \u2014 Metal (since 2010)",
+      "discovery_evidence": "Team page lists Kieran Stanislas as Supervisor \u2014 Production \u2014 Metal (since 2010). Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-kim.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../kim.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Kim Shields",
+      "role": "Service Executive Supervisor (since 1992 \u2014 30+ yrs)",
+      "discovery_evidence": "Team page lists Kim Shields as Service Executive Supervisor (since 1992 \u2014 30+ yrs). Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-kylie_thorne.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../kylie_thorne.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "medium",
+      "discovery_evidence": "Team page scrape yielded this image; person identification not confidently mapped to a name (filename was generic like 'team-kylie_thorne.jpg'). Surface to operator for review before publishing."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-lily-messerli-img.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../lily-messerli-img.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "medium",
+      "discovery_evidence": "Team page scrape yielded this image; person identification not confidently mapped to a name (filename was generic like 'team-lily-messerli-img.jpg'). Surface to operator for review before publishing."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-lindsey.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../lindsey.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Lindsay Folds",
+      "role": "Supervisor \u2014 Service (since 2016)",
+      "discovery_evidence": "Team page lists Lindsay Folds as Supervisor \u2014 Service (since 2016). Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-madison-nelson-img.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../madison-nelson-img.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "medium",
+      "discovery_evidence": "Team page scrape yielded this image; person identification not confidently mapped to a name (filename was generic like 'team-madison-nelson-img.jpg'). Surface to operator for review before publishing."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-marco.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../marco.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Marco Contreras",
+      "role": "Supervisor \u2014 Production \u2014 Metal (since 2023)",
+      "discovery_evidence": "Team page lists Marco Contreras as Supervisor \u2014 Production \u2014 Metal (since 2023). Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-marcos.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../marcos.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Marcos Yebra Gonzalez",
+      "role": "Supervisor \u2014 Production (since 2013)",
+      "discovery_evidence": "Team page lists Marcos Yebra Gonzalez as Supervisor \u2014 Production (since 2013). Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-mariah-townhomes-1-736-740-pinellas-bayway-south-tierra-verde-fl.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../mariah-townhomes-1-736-740-pinellas-bayway-south-tierra-verde-fl.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "medium",
+      "discovery_evidence": "Team page scrape yielded this image; person identification not confidently mapped to a name (filename was generic like 'team-mariah-townhomes-1-736-740-pinellas-bayway-south-tierra-verde-fl.jpg'). Surface to operator for review before publishing."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-marvin.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../marvin.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Marvin Ramirez Rivera",
+      "role": "Supervisor \u2014 Production (since 2018)",
+      "discovery_evidence": "Team page lists Marvin Ramirez Rivera as Supervisor \u2014 Production (since 2018). Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-master_select_certificate-300x230-1.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../master_select_certificate-300x230-1.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "medium",
+      "discovery_evidence": "Team page scrape yielded this image; person identification not confidently mapped to a name (filename was generic like 'team-master_select_certificate-300x230-1.jpg'). Surface to operator for review before publishing."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-melinda-williams-img.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../melinda-williams-img.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "medium",
+      "discovery_evidence": "Team page scrape yielded this image; person identification not confidently mapped to a name (filename was generic like 'team-melinda-williams-img.jpg'). Surface to operator for review before publishing."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-metal1.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../metal1.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "medium",
+      "discovery_evidence": "Team page scrape yielded this image; person identification not confidently mapped to a name (filename was generic like 'team-metal1.jpg'). Surface to operator for review before publishing."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-nemo.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../nemo.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Nemo Smith",
+      "role": "Metal Executive Supervisor (since 2007)",
+      "discovery_evidence": "Team page lists Nemo Smith as Metal Executive Supervisor (since 2007). Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-nichelle.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../nichelle.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Nichele Saunders",
+      "role": "Payroll Manager",
+      "discovery_evidence": "Team page lists Nichele Saunders as Payroll Manager. Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-nick-img.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../nick-img.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Nick",
+      "role": "Production",
+      "discovery_evidence": "Team page lists Nick as Production. Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-olivia-swan-img.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../olivia-swan-img.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "medium",
+      "discovery_evidence": "Team page scrape yielded this image; person identification not confidently mapped to a name (filename was generic like 'team-olivia-swan-img.jpg'). Surface to operator for review before publishing."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-ployglass.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../ployglass.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "medium",
+      "discovery_evidence": "Team page scrape yielded this image; person identification not confidently mapped to a name (filename was generic like 'team-ployglass.jpg'). Surface to operator for review before publishing."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-roof-2025-scaled.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../roof-2025-scaled.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "medium",
+      "discovery_evidence": "Team page scrape yielded this image; person identification not confidently mapped to a name (filename was generic like 'team-roof-2025-scaled.jpg'). Surface to operator for review before publishing."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-samantha_weyhrauch.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../samantha_weyhrauch.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "medium",
+      "discovery_evidence": "Team page scrape yielded this image; person identification not confidently mapped to a name (filename was generic like 'team-samantha_weyhrauch.jpg'). Surface to operator for review before publishing."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-seal-ats-mktg-th.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../seal-ats-mktg-th.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "medium",
+      "discovery_evidence": "Team page scrape yielded this image; person identification not confidently mapped to a name (filename was generic like 'team-seal-ats-mktg-th.jpg'). Surface to operator for review before publishing."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-sentrigard.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../sentrigard.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "medium",
+      "discovery_evidence": "Team page scrape yielded this image; person identification not confidently mapped to a name (filename was generic like 'team-sentrigard.jpg'). Surface to operator for review before publishing."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-shingle2.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../shingle2.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "medium",
+      "discovery_evidence": "Team page scrape yielded this image; person identification not confidently mapped to a name (filename was generic like 'team-shingle2.jpg'). Surface to operator for review before publishing."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-tara_boyle.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../tara_boyle.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Tara Boyle",
+      "role": "Service Manager",
+      "discovery_evidence": "Team page lists Tara Boyle as Service Manager. Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-tarpongc-1024x650-1.png",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../tarpongc-1024x650-1.png",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "medium",
+      "discovery_evidence": "Team page scrape yielded this image; person identification not confidently mapped to a name (filename was generic like 'team-tarpongc-1024x650-1.png'). Surface to operator for review before publishing."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-tile-roofing-institute.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../tile-roofing-institute.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "medium",
+      "discovery_evidence": "Team page scrape yielded this image; person identification not confidently mapped to a name (filename was generic like 'team-tile-roofing-institute.jpg'). Surface to operator for review before publishing."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-tile5.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../tile5.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "medium",
+      "discovery_evidence": "Team page scrape yielded this image; person identification not confidently mapped to a name (filename was generic like 'team-tile5.jpg'). Surface to operator for review before publishing."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-tina.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../tina.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Tina Binzel",
+      "role": "Purchasing Agent",
+      "discovery_evidence": "Team page lists Tina Binzel as Purchasing Agent. Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-tlb07527-225x300-1.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../tlb07527-225x300-1.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Logan Stoecker",
+      "role": "Sheet Metal Technician (since 2015)",
+      "discovery_evidence": "Team page lists Logan Stoecker as Sheet Metal Technician (since 2015). Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-tlb07545-225x300-1.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../tlb07545-225x300-1.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Ernie Spicer",
+      "role": "Sheet Metal Technician (since 2015)",
+      "discovery_evidence": "Team page lists Ernie Spicer as Sheet Metal Technician (since 2015). Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-tyler-img.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../tyler-img.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Tyler",
+      "role": "Production",
+      "discovery_evidence": "Team page lists Tyler as Production. Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-update-certificate.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../update-certificate.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "medium",
+      "discovery_evidence": "Team page scrape yielded this image; person identification not confidently mapped to a name (filename was generic like 'team-update-certificate.jpg'). Surface to operator for review before publishing."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-valentin.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../valentin.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Valentin Arce",
+      "role": "Supervisor \u2014 Production (since 2013)",
+      "discovery_evidence": "Team page lists Valentin Arce as Supervisor \u2014 Production (since 2013). Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-vicente.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../vicente.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Vicente Resendiz Trejo",
+      "role": "Metal Supervisor \u2014 Production (since 2011)",
+      "discovery_evidence": "Team page lists Vicente Resendiz Trejo as Metal Supervisor \u2014 Production (since 2011). Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    },
+    {
+      "asset_type": "team_headshot",
+      "path": "assets/team/team-yury.jpg",
+      "source_url_hint": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/.../yury.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "confidence": "high",
+      "person_name": "Yury Perez",
+      "role": "Supervisor \u2014 Production (since 2016)",
+      "discovery_evidence": "Team page lists Yury Perez as Supervisor \u2014 Production (since 2016). Filename-to-person matched via the team-page H3/H4 caption order + filename heuristics."
+    }
+  ],
+  "owner_family_photos": [
+    {
+      "asset_type": "owner_family_photo",
+      "path": "assets/team/housh.jpg",
+      "cutout_path": "assets/team/housh-family-cutout.png",
+      "source_url": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/2024/09/housh.jpg",
+      "alt_text_from_source": "housh",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_about_page",
+      "discovered_url": "https://arrysroofing.com/about-us/",
+      "discovery_evidence": "Lakeside group portrait of all 4 Housh owners: Stephen (left, fish-pattern shirt), Becky (center-left, green dress), James 'Arry' (center, dark patterned shirt, grey hair), Matthew (right, blue plaid). Matches the names on /about-us/the-arrys-team/ Executive Team section.",
+      "named_persons": [
+        "Stephen Housh",
+        "Becky Housh",
+        "James \"Arry\" Housh",
+        "Matthew Housh"
+      ],
+      "confidence": "high"
+    },
+    {
+      "asset_type": "owner_family_photo_secondary",
+      "path": "assets/team/housh-27.jpg",
+      "source_url": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/2024/09/housh-27.jpg",
+      "alt_text_from_source": "housh 27",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_about_page",
+      "discovered_url": "https://arrysroofing.com/about-us/",
+      "discovery_evidence": "Second family portrait \u2014 outdoor woodland setting with all 4 Housh family members. Smaller cropping (315x210). Suitable for thumbnail / inline use.",
+      "named_persons": [
+        "Stephen Housh",
+        "James \"Arry\" Housh",
+        "Becky Housh",
+        "Matthew Housh"
+      ],
+      "confidence": "high"
+    },
+    {
+      "asset_type": "executive_team_family_showroom",
+      "path": "assets/team/executive-team-family.jpg",
+      "source_url": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/2025/07/OSP_7379-1-min-scaled.jpg",
+      "alt_text_from_source": "OSP 7379 (1) min",
+      "is_real_evidence": true,
+      "discovery_path": "A1_source_site_about_team_page",
+      "discovered_url": "https://arrysroofing.com/about-us/the-arrys-team/",
+      "discovery_evidence": "Captioned 'Executive Team\u2026 The Family' on the team page \u2014 shingle samples visible in the showroom backdrop. All 4 Housh family members. Matthew wears the dark Arry's-Roofing-branded polo with the company logo. This is the most recent (2025-07) and most editorially-framed owner-family photo on the site.",
+      "named_persons": [
+        "Stephen Housh",
+        "James \"Arry\" Housh",
+        "Becky Housh",
+        "Matthew Housh"
+      ],
+      "confidence": "high",
+      "preferred_use": "About section hero \u2014 already styled in the brand's showroom"
+    }
+  ],
+  "gallery": [
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-10322b3d4d8a94c820211008-43482-6zmpat.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-2017-06-14-14-28-27.18.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-2017-06-14-15-25-47.50.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-2017-06-15-11-51-46.05.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-2017-06-20-12-52-32.22.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-2017-06-20-13-13-37.34.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-2017-06-20-14-10-22.40.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-2017-06-21-11-20-37.12.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-2017-06-21-11-32-02.18.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-2017-06-21-11-32-27.20.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-2017-08-09-12-14-11.17.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-2017-08-10-11-27-03.03.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-2017-08-10-11-54-40.07.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-2017-08-10-12-32-39.17.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-2017-08-16-09-13-38.04.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-2017-08-16-10-17-29.12.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-2017-08-16-10-34-30.18.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-2017-08-16-13-33-52.22.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-2017-08-16-14-21-53.37.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-2017-08-18-10-50-21.08.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-2017-08-18-11-26-35.15.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-404bay1.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-41de79eb5e4ea63d20211008-44455-13ctu98.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-728ebef90a2455b320211008-42979-7hbt4p.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-9b714a1edda9059620211008-46977-2ppbgg.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-avolio1.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-barbara1.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-barbara2.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-bishop1.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-brochure1.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-brochure2.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-brochure3.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-brochure4.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-darkshingle3.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-darkshingleroof1v2.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-giebner2.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-giebner3.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-giebner4.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-giebner5.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-jauch1.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Real jobsite photo from project gallery"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-mariah-townhomes-tierra-verde.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Mariah Townhomes project \u2014 736-740 Pinellas Bayway South, Tierra Verde, FL (specific named project from gallery)",
+      "preferred_use": "featured_gallery_card"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-metal-sample-01.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Metal roofing system sample"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-shingle-sample-02.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Shingle roofing system sample"
+    },
+    {
+      "asset_type": "project_gallery",
+      "path": "assets/gallery/gallery-tile-sample-05.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_project_gallery",
+      "discovered_url": "https://arrysroofing.com/project-gallery/",
+      "confidence": "high",
+      "claim_attached": "Tile roofing system sample"
+    }
+  ],
+  "badges": [
+    {
+      "asset_type": "badge",
+      "path": "assets/photos/badges/gaf-master-elite-2025.png",
+      "source_url": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/2025/07/Master-Elite-2025.png",
+      "alt_text_from_source": "Master Elite 2025",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_home_trust_strip",
+      "claim_attached": "GAF Master Elite 2025 (top 2% of US roofing contractors)",
+      "provenance": "scraped from homepage 'Certifications & Affiliations' + 'Awards & Recognition' rows",
+      "confidence": "high"
+    },
+    {
+      "asset_type": "badge",
+      "path": "assets/photos/badges/gaf-certified-metal-2025.png",
+      "source_url": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/2025/07/Certified-Metal-2025.png",
+      "alt_text_from_source": "Certified Metal 2025",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_home_trust_strip",
+      "claim_attached": "GAF Certified Metal 2025",
+      "provenance": "scraped from homepage 'Certifications & Affiliations' + 'Awards & Recognition' rows",
+      "confidence": "high"
+    },
+    {
+      "asset_type": "badge",
+      "path": "assets/photos/badges/gaf-certified-solar.png",
+      "source_url": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/2025/07/Certified-Solar.png",
+      "alt_text_from_source": "Certified Solar",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_home_trust_strip",
+      "claim_attached": "GAF Certified Solar",
+      "provenance": "scraped from homepage 'Certifications & Affiliations' + 'Awards & Recognition' rows",
+      "confidence": "high"
+    },
+    {
+      "asset_type": "badge",
+      "path": "assets/photos/badges/gaf-cmp-logo.png",
+      "source_url": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/2025/07/CMP-Logo.png",
+      "alt_text_from_source": "CMP Logo",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_home_trust_strip",
+      "claim_attached": "GAF Certified Maintenance Professional (CMP)",
+      "provenance": "scraped from homepage 'Certifications & Affiliations' + 'Awards & Recognition' rows",
+      "confidence": "high"
+    },
+    {
+      "asset_type": "badge",
+      "path": "assets/photos/badges/owens-platinum-elite-logo.png",
+      "source_url": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/2025/07/PlatinumElite-Logo-shadow.png",
+      "alt_text_from_source": "PlatinumElite Logo shadow",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_home_trust_strip",
+      "claim_attached": "Owens Corning Platinum Preferred / Platinum Elite Contractor",
+      "provenance": "scraped from homepage 'Certifications & Affiliations' + 'Awards & Recognition' rows",
+      "confidence": "high"
+    },
+    {
+      "asset_type": "badge",
+      "path": "assets/photos/badges/fortified-roof-logo.png",
+      "source_url": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/2025/07/fortified-logo-roof.png",
+      "alt_text_from_source": "fortified logo roof",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_home_trust_strip",
+      "claim_attached": "Fortified Roof authorized contractor (IBHS storm-resilience certification)",
+      "provenance": "scraped from homepage 'Certifications & Affiliations' + 'Awards & Recognition' rows",
+      "confidence": "high"
+    },
+    {
+      "asset_type": "badge",
+      "path": "assets/photos/badges/authorized-contractor-logo.png",
+      "source_url": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/2025/09/Authorized-Contractor-Logo-Color.png",
+      "alt_text_from_source": "Authorized Contractor Logo Color",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_home_trust_strip",
+      "claim_attached": "GAF Authorized Contractor (color logo, 2025-09 issue)",
+      "provenance": "scraped from homepage 'Certifications & Affiliations' + 'Awards & Recognition' rows",
+      "confidence": "high"
+    },
+    {
+      "asset_type": "badge",
+      "path": "assets/photos/badges/bbb-accredited-logo.png",
+      "source_url": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/2024/09/trust-bbba.png",
+      "alt_text_from_source": "trust bbba",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_home_trust_strip",
+      "claim_attached": "BBB Accredited Business (rating + profile not retrievable via bbb.org due to anti-bot, but brand displays the mark in footer)",
+      "provenance": "scraped from homepage 'Certifications & Affiliations' + 'Awards & Recognition' rows",
+      "confidence": "high"
+    },
+    {
+      "asset_type": "badge",
+      "path": "assets/photos/badges/habitat-for-humanity-logo.png",
+      "source_url": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/2024/09/trust-habitatforhumanity.png",
+      "alt_text_from_source": "trust habitatforhumanity",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_home_trust_strip",
+      "claim_attached": "Habitat for Humanity corporate partner",
+      "provenance": "scraped from homepage 'Certifications & Affiliations' + 'Awards & Recognition' rows",
+      "confidence": "high"
+    },
+    {
+      "asset_type": "badge",
+      "path": "assets/photos/badges/expertise-com-logo.png",
+      "source_url": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/2024/09/trust-expertise.png",
+      "alt_text_from_source": "trust expertise",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_home_trust_strip",
+      "claim_attached": "Expertise.com Best of recognition",
+      "provenance": "scraped from homepage 'Certifications & Affiliations' + 'Awards & Recognition' rows",
+      "confidence": "high"
+    },
+    {
+      "asset_type": "badge",
+      "path": "assets/photos/badges/good-housekeeping-logo.png",
+      "source_url": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/2024/09/trust-goodhousekeeping.png",
+      "alt_text_from_source": "trust goodhousekeeping",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_home_trust_strip",
+      "claim_attached": "Good Housekeeping mention",
+      "provenance": "scraped from homepage 'Certifications & Affiliations' + 'Awards & Recognition' rows",
+      "confidence": "high"
+    },
+    {
+      "asset_type": "badge",
+      "path": "assets/photos/badges/ha-elite-service-logo.png",
+      "source_url": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/2024/09/trust-haeliteservice.png",
+      "alt_text_from_source": "trust haeliteservice",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_home_trust_strip",
+      "claim_attached": "HomeAdvisor Elite Service",
+      "provenance": "scraped from homepage 'Certifications & Affiliations' + 'Awards & Recognition' rows",
+      "confidence": "high"
+    },
+    {
+      "asset_type": "badge",
+      "path": "assets/photos/badges/gaf-cmp-maintenance-logo.png",
+      "source_url": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/2024/09/trust-gafcmpmaintenance.png",
+      "alt_text_from_source": "trust gafcmpmaintenance",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_home_trust_strip",
+      "claim_attached": "GAF Certified Maintenance Professional mark (secondary)",
+      "provenance": "scraped from homepage 'Certifications & Affiliations' + 'Awards & Recognition' rows",
+      "confidence": "high"
+    },
+    {
+      "asset_type": "badge",
+      "path": "assets/photos/badges/atticbreeze-logo.png",
+      "source_url": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/2024/10/trust-atticbreeze.png",
+      "alt_text_from_source": "trust atticbreeze",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_home_trust_strip",
+      "claim_attached": "AtticBreeze ventilation partner",
+      "provenance": "scraped from homepage 'Certifications & Affiliations' + 'Awards & Recognition' rows",
+      "confidence": "high"
+    },
+    {
+      "asset_type": "badge",
+      "path": "assets/photos/badges/classic-metal-roofing-logo.png",
+      "source_url": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/2024/10/trust-classic.png",
+      "alt_text_from_source": "trust classic",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_home_trust_strip",
+      "claim_attached": "Classic Metal Roofing Systems Exclusive Partner",
+      "provenance": "scraped from homepage 'Certifications & Affiliations' + 'Awards & Recognition' rows",
+      "confidence": "high"
+    },
+    {
+      "asset_type": "badge",
+      "path": "assets/photos/badges/presidents-club-logo.png",
+      "source_url": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/2026/03/Presidents20Club-scaled.png",
+      "alt_text_from_source": "Presidents20Club",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_home_trust_strip",
+      "claim_attached": "GAF President's Club (manufacturer recognition)",
+      "provenance": "scraped from homepage 'Certifications & Affiliations' + 'Awards & Recognition' rows",
+      "confidence": "high"
+    }
+  ],
+  "certifications": [
+    {
+      "asset_type": "certification_document",
+      "path": "assets/photos/certs/gaf-master-elite-certification.jpg",
+      "source_url": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/2024/09/gaf-master-elite-certification.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_certifications_page",
+      "discovered_url": "https://arrysroofing.com/about-us/certifications/",
+      "claim_attached": "GAF Master Elite certification document scan",
+      "confidence": "high"
+    },
+    {
+      "asset_type": "certification_document",
+      "path": "assets/photos/certs/gaf-master-select-certification.jpg",
+      "source_url": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/2024/09/gaf-master-select-certification.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_certifications_page",
+      "discovered_url": "https://arrysroofing.com/about-us/certifications/",
+      "claim_attached": "GAF Master Select certification document scan (license #1005920)",
+      "confidence": "high"
+    },
+    {
+      "asset_type": "certification_document",
+      "path": "assets/photos/certs/gaf-master-select-certificate.jpg",
+      "source_url": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/2024/09/MASTER_SELECT_CERTIFICATE-300x230-1.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_certifications_page",
+      "discovered_url": "https://arrysroofing.com/about-us/certifications/",
+      "claim_attached": "GAF Master Select certificate thumbnail",
+      "confidence": "high"
+    },
+    {
+      "asset_type": "certification_document",
+      "path": "assets/photos/certs/gaf-pr-cert.png",
+      "source_url": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/2024/09/gaf-pr.png",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_certifications_page",
+      "discovered_url": "https://arrysroofing.com/about-us/certifications/",
+      "claim_attached": "GAF PR-grade certification",
+      "confidence": "high"
+    },
+    {
+      "asset_type": "certification_document",
+      "path": "assets/photos/certs/gaf-all-cert.png",
+      "source_url": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/2024/09/gaf_all.png",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_certifications_page",
+      "discovered_url": "https://arrysroofing.com/about-us/certifications/",
+      "claim_attached": "GAF combined certifications poster",
+      "confidence": "high"
+    },
+    {
+      "asset_type": "certification_document",
+      "path": "assets/photos/certs/gaf-info-with-cert.jpg",
+      "source_url": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/2024/09/Information-with-Certificate.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_certifications_page",
+      "discovered_url": "https://arrysroofing.com/about-us/certifications/",
+      "claim_attached": "GAF informational certificate",
+      "confidence": "high"
+    },
+    {
+      "asset_type": "certification_document",
+      "path": "assets/photos/certs/mra-contractor-membership.jpg",
+      "source_url": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/2024/09/MRA-Contractor-Membership-Certificate.jpg",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_certifications_page",
+      "discovered_url": "https://arrysroofing.com/about-us/certifications/",
+      "claim_attached": "Metal Roofing Alliance Contractor Membership Certificate",
+      "confidence": "high"
+    },
+    {
+      "asset_type": "certification_document",
+      "path": "assets/photos/certs/tile-roofing-institute-cert.png",
+      "source_url": "https://arry-s-roofing-services-inc-v1776353754.websitepro-cdn.com/wp-content/uploads/2024/09/Tile_Roofing_Institute_Certificate.png",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_certifications_page",
+      "discovered_url": "https://arrysroofing.com/about-us/certifications/",
+      "claim_attached": "Tile Roofing Institute Certificate",
+      "confidence": "high"
+    }
+  ],
+  "hero_photos": [
+    {
+      "asset_type": "hero_aerial_residential",
+      "path": "assets/photos/aerial-residential-community.webp",
+      "source_url": "https://arrysroofing.com/wp-content/uploads/2024/11/DJI_0521-copy.webp",
+      "alt_text_from_source": "(empty)",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_home_residential_card",
+      "discovery_evidence": "Drone shot (DJI_0521 filename indicates DJI-branded drone capture) of a residential community. Used on the homepage Residential service card.",
+      "intended_use": "hero_bg_fallback (per asset-scrape.md \u00a73b 2026-05-09 update \u2014 primary hero is now NB2-generated; this scraped photo is fallback only)",
+      "confidence": "high"
+    },
+    {
+      "asset_type": "hero_aerial_commercial",
+      "path": "assets/photos/aerial-commercial-drone.webp",
+      "source_url": "https://arrysroofing.com/wp-content/uploads/2024/11/DJI_0663-1.webp",
+      "alt_text_from_source": "(empty)",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_home_commercial_card",
+      "discovery_evidence": "Second drone shot used on homepage Commercial service card.",
+      "intended_use": "service_section_imagery_or_hero_fallback",
+      "confidence": "high"
+    },
+    {
+      "asset_type": "service_kynar_metal_roof",
+      "path": "assets/photos/kynar-metal-roof-service.webp",
+      "source_url": "https://arrysroofing.com/wp-content/uploads/2024/11/kynarcoated-nevada-silver-2-scaled-1.webp",
+      "alt_text_from_source": "(empty)",
+      "is_real_evidence": true,
+      "discovery_path": "source_site_home_services_card",
+      "discovery_evidence": "Kynar-coated nevada-silver metal roof photo used on homepage Services card.",
+      "intended_use": "service_section_imagery",
+      "confidence": "high"
+    }
+  ],
+  "quarantined": [
+    {
+      "asset_type": "favicon_attempt",
+      "attempted_url": "https://arrysroofing.com/favicon.ico",
+      "quarantine_path": "research/raw/quarantine/favicon.ico",
+      "reason": "/favicon.ico returned an HTML error page with HTTP 200 \u2014 magic-byte check would have caught it but my .ico-extension code path didn't enforce it; manually re-tested via `file` and quarantined. No real favicon found via probe of common WP paths.",
+      "validated_at": "2026-05-13T05:48:32Z"
+    }
+  ]
+}
