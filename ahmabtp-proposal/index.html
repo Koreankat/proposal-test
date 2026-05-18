@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proposition · Un nouveau site pour Société AHMA · ali developz</title>
+<meta name="description" content="Proposition de site web sur mesure pour Société AHMA (AHMA BTP), préparée par Ali Jaafari, ali developz. Le site est déjà construit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FFFFFF; --surface:#F4F7FC; --surface-2:#E9F0FA; --line:rgba(18,32,64,.12);
+    --txt:#16223C; --muted:#5A6781; --accent:#3366CC; --accent-2:#3366CC;
+    --gold:#EEC23C; --gold-soft:#F3D98E; --blue:#3366CC; --blue-soft:#6CB4F0;
+    --grad:linear-gradient(115deg,#3366CC 0%,#6CB4F0 46%,#EEC23C 100%);
+    --ok:#1E9E5A; --warn:#D2502E;
+    --disp:"Inter",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+    --body:"Inter",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+    --pad:clamp(20px,5vw,84px); --ease:cubic-bezier(.22,1,.36,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--body);background:var(--bg);color:var(--txt);
+    font-size:17px;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{font-family:var(--disp);font-weight:800;line-height:1.04;letter-spacing:-.03em}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--accent);color:#fff}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 var(--pad)}
+  .eyebrow{font-family:var(--body);font-weight:600;font-size:12px;letter-spacing:.24em;
+    text-transform:uppercase;color:var(--accent-2)}
+  .muted{color:var(--muted)}
+  .hair{height:1px;background:var(--line);border:0}
+  section{position:relative;padding:clamp(70px,11vh,150px) 0}
+  .sec-k{font-family:var(--body);font-weight:600;font-size:12px;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--muted);margin-bottom:30px;display:flex;gap:14px;align-items:center}
+  .sec-k b{color:var(--accent)}
+  h2.big{font-size:clamp(2rem,4.6vw,4rem);max-width:20ch;margin-bottom:26px}
+  .lead{font-size:clamp(1.05rem,1.5vw,1.32rem);color:var(--muted);max-width:62ch}
+  [data-rev]{opacity:0;transform:translateY(30px);transition:opacity .9s var(--ease),transform 1s var(--ease)}
+  [data-rev].in{opacity:1;transform:none}
+  [data-rev][data-d="1"]{transition-delay:.08s}[data-rev][data-d="2"]{transition-delay:.16s}
+  [data-rev][data-d="3"]{transition-delay:.24s}[data-rev][data-d="4"]{transition-delay:.32s}
+  .btn{display:inline-flex;align-items:center;gap:12px;font-family:var(--body);font-weight:600;
+    font-size:14px;letter-spacing:.04em;background:var(--accent);color:#fff;padding:17px 30px;
+    border-radius:8px;border:0;cursor:pointer;transition:transform .5s var(--ease),background .3s}
+  .btn:hover{background:var(--accent-2);transform:translateY(-3px)}
+  .btn .ar{transition:transform .5s var(--ease)}.btn:hover .ar{transform:translateX(5px)}
+  .btn-2{background:transparent;color:var(--txt);border:1px solid var(--line)}
+  .btn-2:hover{background:rgba(22,32,58,.05);border-color:var(--accent)}
+
+  /* topbar */
+  .topbar{position:fixed;inset:0 0 auto 0;z-index:60;display:flex;align-items:center;
+    justify-content:space-between;padding:14px var(--pad);
+    background:rgba(255,255,255,.82);backdrop-filter:blur(14px) saturate(1.4);
+    border-bottom:1px solid transparent;transition:.4s var(--ease)}
+  body.scrolled .topbar{border-bottom-color:var(--line);background:rgba(255,255,255,.96);
+    box-shadow:0 10px 30px -22px rgba(22,32,58,.4)}
+  .brand{display:flex;align-items:center}
+  .brand img{height:36px;width:auto;display:block}
+  footer .brand img{height:46px}
+  .topbar .tr{display:flex;align-items:center;gap:18px;font-size:12.5px;color:var(--muted)}
+  .topbar .tr img{height:32px;width:auto}
+  .topbar .tr .sep{width:1px;height:22px;background:var(--line)}
+
+  /* cover */
+  .cover{padding-top:clamp(120px,17vh,200px);text-align:center;overflow:hidden}
+  .cover::before{content:"";position:absolute;left:50%;top:-14%;width:1300px;height:1000px;
+    transform:translateX(-50%);
+    background:radial-gradient(62% 62% at 32% 26%,rgba(51,102,204,.14),transparent 60%),
+      radial-gradient(58% 58% at 74% 40%,rgba(238,194,60,.16),transparent 62%);
+    pointer-events:none;z-index:0;filter:blur(8px)}
+  .cover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;
+    background:var(--grad);opacity:.9;z-index:1}
+  .cover .wrap{position:relative;z-index:1}
+  .cover .eyebrow{margin-bottom:26px}
+  .cover h1{font-size:clamp(2.5rem,7vw,6rem);max-width:16ch;margin:0 auto 24px;letter-spacing:-.03em}
+  .cover h1 em{font-style:normal;color:var(--accent-2)}
+  .cover .sub{font-size:clamp(1.05rem,1.6vw,1.35rem);color:var(--muted);max-width:56ch;margin:0 auto 44px}
+  .cover .cta-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:64px}
+
+  /* device mockups */
+  /* device mockups — JS scales each iframe to its screen width (robust at any container size) */
+  .laptop{max-width:980px;width:100%;margin:0 auto;position:relative}
+  .laptop .screen{position:relative;background:#0c1117;border:9px solid #1b212b;border-radius:13px;
+    box-shadow:0 44px 80px -44px rgba(20,32,64,.5);overflow:hidden;aspect-ratio:16/10}
+  .laptop .screen iframe{position:absolute;top:0;left:0;width:1440px;height:900px;border:0;
+    transform-origin:0 0;background:#fff}
+  .laptop .bar{position:absolute;inset:0 0 auto 0;height:30px;background:#1b212b;z-index:2;
+    display:flex;align-items:center;gap:7px;padding:0 14px}
+  .laptop .bar i{width:10px;height:10px;border-radius:50%;background:#3a414f}
+  .laptop .bar i:first-child{background:#ff5f57}.laptop .bar i:nth-child(2){background:#febc2e}
+  .laptop .bar i:nth-child(3){background:#28c840}
+  .laptop .bar span{margin-left:14px;font-size:11px;color:#8a93a3;font-family:var(--body)}
+  .laptop .base{height:13px;background:linear-gradient(180deg,#1b212b,#11151b);
+    border-radius:0 0 13px 13px;margin:0 auto;width:104%;margin-left:-2%}
+  .laptop .base::after{content:"";display:block;width:120px;height:7px;margin:0 auto;
+    background:#29303b;border-radius:0 0 9px 9px}
+
+  .showcase{display:flex;flex-direction:row;align-items:center;justify-content:center;
+    gap:clamp(22px,3.5vw,52px);flex-wrap:wrap}
+  .showcase .laptop{flex:1 1 540px;max-width:720px;min-width:0}
+  .showcase .phone{flex:0 0 236px;width:236px}
+  .phone{width:288px;position:relative;flex:0 0 auto}
+  .phone .screen{position:relative;background:#0c1117;border:9px solid #1b212b;border-radius:40px;
+    overflow:hidden;aspect-ratio:9/19.5;box-shadow:0 38px 66px -36px rgba(20,32,64,.45)}
+  .phone .screen iframe{position:absolute;top:0;left:0;width:412px;height:892px;border:0;
+    transform-origin:0 0;background:#fff}
+  .phone .notch{position:absolute;top:0;left:50%;transform:translateX(-50%);width:122px;height:26px;
+    background:#1b212b;border-radius:0 0 16px 16px;z-index:2}
+  .live-tag{display:inline-flex;align-items:center;gap:9px;font-size:12.5px;font-weight:600;
+    color:var(--ok);background:rgba(67,224,139,.1);border:1px solid rgba(67,224,139,.32);
+    padding:8px 15px;border-radius:30px;margin-bottom:22px}
+  .live-tag .pulse{width:8px;height:8px;border-radius:50%;background:var(--ok);
+    box-shadow:0 0 0 0 rgba(67,224,139,.6);animation:pl 2s infinite}
+  @keyframes pl{70%{box-shadow:0 0 0 9px rgba(67,224,139,0)}100%{box-shadow:0 0 0 0 rgba(67,224,139,0)}}
+
+  /* stat band */
+  .stats{display:flex;flex-direction:column;border:1px solid var(--line);
+    border-radius:16px;overflow:hidden;background:var(--surface);
+    box-shadow:0 30px 60px -42px rgba(22,32,58,.26)}
+  .stats .st{display:flex;align-items:center;gap:clamp(18px,2.2vw,28px);
+    padding:clamp(20px,2.5vw,28px) clamp(22px,3vw,34px);border-bottom:1px solid var(--line)}
+  .stats .st:last-child{border-bottom:0}
+  .stats .st .n{font-family:var(--disp);font-weight:800;
+    font-size:clamp(2rem,3.2vw,2.9rem);line-height:1;letter-spacing:-.035em;
+    color:var(--txt);flex:0 0 auto;min-width:3ch}
+  .stats .st .n em{font-style:normal;color:var(--accent-2)}
+  .stats .st .l{font-size:14.5px;color:var(--muted);letter-spacing:.01em;line-height:1.42}
+
+  /* intro split */
+  .split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px 80px;align-items:center}
+  .split>*{min-width:0}
+  .split p+p{margin-top:20px}
+  .split .lead{color:var(--txt)}
+  .sig{margin-top:30px;font-family:var(--disp);font-weight:800;font-size:20px;color:var(--txt);letter-spacing:-.01em}
+  .sig small{display:block;font-family:var(--body);font-size:13px;color:var(--muted);margin-top:4px;letter-spacing:.04em}
+
+  /* before/after */
+  .ba{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .ba .col{border:1px solid var(--line);border-radius:16px;padding:clamp(26px,3.4vw,42px);background:var(--surface)}
+  .ba .col.now{background:var(--surface)}
+  .ba .col.next{background:linear-gradient(165deg,rgba(51,102,204,.09),rgba(238,194,60,.10) 72%,var(--bg));
+    border-color:rgba(51,102,204,.26)}
+  .ba .tag{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-bottom:24px}
+  .ba .now .tag{color:var(--warn)}.ba .next .tag{color:var(--accent-2)}
+  .ba ul{list-style:none}
+  .ba li{display:flex;gap:14px;padding:14px 0;border-top:1px solid var(--line);font-size:15.5px}
+  .ba li:first-child{border-top:0}
+  .ba li .ic{flex:0 0 20px;font-weight:700}
+  .ba .now li .ic{color:var(--warn)}.ba .next li .ic{color:var(--ok)}
+  .ba .next li{color:var(--txt)}.ba .now li{color:var(--muted)}
+
+  /* pillars */
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .pillar{border:1px solid var(--line);border-radius:16px;padding:clamp(28px,3.4vw,40px);
+    background:var(--surface);transition:.5s var(--ease)}
+  .pillar{box-shadow:0 24px 50px -42px rgba(22,32,58,.3)}
+  .pillar:hover{border-color:var(--accent);transform:translateY(-5px);
+    box-shadow:0 30px 56px -36px rgba(51,102,204,.28)}
+  .pillar .p-k{font-family:var(--disp);font-weight:700;font-size:15px;color:var(--accent);margin-bottom:20px}
+  .pillar h3{font-size:1.5rem;margin-bottom:14px}
+  .pillar p{color:var(--muted);font-size:15px;margin-bottom:22px}
+  .pillar ul{list-style:none;font-size:14.5px}
+  .pillar li{padding:11px 0 11px 24px;position:relative;border-top:1px solid var(--line);color:var(--txt)}
+  .pillar li:first-child{border-top:0}
+  .pillar li::before{content:"→";position:absolute;left:0;color:var(--accent-2)}
+
+  /* deliverables */
+  .deliv{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);
+    border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .deliv .d{background:var(--bg);padding:clamp(24px,3vw,34px)}
+  .deliv .d .di{font-family:var(--disp);color:var(--accent);font-weight:700;font-size:13px;margin-bottom:16px;letter-spacing:.04em}
+  .deliv .d h4{font-size:1.12rem;margin-bottom:9px}
+  .deliv .d p{font-size:14px;color:var(--muted)}
+
+  /* sitemap */
+  .smap{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--surface)}
+  .smap .r{display:grid;grid-template-columns:96px 1fr;gap:24px;padding:22px clamp(22px,3vw,36px);
+    border-top:1px solid var(--line);align-items:baseline}
+  .smap .r:first-child{border-top:0}
+  .smap .r .k{font-family:var(--disp);font-weight:700;color:var(--accent);font-size:15px}
+  .smap .r .t{font-weight:600;font-size:16px;margin-bottom:4px}
+  .smap .r .t span{color:var(--muted);font-weight:400;font-size:14px}
+
+  /* pricing */
+  .price-card{max-width:780px;margin:0 auto;border:1px solid rgba(51,102,204,.26);border-radius:20px;
+    background:linear-gradient(155deg,rgba(238,194,60,.16) 0%,rgba(255,255,255,.5) 44%,rgba(51,102,204,.13) 100%),var(--bg);
+    padding:clamp(34px,5vw,64px);text-align:center;
+    box-shadow:0 40px 80px -50px rgba(22,32,58,.5)}
+  .vstack{text-align:left;max-width:560px;margin:0 auto 36px}
+  .vstack .v{display:flex;justify-content:space-between;gap:20px;padding:13px 0;
+    border-top:1px solid var(--line);font-size:15px}
+  .vstack .v:first-child{border-top:0}
+  .vstack .v .vp{color:var(--muted);white-space:nowrap}
+  .price-num{font-family:var(--disp);font-weight:800;font-size:clamp(2.6rem,6vw,4.4rem);
+    color:var(--txt);letter-spacing:-.035em;line-height:1}
+  .price-sub{color:var(--muted);margin:16px auto 32px;max-width:46ch}
+  #priceReveal.open .price-hidden{display:none}
+  .price-hidden{margin:10px 0}
+  .price-body{display:none}
+  #priceReveal.open .price-body{display:block;animation:fade .7s var(--ease)}
+  @keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  .guarantee{display:inline-flex;align-items:center;gap:12px;margin-top:30px;font-size:13.5px;
+    color:var(--muted);border:1px solid var(--line);padding:13px 22px;border-radius:30px}
+  .guarantee b{color:var(--txt)}
+
+  /* accept */
+  .accept{border:1px solid var(--line);border-radius:20px;background:var(--surface);
+    padding:clamp(32px,5vw,60px);max-width:860px;margin:0 auto}
+  .accept .rows{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:34px 0 40px}
+  .accept .f{border-bottom:1px solid var(--line);padding-bottom:14px}
+  .accept .f .k{font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:9px}
+  .accept .f .v{font-size:17px;color:var(--txt);font-weight:600}
+  .accept .cta-row{display:flex;gap:16px;flex-wrap:wrap}
+  .ph{color:var(--accent);font-weight:600;border-bottom:1px dashed rgba(51,102,204,.5)}
+
+  footer{border-top:1px solid var(--line);padding:50px var(--pad);text-align:center;
+    color:var(--muted);font-size:13.5px}
+  footer .brand{justify-content:center;margin-bottom:14px;font-size:16px}
+
+  @media(max-width:980px){
+    .split,.ba,.pillars,.deliv,.accept .rows{grid-template-columns:1fr}
+    .showcase{flex-direction:column}
+    .showcase .laptop{flex:1 1 auto;max-width:860px}
+    .stats{grid-template-columns:1fr}
+    .stats .st{border-right:0;border-bottom:1px solid var(--line)}
+    .stats .st:last-child{border-bottom:0}
+    .smap .r{grid-template-columns:70px 1fr;gap:16px}
+    .pf{grid-template-columns:1fr 1fr}.pf .feat{grid-column:span 2}
+    .tg{columns:2}
+  }
+  @media(max-width:600px){
+    .topbar .tr .sep,.topbar .tr span{display:none}
+    .pf{grid-template-columns:1fr}.pf .feat{grid-column:span 1}
+    .tg{columns:1}
+    .fab{right:14px;bottom:14px}.fab button{padding:13px 18px;font-size:12px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;scroll-behavior:auto!important}
+    [data-rev]{opacity:1!important;transform:none!important}
+  }
+
+  /* portfolio */
+  .pf{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .pf .c{border:1px solid var(--line);border-radius:14px;padding:26px 24px;background:var(--bg);
+    display:flex;flex-direction:column;gap:11px;transition:.45s var(--ease)}
+  .pf .c:hover{border-color:var(--accent);transform:translateY(-4px);
+    box-shadow:0 26px 50px -38px rgba(51,102,204,.32)}
+  .pf .c .tag{font-family:var(--disp);font-weight:700;font-size:11px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--accent)}
+  .pf .c h4{font-size:1.14rem;letter-spacing:-.02em}
+  .pf .c p{font-size:13.5px;color:var(--muted);flex:1;margin:0}
+  .pf .c .lk{font-size:12px;font-weight:600;color:var(--accent-2);letter-spacing:.03em}
+  .pf .feat{grid-column:span 2;
+    background:linear-gradient(150deg,rgba(238,194,60,.16),rgba(51,102,204,.10) 72%,var(--bg));
+    border-color:rgba(51,102,204,.28)}
+  .pf .feat h4{font-size:clamp(1.4rem,2.4vw,2rem)}
+  .pf .feat p{font-size:15px;color:var(--txt)}
+  .pf-more{text-align:center;margin-top:30px;color:var(--muted);font-size:14.5px}
+  /* testimonials */
+  .tg{columns:3;column-gap:18px}
+  .tg .t{break-inside:avoid;border:1px solid var(--line);border-radius:14px;padding:24px;
+    background:var(--bg);margin-bottom:18px;display:inline-block;width:100%}
+  .tg .t .stars{color:#EEC23C;letter-spacing:3px;font-size:14px;margin-bottom:12px}
+  .tg .t .q{font-size:14px;color:var(--txt);line-height:1.62;margin-bottom:18px}
+  .tg .t .who{display:flex;align-items:center;gap:11px}
+  .tg .t .av{width:36px;height:36px;border-radius:50%;flex:0 0 36px;display:flex;
+    align-items:center;justify-content:center;font-family:var(--disp);font-weight:700;
+    font-size:13px;color:#fff;background:linear-gradient(140deg,#3366CC,#6CB4F0)}
+  .tg .t .nm{font-weight:700;font-size:13.5px;line-height:1.2}
+  .tg .t .src{font-size:11px;color:var(--muted);display:flex;align-items:center;gap:6px;margin-top:4px}
+  .tg .t .src svg{width:13px;height:13px;display:block;flex:0 0 13px}
+  /* editable price */
+  .price-num{display:flex;align-items:baseline;justify-content:center;gap:10px;flex-wrap:wrap}
+  .price-num .cur{font-size:.34em;font-weight:700;color:var(--muted);letter-spacing:.05em}
+  #montant{outline:none;border-bottom:2px dashed transparent;transition:.3s;cursor:text;padding:0 6px;border-radius:3px}
+  #montant:hover,#montant:focus{border-bottom-color:rgba(51,102,204,.6);background:rgba(51,102,204,.07)}
+  .edit-hint{display:block;margin:16px auto 0;background:none;border:0;cursor:pointer;
+    font-family:var(--body);font-size:11.5px;letter-spacing:.14em;color:var(--accent-2);text-transform:uppercase}
+  .edit-hint:hover{color:var(--accent)}
+  /* floating download */
+  .fab{position:fixed;right:22px;bottom:22px;z-index:80}
+  .fab button{display:inline-flex;align-items:center;gap:10px;font-family:var(--body);font-weight:700;
+    font-size:13px;letter-spacing:.03em;border:0;cursor:pointer;padding:15px 24px;border-radius:40px;
+    background:var(--accent);color:#fff;box-shadow:0 18px 36px -16px rgba(51,102,204,.5);
+    transition:transform .4s var(--ease),background .3s}
+  .fab button:hover{transform:translateY(-3px);background:var(--accent-2)}
+  .preuve-print{display:none}
+  @media print{
+    @page{margin:13mm}
+    .topbar,.fab,.edit-hint,#revealBtn,.cover .cta-row,.no-print{display:none!important}
+    html,body{background:#fff!important}
+    body{font-size:11.5px}
+    section{padding:22px 0!important;page-break-inside:avoid;break-inside:avoid}
+    .cover{padding-top:6px!important}
+    .cover::before,.cover::after{display:none!important}
+    [data-rev]{opacity:1!important;transform:none!important}
+    .price-body{display:block!important}
+    .laptop,.phone,.showcase{display:none!important}
+    .preuve-print{display:block!important;border:1px solid var(--line);border-radius:12px;
+      padding:26px;text-align:center;background:var(--surface)}
+    .preuve-print a{color:var(--accent);font-weight:700}
+    .pf,.deliv,.pillars,.ba,.split{grid-template-columns:1fr 1fr!important}
+    .tg{columns:2}
+    h1{font-size:2.2rem!important}.cover h1{font-size:2.4rem!important}
+    h2.big{font-size:1.5rem!important}
+    a[href^="http"]::after,a[href^="mailto"]::after{content:""}
+  }
+  /* responsive overrides — placed last so they win over the base .pf/.tg rules */
+  @media(max-width:980px){
+    .pf{grid-template-columns:1fr 1fr}.pf .feat{grid-column:span 2}
+    .tg{columns:2}
+  }
+  @media(max-width:600px){
+    .pf{grid-template-columns:1fr}.pf .feat{grid-column:span 1}
+    .tg{columns:1}
+    .fab{right:14px;bottom:14px}.fab button{padding:13px 18px;font-size:12px}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar" id="topbar">
+  <a href="#top" class="brand" aria-label="We Developz"><img src="brand/wedevelopz-logo.png" alt="We Developz"></a>
+  <div class="tr">
+    <span>Proposition confidentielle</span>
+    <span class="sep"></span>
+    <img src="../assets/logo/ahmabtp-primary-logo.png" alt="Société AHMA">
+  </div>
+</div>
+
+<!-- COVER -->
+<section class="cover" id="top">
+  <div class="wrap">
+    <div class="eyebrow" data-rev>Proposition de site web · Préparée pour Société AHMA</div>
+    <h1 data-rev data-d="1">Un nouveau site pour <em>Société AHMA.</em></h1>
+    <p class="sub" data-rev data-d="2">Une entreprise de 27 ans, 526 ouvrages publics et 1 050 collaborateurs mérite un site à la hauteur de son envergure. Je ne vous envoie pas une maquette : je l'ai déjà construit.</p>
+    <div class="cta-row" data-rev data-d="3">
+      <a href="../build/index.html" target="_blank" rel="noopener" class="btn">Ouvrir le site en plein écran <span class="ar">→</span></a>
+      <a href="#preuve" class="btn btn-2">Découvrir la proposition</a>
+    </div>
+    <div class="laptop" data-rev data-d="4">
+      <div class="screen">
+        <div class="bar"><i></i><i></i><i></i><span>societe-ahma.ma</span></div>
+        <iframe src="../build/index.html" title="Aperçu du nouveau site Société AHMA" loading="lazy" scrolling="no"></iframe>
+      </div>
+      <div class="base"></div>
+    </div>
+  </div>
+</section>
+
+<!-- HELLO ALI -->
+<section>
+  <div class="wrap">
+    <div class="sec-k"><b>01</b> Qui vous parle</div>
+    <div class="split">
+      <div data-rev>
+        <h2 class="big">Bonjour, je suis <em style="color:var(--accent-2);font-style:normal">Ali.</em></h2>
+        <p class="lead">Je conçois et développe des sites qui font gagner de l'argent à ceux qui les commandent. Pas des vitrines décoratives : des outils de crédibilité et de conversion.</p>
+        <p class="muted" style="margin-top:18px">Sous le nom <strong style="color:var(--txt)">ali developz</strong>, j'ai livré 140 sites et généré plusieurs millions de dollars pour mes clients. Mon approche est simple : un interlocuteur unique, une équipe d'experts dédiée, aucune lourdeur d'agence, et un résultat que vous pouvez juger avant même de décider.</p>
+        <div class="sig">Ali Jaafari<small>ali developz · Conception &amp; développement web sur mesure</small></div>
+      </div>
+      <div data-rev data-d="1">
+        <div class="stats">
+          <div class="st"><div class="n" data-count="140">0</div><div class="l">Sites conçus &amp; livrés</div></div>
+          <div class="st"><div class="n">$<em data-count="1">0</em>M+</div><div class="l">Générés pour mes clients</div></div>
+          <div class="st"><div class="n"><em data-count="9">0</em></div><div class="l">Experts dans l'équipe</div></div>
+        </div>
+        <p class="muted" style="margin-top:22px;font-size:14.5px">Pour cette proposition, j'ai poussé la logique jusqu'au bout : votre site est déjà construit, fonctionnel, et vous pouvez l'ouvrir maintenant. Faites défiler.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF / LIVE BUILD -->
+<section id="preuve" style="background:var(--surface)">
+  <div class="wrap">
+    <div class="sec-k"><b>02</b> La preuve, déjà en ligne</div>
+    <div class="live-tag" data-rev><span class="pulse"></span>Site fonctionnel · pas une maquette</div>
+    <h2 class="big" data-rev data-d="1">Ce n'est pas un concept. <em style="color:var(--accent-2);font-style:normal">C'est votre site.</em></h2>
+    <p class="lead" data-rev data-d="2" style="margin-bottom:48px">Conçu spécifiquement pour Société AHMA : vos couleurs de marque, votre portrait du Président, vos 10 ouvrages publics, vos 20 partenaires institutionnels et votre classification ministérielle. Ouvrez-le, scrollez, testez-le sur mobile.</p>
+    <div class="showcase">
+      <div class="laptop" data-rev>
+        <div class="screen">
+          <div class="bar"><i></i><i></i><i></i><span>societe-ahma.ma</span></div>
+          <iframe src="../build/index.html" title="Nouveau site, vue bureau" loading="lazy" scrolling="no"></iframe>
+        </div>
+        <div class="base"></div>
+      </div>
+      <div class="phone" data-rev data-d="2">
+        <div class="screen">
+          <div class="notch"></div>
+          <iframe src="../build/index.html" title="Nouveau site, vue mobile" loading="lazy" scrolling="no"></iframe>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:54px" data-rev>
+      <a href="../build/index.html" target="_blank" rel="noopener" class="btn">Ouvrir le site complet en plein écran <span class="ar">→</span></a>
+    </div>
+    <div class="preuve-print">
+      <div style="font-family:var(--disp);font-weight:800;font-size:1.3rem;margin-bottom:8px">Le site est déjà en ligne.</div>
+      <div class="muted">Démonstration interactive complète, bureau et mobile, à ouvrir maintenant&nbsp;:</div>
+      <div style="margin-top:10px"><a href="../build/index.html">Ouvrir la démonstration du site Société AHMA</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section>
+  <div class="wrap">
+    <div class="sec-k"><b>03</b> Du travail, pas des promesses</div>
+    <h2 class="big" data-rev>Je ne vous parle pas. <em style="color:var(--accent-2);font-style:normal">Je vous montre.</em></h2>
+    <p class="lead" data-rev data-d="1" style="margin-bottom:50px">Des entreprises industrielles, des bureaux d'ingénierie, des institutions. Le même secteur exigeant que le vôtre, le même standard.</p>
+    <div class="pf">
+      <a class="c feat" href="https://tgcc.ma/" target="_blank" rel="noopener" data-rev>
+        <div class="tag">Référence · BTP Maroc</div>
+        <h4>TGCC — Refonte conceptuelle</h4>
+        <p>Le plus grand groupe de construction du Maroc. Concevoir pour le leader du BTP marocain, ce n'est pas décorer une page. C'est installer l'autorité. C'est exactement le standard que j'ai construit pour Société AHMA.</p>
+        <span class="lk">tgcc.ma · concept ↗</span>
+      </a>
+      <a class="c" href="https://www.pem-tech.fr" target="_blank" rel="noopener" data-rev data-d="1">
+        <div class="tag">Industrie · Énergie</div>
+        <h4>PEM Technologies</h4>
+        <p>Leader européen de l'ingénierie industrielle et énergétique, présenté à la hauteur de ses ambitions.</p>
+        <span class="lk">pem-tech.fr ↗</span>
+      </a>
+      <a class="c" href="https://www.etop.ma/" target="_blank" rel="noopener" data-rev data-d="2">
+        <div class="tag">Bureau d'études</div>
+        <h4>ETOP — Ingénierie technique</h4>
+        <p>Une vision technique complexe transformée en site clair, moderne et performant.</p>
+        <span class="lk">etop.ma ↗</span>
+      </a>
+      <div class="c" data-rev>
+        <div class="tag">Ingénierie · Sécurité</div>
+        <h4>Conformis Maroc</h4>
+        <p>Bureau d'ingénierie et de sécurité incendie. La rigueur du métier, enfin crédible en ligne.</p>
+      </div>
+      <div class="c" data-rev data-d="1">
+        <div class="tag">Énergie · CEE</div>
+        <h4>SPVénergetique</h4>
+        <p>Sécurisation et valorisation des opérations CEE. Un sujet aride rendu lisible et premium.</p>
+      </div>
+      <a class="c" href="https://addaman-group.com" target="_blank" rel="noopener" data-rev data-d="2">
+        <div class="tag">Sécurité · Incendie</div>
+        <h4>Addaman Group</h4>
+        <p>« Pour la première fois, je suis fier de montrer notre site. » Le niveau et l'ambition, enfin reflétés.</p>
+        <span class="lk">addaman-group.com ↗</span>
+      </a>
+      <a class="c" href="https://perfectadvice.ma" target="_blank" rel="noopener" data-rev data-d="3">
+        <div class="tag">Conseil · Maroc</div>
+        <h4>Perfect Advice</h4>
+        <p>Conseil et accompagnement d'entreprise. Un positionnement aligné au pixel près.</p>
+        <span class="lk">perfectadvice.ma ↗</span>
+      </a>
+      <div class="c" data-rev>
+        <div class="tag">Industrie · Afrique</div>
+        <h4>PEM Africa</h4>
+        <p>La vitrine africaine d'un groupe industriel et énergétique. Même exigence, même finition.</p>
+      </div>
+    </div>
+    <p class="pf-more" data-rev>+20 autres projets livrés : industrie, ingénierie, institutionnel, e-commerce premium, plateformes nationales.</p>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section style="background:var(--surface)">
+  <div class="wrap">
+    <div class="sec-k"><b>04</b> Ils en parlent</div>
+    <h2 class="big" data-rev>Pas des avis anonymes. <em style="color:var(--accent-2);font-style:normal">Des dirigeants.</em></h2>
+    <p class="lead" data-rev data-d="1" style="margin-bottom:50px">Ils ont signé, vu le résultat, et l'ont dit. Fondateurs, gérants, directeurs, dans des secteurs aussi exigeants que le BTP public.</p>
+    <div class="tg" data-rev data-d="1">
+      <div class="t"><div class="stars">★★★★★</div><div class="q">« Ali a parfaitement compris notre besoin premium sans que j'aie à entrer dans les détails. Le résultat final dépasse ce que nous imaginions. Très réactif, force de proposition, il donne toujours plus que ce qui est demandé. »</div><div class="who"><div class="av">IK</div><div><div class="nm">Imane El Kassaboui</div><div class="src"><svg viewBox="0 0 48 48"><path fill="#4285F4" d="M45 24c0-1.6-.1-3.1-.4-4.6H24v9.3h11.8c-.5 2.8-2 5.2-4.4 6.8v5.6h7.1C42.7 37.3 45 31.2 45 24z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.3l-7.1-5.6c-2 1.3-4.5 2.1-7.4 2.1-5.7 0-10.5-3.8-12.2-9H4.5v5.7C8.1 41.1 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.8 28.2c-.4-1.3-.7-2.7-.7-4.2s.3-2.9.7-4.2v-5.7H4.5C3 17.1 2 20.4 2 24s1 6.9 2.5 9.9l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.2 0 6.1 1.1 8.4 3.3l6.3-6.3C34.9 4.1 29.9 2 24 2 15.4 2 8.1 6.9 4.5 14.1l7.3 5.7c1.7-5.2 6.5-9 12.2-9z"/></svg> Avis Google · pem-tech.fr</div></div></div></div>
+      <div class="t"><div class="stars">★★★★★</div><div class="q">« Pour la première fois, je suis vraiment fier de montrer notre site. Il reflète enfin le niveau et l'ambition d'Addaman. Ali a livré un travail premium, rapide et parfaitement exécuté. »</div><div class="who"><div class="av">AB</div><div><div class="nm">Abdelatif Bennani</div><div class="src"><svg viewBox="0 0 48 48"><path fill="#4285F4" d="M45 24c0-1.6-.1-3.1-.4-4.6H24v9.3h11.8c-.5 2.8-2 5.2-4.4 6.8v5.6h7.1C42.7 37.3 45 31.2 45 24z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.3l-7.1-5.6c-2 1.3-4.5 2.1-7.4 2.1-5.7 0-10.5-3.8-12.2-9H4.5v5.7C8.1 41.1 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.8 28.2c-.4-1.3-.7-2.7-.7-4.2s.3-2.9.7-4.2v-5.7H4.5C3 17.1 2 20.4 2 24s1 6.9 2.5 9.9l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.2 0 6.1 1.1 8.4 3.3l6.3-6.3C34.9 4.1 29.9 2 24 2 15.4 2 8.1 6.9 4.5 14.1l7.3 5.7c1.7-5.2 6.5-9 12.2-9z"/></svg> Avis Google · addaman-group.com</div></div></div></div>
+      <div class="t"><div class="stars">★★★★★</div><div class="q">« Un travail propre, structuré et aligné sur notre positionnement. Ali a su transformer une vision complexe en un site clair, moderne et professionnel. Collaboration fluide et très agréable. »</div><div class="who"><div class="av">MM</div><div><div class="nm">Mbarek M'hait</div><div class="src"><svg viewBox="0 0 32 32" fill="#25D366"><path d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.7 5.5 2.1 7.9L.3 31.6l7.9-2.1c2.3 1.3 4.9 1.9 7.6 1.9h.1c8.6 0 15.6-7 15.6-15.6S24.6.4 16 .4zm8.9 21.9c-.4 1-2.2 1.9-3 2-.8.1-1.7.4-5.8-1.2-4.9-1.9-8-6.9-8.3-7.2-.2-.3-1.9-2.6-1.9-4.9 0-2.3 1.2-3.5 1.7-3.9.4-.5.9-.6 1.2-.6h.9c.3 0 .7-.1 1.1.8.4 1 1.4 3.3 1.5 3.5.1.2.2.5 0 .8-.5 1-1 1.4-1.3 1.7-.3.3-.5.6-.2 1.1.3.5 1.4 2.3 3 3.7 2.1 1.8 3.8 2.4 4.3 2.6.5.2.8.2 1.1-.1.3-.4 1.3-1.5 1.6-2 .3-.5.7-.4 1.1-.3.4.2 2.8 1.3 3.2 1.6.5.2.8.3.9.5.1.3.1 1-.3 2z"/></svg> WhatsApp · perfectadvice.ma</div></div></div></div>
+      <div class="t"><div class="stars">★★★★★</div><div class="q">« Excellent travail dès le premier jet. Ali a su capturer l'essence de la marque et proposer une interface moderne et performante. Réactif, fiable et très professionnel. »</div><div class="who"><div class="av">MD</div><div><div class="nm">Mehdi Dellel</div><div class="src"><svg viewBox="0 0 48 48"><path fill="#4285F4" d="M45 24c0-1.6-.1-3.1-.4-4.6H24v9.3h11.8c-.5 2.8-2 5.2-4.4 6.8v5.6h7.1C42.7 37.3 45 31.2 45 24z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.3l-7.1-5.6c-2 1.3-4.5 2.1-7.4 2.1-5.7 0-10.5-3.8-12.2-9H4.5v5.7C8.1 41.1 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.8 28.2c-.4-1.3-.7-2.7-.7-4.2s.3-2.9.7-4.2v-5.7H4.5C3 17.1 2 20.4 2 24s1 6.9 2.5 9.9l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.2 0 6.1 1.1 8.4 3.3l6.3-6.3C34.9 4.1 29.9 2 24 2 15.4 2 8.1 6.9 4.5 14.1l7.3 5.7c1.7-5.2 6.5-9 12.2-9z"/></svg> Avis Google · etop.ma</div></div></div></div>
+      <div class="t"><div class="stars">★★★★★</div><div class="q">« Ali a compris immédiatement ce que nous voulions : un site clair, dynamique et digne d'une plateforme nationale. Le résultat est propre, rapide et prêt à scaler. Très satisfait. »</div><div class="who"><div class="av">YA</div><div><div class="nm">Yassir Ablad</div><div class="src"><svg viewBox="0 0 32 32" fill="#25D366"><path d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.7 5.5 2.1 7.9L.3 31.6l7.9-2.1c2.3 1.3 4.9 1.9 7.6 1.9h.1c8.6 0 15.6-7 15.6-15.6S24.6.4 16 .4zm8.9 21.9c-.4 1-2.2 1.9-3 2-.8.1-1.7.4-5.8-1.2-4.9-1.9-8-6.9-8.3-7.2-.2-.3-1.9-2.6-1.9-4.9 0-2.3 1.2-3.5 1.7-3.9.4-.5.9-.6 1.2-.6h.9c.3 0 .7-.1 1.1.8.4 1 1.4 3.3 1.5 3.5.1.2.2.5 0 .8-.5 1-1 1.4-1.3 1.7-.3.3-.5.6-.2 1.1.3.5 1.4 2.3 3 3.7 2.1 1.8 3.8 2.4 4.3 2.6.5.2.8.2 1.1-.1.3-.4 1.3-1.5 1.6-2 .3-.5.7-.4 1.1-.3.4.2 2.8 1.3 3.2 1.6.5.2.8.3.9.5.1.3.1 1-.3 2z"/></svg> WhatsApp · stockmort.ma</div></div></div></div>
+      <div class="t"><div class="stars">★★★★★</div><div class="q">« J'étais pressé, il me fallait un site complet rapidement. Ali a livré dans des délais très courts, avec un design et un développement de qualité. Il a assuré. »</div><div class="who"><div class="av">MZ</div><div><div class="nm">Mehdi Zaikane</div><div class="src"><svg viewBox="0 0 48 48"><path fill="#4285F4" d="M45 24c0-1.6-.1-3.1-.4-4.6H24v9.3h11.8c-.5 2.8-2 5.2-4.4 6.8v5.6h7.1C42.7 37.3 45 31.2 45 24z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.3l-7.1-5.6c-2 1.3-4.5 2.1-7.4 2.1-5.7 0-10.5-3.8-12.2-9H4.5v5.7C8.1 41.1 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.8 28.2c-.4-1.3-.7-2.7-.7-4.2s.3-2.9.7-4.2v-5.7H4.5C3 17.1 2 20.4 2 24s1 6.9 2.5 9.9l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.2 0 6.1 1.1 8.4 3.3l6.3-6.3C34.9 4.1 29.9 2 24 2 15.4 2 8.1 6.9 4.5 14.1l7.3 5.7c1.7-5.2 6.5-9 12.2-9z"/></svg> Avis Google · zontesmaroc.com</div></div></div></div>
+      <div class="t"><div class="stars">★★★★★</div><div class="q">« J'adore le rendu. C'est élégant, simple et exactement ce que je voulais. Travailler avec Ali, c'était fluide et agréable. »</div><div class="who"><div class="av">MS</div><div><div class="nm">Meriem Squalli</div><div class="src"><svg viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7v-3.5h3.1V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9v2.2h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z"/></svg> Facebook · pralinor.ma</div></div></div></div>
+      <div class="t"><div class="stars">★★★★★</div><div class="q">« Ali est très pro, à l'écoute, et le travail s'est fait sans stress. Le résultat est propre et correspond à notre image. »</div><div class="who"><div class="av">YA</div><div><div class="nm">Yassine</div><div class="src"><svg viewBox="0 0 32 32" fill="#25D366"><path d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.7 5.5 2.1 7.9L.3 31.6l7.9-2.1c2.3 1.3 4.9 1.9 7.6 1.9h.1c8.6 0 15.6-7 15.6-15.6S24.6.4 16 .4zm8.9 21.9c-.4 1-2.2 1.9-3 2-.8.1-1.7.4-5.8-1.2-4.9-1.9-8-6.9-8.3-7.2-.2-.3-1.9-2.6-1.9-4.9 0-2.3 1.2-3.5 1.7-3.9.4-.5.9-.6 1.2-.6h.9c.3 0 .7-.1 1.1.8.4 1 1.4 3.3 1.5 3.5.1.2.2.5 0 .8-.5 1-1 1.4-1.3 1.7-.3.3-.5.6-.2 1.1.3.5 1.4 2.3 3 3.7 2.1 1.8 3.8 2.4 4.3 2.6.5.2.8.2 1.1-.1.3-.4 1.3-1.5 1.6-2 .3-.5.7-.4 1.1-.3.4.2 2.8 1.3 3.2 1.6.5.2.8.3.9.5.1.3.1 1-.3 2z"/></svg> WhatsApp · gsproclean.ma</div></div></div></div>
+      <div class="t"><div class="stars">★★★★★</div><div class="q">“Ali just understood exactly what I wanted without me having to explain everything. I barely had to give direction, and the result came out even better than I expected. Super smooth.”</div><div class="who"><div class="av">JO</div><div><div class="nm">Joshua</div><div class="src"><svg viewBox="0 0 48 48"><path fill="#4285F4" d="M45 24c0-1.6-.1-3.1-.4-4.6H24v9.3h11.8c-.5 2.8-2 5.2-4.4 6.8v5.6h7.1C42.7 37.3 45 31.2 45 24z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.3l-7.1-5.6c-2 1.3-4.5 2.1-7.4 2.1-5.7 0-10.5-3.8-12.2-9H4.5v5.7C8.1 41.1 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.8 28.2c-.4-1.3-.7-2.7-.7-4.2s.3-2.9.7-4.2v-5.7H4.5C3 17.1 2 20.4 2 24s1 6.9 2.5 9.9l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.2 0 6.1 1.1 8.4 3.3l6.3-6.3C34.9 4.1 29.9 2 24 2 15.4 2 8.1 6.9 4.5 14.1l7.3 5.7c1.7-5.2 6.5-9 12.2-9z"/></svg> Avis Google · metawrapz.co</div></div></div></div>
+      <div class="t"><div class="stars">★★★★★</div><div class="q">« Top top top. Le site est exactement comme je l'imaginais, voire mieux. Rien à redire, le travail parle de lui-même. »</div><div class="who"><div class="av">AM</div><div><div class="nm">Adam Mada</div><div class="src"><svg viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7v-3.5h3.1V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9v2.2h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z"/></svg> Facebook · voltrix.fr</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CURRENT SITE COSTS -->
+<section>
+  <div class="wrap">
+    <div class="sec-k"><b>05</b> Le constat</div>
+    <h2 class="big" data-rev>Votre site actuel ne soutient pas vos appels d'offres.</h2>
+    <p class="lead" data-rev data-d="1" style="margin-bottom:50px">Quand un maître d'ouvrage public, un partenaire institutionnel ou un bailleur international vous cherche en ligne, votre site doit confirmer votre stature. Aujourd'hui, il la dessert.</p>
+    <div class="ba">
+      <div class="col now" data-rev>
+        <div class="tag">● Aujourd'hui</div>
+        <ul>
+          <li><span class="ic">✕</span>Thème WordPress générique (Koncrete / Elementor), figé depuis 2023.</li>
+          <li><span class="ic">✕</span>Typographie sans caractère, aucune hiérarchie : on dirait un modèle acheté.</li>
+          <li><span class="ic">✕</span>Bannière purement décorative, sans message ni appel à l'action.</li>
+          <li><span class="ic">✕</span>Aucune expérience mobile sérieuse, téléphone non cliquable.</li>
+          <li><span class="ic">✕</span>Classification, 27 ans, portefeuille et 20 partenaires : vos meilleurs atouts, noyés et sous-valorisés.</li>
+          <li><span class="ic">✕</span>Une image en décalage avec une entreprise du calibre des grands acteurs du BTP marocain.</li>
+        </ul>
+      </div>
+      <div class="col next" data-rev data-d="1">
+        <div class="tag">● Avec le nouveau site</div>
+        <ul>
+          <li><span class="ic">✓</span>Une identité de niveau cabinet d'architecture, construite sur votre bleu royal et votre or.</li>
+          <li><span class="ic">✓</span>Un héros cinématique : message, signature et appel à l'action immédiats.</li>
+          <li><span class="ic">✓</span>Vos 10 ouvrages publics mis en scène dans un portfolio à défilement horizontal.</li>
+          <li><span class="ic">✓</span>Classification ministérielle et 20 partenaires présentés comme des preuves de confiance.</li>
+          <li><span class="ic">✓</span>100% responsive, rapide, en français, pensé pour le mobile.</li>
+          <li><span class="ic">✓</span>Une perception à la hauteur de vos 526 projets et 1 050 collaborateurs.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE FORMULA -->
+<section style="background:var(--surface)">
+  <div class="wrap">
+    <div class="sec-k"><b>06</b> La formule</div>
+    <h2 class="big" data-rev>Trois leviers, pensés pour le BTP public.</h2>
+    <p class="lead" data-rev data-d="1" style="margin-bottom:50px">Votre site ne vend pas une toiture à un particulier. Il convainc un comité d'appel d'offres, un ministère, un partenaire. Toute la conception sert cet objectif.</p>
+    <div class="pillars">
+      <div class="pillar" data-rev>
+        <div class="p-k">01 · Crédibilité</div>
+        <h3>Imposer le sérieux</h3>
+        <p>Faire ressentir, en cinq secondes, l'envergure réelle de l'entreprise.</p>
+        <ul>
+          <li>Classification ministérielle en preuve formelle</li>
+          <li>27 ans, 526 projets, 1 050 collaborateurs en compteurs animés</li>
+          <li>Mot du Président : portrait réel, gravité institutionnelle</li>
+          <li>20 ministères et institutions en bandeau partenaires</li>
+        </ul>
+      </div>
+      <div class="pillar" data-rev data-d="1">
+        <div class="p-k">02 · Perception</div>
+        <h3>Être trouvé au bon niveau</h3>
+        <p>Quand on vous cherche, le site confirme votre position.</p>
+        <ul>
+          <li>Identité de marque cohérente (audit couleur + typo)</li>
+          <li>Portefeuille d'ouvrages publics réels, nommés et illustrés</li>
+          <li>Note Google 4,5 mise en avant honnêtement</li>
+          <li>100% en français, vocabulaire institutionnel exact</li>
+        </ul>
+      </div>
+      <div class="pillar" data-rev data-d="2">
+        <div class="p-k">03 · Modernité</div>
+        <h3>Le niveau d'aujourd'hui</h3>
+        <p>La finition technique qui distingue un acteur majeur.</p>
+        <ul>
+          <li>Animations au défilement, dont deux sections horizontales</li>
+          <li>Performance, accessibilité, respect du mouvement réduit</li>
+          <li>Mobile irréprochable, navigation tactile fluide</li>
+          <li>Page unique, rapide, sans dépendance lourde</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DELIVERABLES -->
+<section>
+  <div class="wrap">
+    <div class="sec-k"><b>07</b> Ce que contient votre site</div>
+    <h2 class="big" data-rev>Tout est déjà fait.</h2>
+    <p class="lead" data-rev data-d="1" style="margin-bottom:50px">Pas une liste de promesses : un inventaire de ce qui est livré et visible dans la démonstration ci-dessus.</p>
+    <div class="deliv">
+      <div class="d" data-rev><div class="di">↦ Direction artistique</div><h4>Identité de niveau architecte</h4><p>Système bleu royal #222F96 + or #FFB400 issu de votre logo, typographie Rubik / Roboto, trame structurelle.</p></div>
+      <div class="d" data-rev data-d="1"><div class="di">↦ Héros</div><h4>Ouverture cinématique</h4><p>Photo de chantier, message « Bâtissons Pour L'Avenir Durable », question qualifiante, appel à l'action.</p></div>
+      <div class="d" data-rev data-d="2"><div class="di">↦ Portfolio</div><h4>10 ouvrages, défilement horizontal</h4><p>Hôpitaux, juridictions, établissements de formation, équipements sportifs : vrais projets, vraies photos.</p></div>
+      <div class="d" data-rev><div class="di">↦ Historique</div><h4>Frise 1998 → 2025</h4><p>Chronologie horizontale animée : fondation, expansion nationale, virage environnement et sécurité.</p></div>
+      <div class="d" data-rev data-d="1"><div class="di">↦ Crédibilité</div><h4>Classification &amp; 20 partenaires</h4><p>Décret du 16 juin 1994 présenté comme un credential ; bandeau défilant des ministères et institutions.</p></div>
+      <div class="d" data-rev data-d="2"><div class="di">↦ Direction</div><h4>Mot du Président</h4><p>Portrait réel de M. Ait Haj My Abdelghni sur panneau bleu, citation, signature institutionnelle.</p></div>
+      <div class="d" data-rev><div class="di">↦ Contact</div><h4>Formulaire conforme</h4><p>Coordonnées, horaires, panneau de localisation, consentement Loi 09-08, lien Google Maps vérifié.</p></div>
+      <div class="d" data-rev data-d="1"><div class="di">↦ Technique</div><h4>Responsive &amp; performance</h4><p>Mobile-first, compteurs animés, révélations au défilement, fichier unique sans dépendance.</p></div>
+      <div class="d" data-rev data-d="2"><div class="di">↦ Langue</div><h4>100% français</h4><p>Rédigé pour le secteur BTP public marocain. Aucun nom d'institution traduit, aucun idiome importé.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SITEMAP -->
+<section style="background:var(--surface)">
+  <div class="wrap">
+    <div class="sec-k"><b>08</b> Votre site, section par section</div>
+    <h2 class="big" data-rev style="margin-bottom:44px">L'architecture, en clair.</h2>
+    <div class="smap" data-rev data-d="1">
+      <div class="r"><div class="k">.00</div><div><div class="t">Héros <span>· accueil cinématique</span></div><div class="muted" style="font-size:14px">Photo plein cadre, message de marque, question qualifiante, note Google, appel à l'action.</div></div></div>
+      <div class="r"><div class="k">.01</div><div><div class="t">L'Entreprise <span>· positionnement</span></div><div class="muted" style="font-size:14px">Entreprise marocaine de BTP, fondée en 1998, classée par le Ministère de l'Équipement.</div></div></div>
+      <div class="r"><div class="k">.02</div><div><div class="t">Chiffres clés <span>· compteurs animés</span></div><div class="muted" style="font-size:14px">526 projets réalisés · 38 en cours · 1 050 collaborateurs · 27 ans.</div></div></div>
+      <div class="r"><div class="k">.03</div><div><div class="t">Nos Réalisations <span>· défilement horizontal</span></div><div class="muted" style="font-size:14px">10 ouvrages publics en panneaux plein écran, navigation latérale.</div></div></div>
+      <div class="r"><div class="k">.04</div><div><div class="t">Historique <span>· frise horizontale</span></div><div class="muted" style="font-size:14px">1998 → 2009 → 2012 → 2025, grands chiffres d'années.</div></div></div>
+      <div class="r"><div class="k">.05</div><div><div class="t">Classification <span>· crédibilité</span></div><div class="muted" style="font-size:14px">Décret du 16 juin 1994, présenté comme la qualification d'accès aux marchés publics.</div></div></div>
+      <div class="r"><div class="k">.06</div><div><div class="t">Partenaires <span>· bandeau institutionnel</span></div><div class="muted" style="font-size:14px">20 ministères et institutions en défilement continu.</div></div></div>
+      <div class="r"><div class="k">.07</div><div><div class="t">Mot du Président <span>· direction</span></div><div class="muted" style="font-size:14px">Portrait réel sur panneau bleu, citation, signature.</div></div></div>
+      <div class="r"><div class="k">.08</div><div><div class="t">Nos Valeurs <span>· triptyque éditorial</span></div><div class="muted" style="font-size:14px">Professionnalisme · Volonté · Esprit du Dialogue.</div></div></div>
+      <div class="r"><div class="k">.09</div><div><div class="t">Contact <span>· conversion</span></div><div class="muted" style="font-size:14px">Coordonnées, formulaire conforme Loi 09-08, panneau de localisation Marrakech.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section>
+  <div class="wrap">
+    <div class="sec-k"><b>09</b> Investissement</div>
+    <h2 class="big" data-rev style="text-align:center;margin-left:auto;margin-right:auto;max-width:24ch">Une image institutionnelle, pour une fraction d'un seul marché.</h2>
+    <div class="price-card" id="priceReveal" data-rev data-d="1">
+      <div class="vstack">
+        <div class="v"><span>Découverte &amp; immersion de marque</span><span class="vp">Inclus</span></div>
+        <div class="v"><span>Design UI / UX — interface éditoriale sur mesure</span><span class="vp">Inclus</span></div>
+        <div class="v"><span>Développement, animations &amp; sections (2 scrolls horizontaux)</span><span class="vp">Inclus</span></div>
+        <div class="v"><span>Parcours de contact &amp; conversion</span><span class="vp">Inclus</span></div>
+        <div class="v"><span>Fondations SEO techniques</span><span class="vp">Inclus</span></div>
+        <div class="v"><span>QA, tests &amp; validation multi-supports + mise en ligne</span><span class="vp">Inclus</span></div>
+      </div>
+      <button class="btn" id="revealBtn" type="button" style="margin:6px auto 0">Afficher l'investissement</button>
+      <div class="price-body">
+        <div class="price-num"><span class="cur">MAD</span><span class="amount" id="montant" contenteditable="true" spellcheck="false" data-default="45 000">45 000</span><span class="cur">HT</span></div>
+        <button class="edit-hint" id="editHint" type="button">✎ Cliquer pour modifier le tarif</button>
+        <p class="price-sub">Investissement unique, livrable complet. Le site que vous venez de voir est déjà construit. Paiement&nbsp;: 50&nbsp;% au lancement, 30&nbsp;% à la validation du design, 20&nbsp;% à la livraison. Hébergement estimé 20–50&nbsp;USD/mois, payé directement au prestataire. Aucun frais caché.</p>
+        <a href="#signer" class="btn">Valider la proposition <span class="ar">→</span></a>
+        <div class="guarantee">◆ <span><b>Le risque est de mon côté&nbsp;:</b> vous avez vu le site fini avant d'engager le moindre dirham. C'est une fraction du budget d'un seul marché public, pour une image qui pèse sur chacun d'eux.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACCEPT -->
+<section id="signer" style="background:var(--surface)">
+  <div class="wrap">
+    <div class="sec-k"><b>10</b> Passons à l'action</div>
+    <h2 class="big" data-rev>Vous avez vu le résultat. <em style="color:var(--accent-2);font-style:normal">Mettons-le en ligne.</em></h2>
+    <div class="accept" data-rev data-d="1">
+      <p class="muted">Cette proposition concerne le site présenté dans cette page, déjà construit. La validation lance la mise en ligne, les ajustements finaux et le transfert.</p>
+      <div class="rows">
+        <div class="f"><div class="k">Entreprise</div><div class="v">Société AHMA (AHMA BTP)</div></div>
+        <div class="f"><div class="k">Représentant</div><div class="v">M. Ait Haj My Abdelghni, Président Directeur Général</div></div>
+        <div class="f"><div class="k">Préparé par</div><div class="v">Ali Jaafari, ali developz</div></div>
+        <div class="f"><div class="k">Date</div><div class="v" id="today">2026</div></div>
+      </div>
+      <div class="cta-row">
+        <a href="mailto:ali@wedevelopz.com?subject=Validation%20proposition%20site%20Soci%C3%A9t%C3%A9%20AHMA" class="btn">Valider par e-mail <span class="ar">→</span></a>
+        <a href="tel:+212656290736" class="btn btn-2">Appeler ali developz</a>
+      </div>
+      <p class="muted" style="margin-top:26px;font-size:13.5px">ali developz · Ali Jaafari · <a class="ph" href="mailto:ali@wedevelopz.com">ali@wedevelopz.com</a> · <a class="ph" href="tel:+212656290736">+212 6 56290736</a> · wedevelopz.com</p>
+    </div>
+  </div>
+</section>
+
+<div class="fab no-print"><button class="pdf" id="dlPdf" type="button">⬇&nbsp;&nbsp;Télécharger le PDF</button></div>
+
+<footer>
+  <div class="brand" style="display:inline-flex"><img src="brand/wedevelopz-logo.png" alt="We Developz"></div>
+  <div>© <span id="year">2026</span> ali developz · Ali Jaafari · Proposition préparée pour Société AHMA (AHMA BTP)</div>
+  <div style="margin-top:8px;opacity:.7">Site de démonstration construit sur mesure · 140 sites livrés · plusieurs millions de dollars générés</div>
+</footer>
+
+<script>
+(function(){
+  var reduce = matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var y = new Date().getFullYear();
+  document.getElementById('year').textContent = y;
+  var td = document.getElementById('today');
+  try{ td.textContent = new Date().toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric'}); }catch(e){ td.textContent = y; }
+
+  var topbar = document.getElementById('topbar');
+  function onScroll(){ document.body.classList.toggle('scrolled', window.scrollY > 40); }
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  var revs = document.querySelectorAll('[data-rev]');
+  if (reduce || !('IntersectionObserver' in window)){
+    revs.forEach(function(e){ e.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold:.12, rootMargin:'0px 0px -6% 0px'});
+    revs.forEach(function(e){ io.observe(e); });
+    function sweep(){ revs.forEach(function(e){
+      if(!e.classList.contains('in') && e.getBoundingClientRect().top < innerHeight*0.96) e.classList.add('in'); }); }
+    window.addEventListener('scroll', sweep, {passive:true});
+    window.addEventListener('load', sweep);
+    setTimeout(sweep, 700); setTimeout(sweep, 1700);
+  }
+
+  var nums = document.querySelectorAll('[data-count]');
+  function runCount(el){
+    var target = +el.dataset.count, dur = 1500, start = performance.now(), done = false;
+    function fin(){ if(done) return; done = true; el.textContent = target.toLocaleString('fr-FR'); }
+    function step(now){
+      if(done) return;
+      var p = Math.min(Math.max((now-start)/dur,0),1); p = 1 - Math.pow(1-p,3);
+      el.textContent = Math.round(target*p).toLocaleString('fr-FR');
+      if (p < 1) requestAnimationFrame(step); else fin();
+    }
+    requestAnimationFrame(step);
+    setTimeout(fin, dur + 400);
+  }
+  if (reduce){ nums.forEach(function(el){ el.textContent = (+el.dataset.count).toLocaleString('fr-FR'); }); }
+  else {
+    var cio = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ runCount(e.target); cio.unobserve(e.target); } });
+    }, {threshold:.5});
+    nums.forEach(function(el){ cio.observe(el); });
+  }
+
+  var rb = document.getElementById('revealBtn'), pr = document.getElementById('priceReveal');
+  rb.addEventListener('click', function(){ pr.classList.add('open'); });
+
+  /* editable price — persists locally so Ali sets it before exporting; recipient gets the PDF */
+  var montant = document.getElementById('montant');
+  var KEY = 'ahmabtp-proposal-montant';
+  try{ var sv = localStorage.getItem(KEY); if(sv) montant.textContent = sv; }catch(e){}
+  function saveM(){ try{ localStorage.setItem(KEY, (montant.textContent||'').trim()); }catch(e){} }
+  montant.addEventListener('input', saveM);
+  montant.addEventListener('keydown', function(e){ if(e.key==='Enter'){ e.preventDefault(); montant.blur(); } });
+  montant.addEventListener('blur', function(){ if(!(montant.textContent||'').trim()){ montant.textContent = montant.dataset.default; } saveM(); });
+  document.getElementById('editHint').addEventListener('click', function(){
+    pr.classList.add('open'); montant.focus();
+    try{ var r=document.createRange(); r.selectNodeContents(montant); var s=getSelection(); s.removeAllRanges(); s.addRange(r); }catch(e){}
+  });
+
+  /* download as a locked PDF — reveals everything, then the browser's Save-as-PDF */
+  document.getElementById('dlPdf').addEventListener('click', function(){
+    pr.classList.add('open');
+    revs.forEach(function(e){ e.classList.add('in'); });
+    setTimeout(function(){ window.print(); }, 80);
+  });
+
+  /* scale every device mockup's iframe to its rendered screen width — never collapses */
+  function fitMockups(){
+    document.querySelectorAll('.laptop .screen, .phone .screen').forEach(function(scr){
+      var fr = scr.querySelector('iframe'); if(!fr) return;
+      var base = scr.closest('.phone') ? 412 : 1440;
+      var w = scr.clientWidth;
+      if(!w) return;
+      fr.style.width = base + 'px';
+      fr.style.transform = 'scale(' + (w/base).toFixed(5) + ')';
+    });
+  }
+  fitMockups();
+  window.addEventListener('load', fitMockups);
+  window.addEventListener('resize', function(){ clearTimeout(window.__fm); window.__fm = setTimeout(fitMockups, 120); });
+  document.querySelectorAll('.laptop iframe, .phone iframe').forEach(function(fr){
+    fr.addEventListener('load', fitMockups);
+  });
+  setTimeout(fitMockups, 300); setTimeout(fitMockups, 1000);
+})();
+</script>
+</body>
+</html>
