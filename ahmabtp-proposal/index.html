@@ -609,9 +609,7 @@
       </div>
       <button class="btn" id="revealBtn" type="button" style="margin:6px auto 0">Afficher l'investissement</button>
       <div class="price-body">
-        <div class="price-num"><span class="cur">MAD</span><span class="amount" id="montant" contenteditable="true" spellcheck="false" data-default="45 000">45 000</span><span class="cur">HT</span></div>
-        <button class="edit-hint" id="editHint" type="button">✎ Cliquer pour modifier le tarif</button>
-        <p class="price-sub">Investissement unique, livrable complet. Le site que vous venez de voir est déjà construit. Paiement&nbsp;: 50&nbsp;% au lancement, 30&nbsp;% à la validation du design, 20&nbsp;% à la livraison. Hébergement estimé 20–50&nbsp;USD/mois, payé directement au prestataire. Aucun frais caché.</p>
+        <div class="price-num" style="margin-bottom:30px"><span class="cur">MAD</span><span class="amount">67 000</span><span class="cur">HT</span></div>
         <a href="#signer" class="btn">Valider la proposition <span class="ar">→</span></a>
         <div class="guarantee">◆ <span><b>Le risque est de mon côté&nbsp;:</b> vous avez vu le site fini avant d'engager le moindre dirham. C'est une fraction du budget d'un seul marché public, pour une image qui pèse sur chacun d'eux.</span></div>
       </div>
@@ -699,19 +697,6 @@
 
   var rb = document.getElementById('revealBtn'), pr = document.getElementById('priceReveal');
   rb.addEventListener('click', function(){ pr.classList.add('open'); });
-
-  /* editable price — persists locally so Ali sets it before exporting; recipient gets the PDF */
-  var montant = document.getElementById('montant');
-  var KEY = 'ahmabtp-proposal-montant';
-  try{ var sv = localStorage.getItem(KEY); if(sv) montant.textContent = sv; }catch(e){}
-  function saveM(){ try{ localStorage.setItem(KEY, (montant.textContent||'').trim()); }catch(e){} }
-  montant.addEventListener('input', saveM);
-  montant.addEventListener('keydown', function(e){ if(e.key==='Enter'){ e.preventDefault(); montant.blur(); } });
-  montant.addEventListener('blur', function(){ if(!(montant.textContent||'').trim()){ montant.textContent = montant.dataset.default; } saveM(); });
-  document.getElementById('editHint').addEventListener('click', function(){
-    pr.classList.add('open'); montant.focus();
-    try{ var r=document.createRange(); r.selectNodeContents(montant); var s=getSelection(); s.removeAllRanges(); s.addRange(r); }catch(e){}
-  });
 
   /* download as a locked PDF — reveals everything, then the browser's Save-as-PDF */
   document.getElementById('dlPdf').addEventListener('click', function(){
