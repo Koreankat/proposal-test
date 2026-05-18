@@ -10,8 +10,33 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
+<style id="pl-style">
+#preloader{position:fixed;inset:0;z-index:99999;pointer-events:none;background:#16205C}
+#preloader .pl-panel{position:fixed;left:0;width:100%;height:50.6vh;will-change:transform;backface-visibility:hidden}
+#preloader .pl-top{top:0;background:linear-gradient(180deg,#2a40b0,#16205C);animation:plTop .92s cubic-bezier(.76,0,.24,1) 1.75s forwards}
+#preloader .pl-bot{bottom:0;background:linear-gradient(0deg,#2a40b0,#16205C);animation:plBot .92s cubic-bezier(.76,0,.24,1) 1.75s forwards}
+@keyframes plTop{to{transform:translateY(-101%)}}
+@keyframes plBot{to{transform:translateY(101%)}}
+#preloader .pl-logo{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;z-index:2;animation:plOut .55s ease 1.55s forwards}
+@keyframes plOut{to{opacity:0;transform:scale(1.05)}}
+#preloader .pl-logo img{position:absolute;width:clamp(150px,17vw,232px);height:auto;user-select:none;-webkit-user-select:none}
+#preloader .pl-ghost{opacity:.15}
+#preloader .pl-fill{clip-path:inset(100% 0 0 0);filter:drop-shadow(0 0 20px rgba(233,194,107,.55));animation:plFill 1.2s cubic-bezier(.62,0,.2,1) .3s forwards}
+@keyframes plFill{to{clip-path:inset(0 0 0 0)}}
+#preloader.pl-done{display:none}
+@media (prefers-reduced-motion: reduce){#preloader{display:none!important}}
+</style>
 </head>
 <body>
+<div id="preloader" aria-hidden="true">
+  <div class="pl-panel pl-top"></div>
+  <div class="pl-panel pl-bot"></div>
+  <div class="pl-logo">
+    <img class="pl-ghost" src="assets/logo/ahmabtp-logo-white.png" alt="">
+    <img class="pl-fill" src="assets/logo/ahmabtp-logo-white.png" alt="">
+  </div>
+</div>
+<script>(function(){var p=document.getElementById('preloader');if(!p)return;function d(){p.classList.add('pl-done');}if(matchMedia('(prefers-reduced-motion: reduce)').matches){d();return;}setTimeout(d,2900);setTimeout(d,5200);})();</script>
 
 <!-- ── Sticky header lockup (utility + nav) ──────────────────────── -->
 <div class="header-lockup" data-screen-label="Header">
